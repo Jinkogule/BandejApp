@@ -1,0 +1,235 @@
+/*----------------------------------------------------------------PRINCIPAIS----------------------------------------------------------------*/
+body{
+    padding-top: 50px;
+    font-family: 'Bahnschrift' !important;
+    font-size: 1.0rem;
+    text-align: justify;
+    background-color: rgb(220, 247, 255);      
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+/*----------------------------------------SCROLLBAR----------------------------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #747BCF;
+    border-radius: 20px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5E5FC0;
+}
+
+.centraliza {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.card{
+    background-color: #747BCF;
+    border: none;
+    text-align: left !important;
+    margin-bottom: 5px;
+    margin-top: 5px !important;
+}
+.engrenagem{
+    color:#555555;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/*card header*/
+.card-header{
+    text-align: center;
+    background-color: #5E5FC0;
+
+}
+
+.text-shadow{
+    text-shadow: 2px 0 0 rgb(0, 0, 0);
+    color: #fff;
+}
+
+.container-menu {
+    width: 100% !important;          
+} 
+
+/*--------navbar--------*/
+.navbar1{
+    background-color: #1F519B;
+
+}
+
+.navbar2 {
+    height: 45px;
+    margin-top: 56px;
+    background-color: #747BCF;
+    padding: 0;
+}
+
+.navbar-vazio{
+    height: 55px;
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 2rem;
+}
+
+.navbar-brand-dashboard{
+    color: white;
+    font-size: 1rem;
+}
+
+.menu-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+} 
+
+.navbar-brand:hover{
+    color: rgb(179, 179, 179);
+}
+
+h4{
+    color: #fff;
+}
+
+/*--------footer--------*/
+.page-footer{
+    background-color: #44832d;
+}
+.text-center{
+    color: white;
+}
+
+/*----------------------------------------LOGIN / CADASTRO----------------------------------------*/
+@media (min-width: 1000px) {
+    .container-login{
+        float: center;
+        width: 400px;
+        height: 410px;
+        background-color: #1F519B;
+        margin: 50px auto;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-login{
+        float: center;
+        width: 95%;
+        height: 410px;
+        background-color: #1F519B;
+        margin: 50px auto;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+@media (min-width: 1000px) {
+    .container-cadastro{
+        float: center;
+        background-color: #1F519B;
+        border-radius: 10px;
+        width: 500px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-cadastro{
+        float: center;
+        background-color: #1F519B;
+        border-radius: 10px;
+        width: 95%;
+        margin: 50px auto;
+    }
+}
+
+
+.nav-link{
+    color: #fff;
+    text-align: center;
+}
+.nav-link:hover{
+    color: rgb(155, 155, 155);
+    text-align: center;
+}
+
+.espaço {
+    line-height: 15px;  
+    margin: 15px 0;
+}
+
+/*--------dashboard usuário--------*/
+.centralizar{
+    text-align: center;
+}
+
+.text-divider{
+    text-align: center;
+    font-size: 1.1rem !important;
+}
+
+/*----------------------------------------MODAL----------------------------------------*/
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
