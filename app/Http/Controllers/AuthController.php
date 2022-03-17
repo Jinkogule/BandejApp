@@ -33,7 +33,7 @@ class AuthController extends Controller{
 
             $data = $request->all();
             $check = $this->geraRefeicoes($data);
-            
+
             return redirect()->intended('dashboard');
         }
         return back()->withErrors([
@@ -79,7 +79,7 @@ class AuthController extends Controller{
     }
     
     public function geraRefeicoes(array $data){
-        for ($x = 0; $x <= 30; $x++){
+        for ($x = 0; $x <= 1; $x++){
             Refeicao::create([
                 'id_usuario' => Auth::user()->id,
                 'tipo' => 'almoço',
@@ -89,7 +89,7 @@ class AuthController extends Controller{
             ]);
         }
 
-        for ($x = 0; $x <= 30; $x++){
+        for ($x = 0; $x <= 1; $x++){
             Refeicao::create([
                 'id_usuario' => Auth::user()->id,
                 'tipo' => 'janta',
