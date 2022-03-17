@@ -30,7 +30,10 @@ class AuthController extends Controller{
             $request->session()->put('id', Auth::user()->id);
             $request->session()->put('user_type', Auth::user()->user_type);
             $request->session()->put('user_email', Auth::user()->email);
-    
+
+            $data = $request->all();
+            $check = $this->geraRefeicoes($data);
+            
             return redirect()->intended('dashboard');
         }
         return back()->withErrors([
@@ -55,7 +58,7 @@ class AuthController extends Controller{
         $data = $request->all();
         $check = $this->criaUsuario($data);
         
-        $check = $this->geraRefeicoes($data);
+        
         
         return redirect("/")->with('message', 'Cadastro realizado com sucesso!');
     }
@@ -78,7 +81,7 @@ class AuthController extends Controller{
     public function geraRefeicoes(array $data){
         for ($x = 0; $x <= 30; $x++){
             Refeicao::create([
-                'id_usuario' => '7',
+                'id_usuario' => Auth::user()->id,
                 'tipo' => 'almoço',
                 'unidade_bandejao' => 'gragoatá',
                 'dia_da_semana' => $x,
@@ -88,7 +91,7 @@ class AuthController extends Controller{
 
         for ($x = 0; $x <= 30; $x++){
             Refeicao::create([
-                'id_usuario' => '7',
+                'id_usuario' => Auth::user()->id,
                 'tipo' => 'janta',
                 'unidade_bandejao' => 'gragoatá',
                 'dia_da_semana' => $x,
