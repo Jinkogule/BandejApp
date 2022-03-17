@@ -18,7 +18,7 @@ class CreateRefeicaosTable extends Migration
             $table->unsignedBigInteger('id_usuario');
             $table->string('tipo');
             $table->string('unidade_bandejao');
-            $table->string('cardapio');
+            $table->string('cardapio')->nullable();
             $table->string('dia_da_semana');
             $table->char('status_confirmacao', 1)->default('N');
             $table->char('status_validez', 1)->default('V');
