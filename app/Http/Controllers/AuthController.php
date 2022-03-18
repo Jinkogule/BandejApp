@@ -31,13 +31,13 @@ class AuthController extends Controller{
             $request->session()->put('user_type', Auth::user()->user_type);
             $request->session()->put('user_email', Auth::user()->email);
     
-            /*preenchendo refeições iniciais*/
+            /*preenchendo refeições iniciais
             $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
             if ($q_refeicoes == 0){
                 $check = $this->geraRefeicoes($data);
             }
-            /*preenchendo refeições iniciais*/
-            
+            preenchendo refeições iniciais*/
+
             return redirect()->intended('dashboard');
         }
         return back()->withErrors([
