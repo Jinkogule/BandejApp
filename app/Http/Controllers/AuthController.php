@@ -31,6 +31,13 @@ class AuthController extends Controller{
             $request->session()->put('user_type', Auth::user()->user_type);
             $request->session()->put('user_email', Auth::user()->email);
     
+            /*preenchendo refeições iniciais*/
+            $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
+            if ($q_refeicoes == 0){
+                $check = $this->geraRefeicoes($data);
+            }
+            /*preenchendo refeições iniciais*/
+            
             return redirect()->intended('dashboard');
         }
         return back()->withErrors([
@@ -54,7 +61,7 @@ class AuthController extends Controller{
            
         $data = $request->all();
         $check = $this->criaUsuario($data);
-        $check = $this->geraRefeicoes($data);
+        
         
         return redirect("/")->with('message', 'Cadastro realizado com sucesso!');
     }
@@ -77,7 +84,7 @@ class AuthController extends Controller{
     public function geraRefeicoes(array $data){
         for ($x = 0; $x <= 30; $x++){
             Refeicao::create([
-                'id_usuario' => '7',
+                'id_usuario' => Auth::user()->id,
                 'tipo' => 'almoço',
                 'unidade_bandejao' => 'gragoatá',
                 'dia_da_semana' => $x,
@@ -87,7 +94,7 @@ class AuthController extends Controller{
 
         for ($x = 0; $x <= 30; $x++){
             Refeicao::create([
-                'id_usuario' => '7',
+                'id_usuario' => Auth::user()->id,
                 'tipo' => 'janta',
                 'unidade_bandejao' => 'gragoatá',
                 'dia_da_semana' => $x,
