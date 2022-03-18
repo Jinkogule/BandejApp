@@ -110,7 +110,8 @@ class AuthController extends Controller{
                 return View::make('admin.dashboard');  // admin dashboard path
             }
             else{
-                return View::make('user.dashboard');  // member dashboard path
+                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('dia_da_semana')->paginate(30);
+                return View::make('user.dashboard')->with('events', $events);  // user dashboard path
             }   
         }
   
