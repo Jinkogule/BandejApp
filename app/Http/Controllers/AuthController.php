@@ -54,9 +54,8 @@ class AuthController extends Controller{
            
         $data = $request->all();
         $check = $this->criaUsuario($data);
-        /*
         $check = $this->geraRefeicoes($data);
-        */
+        
         return redirect("/")->with('message', 'Cadastro realizado com sucesso!');
     }
 
