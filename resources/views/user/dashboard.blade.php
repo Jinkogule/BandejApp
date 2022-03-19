@@ -46,13 +46,15 @@
                     @foreach($events as $event)
                     <div class="card">
                         <div class="card-header">
-                            <!--Pendente-->
+                            
                             <?php
+                            /*pendente*/
                             if ($event->status_confirmacao == 'N'){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <?php
                             }
+                            /*confirmada*/
                             else{
                             ?>
                                 <img src="/images/confirmado.png" class="img-fluid" alt="Responsive image" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
@@ -76,6 +78,10 @@
                             <?php
                             }
                             ?>
+                            <?php
+                            /*pendente*/
+                            if ($event->status_confirmacao == 'N'){
+                            ?>
                             <div class="container botoes-cc" style="margin: 0 auto;">
                                 <div class="row">
                                     <div class="col" style="margin: 0 auto;">
@@ -87,7 +93,10 @@
                                         <a href="#" class="btn btn-primary btn-sm d-flex justify-content-center btn-cancelar" role="button">Cancelar</a>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
+                            <?php
+                            }
+                            ?>
                         </div>                       
                     </div>
                     @endforeach 
