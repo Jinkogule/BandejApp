@@ -46,8 +46,20 @@
                     @foreach($events as $event)
                     <div class="card">
                         <div class="card-header">
-
-                            <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <!--Pendente-->
+                            <?php
+                            if ($event->status_confirmacao == 'N'){
+                            ?>
+                                <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <?php
+                            }
+                            else{
+                            ?>
+                                <img src="/images/confirmado.png" class="img-fluid" alt="Responsive image" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <?php
+                            }
+                            
+                            ?>
                             <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - data - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
                         </div>
                         
@@ -57,7 +69,7 @@
                             ?>
                             <div class="container capa-cardapio" style="background-image: url('/images/peixe.jpg');">
                                 <div class="cardapio">
-                                    {{$event->cardapio}}
+                                    Cardápio: {{$event->cardapio}}
                                 </div>
                             </div>
                             <br>
