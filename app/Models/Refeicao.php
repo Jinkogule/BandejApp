@@ -19,6 +19,7 @@ class Refeicao extends Model
         'tipo',
         'cardapio',
         'unidade_bandejao',
+        'data_visual',
         'data',
         'dia_da_semana',
         'status_confirmacao',

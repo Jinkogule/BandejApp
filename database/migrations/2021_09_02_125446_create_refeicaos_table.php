@@ -20,7 +20,8 @@ class CreateRefeicaosTable extends Migration
             $table->string('unidade_bandejao');
             $table->string('cardapio')->nullable();
             $table->string('dia_da_semana');
-            $table->string('data');
+            $table->string('data_visual');
+            $table->date('data');
             $table->char('status_confirmacao', 1)->default('N');
             $table->char('status_validez', 1)->default('V');
             $table->timestamps();

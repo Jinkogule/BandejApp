@@ -68,7 +68,7 @@
                             }
                             
                             ?>
-                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data}} - {{$event->tipo}} - {{$event->unidade_bandejao}} - id: {{$event->id}}</span>
+                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data_visual}} - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
                         </div>
                         
                         <div class="card-body">
@@ -161,9 +161,9 @@
                                     <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data}} id: {{$event->id}}.
+                                    Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data_visual}}.
                                     <br><br>
-                                    Você confirma?
+                                    Você confirma sua presença?
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row" style= "margin: 0 auto;">
