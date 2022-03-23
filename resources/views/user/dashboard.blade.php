@@ -68,7 +68,7 @@
                             }
                             
                             ?>
-                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data}} - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
+                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data}} - {{$event->tipo}} - {{$event->unidade_bandejao}} - id: {{$event->id}}</span>
                         </div>
                         
                         <div class="card-body">
@@ -126,7 +126,7 @@
                                     <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}})
+                                    Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}} ) id: {{$event->id}}
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row" style= "margin: 0 auto;">
@@ -161,7 +161,7 @@
                                     <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data}}.
+                                    Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data}} id: {{$event->id}}.
                                     <br><br>
                                     Você confirma?
                                 </div>
@@ -205,7 +205,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content confirmacao-bloco">
                                 <div class="modal-header" style="position: relative">
-                                    <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença</h5>
+                                    <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença id: {{$event->id}}</h5>
                                     <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
