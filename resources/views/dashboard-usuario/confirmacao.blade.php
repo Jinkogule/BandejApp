@@ -13,6 +13,7 @@
                 <div class="row" style= "margin: 0 auto;">
                     <div class="col-6">
                         <button type="button" class="btn btn-primary btn-confirmar" data-dismiss="modal">Sim</button>
+                        
                     </div>
                     <div class="col-6">
                         <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru">Não, irei em outro RU</button>
@@ -32,20 +33,40 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a), você tem um almoço planejado no Gragoatá para amanhã, dia 15.
+                Prezado(a), você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia 15.
                 <br><br>
                 Você confirma?
             </div>
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
                     <div class="col-3">
-                        <button type="button" class="btn btn-primary btn-confirmar" data-dismiss="modal">Sim</button>
+                        <!--Confirmar refeição mantendo o RU-->
+                        <form id="confirmar_refeicao" action="{{ route('confirmarRefeicao') }}" method="POST">
+                            @csrf          
+                            <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
+                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{$event->unidade_bandejao}}">
+
+                            <div class="col" style="margin: 0 auto;">
+                                <button type="submit" class="btn btn-primary btn-confirmar" data-dismiss="modal">Sim</button>
+                            </div>
+                        </form>
+                        
                     </div>
                     <div class="col-6">
+                        <!--Confirmar refeição trocando o RU-->
                         <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru">Sim, mas em outro RU</button>
                     </div>
                     <div class="col-3">
-                        <button type="button" class="btn btn-primary btn-cancelar" data-dismiss="modal">Não</button>
+                        <!--Cancelar refeição-->
+                        <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
+                            @csrf          
+                            <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
+
+                            <div class="col" style="margin: 0 auto;">
+                                <button type="submit" class="btn btn-primary btn-cancelar" data-dismiss="modal">Não</button>
+                            </div>
+                        </form>
+                        
                     </div>
                 </div>
             </div>

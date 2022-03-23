@@ -85,6 +85,7 @@
                             <div class="container botoes-cc" style="margin: 0 auto;">
                                 <div class="row">
                                     <div class="col" style="margin: 0 auto;">
+                                    
                                         <a href="#" class="btn btn-primary btn-sm d-flex justify-content-center btn-confirmar" data-toggle="modal" data-target="#confirmacao" role="button">Confirmar</a>
                                      
                                     </div>

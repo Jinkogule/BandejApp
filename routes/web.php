@@ -43,6 +43,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 });
 Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
+Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
 
 
 
