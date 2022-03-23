@@ -24,7 +24,7 @@
 
         @include('dashboard-usuario.navbar2')
 
-        @include('dashboard-usuario.confirmacao')
+        
         <!-- Button trigger modal 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;">
         Notificação de Confirmação
@@ -44,6 +44,7 @@
                 
                     <br>
                     @foreach($events as $event)
+                    @include('dashboard-usuario.confirmacao')
                     <div class="card">
                         <div class="card-header">
                             
