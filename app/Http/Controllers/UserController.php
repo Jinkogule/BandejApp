@@ -77,12 +77,15 @@ class UserController extends Controller{
     }
 
     public function confirmarRefeicao(Request $request){
-        
-        $id_refeicao = $request->input('id_refeicao');
-        $unidade_bandejao = $request->input('unidade_bandejao');
+        $data = $request->all();
 
-        DB::table('refeicaos')->where('id', '=', $id_refeicao)->update(['status_confirmacao' => "C"]);
-        DB::table('refeicaos')->where('id', $id_refeicao)->update(['unidade_bandejao' => $unidade_bandejao]);
+        $request->validate([
+            'id_refeicao' => 'required',
+            'unidade_bandejao' => 'required']
+        );
+
+        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => "C"]);
+        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['unidade_bandejao' => $data['unidade_bandejao']]);
                 
         return redirect('/dashboard')->with('message', 'Refeição confirmada com sucesso!');
     }
