@@ -29,7 +29,7 @@
                 {{ session()->get('message') }}
             </div>
         @endif
-        
+
         <!-- Button trigger modal 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;">
         Notificação de Confirmação
@@ -68,7 +68,7 @@
                             }
                             
                             ?>
-                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - data - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
+                            <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data}} - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
                         </div>
                         
                         <div class="card-body">
