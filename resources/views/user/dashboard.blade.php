@@ -24,6 +24,11 @@
 
         @include('dashboard-usuario.navbar2')
 
+        @if(session()->has('message'))
+            <div class="alert alert-success" style="text-align: center;">
+                {{ session()->get('message') }}
+            </div>
+        @endif
         
         <!-- Button trigger modal 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="position: absolute;">
