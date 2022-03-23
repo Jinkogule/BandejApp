@@ -89,9 +89,16 @@
                                      
                                     </div>
                                     
-                                    <div class="col" style="margin: 0 auto;">
-                                        <a href="#" class="btn btn-primary btn-sm d-flex justify-content-center btn-cancelar" role="button">Cancelar</a>
-                                    </div>
+                                    <!--Form cancelamento de refeição-->
+                                    <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
+                                        @csrf          
+                                        <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
+    
+                                        <div class="col" style="margin: 0 auto;">
+                                            <button type="submit" class="btn btn-primary btn-sm d-flex justify-content-center btn-cancelar">Cancelar</a>
+                                        </div>
+                                    </form> 
+                                    
                                 </div>
                             </div>
                             <?php

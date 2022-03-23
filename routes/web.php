@@ -42,6 +42,9 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     })->name('dashboard');
 
 });
+Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
+
+
 
 Route::get('planejamentomensal', [PlanejamentoMensalController::class, 'planejamentomensal']);
 
