@@ -87,6 +87,7 @@ class AuthController extends Controller{
                 'id_usuario' => Auth::user()->id,
                 'tipo' => 'almoço',
                 'unidade_bandejao' => 'gragoatá',
+                'data' => date('d/m/Y'),
                 'dia_da_semana' => $x,
                 
             ]);
@@ -97,6 +98,7 @@ class AuthController extends Controller{
                 'id_usuario' => Auth::user()->id,
                 'tipo' => 'janta',
                 'unidade_bandejao' => 'gragoatá',
+                'data' => date('d/m/Y'),
                 'dia_da_semana' => $x,
                 
             ]);
