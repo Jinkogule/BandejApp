@@ -70,7 +70,7 @@ class UserController extends Controller{
     public function cancelarRefeicao(Request $request){
         
         $id_refeicao =  $request->input('id_refeicao');
-
+        
         DB::table('refeicaos')->delete($id_refeicao);
 
         return redirect('/dashboard')->withSuccess('Refeição cancelada com sucesso!');
@@ -78,11 +78,12 @@ class UserController extends Controller{
 
     public function confirmarRefeicao(Request $request){
         
-        $id_refeicao =  $request->input('id_refeicao');
+        $id_refeicao = $request->input('id_refeicao');
+        $unidade_bandejao = $request->input('unidade_bandejao');
 
         DB::table('refeicaos')->where('id', $id_refeicao)->update(['status_confirmacao' => "C"]);
+        DB::table('refeicaos')->where('id', $id_refeicao)->update(['unidade_bandejao' => $unidade_bandejao]);
                 
-
         return redirect('/dashboard')->withSuccess('Refeição confirmada com sucesso!');
     }
 }

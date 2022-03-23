@@ -12,7 +12,16 @@
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary btn-confirmar" data-dismiss="modal">Sim</button>
+                        <!--Confirmar refeição mantendo o RU-->
+                        <form id="confirmar_refeicao" action="{{ route('confirmarRefeicao') }}" method="POST">
+                            @csrf          
+                            <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
+                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{$event->unidade_bandejao}}">
+
+                            <div class="col" style="margin: 0 auto;">
+                                <button type="submit" class="btn btn-primary btn-confirmar">Sim</button>
+                            </div>
+                        </form>
                         
                     </div>
                     <div class="col-6">
@@ -40,16 +49,7 @@
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
                     <div class="col-3">
-                        <!--Confirmar refeição mantendo o RU-->
-                        <form id="confirmar_refeicao" action="{{ route('confirmarRefeicao') }}" method="POST">
-                            @csrf          
-                            <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
-                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{$event->unidade_bandejao}}">
-
-                            <div class="col" style="margin: 0 auto;">
-                                <button type="submit" class="btn btn-primary btn-confirmar" data-dismiss="modal">Sim</button>
-                            </div>
-                        </form>
+                        
                         
                     </div>
                     <div class="col-6">
@@ -57,15 +57,9 @@
                         <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru">Sim, mas em outro RU</button>
                     </div>
                     <div class="col-3">
-                        <!--Cancelar refeição-->
-                        <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
-                            @csrf          
-                            <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
-
-                            <div class="col" style="margin: 0 auto;">
+                     
                                 <button type="submit" class="btn btn-primary btn-cancelar" data-dismiss="modal">Não</button>
-                            </div>
-                        </form>
+                          
                         
                     </div>
                 </div>
@@ -83,7 +77,11 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                
+                <!--Form - Confirmar refeição trocando o RU-->
+                <form id="confirmar_refeicao" action="{{ route('confirmarRefeicao') }}" method="POST">
+                    @csrf          
+                    <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
                     <label for="unidade_bandejao">Selecione o novo local da refeição:</label>
                     <select class="form-control" id="unidade_bandejao" name="unidade_bandejao">
                         <option></option>
@@ -93,15 +91,17 @@
                         <option>Veterinária</option>
                         <option>HUAP</option>
                     </select>
+
+                    <div class="modal-footer">
+                        <div class="row" style= "margin: 0 auto;">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary btn-confirmar" data-dismiss="modal">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <div class="row" style= "margin: 0 auto;">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary btn-confirmar" data-dismiss="modal">Confirmar</button>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
