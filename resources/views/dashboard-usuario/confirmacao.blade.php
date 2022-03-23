@@ -95,7 +95,7 @@
                     <div class="modal-footer">
                         <div class="row" style= "margin: 0 auto;">
                             <div class="col">
-                                <button type="submit" class="btn btn-primary btn-confirmar" data-dismiss="modal">Confirmar</button>
+                                <button type="submit" class="btn btn-primary btn-confirmar">Confirmar</button>
                             </div>
                         </div>
                     </div>
