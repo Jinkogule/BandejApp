@@ -81,7 +81,8 @@ class UserController extends Controller{
         $id_refeicao = $request->input('id_refeicao');
         $unidade_bandejao = $request->input('unidade_bandejao');
 
-        DB::table('refeicaos')->where('id', '=', $id_refeicao)->update(['status_confirmacao' => "C"])->update(['unidade_bandejao' => $unidade_bandejao]);
+        DB::table('refeicaos')->where('id', '=', $id_refeicao)->update(['status_confirmacao' => "C"]);
+        DB::table('refeicaos')->where('id', $id_refeicao)->update(['unidade_bandejao' => $unidade_bandejao]);
                 
         return redirect('/dashboard')->with('message', 'Refeição confirmada com sucesso!');
     }
