@@ -41,7 +41,7 @@
             </div>
         @endif
 
-        <div class="container container-login">
+        <div class="container-flex container-login">
             <br>
             <h4 style="text-align: center;">Acesse o BandejApp</h4><hr>
             <form method="POST" action="{{ route('realizarLogin') }}">
