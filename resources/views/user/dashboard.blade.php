@@ -90,9 +90,9 @@
                             ?>
                             <div class="container botoes-cc" style="margin: 0 auto;">
                                 <div class="row">
-                                    <div class="col" style="margin: 0 auto;">
+                                    <div class="col">
                                     
-                                        <button class="btn btn-primary btn-sm d-flex btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}" role="button">Confirmar</button>
+                                        <button class="btn btn-primary btn-sm form-control btn-block btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}" role="button">Confirmar</button>
                                      
                                     </div>
                                     
@@ -101,8 +101,8 @@
                                         @csrf          
                                         <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
     
-                                        <div class="col" style="margin: 0 auto;">
-                                            <button type="submit" class="btn btn-primary btn-sm d-flex btn-cancelar">Cancelar</button>
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-primary btn-sm form-control btn-block btn-cancelar">Cancelar</button>
                                         </div>
                                     </form> 
                                     
