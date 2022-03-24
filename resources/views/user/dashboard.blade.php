@@ -53,8 +53,10 @@
                         <div class="card-header">
                             
                             <?php
+                            $amanha = date("Y-m-d", time() + 86400);
+
                             /*pendente*/
-                            if ($event->status_confirmacao == 'N'){
+                            if ($event->status_confirmacao == 'N' && $amanha >= $event->data){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <?php
@@ -91,7 +93,6 @@
                                 <div class="row">
                                     <!--Botão de confirmação disponível caso o dia atual seja 1 anterior à ocorrência da refeição-->
                                     <?php
-                                    $amanha = date("Y-m-d", time() + 86400);
                                     
                                     if ($amanha >= $event->data){
                                     ?>
@@ -101,7 +102,7 @@
                                     <?php
                                     }
                                     ?>
-                                    
+
                                     <!--Form cancelamento de refeição-->
                                     <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
                                         @csrf          
