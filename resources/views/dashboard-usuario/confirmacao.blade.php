@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}} ) id: {{$event->id}}
+                Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}})
             </div>
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
@@ -86,7 +86,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
-                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença id: {{$event->id}}</h5>
+                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença</h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
