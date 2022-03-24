@@ -191,33 +191,41 @@ body{
 .btn-confirmar{
     background-color: #44832d;
     border-radius: 10px;
+    color: #fff;
 }
 .btn-confirmar:hover{
     background-color: #3d642f;
+    color: #fff;
 }
 
 .btn-cancelar{
     background-color: #961c1c;
     border-radius: 10px;
+    color: #fff;
 }
 .btn-cancelar:hover{
     background-color: #7a2525;
+    color: #fff;
 }
 
 .btn-desativado{
     background-color: #6e6e6e;
+    color: #fff;
     border-radius: 10px;
 }
 .btn-desativado:hover{
     background-color: #414141;
+    color: #fff;
 }
 
 .btn-neutro{
     background-color: #747BCF;
+    color: #fff;
     border-radius: 10px;
 }
 .btn-neutro:hover{
     background-color: #575eb1;
+    color: #fff;
 }
 
 /*-------------------------------TELA DE CONFIRMAÇÃO----------------------*/
