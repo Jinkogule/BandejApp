@@ -90,20 +90,20 @@
                             ?>
                             <div class="container botoes-cc" style="margin: 0 auto;">
                                 <div class="row">
-                                    <div class="col">
-                                    
-                                        <button class="btn btn-primary btn-sm form-control btn-block btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}" role="button">Confirmar</button>
-                                     
+                                    <div class="d-grid mx-auto mb-4">
+                                        <button type="submit" class="btn btn-success btn-block" data-toggle="modal" data-target="#confirmacao{{$event->id}}">Confirmar</button>
                                     </div>
-                                    
+                                        
                                     <!--Form cancelamento de refeição-->
                                     <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
                                         @csrf          
                                         <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
     
-                                        <div class="col">
-                                            <button type="submit" class="btn btn-primary btn-sm form-control btn-block btn-cancelar">Cancelar</button>
-                                        </div>
+                                        
+                                            <div class="d-grid mx-auto mb-4">
+                                                <button type="submit" class="btn btn-danger btn-block">Cancelar</button>
+                                            </div>
+                                       
                                     </form> 
                                     
                                 </div>
