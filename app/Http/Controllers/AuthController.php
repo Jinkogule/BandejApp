@@ -40,10 +40,7 @@ class AuthController extends Controller{
 
             return redirect()->intended('dashboard');
         }
-        return back()->withErrors([
-            'email' => 'Dados inseridos são inválidos',
-            'password' => 'Dados inseridos são inválidos'
-        ]);
+        return back()->with('erro', 'Dados inseridos são inválidos');
     }
 
     /*Cadastro*/
