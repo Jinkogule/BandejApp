@@ -41,6 +41,12 @@
             </div>
         @endif
 
+        @if(session()->has('erro'))
+            <div class="alert alert-danger" style="text-align: center;">
+                {{ session()->get('erro') }}
+            </div>
+        @endif
+        
         <div class="container container-login">
             <br>
             <h4 style="text-align: center;">Acesse o BandejApp</h4><hr>
