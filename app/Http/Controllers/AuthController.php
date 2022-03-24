@@ -104,7 +104,7 @@ class AuthController extends Controller{
 
     /*Dashboard*/
     public function dashboard(){
-        $hoje = date('Ymd');
+        $hoje = date('Y-m-d');
 
         if(Auth::check()){
             if (Auth::user()->user_type == 'Administrator'){

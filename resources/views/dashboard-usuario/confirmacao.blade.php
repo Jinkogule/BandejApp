@@ -1,5 +1,5 @@
-<!--Confirmação-->
-<div class="modal fade" id="confirmacao" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!--Modals de Confirmação-->
+<div class="modal fade" id="confirmacao{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}})
+                Prezado(a) {{ session('nome') }}, você pretende manter o RU selecionado? ({{$event->unidade_bandejao}} ) id: {{$event->id}}
             </div>
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
@@ -25,7 +25,7 @@
                         
                     </div>
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru">Não, irei em outro RU</button>
+                        <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru{{$event->id}}">Não, irei em outro RU</button>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 </div>
 
 <!--Notificação de confirmação-->
-<div class="modal fade" id="confirmacao-notificacao" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="confirmacao-notificacao{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
@@ -42,9 +42,9 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data}}.
+                Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data_visual}}.
                 <br><br>
-                Você confirma?
+                Você confirma sua presença?
             </div>
             <div class="modal-footer">
                 <div class="row" style= "margin: 0 auto;">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-6">
                         <!--Confirmar refeição trocando o RU-->
-                        <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru">Sim, mas em outro RU</button>
+                        <button type="button" class="btn btn-primary btn-neutro" data-dismiss="modal" data-toggle="modal" data-target="#confirmacao-ru{{$event->id}}">Sim, mas em outro RU</button>
                     </div>
                     <div class="col-3">
                         <!--Form cancelamento de refeição-->
@@ -82,11 +82,11 @@
 </div>
 
 <!--Confirmação de RU-->
-<div class="modal fade" id="confirmacao-ru" data-keyboard="false" data-backdrop="false" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="confirmacao-ru{{$event->id}}" data-keyboard="false" data-backdrop="false" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
-                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença</h5>
+                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Confirmação de Presença id: {{$event->id}}</h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -113,8 +113,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
-            
+            </div>       
         </div>
     </div>
 </div>
