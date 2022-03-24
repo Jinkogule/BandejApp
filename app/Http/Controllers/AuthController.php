@@ -40,7 +40,7 @@ class AuthController extends Controller{
 
             return redirect()->intended('dashboard');
         }
-        return back()->with('erro', 'Dados inseridos são inválidos');
+        return redirect("/")->with('erro', 'Dados inseridos são inválidos');
     }
 
     /*Cadastro*/
