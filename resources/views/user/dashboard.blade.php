@@ -62,12 +62,11 @@
                             <?php
                             }
                             /*confirmada*/
-                            else{
+                            elseif ($event->status_confirmacao == 'C'){
                             ?>
                                 <img src="/images/confirmado.png" class="img-fluid" alt="Responsive image" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <?php
                             }
-                            
                             ?>
                             <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data_visual}} - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
                         </div>
