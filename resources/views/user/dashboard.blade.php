@@ -92,7 +92,7 @@
                                 <div class="row">
                                     <div class="col" style="margin: 0 auto;">
                                     
-                                        <a href="#" class="btn btn-primary btn-sm d-flex justify-content-center btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}" role="button">Confirmar</a>
+                                        <button class="btn btn-primary btn-sm d-flex justify-content-center btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}" role="button">Confirmar</button>
                                      
                                     </div>
                                     
@@ -102,7 +102,7 @@
                                         <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
     
                                         <div class="col" style="margin: 0 auto;">
-                                            <button type="submit" class="btn btn-primary btn-sm d-flex justify-content-center btn-cancelar">Cancelar</a>
+                                            <button type="submit" class="btn btn-primary btn-sm d-flex justify-content-center btn-cancelar">Cancelar</button>
                                         </div>
                                     </form> 
                                     
