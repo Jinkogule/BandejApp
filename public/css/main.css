@@ -129,8 +129,8 @@ h4{
 @media (min-width: 1000px) {
     .container-login{
         float: center;
-        min-width: 400px;
-        min-height: 410px;
+        width: 400px;
+        height: 410px;
         background-color: #1F519B;
         margin: 50px auto;
         border-radius: 10px;
@@ -140,8 +140,8 @@ h4{
 @media (max-width: 1000px) {
     .container-login{
         float: center;
-        min-width: 95%;
-        min-height: 410px;
+        width: 95%;
+        height: 410px;
         background-color: #1F519B;
         margin: 50px auto;
         border-radius: 10px;
