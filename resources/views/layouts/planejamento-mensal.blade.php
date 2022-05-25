@@ -62,7 +62,7 @@
                                     <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                    <input type="hidden" name="data" value="{{ $unidade_bandejao }}">
+                                    <input type="hidden" name="data" value="{{ $event->data }}">
                                     <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
