@@ -108,6 +108,8 @@
                         alert(data); // show response from the php script.
                     }
                 });
+                
+                return false;
             }
         
             </script>
