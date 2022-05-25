@@ -14,38 +14,20 @@ class UserController extends Controller{
 
         $data = $request->all();
        
-
         $request->validate([
+            'id_usuario' => 'required',
             'tipo' => 'required',
             'unidade_bandejao' => 'required',
             'dia_da_semana' => 'required']
         );
        
-
-        $verif_existencia = DB::table('refeicaos')
-            ->where('tipo', $data['tipo'])
-            ->where('dia_da_semana', $data['dia_da_semana'])
-            ->where('id_usuario', Auth::user()->id)
-            ->exists();
-       
-
-        $verif_quantidade = (DB::table('refeicaos')->where('id_usuario', Auth::user()->id)->get())->count();
-
-
-
-        if ($verif_existencia == true){
-            return Redirect::back()->withErrors(['ErroRefeicaoExistente' => 'Já existe uma refeição deste tipo em seus registros.']);
-        }
-        else{
-            if ($verif_quantidade < 10){        
-                $check = $this->criaRefeicao($data);
-                return redirect("dashboard")->withSuccess('Refeição registrada com sucesso!');
-            }
-            else{
-                return redirect("/naopodemaisque10")->with('MensagemDeErro','Não é possível registrar mais que 10 refeições');
-            }
-        }
-
+        return Refeicao::create([
+            'id_usuario' => $data['id_usuario'],
+            'tipo' => $data['tipo'],
+            'unidade_bandejao' => $data['unidade_bandejao'],
+            'dia_da_semana' => $data['dia_da_semana'],
+            'cardapio' => null,
+        ]);
     }
 
     

@@ -11,11 +11,12 @@ class PlanejamentoMensalController extends Controller
 {
     public function planejamentomensal(){
         $unidade_bandejao = Auth::user()->unidade_bandejao;
+        $user_id = Auth::user()->id;
         //$refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $id_usuario)->paginate(10);
         $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(30);
+        
 
-
-        return View::make('layouts.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('calendario_dias', $calendario_dias);
+        return View::make('layouts.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
         
         
     }

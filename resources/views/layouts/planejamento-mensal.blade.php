@@ -55,13 +55,14 @@
                             </div>
                             
                             <div class="card-body">
-                                <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
+                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input type="checkbox" id="tipo" name="tipo" value="Almoçar" onchange="document.getElementById('registrarRefeicao').submit()">
-                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label><br>
+                                    <input type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
+                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
+                                    <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                
-                        
+                                    <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                    <br>
                                 </form>
                                 <hr>
                                 <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
