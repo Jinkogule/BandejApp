@@ -61,7 +61,7 @@
                             </div>
                             
                             <div class="card-body">
-                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST" onsubmit="submitFormAlmoco();return false">
+                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST" onsubmit="submitFormAlmoco()">
                                 @csrf
                                     <input hidden type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
@@ -99,6 +99,7 @@
             function submitFormAlmoco(){
                 $.ajax({
                     type: "POST",
+                    url:'../registrarRefeicao',
                     data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
                     success: function(data)
                     {
