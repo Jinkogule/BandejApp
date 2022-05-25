@@ -101,8 +101,8 @@
                 var _token = document.getElementById('_token').value;
                 $.ajax({
                     type: "POST",
-                    
-                    data: $("registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
+                    url:'../registrarRefeicao',
+                    data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
                     success: function(data)
                     {
                         alert(data); // show response from the php script.
