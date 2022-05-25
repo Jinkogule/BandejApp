@@ -98,16 +98,20 @@
 
             function submitFormAlmoco(){
             
-                var _token = document.getElementById('_token').value;
-                $.ajax({
-                    type: "POST",
-                    url:'../registrarRefeicao',
-                    data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
-                    success: function(data)
-                    {
-                        alert(data); // show response from the php script.
-                    }
+                $(document).ready(function() {
+                    $(document).on('submit', '#registrarRefeicaoAlmoco', function() {
+                        $.ajax({
+                            type: "POST",
+                            data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
+                            success: function(data)
+                            {
+                                alert(data); // show response from the php script.
+                            }
+                        });
+                    return false;
+                    });
                 });
+                
                 
                 return false;
             }
