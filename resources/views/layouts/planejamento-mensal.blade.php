@@ -44,61 +44,40 @@
                 <div class="container container2-pm" style="overflow: auto">
                     <br>
                     
-                    <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
-                    @csrf
+                    
                     <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
+                    
                         @foreach($calendario_dias as $event)
+                        
                         <div class="card">
                             <div class="card-header">
                                 <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data_visual}}</span>
                             </div>
                             
                             <div class="card-body">
-                                <input type="checkbox" id="tipo" name="tipo" value="Almoçar" onchange="document.getElementById('registrarRefeicao').submit()"
+                                <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
+                                @csrf
+                                    <input type="checkbox" id="tipo" name="tipo" value="Almoçar" onchange="document.getElementById('registrarRefeicao').submit()">
+                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label><br>
+                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                 
-                                <?php
-                                
-                                if (2==2) {
-                                ?>
-                                    checked
-                                <?php
-                                }
-                                ?>
-                                >
-                                <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label><br>
-                            <script>
-                            let checkbox = document.getElementById('tipo');
-                            if(checkbox.checked) {
                         
-                            document.write(
+                                </form>
+                                <hr>
+                                <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
+                                @csrf
+                                    <input type="checkbox" id="tipo" name="tipo" value="Jantar" onchange="document.getElementById('registrarRefeicao').submit()">
+                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                    <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                             
-                            <form id="cancelarRefeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
-                            @csrf
-                            <input type='hidden' name='id_refeicao' value='1' />
-                                <button type="submit" class="btn btn-primary btn-sm btn-block">Cancelar</button>
-                            </form>
-                            
-                                );
-                            }
-
-                            </script>
-                    </form>
-                    <hr>
-                    <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
-                    @csrf
-                        <input type="checkbox" id="tipo" name="tipo" value="Jantar" onchange="document.getElementById('registrarRefeicao').submit()" <?php if (2==2) { ?> checked <?php } ?>>
-                        <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                        <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
-                
-                                
+                                </form>      
                             </div>                       
                         </div>
-                    </form>
-                    @endforeach 
+                                
+                        @endforeach 
+                    </div>
                 </div>
             </div>
-        </div>
        
     </body>
 </html>
