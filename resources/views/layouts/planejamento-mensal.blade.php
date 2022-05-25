@@ -73,7 +73,7 @@
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
                                     
-                                    <button type="submit">Click me</button>
+                                    <input type="submit" value="Send Request">
                                     <br>
                                     
                                 </form>
