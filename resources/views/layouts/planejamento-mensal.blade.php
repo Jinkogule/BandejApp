@@ -61,7 +61,7 @@
                             </div>
                             
                             <div class="card-body">
-                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST">
+                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST" onsubmit="submitFormAlmoco();return false">
                                 @csrf
                                     <input hidden type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
@@ -73,7 +73,7 @@
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
                                     
-                                    <button onclick="submitFormAlmoco()">Click me</button>
+                                    <button type="submit">Click me</button>
                                     <br>
                                     
                                 </form>
