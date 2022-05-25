@@ -72,7 +72,8 @@
                                     <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
-                                    <input value="Send Request" onclick="submitFormAlmoco()">
+                                    
+                                    <button onclick="submitFormAlmoco()">Click me</button>
                                     <br>
                                     
                                 </form>
