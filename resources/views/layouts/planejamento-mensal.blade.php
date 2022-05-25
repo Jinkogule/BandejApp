@@ -7,13 +7,15 @@
         <!--Meta Tags -->
         @include('comuns.metatags')
 
-        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
         <!--Favicon-->
         @include('comuns.favicon')
 
         <!-- Estilos (path do arquivo css) -->
         @include('comuns.styles')
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
         <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
 
         <!-- JQuery com o AJAX-->
