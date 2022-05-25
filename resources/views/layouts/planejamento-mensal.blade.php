@@ -97,23 +97,16 @@
             <script>
 
             function submitFormAlmoco(){
-            
-                $(document).ready(function() {
-                    $(document).on('submit', '#registrarRefeicaoAlmoco', function() {
-                        $.ajax({
-                            type: "POST",
-                            data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
-                            success: function(data)
-                            {
-                                alert(data); // show response from the php script.
-                            }
-                        });
-                    return false;
-                    });
+                $.ajax({
+                    type: "POST",
+                    data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        alert(data); // show response from the php script.
+                    }
                 });
-                
-                
                 return false;
+                   
             }
         
             </script>
