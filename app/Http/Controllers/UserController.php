@@ -20,13 +20,15 @@ class UserController extends Controller{
             'unidade_bandejao' => 'required',
             'dia_da_semana' => 'required']
         );
-       
-        return Refeicao::create([
+
+        Refeicao::create([
             'id_usuario' => $data['id_usuario'],
             'tipo' => $data['tipo'],
             'unidade_bandejao' => $data['unidade_bandejao'],
+            'data' => $data['data'],
+            'data_visual' => $data['data_visual'],
             'dia_da_semana' => $data['dia_da_semana'],
-            'cardapio' => null,
+            
         ]);
     }
 

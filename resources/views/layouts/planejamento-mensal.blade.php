@@ -51,7 +51,7 @@
                         
                         <div class="card">
                             <div class="card-header">
-                                <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data_visual}}</span>
+                                <span class="card-title" style="text-align: center; color: #fff;">{{ $event->dia_da_semana }} - {{ $event->data_visual }}</span>
                             </div>
                             
                             <div class="card-body">
@@ -60,6 +60,10 @@
                                     <input hidden type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Almoço">
+                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                    <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                    <input type="hidden" name="data" value="{{ $unidade_bandejao }}">
+                                    <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
                                     <input type="submit" value="Send Request">
