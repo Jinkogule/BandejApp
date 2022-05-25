@@ -7,8 +7,7 @@
         <!--Meta Tags -->
         @include('comuns.metatags')
 
-        <!-- Bootstrap CSS -->
-        @include('comuns.bootstrap')
+        
 
         <!--Favicon-->
         @include('comuns.favicon')
@@ -16,9 +15,14 @@
         <!-- Estilos (path do arquivo css) -->
         @include('comuns.styles')
         <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
-    </head>
 
+        <!-- JQuery com o AJAX-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+    </head>
+    
     <body>
+        <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
         <!--Navbar-->
         @include('dashboard-usuario.navbar1')
 
@@ -66,8 +70,9 @@
                                     <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
-                                    <input type="submit" value="Send Request">
+                                    <input value="Send Request" onclick="submitFormAlmoco()">
                                     <br>
+                                    
                                 </form>
                                 <hr>
                                 <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
@@ -85,5 +90,23 @@
                 </div>
             </div>
        
+
+            <script>
+
+            function submitFormAlmoco(){
+            
+                var _token = document.getElementById('_token').value;
+                $.ajax({
+                    type: "POST",
+                    
+                    data: $("registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        alert(data); // show response from the php script.
+                    }
+                });
+            }
+        
+            </script>
     </body>
 </html>
