@@ -57,11 +57,12 @@
                             <div class="card-body">
                                 <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
+                                    <input hidden type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                    <input type="submit" value="Send Request">
                                     <br>
                                 </form>
                                 <hr>
@@ -70,7 +71,7 @@
                                     <input type="checkbox" id="tipo" name="tipo" value="Jantar" onchange="document.getElementById('registrarRefeicao').submit()">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
-                            
+                                    <input type="submit" value="Send Request">
                                 </form>      
                             </div>                       
                         </div>
