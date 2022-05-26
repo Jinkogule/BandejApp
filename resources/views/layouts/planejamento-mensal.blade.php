@@ -61,9 +61,9 @@
                             </div>
                             
                             <div class="card-body">
-                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST" onsubmit="submitFormAlmoco()">
+                                <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input hidden type="checkbox" onchange="document.getElementById('registrarRefeicaoAlmoco').submit()">
+                                    <input hidden type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -73,9 +73,28 @@
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
                                     
-                                    <input type="submit" value="Send Request">
+                                    <input type="submit" id="submit" value="Send Request">
                                     <br>
-                                    
+                                
+
+
+                                    <script type="text/javascript">
+                                    $(function ()
+                                    {
+                                        $("#registrarRefeicaoAlmoco").on('submit', function ()
+                                        {
+                                            if (document.getElementById("checkbocAlmoço").checked)
+                                            {
+                                                $("#registrarRefeicaoAlmoco").submit();
+                                            }
+                                            else
+                                            {
+                                                e.preventDefault();
+                                                alert('Please check the box before submitting the form');
+                                            }
+                                        });
+                                    });
+                                </script>
                                 </form>
                                 <hr>
                                 <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
