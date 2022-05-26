@@ -63,7 +63,7 @@
                             <div class="card-body">
                                 <form id="registrarRefeicaoAlmoco" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input hidden type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço">
+                                    <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
