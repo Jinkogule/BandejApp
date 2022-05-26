@@ -109,7 +109,7 @@
                                     <?php
                                     }
                                     ?>
-                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
+                                    <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Janta">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
