@@ -63,7 +63,20 @@
                             <div class="card-body">
                                 <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                                    <?php
+                                    if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', '{{ $user_id }}')->where('tipo', '=', 'Almoço')->where('data', '=', '{{ $event->data }}')->count() == 1){
+                                    ?>
+                                        <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                    <?php
+                                    }
+                                    else {
+                                    ?>
+                                        <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                                    <?php
+                                    }
+                                    ?>
+                                    
+                                    
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <input type="hidden" name="tipo" value="Almoço">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
