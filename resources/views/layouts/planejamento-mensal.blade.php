@@ -64,7 +64,8 @@
                                 <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
                                     <?php
-                                    if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', '{{ $user_id }}')->where('tipo', '=', 'Almoço')->where('data', '=', '{{ $event->data }}')->count() == 1){
+                                    
+                                    if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
                                         <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
                                     <?php
