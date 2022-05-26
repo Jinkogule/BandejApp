@@ -94,12 +94,29 @@
                                     
                                 </form>
                                 <hr>
-                                <form id="registrarRefeicao" action="{{ route('refeicao') }}" method="POST">
+                                <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
-                                    <input type="checkbox" id="tipo" name="tipo" value="Jantar" onchange="document.getElementById('registrarRefeicao').submit()">
+                                    <?php
+                                    
+                                    if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->count() == 1){
+                                    ?>
+                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()" checked>
+                                    <?php
+                                    }
+                                    else {
+                                    ?>
+                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
+                                    <?php
+                                    }
+                                    ?>
+                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
+                                    <input type="hidden" name="tipo" value="Janta">
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                    <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
-                                    <input type="submit" value="Send Request">
+                                    <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                    <input type="hidden" name="data" value="{{ $event->data }}">
+                                    <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
+                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                    <input type="hidden" name="id_usuario" value="{{ $user_id }}">
                                 </form>      
                             </div>                       
                         </div>
