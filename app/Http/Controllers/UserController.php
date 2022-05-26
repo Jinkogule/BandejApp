@@ -30,6 +30,8 @@ class UserController extends Controller{
             'dia_da_semana' => $data['dia_da_semana'],
             
         ]);
+
+        return redirect('/planejamentomensal')->with('message', 'Refeição registrada com sucesso!');
     }
 
     
