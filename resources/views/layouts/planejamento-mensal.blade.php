@@ -61,38 +61,54 @@
                             </div>
                             
                             <div class="card-body">
-                                <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
-                                @csrf
+                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                     <?php
                                     
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
-                                        <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                        <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="tipo" value="Almoço">
+                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                            <input type="hidden" name="data" value="{{ $event->data }}">
+                                            <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
+                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+
+                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                        </form>
                                     <?php
                                     }
                                     else {
                                     ?>
                                         <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="tipo" value="Almoço">
+                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                            <input type="hidden" name="data" value="{{ $event->data }}">
+                                            <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
+                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+
+                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                        </form>
                                     <?php
                                     }
                                     ?>
                                     
                                     
-                                    <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
-                                    <input type="hidden" name="tipo" value="Almoço">
-                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                    <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                    <input type="hidden" name="data" value="{{ $event->data }}">
-                                    <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                    <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                    <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                    
+                                    
                                     
                                     <br>
                                 
 
 
                                     
-                                </form>
+                                
                                 <hr>
                                 <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                 @csrf
