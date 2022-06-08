@@ -93,7 +93,7 @@
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
                                         </form>
                                     <?php
                                     }
