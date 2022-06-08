@@ -82,7 +82,7 @@
                                     }
                                     else {
                                     ?>
-                                        <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                        
                                         <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
@@ -101,9 +101,6 @@
                                     
                                     
                                     
-                                    
-                                    
-                                    <br>
                                 
 
 
