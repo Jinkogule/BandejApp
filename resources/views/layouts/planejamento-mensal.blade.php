@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form_{{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -155,7 +155,7 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsByClassName("form_8");
+  let forms = document.getElementsByClassId("registrarRefeicaoAlmoco_{{ $event->id }}");
   for(var i =0; i < forms.length; i++){
     forms[i].submit();
   }
