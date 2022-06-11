@@ -52,7 +52,10 @@
                     
                     
                     <input type='checkbox' class='checkall' onclick="submitall();" style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
-                    
+                        <?php
+                        $aux_form_janta = 0;
+                        $aux_form_almoco = 0;
+                        ?>
                         @foreach($calendario_dias as $event)
                         
                         <div class="card">
@@ -63,7 +66,7 @@
                             <div class="card-body">
                                     
                                     <?php
-                                    $aux_form = 0;
+                                    
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
                                         <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
@@ -84,7 +87,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form {{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form {{ $aux_form_almoco }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -126,7 +129,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form {{ $aux_form }}" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form {{ $aux_form_janta }}" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Janta">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -141,7 +144,8 @@
                                         </form>
                                     <?php
                                     }
-                                    $aux_form+=1;
+                                    $aux_form_janta+=1;
+                                    $aux_form_almoco+=1;
                                     ?>
                                     
                             </div>                       
