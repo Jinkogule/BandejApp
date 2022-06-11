@@ -51,11 +51,8 @@
                     <br>
                     
                     
-                    <input type='checkbox' class='checkall' onclick="submitall();" style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
-                        <?php
-                        $aux_form_janta = 0;
-                        $aux_form_almoco = 0;
-                        ?>
+                    <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
+                    
                         @foreach($calendario_dias as $event)
                         
                         <div class="card">
@@ -87,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form {{ $aux_form_almoco }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -129,7 +126,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form {{ $aux_form_janta }}" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Janta">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -144,8 +141,6 @@
                                         </form>
                                     <?php
                                     }
-                                    $aux_form_janta+=1;
-                                    $aux_form_almoco+=1;
                                     ?>
                                     
                             </div>                       
@@ -158,12 +153,7 @@
        
 
             <script>
-function submitall(){
-  let forms = document.getElementsByClassName("form");
-  for(var i =0; i < 30; i++){
-    forms[i].submit();
-  }
-}
+
             function submitFormAlmoco(){
                 $.ajax({
                     type: "POST",
