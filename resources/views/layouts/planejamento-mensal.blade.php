@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form_{{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form {{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -126,7 +126,7 @@
                                     else {
                                     ?>
                         
-                                        <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form {{ $aux_form }}" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Janta">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -140,8 +140,8 @@
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
-                                    $aux_form+=1;
                                     }
+                                    $aux_form+=1;
                                     ?>
                                     
                             </div>                       
@@ -155,13 +155,10 @@
 
             <script>
 function submitall(){
-    document.getElementById("registrarRefeicaoJanta_1").submit();
-    document.getElementById("registrarRefeicaoJanta_2").submit();
-    document.getElementById("registrarRefeicaoJanta_3").submit();
-    document.getElementById("registrarRefeicaoJanta_4").submit();
-    document.getElementById("registrarRefeicaoJanta_5").submit();
-    document.getElementById("registrarRefeicaoJanta_6").submit();
-    document.getElementById("registrarRefeicaoJanta_7").submit();
+  let forms = document.getElementsByClassName("form");
+  for(var i =0; i < 30; i++){
+    forms[i].submit();
+  }
 }
             function submitFormAlmoco(){
                 $.ajax({
