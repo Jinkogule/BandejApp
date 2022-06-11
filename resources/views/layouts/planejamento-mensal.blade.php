@@ -155,7 +155,7 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsByClassName("form_{{ $aux_form }}");
+  let forms = document.getElementsByClassName("form_8");
   for(var i =0; i < forms.length; i++){
     forms[i].submit();
   }
