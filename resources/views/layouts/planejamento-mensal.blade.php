@@ -51,7 +51,7 @@
                     <br>
                     
                     
-                    <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
+                    <input type='checkbox' class='checkall' onclick="submitall();" style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
                         
@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -126,7 +126,7 @@
                                     else {
                                     ?>
                         
-                                        <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Janta">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -153,7 +153,12 @@
        
 
             <script>
-
+function submitall(){
+  let forms = document.getElementsByClassName("form");
+  for(var i =0; i < forms.length; i++){
+    forms[i].submit();
+  }
+}
             function submitFormAlmoco(){
                 $.ajax({
                     type: "POST",
