@@ -155,7 +155,7 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsByClassId("registrarRefeicaoAlmoco");
+  let forms = document.getElementsById("registrarRefeicaoAlmoco");
   for(var i =0; i < forms.length; i++){
     forms[i].submit();
   }
