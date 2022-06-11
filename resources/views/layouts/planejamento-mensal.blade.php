@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form_{{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -155,10 +155,13 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsById("registrarRefeicaoAlmoco_2");
-  for(var i =0; i < forms.length; i++){
-    forms[i].submit();
-  }
+    document.getElementById("registrarRefeicaoJanta_1").submit();
+    document.getElementById("registrarRefeicaoJanta_2").submit();
+    document.getElementById("registrarRefeicaoJanta_3").submit();
+    document.getElementById("registrarRefeicaoJanta_4").submit();
+    document.getElementById("registrarRefeicaoJanta_5").submit();
+    document.getElementById("registrarRefeicaoJanta_6").submit();
+    document.getElementById("registrarRefeicaoJanta_7").submit();
 }
             function submitFormAlmoco(){
                 $.ajax({
