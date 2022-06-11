@@ -63,7 +63,7 @@
                             <div class="card-body">
                                     
                                     <?php
-                                    
+                                    $aux_form = 0;
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
                                         <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form class="form_{{ $aux_form }}" id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -126,7 +126,7 @@
                                     else {
                                     ?>
                         
-                                        <form class="form" id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Janta">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -140,6 +140,7 @@
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
+                                    $aux_form+=1;
                                     }
                                     ?>
                                     
@@ -154,7 +155,7 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsByClassName("form");
+  let forms = document.getElementsByClassName("form_{{ $aux_form }}");
   for(var i =0; i < forms.length; i++){
     forms[i].submit();
   }
