@@ -84,7 +84,7 @@
                                     else {
                                     ?>
                         
-                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoAlmoco {{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -94,7 +94,7 @@
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco {{ $event->id }}').submit()">
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
@@ -155,24 +155,12 @@
 
             <script>
 function submitall(){
-  let forms = document.getElementsByClassId("registrarRefeicaoAlmoco_{{ $event->id }}");
+  let forms = document.getElementsByClassId("registrarRefeicaoAlmoco");
   for(var i =0; i < forms.length; i++){
     forms[i].submit();
   }
 }
-            function submitFormAlmoco(){
-                $.ajax({
-                    type: "POST",
-                    url:'../registrarRefeicao',
-                    data: $("#registrarRefeicaoAlmoco").serialize(), // serializes the form's elements.
-                    success: function(data)
-                    {
-                        alert(data); // show response from the php script.
-                    }
-                });
-                return false;
-                   
-            }
+           
         
             </script>
     </body>
