@@ -55,7 +55,14 @@ Route::post('cancelarRefeicaoPlanejamento', [UserController::class, 'cancelarRef
 Route::post('refeicao', [UserController::class, 'registrarRefeicao'])->name('refeicao');
 
 Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
-Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao'); 
+Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
+
+Route::get('/teste-mail', function () {
+    Mail::send('mail.teste', ['teste' => 'teste'], function($m){
+        $m->from('bandejaoaplicativo@gmail.com');
+        $m->to('lucaspimenta21@gmail.com');
+    });
+});
 
 
 
