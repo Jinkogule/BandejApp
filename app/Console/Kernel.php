@@ -17,13 +17,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $now = Carbon::now();
-        $month = $now->format('F');
-        $year = $now->format('yy');
-
-        $fourthFridayMonthly = new Carbon('fourth friday of ' . $month . ' ' . $year);
-
-        $schedule->job(new SendEmailJob)->monthlyOn($fourthFridayMonthly->format('d'), '13:46');
+        $schedule->job(new SendEmailJob)->everyMinute()->withoutOverlapping();
     }
 
     /**
