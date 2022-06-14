@@ -5,6 +5,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PlanejamentoMensalController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MailController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 /*
@@ -57,12 +58,9 @@ Route::post('refeicao', [UserController::class, 'registrarRefeicao'])->name('ref
 Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
 Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
 
-Route::get('/teste-mail', function () {
-    Mail::send('mail.teste', ['teste' => 'teste'], function($m){
-        $m->from('bandejaoaplicativo@gmail.com');
-        $m->to('lucaspimenta21@gmail.com');
-    });
-});
+
+Route::get('/teste-mail', [MailController::class, 'teste_mail']);
+
 
 
 
