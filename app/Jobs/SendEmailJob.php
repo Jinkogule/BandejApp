@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Mail\Gmail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -32,11 +31,10 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
-        $details = [
-            'title' => 'Thank you for subscribing to my newsletter',
-            'body' => 'You will receive a newsletter every Fourth Friday of the month'
-
-        ];
-        Mail::to('lucaspimenta21@gmail.com')->send(new Gmail($details));
+        Mail::send('mail.teste', ['teste' => 'teste'], function($m){
+            $m->from('bandejaoaplicativo@gmail.com');
+            $m->to('lucaspimenta21@gmail.com');
+            $m->subject('Confirme sua presença no almoço de hoje');
+        });
     }
 }

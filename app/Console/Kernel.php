@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Console;
-use App\Http\Controllers\MailController;
+use App\Jobs\SendEmailJob;
+use Carbon\Carbon;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -16,7 +17,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(MailController::class, ['teste_mail', '--force'])->everyMinute()->withoutOverlapping();
+        $schedule->job(new SendEmailJob)->everyFiveMinutes();
     }
 
     /**
