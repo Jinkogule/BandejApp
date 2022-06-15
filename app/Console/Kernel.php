@@ -17,7 +17,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('command:SendEmails')->everyMinute();
+        $schedule->call(function () {
+            Mail::send('mail.teste', ['teste' => 'teste'], function($m){
+                $m->from('bandejaoaplicativo@gmail.com');
+                $m->to('lucaspimenta21@gmail.com');
+                $m->subject('Confirme sua presença no almoço de hoje');
+            });
+        })->everyMinute();
     }
 
     /**
