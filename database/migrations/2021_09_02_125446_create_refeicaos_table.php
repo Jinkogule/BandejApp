@@ -26,7 +26,7 @@ class CreateRefeicaosTable extends Migration
             $table->char('status_validez', 1)->default('V');
             $table->timestamps();
 
-            $table->unique(['id_usuario', 'tipo', 'dia_da_semana']);
+            $table->unique(['id_usuario', 'tipo', 'data']);
 
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');;
             
