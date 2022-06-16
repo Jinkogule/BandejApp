@@ -21,7 +21,7 @@ class MailController extends Controller
         
         $usersssadas = User::where('email', DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.email')->whereDate('refeicaos.data', '=', date('Y-m-d')));
 
-        echo $usersssadas;
+       
         foreach($users as $user){
             
             Mail::to($user)->send(new NotifyUserAboutSomething($user));
