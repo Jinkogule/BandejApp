@@ -20,7 +20,7 @@ class MailController extends Controller
 
         Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m) use ($emails) {
             $m->from('bandejaoaplicativo@gmail.com');    
-            $m->to($emails);
+            $m->to(trim($emails));
             $m->subject('Confirme sua presença no almoço de hoje');
         });
         
