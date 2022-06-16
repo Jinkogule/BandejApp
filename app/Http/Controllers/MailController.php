@@ -19,7 +19,7 @@ class MailController extends Controller
 
         $usersssadas = DB::table('users')
         ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
-        ->select('users.email')->whereIn('refeicaos.data_visual', [$hoje])-get();
+        ->select('users.email')->whereIn('refeicaos.data_visual', [$hoje])->get();
 
         
         
