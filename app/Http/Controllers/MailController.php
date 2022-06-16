@@ -15,18 +15,18 @@ class MailController extends Controller
         $hoje = date('d/m/y');
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
         $refeicaos = Refeicao::where('data_visual', '=', $hoje)->get();
-        $users = User::whereIn('id_usuario', $refeicaos)->get();
+        $users = User::where('id', '!=', '0')->get();
 
-        $userss = DB::table('users')
+        $usersssadas = DB::table('users')
         ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
         ->select('users.email')->where('refeicaos.data_visual', '=', $hoje)
         ->get();
 
         
         
-        foreach($users as $user){
+        foreach($usersssadas as $user){
             /*Mail::to($user)->send(new NotifyUserAboutSomething($user));*/
-            echo $userss;
+            echo $user;
         }
         
     }
