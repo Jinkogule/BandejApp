@@ -15,7 +15,7 @@ class MailController extends Controller
         
         $hoje = date('d/m/y');
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
-        $refeicaos = Refeicao::where('data_visual', '=', $hoje)->get();
+        $refeicaos = Refeicao::where('data_visual', '=', date('d/m/y'))->get();
         $users = User::where('id', '!=', '0')->get();
 
         
