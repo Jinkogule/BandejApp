@@ -12,10 +12,9 @@ class MailController extends Controller
         $usuarios = DB::table('users')->where('id', '!=', '0')->get();
 
         foreach ($usuarios as $usuario){
-            $usuario_email = $usuario->email;
             Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m){
                 $m->from('bandejaoaplicativo@gmail.com');
-                $m->to($usuario_email);
+                $m->to($usuario->email);
                 $m->subject('Confirme sua presença no almoço de hoje');
             });
         }
