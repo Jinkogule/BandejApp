@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
 
 class NotifyUserAboutSomething extends Mailable
 {
@@ -16,9 +17,9 @@ class NotifyUserAboutSomething extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -30,6 +31,10 @@ class NotifyUserAboutSomething extends Mailable
     {
         return $this->from('bandejaoaplicativo@gmail.com', 'BandejApp')
                     ->subject('Confirme sua presença no Bandejão')
-                    ->view('mail.confirmar-presenca');
+                    ->view('mail.confirmar-presenca')
+                    ->with([
+                        'nome' => $this->user->nome,
+                        'sobrenome' => $this->order->sobrenome,
+                    ]);;
     }
 }
