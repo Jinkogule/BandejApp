@@ -11,7 +11,7 @@ use App\Mail\NotifyUserAboutSomething;
 class MailController extends Controller
 {
     public function teste_mail(){
-        $users = DB::table('users')->where('id', '!=', '0')->get();
+        $users = User::select('users')->where('id', '!=', '0')->get();
 
         
         
