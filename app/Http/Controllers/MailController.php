@@ -13,7 +13,7 @@ class MailController extends Controller
 {
     public function teste_mail(){
         
-        
+        $hoje = date('y/m/d');
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
         $refeicaos = Refeicao::where('data_visual', '=', date('y/m/d'))->get();
         $users = User::where('id', '!=', '0')->get();
@@ -23,7 +23,7 @@ class MailController extends Controller
         ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
         ->select('users.email')->where('refeicaos.data_visual', '=', $hoje);*/
 
-        echo $refeicaos;
+        echo $hoje;
         foreach($users as $user){
             
             Mail::to($user)->send(new NotifyUserAboutSomething($user));
