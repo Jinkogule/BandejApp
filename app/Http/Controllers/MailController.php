@@ -12,20 +12,20 @@ use App\Mail\NotifyUserAboutSomething;
 class MailController extends Controller
 {
     public function teste_mail(){
-        $hoje = date('d/m/y');
+        $hoje = date('y-m-d');
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
         $refeicaos = Refeicao::where('data_visual', '=', $hoje)->get();
         $users = User::where('id', '!=', '0')->get();
 
-        $usersssadas = DB::table('users')
+        
+        /*$usersssadas = DB::table('users')
         ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
-        ->select('*')->where('refeicaos.id', '!=', '0')->get();
+        ->select('users.email')->where('refeicaos.data_visual', '=', $hoje);*/
 
-        
-        
-        foreach($usersssadas as $user){
-            /*Mail::to($user)->send(new NotifyUserAboutSomething($user));*/
-            echo $user;
+        echo $refeicaos;
+        foreach($users as $user){
+            
+            Mail::to($user)->send(new NotifyUserAboutSomething($user));
         }
         
     }
