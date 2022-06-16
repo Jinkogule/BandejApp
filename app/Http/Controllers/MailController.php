@@ -14,7 +14,7 @@ class MailController extends Controller
         foreach ($usuarios as $user){
             Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m){
                 $m->from('bandejaoaplicativo@gmail.com');
-                $m->to($user->email);
+                $m->to('{ $user->email }');
                 $m->subject('Confirme sua presença no almoço de hoje');
             });
         }
