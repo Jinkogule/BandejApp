@@ -11,7 +11,7 @@ class MailController extends Controller
     public function teste_mail(){
         $usuarios = DB::table('users')->where('id', '!=', '0')->get();
 
-        foreach ($usuarios as $event){
+        foreach ($usuarios as $user){
             echo $user->email;
         }
     }
