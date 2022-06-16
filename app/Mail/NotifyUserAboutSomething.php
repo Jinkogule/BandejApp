@@ -28,6 +28,8 @@ class NotifyUserAboutSomething extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.confirmar-presenca');
+        return $this->from('bandejaoaplicativo@gmail.com', 'BandejApp')
+                    ->subject('Confirme sua presença no Bandejão')
+                    ->view('mail.confirmar-presenca');
     }
 }
