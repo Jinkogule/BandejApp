@@ -13,15 +13,15 @@ class MailController extends Controller
 
         
             
-            Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m){
-                foreach ($usuarios as $user){
-                $user_mail = $user->email;
+        $emails = User::select('email')
+        ->where('id','!=', '0')
+        ->lists('email');
 
-                $m->from('bandejaoaplicativo@gmail.com');
-                $m->to($user_mail);
-                $m->subject('Confirme sua presença no almoço de hoje');
-                }
-            });
+        Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m) use ($emails) {
+            $m->from('bandejaoaplicativo@gmail.com');    
+            $m->to($emails);
+            $m->subject('Confirme sua presença no almoço de hoje');
+        });
         
     }
 }
