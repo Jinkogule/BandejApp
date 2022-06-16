@@ -16,10 +16,10 @@ class MailController extends Controller
         
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
         $refeicaos = Refeicao::whereDate('data', '=', date('Y-m-d'))->get();
-        $users = User::where('id', '!=', '0')->get();
+        $users = User::where(DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.email')->whereDate('refeicaos.data', '=', date('Y-m-d')));
 
         
-        $usersssadas = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.email')->whereDate('refeicaos.data', '=', date('Y-m-d'));
+        $usersssadas = User::where(DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.email')->whereDate('refeicaos.data', '=', date('Y-m-d')));
 
         echo $usersssadas;
         foreach($users as $user){
