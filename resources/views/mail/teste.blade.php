@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>kings</title>
-</head>
-<body>
-    <h1>{{ $details['title'] }}</h1>
-    <p>{{ $details['body'] }}</p>
+Prezado(a) Lucas, você tem um almoço planejado no Praia Vermelha para amanhã, dia 02/05/2022.
 
-    <p>Thank you for subscribing</p>
-</body>
-</html>
+Você confirma sua presença?
