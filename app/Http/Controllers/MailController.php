@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class MailController extends Controller
 {
     public function teste_mail(){
-        $usuarios = DB::table('users')->where('id', '!=', '0');
+        $usuarios = DB::table('users')->where('id', '!=', '0')->get();
 
         foreach ($usuarios as $usuario){
             $usuario_email = $usuario->email;
