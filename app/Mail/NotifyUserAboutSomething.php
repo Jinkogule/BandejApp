@@ -35,6 +35,6 @@ class NotifyUserAboutSomething extends Mailable
                     ->with([
                         'nome' => $this->user->nome,
                         'sobrenome' => $this->order->sobrenome,
-                    ]);;
+                    ]);
     }
 }
