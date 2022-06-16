@@ -12,10 +12,10 @@ use App\Mail\NotifyUserAboutSomething;
 class MailController extends Controller
 {
     public function teste_mail(){
-        $hoje = date('y-m-d');
+        $hoje = date('y/m/d');
         
         /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
-        $refeicaos = Refeicao::where('data_visual', '=', '16/06/2022')->get();
+        $refeicaos = Refeicao::where('data_visual', '=', $hoje)->get();
         $users = User::where('id', '!=', '0')->get();
 
         
