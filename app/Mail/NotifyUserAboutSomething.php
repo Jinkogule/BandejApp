@@ -42,7 +42,7 @@ class NotifyUserAboutSomething extends Mailable
                     ->view('mail.confirmar-presenca')
                     ->with([
                         'nome' => $this->user->nome,
-                        'sobrenome' => $this->order->sobrenome,
+                        'sobrenome' => $this->user->sobrenome,
                     ]);
     }
 }
