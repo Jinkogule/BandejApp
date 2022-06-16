@@ -19,4 +19,23 @@ class MailController extends Controller
         }
         
     }
+
+    public function sendMail(Request $request)
+    {
+        $users = User::whereIn('id',$request->ids)->get();
+        
+        if ($users->count() > 0) {
+            foreach($users as $key => $value){
+                if (!empty($value->email)) {
+                    $details = [
+                      'subject' => 'Test From Nicesnippets.com',
+                    ];
+
+                    Mail::to($value->email)->send(new TestUserMail($details));
+                }
+            }
+        }
+
+        return response()->json(['done']);
+    }
 }
