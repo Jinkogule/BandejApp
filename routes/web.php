@@ -61,9 +61,6 @@ Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->
 
 Route::get('/teste-mail', [MailController::class, 'teste_mail']);
 
-Route::post('send-mail', [MailController::class, 'sendMail'])->name('send.mail');
-
-
 
 
 
