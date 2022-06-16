@@ -23,7 +23,7 @@ class MailController extends Controller
         
         
 
-        echo $usersssadas;
+        
         foreach($users as $user){
             
             Mail::to($user)->send(new NotifyUserAboutSomething($user));
