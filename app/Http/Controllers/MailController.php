@@ -17,10 +17,16 @@ class MailController extends Controller
         $refeicaos = Refeicao::where('data_visual', '=', $hoje)->get();
         $users = User::whereIn('id_usuario', $refeicaos)->get();
 
+        $users = DB::table('users')
+        ->join('refeicaos', 'users.id', '=', 'refeicaos.usuario_id')
+        ->select('users.email')->where('refeicaos.data', '=', $hoje)
+        ->get();
+
         
         
         foreach($users as $user){
-            Mail::to($user)->send(new NotifyUserAboutSomething($user));
+            /*Mail::to($user)->send(new NotifyUserAboutSomething($user));*/
+            echo $users;
         }
         
     }
