@@ -16,7 +16,7 @@ class MailController extends Controller
             
         $emails = User::select('email')
         ->where('id','!=', '0')
-        ->pluck('email');
+        ->get('email');
 
         Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m) use ($emails) {
             $m->from('bandejaoaplicativo@gmail.com');    
