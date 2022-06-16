@@ -25,7 +25,7 @@ class NotifyUserAboutSomething extends Mailable
      * @param  \App\Models\User  $order
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct($user)
     {
         $this->user = $user;
     }
