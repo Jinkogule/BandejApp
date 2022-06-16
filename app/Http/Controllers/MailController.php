@@ -19,7 +19,7 @@ class MailController extends Controller
 
         $usersssadas = DB::table('users')
         ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
-        ->select('users.email')-count();
+        ->select('users.email')->where('refeicaos.id', '!=', '0')-count();
 
         
         
