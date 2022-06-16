@@ -18,7 +18,7 @@ class MailController extends Controller
         $users = User::whereIn('id_usuario', $refeicaos)->get();
 
         $users = DB::table('users')
-        ->join('refeicaos', 'users.id', '=', 'refeicaos.usuario_id')
+        ->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')
         ->select('users.email')->where('refeicaos.data', '=', $hoje)
         ->get();
 
