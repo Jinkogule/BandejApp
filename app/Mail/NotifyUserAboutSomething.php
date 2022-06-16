@@ -13,8 +13,16 @@ class NotifyUserAboutSomething extends Mailable
     use Queueable, SerializesModels;
 
     /**
+     * The order instance.
+     *
+     * @var \App\Models\User
+     */
+    public $user;
+ 
+    /**
      * Create a new message instance.
      *
+     * @param  \App\Models\User  $order
      * @return void
      */
     public function __construct(User $user)
