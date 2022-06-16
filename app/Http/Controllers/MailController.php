@@ -8,10 +8,14 @@ use Illuminate\Support\Facades\Mail;
 class MailController extends Controller
 {
     public function teste_mail(){
-        Mail::send('mail.teste', ['teste' => 'teste'], function($m){
-            $m->from('bandejaoaplicativo@gmail.com');
-            $m->to('lucaspimenta21@gmail.com');
-            $m->subject('Confirme sua presença no almoço de hoje');
-        });
+        $usuarios = DB::table('users')->where('id', '!=', '0');
+
+        foreach ($usuarios as $event){
+            Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m){
+                $m->from('bandejaoaplicativo@gmail.com');
+                $m->to('{{ $event->email }}');
+                $m->subject('Confirme sua presença no almoço de hoje');
+            });
+        }
     }
 }
