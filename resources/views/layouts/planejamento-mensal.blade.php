@@ -135,6 +135,7 @@
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
+                                            <input type="submit" value="sdfsdfsd">
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
