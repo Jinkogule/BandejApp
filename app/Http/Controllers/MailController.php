@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Refeicao;
-use App\Mail\NotifyUserAboutSomething;
+use App\Mail\NotificaConfirmacaoDePresenca;
 
 class MailController extends Controller
 {
