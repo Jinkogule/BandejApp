@@ -23,7 +23,7 @@ class MailController extends Controller
         foreach($users as $user){
             $refeicaos = Refeicao::where('id_usuario', '=', $user->id)->whereDate('data', '=', date('Y-m-d'))->get();
             foreach($refeicaos as $refeicao){
-                Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user, $refeicao));
+                Mail::to($user->email)->send(new NotificaConfirmacaoDePresenca($user, $refeicao));
             }
         }
     }
