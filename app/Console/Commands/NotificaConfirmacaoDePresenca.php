@@ -11,7 +11,7 @@ class NotificaConfirmacaoDePresenca extends Command
      *
      * @var string
      */
-    protected $signature = 'notificacaoDeConfirmacaoDePresenca:send';
+    protected $signature = 'notificacao:confirmacao';
 
     /**
      * The console command description.

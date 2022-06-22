@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('notificacaoDeConfirmacaoDePresenca:send')->everyMinute();
+        $schedule->command('notificacao:confirmacao')->everyMinute();
     }
 
     /**
