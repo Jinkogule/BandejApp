@@ -29,7 +29,7 @@ class PlanejamentoMensalController extends Controller
         $data_visual = $_POST['data_visual'];
         $id_usuario = $_POST['id_usuario'];
 
-        return Refeicao::create([
+        Refeicao::create([
             'id_usuario' => $id_usuario,
             'tipo' => $tipo,
             'unidade_bandejao' => $unidade_bandejao,
@@ -38,5 +38,7 @@ class PlanejamentoMensalController extends Controller
             'dia_da_semana' => $dia_da_semana,
             
         ]);
+
+        return json_encode($tipo, $unidade_bandejao, $dia_da_semana, $data, $data_visual, $id_usuario);
     }
 }
