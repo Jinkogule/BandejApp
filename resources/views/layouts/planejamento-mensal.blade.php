@@ -115,7 +115,6 @@
                                             <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                             <input type="hidden" name="data" value="{{ $event->data }}">
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
@@ -133,7 +132,6 @@
                                             <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                             <input type="hidden" name="data" value="{{ $event->data }}">
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
@@ -153,7 +151,43 @@
        
 
             <script>
+                $(document).ready(function (){
+                    $("form").submit(function (event){
+                        event.preventDefault();
 
+                        var tipo = document.getElementByName("tipo").value;
+                        var unidade_bandejao = document.getElementByName("unidade_bandejao").value;
+                        var dia_da_semana = document.getElementByName("dia_da_semana").value;
+                        var data = document.getElementByName("data").value;
+                        var data_visual = document.getElementByName("data_visual").value;
+                        var id_usuario = document.getElementByName("id_usuario").value;
+
+                        
+                        var _token = document.getElementById('_token').value;
+                        $.ajax({
+
+                            url:'../ajax_submit',
+
+                            dataType:'json',
+
+                            type: 'post',
+
+                            data: { 
+                                _token:_token,
+                                tipo:tipo,
+                                unidade_bandejao:unidade_bandejao,
+                                dia_da_semana:dia_da_semana,
+                                data:data,
+                                data_visual:data_visual,
+                                id_usuario:id_usuario
+                            },
+
+                            success:function(data){
+                            
+                            }
+                        });
+                    })
+                })
             function submitFormAlmoco(){
                 $.ajax({
                     type: "POST",

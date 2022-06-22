@@ -61,6 +61,8 @@ Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->
 
 Route::get('/teste-mail', [MailController::class, 'teste_mail']);
 
+Route::post('/ajax_submit', [PlanejamentoMensalController::class, 'ajax_submit'])->name('ajax_submit');
+
 
 
 

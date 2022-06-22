@@ -20,4 +20,23 @@ class PlanejamentoMensalController extends Controller
         
         
     }
+
+    public function ajax_submit(){
+        $tipo = $_POST['tipo'];
+        $unidade_bandejao = $_POST['unidade_bandejao'];
+        $dia_da_semana = $_POST['dia_da_semana'];
+        $data = $_POST['data'];
+        $data_visual = $_POST['data_visual'];
+        $id_usuario = $_POST['id_usuario'];
+
+        return Refeicao::create([
+            'id_usuario' => $id_usuario,
+            'tipo' => $tipo,
+            'unidade_bandejao' => $unidade_bandejao,
+            'data' => $data,
+            'data_visual' => $data_visual,
+            'dia_da_semana' => $dia_da_semana,
+            
+        ]);
+    }
 }
