@@ -24,7 +24,6 @@
     </head>
     
     <body>
-        <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
         <!--Navbar-->
         @include('dashboard-usuario.navbar1')
 
@@ -110,6 +109,7 @@
                                     ?>
                                         <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
                                             @csrf
+                                            <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
                                             <input type="hidden" id="tipo" name="tipo" value="Janta">
                                             <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
@@ -127,6 +127,7 @@
                         
                                         <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
+                                            <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
                                             <input type="hidden" id="tipo" name="tipo" value="Janta">
                                             <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
