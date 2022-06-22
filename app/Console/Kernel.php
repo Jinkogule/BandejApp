@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Console;
-use App\Jobs\NotificaConfirmacaoDePresencaJob;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Mail\NotificaConfirmacaoDePresenca;
 
 class Kernel extends ConsoleKernel
 {
@@ -16,7 +16,17 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->job(new NotificaConfirmacaoDePresencaJob)->everyMinute();
+        $schedule->call(function () {
+            $refeicaos = Refeicao::whereDate('data', '=', date('Y-m-d'))->get();
+
+            $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d'));
+            $users = User::whereIn('id', $users_ref_hoje)->get();
+            
+            foreach($users as $user){
+                
+                Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user));
+            }
+        })->everyMinute();
     }
 
     /**
