@@ -156,7 +156,7 @@
                 $(document).ready(function (){
                     $("form").submit(function (event){
                         event.preventDefault();
-
+                        alert('teste chegou até aqui dentro da funcao ajax, mas fora do controller');
                         var tipo = document.getElementById("tipo").value;
                         var unidade_bandejao = document.getElementById("unidade_bandejao").value;
                         var dia_da_semana = document.getElementById("dia_da_semana").value;
