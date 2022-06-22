@@ -50,6 +50,9 @@ class NotificaConfirmacaoDePresenca extends Mailable
                         'sobrenome' => $this->user->sobrenome,
                         'email' => $this->user->email,
                         'tipo_refeicao' => $this->refeicao->tipo,
+                        'unidade_refeicao' => $this->refeicao->unidade_bandejao,
+                        'data_refeicao' => $this->refeicao->data_visual,
+                        'dia_da_semana_refeicao' => $this->refeicao->dia_da_semana,
                     ]);
     }
 }

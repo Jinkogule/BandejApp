@@ -1,3 +1,3 @@
-Prezado(a) {{ $nome }}, com email {{ $email }} você tem um {{ $tipo_refeicao }} planejado no Praia Vermelha para amanhã, dia 02/05/2022.
-asdasdassaas
+Prezado(a) {{ $nome }}, você tem um(a) {{ $tipo_refeicao }} no campus {{ $tipo_refeicao }} para esta {{ $dia_da_semana_refeicao }}, dia {{ $data_refeicao }}.
+<br>
 Você confirma sua presença?
