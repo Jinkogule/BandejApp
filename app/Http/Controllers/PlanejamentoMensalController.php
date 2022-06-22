@@ -22,10 +22,15 @@ class PlanejamentoMensalController extends Controller
     }
 
     public function ajax_submit(){
-       
+        alert('teste chegou até aqui');
         $tipo = $_POST['tipo'];
-        
+        $unidade_bandejao = $_POST['unidade_bandejao'];
+        $dia_da_semana = $_POST['dia_da_semana'];
+        $data = $_POST['data'];
+        $data_visual = $_POST['data_visual'];
+        $id_usuario = $_POST['id_usuario'];
 
+        
         return json_encode($tipo);
     }
 }
