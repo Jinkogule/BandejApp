@@ -12,11 +12,6 @@ use App\Mail\NotificaConfirmacaoDePresenca;
 class MailController extends Controller
 {
     public function teste_mail(){
-        
-        
-        /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
-       
-
         $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d', strtotime(' +1 day')));
         $users = User::whereIn('id', $users_ref_hoje)->get();
 
