@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\User;
+use App\Models\Refeicao;
 
 class NotificaConfirmacaoDePresenca extends Mailable
 {
@@ -16,18 +17,22 @@ class NotificaConfirmacaoDePresenca extends Mailable
      * The order instance.
      *
      * @var \App\Models\User
+     * @var \App\Models\Refeicao
      */
     public $user;
+    public $refeicao;
  
     /**
      * Create a new message instance.
      *
      * @param  \App\Models\User  $order
+     * @param  \App\Models\Refeicao  $order
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user, $refeicao)
     {
         $this->user = $user;
+        $this->refeicao = $refeicao;
     }
 
     /**
@@ -44,6 +49,7 @@ class NotificaConfirmacaoDePresenca extends Mailable
                         'nome' => $this->user->nome,
                         'sobrenome' => $this->user->sobrenome,
                         'email' => $this->user->email,
+                        'tipo_refeicao' => $this->refeicao->tipo,
                     ]);
     }
 }

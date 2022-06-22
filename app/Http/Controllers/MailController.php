@@ -20,13 +20,9 @@ class MailController extends Controller
         $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d'));
         $users = User::whereIn('id', $users_ref_hoje)->get();
 
-        
-        
-
-        
         foreach($users as $user){
-            
-            Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user));
+            $refeicao = Refeicao::where('id_usuario', '=', $user->id)->whereDate('data', '=', date('Y-m-d'))->get();
+            Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user, $refeicao));
         }
         
     }
