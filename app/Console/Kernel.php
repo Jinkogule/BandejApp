@@ -22,14 +22,7 @@ class Kernel extends ConsoleKernel
     {
         
         $schedule->call(function () {
-            $refeicaos = Refeicao::whereDate('data', '=', date('Y-m-d'))->get();
-
-            $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d'));
-            $users = User::whereIn('id', $users_ref_hoje)->get();
-
-            foreach($users as $user){
-                Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user));
-            }
+            DB::table('refeicaos')->where('tipo', '=', 'Almoço')->delete();
         })->everyMinute();
     }
 
