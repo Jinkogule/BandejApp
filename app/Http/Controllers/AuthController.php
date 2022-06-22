@@ -111,7 +111,7 @@ class AuthController extends Controller{
                 return View::make('admin.dashboard');  // admin dashboard path
             }
             else{
-                $events = DB::table('refeicaos')->select('*')/*->where('data', '>=', $hoje)*/->orderBy('data')->orderBy('tipo')->paginate(30);
+                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '>=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(31);
                 return View::make('user.dashboard')->with('events', $events);  // user dashboard path
             }   
         }
