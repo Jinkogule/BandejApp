@@ -110,13 +110,13 @@
                                     ?>
                                         <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="tipo" value="Janta">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                            <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                            <input type="hidden" name="data" value="{{ $event->data }}">
-                                            <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="id_usuario" value="{{ $user_id }}">
-
+                                            <input type="hidden" id="tipo" name="tipo" value="Janta">
+                                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                            <input type="hidden" id="data" name="data" name="data" value="{{ $event->data }}">
+                                            <input type="hidden" id="data_visual" name="data_visual" value="{{ $event->data_visual }}">
+                                            <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
+                                            <input type="submit" value="sdfsdfsd">
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
@@ -127,12 +127,12 @@
                         
                                         <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="tipo" value="Janta">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                            <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                            <input type="hidden" name="data" value="{{ $event->data }}">
-                                            <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                            <input type="hidden" id="tipo" name="tipo" value="Janta">
+                                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                            <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                            <input type="hidden" id="data" name="data" value="{{ $event->data }}">
+                                            <input type="hidden" id="data_visual" name="data_visual" value="{{ $event->data_visual }}">
+                                            <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
                                             <input type="submit" value="sdfsdfsd">
@@ -156,12 +156,12 @@
                     $("form").submit(function (event){
                         event.preventDefault();
 
-                        var tipo = document.getElementByName("tipo").value;
-                        var unidade_bandejao = document.getElementByName("unidade_bandejao").value;
-                        var dia_da_semana = document.getElementByName("dia_da_semana").value;
-                        var data = document.getElementByName("data").value;
-                        var data_visual = document.getElementByName("data_visual").value;
-                        var id_usuario = document.getElementByName("id_usuario").value;
+                        var tipo = document.getElementById("tipo").value;
+                        var unidade_bandejao = document.getElementById("unidade_bandejao").value;
+                        var dia_da_semana = document.getElementById("dia_da_semana").value;
+                        var data = document.getElementById("data").value;
+                        var data_visual = document.getElementById("data_visual").value;
+                        var id_usuario = document.getElementById("id_usuario").value;
 
                         
                         var _token = document.getElementById('_token').value;
