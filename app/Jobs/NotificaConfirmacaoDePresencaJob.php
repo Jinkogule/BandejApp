@@ -8,11 +8,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\DB;
 
-class SendEmailJob implements ShouldQueue
+class NotificaConfirmacaoDePresencaJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -33,15 +30,15 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle()
     {
-        $usuarios = DB::table('users')->where('id', '!=', '0');
+        /*$users = DB::table('users')->where('id', '!=', '0')->get();*/
+        $refeicaos = Refeicao::whereDate('data', '=', date('Y-m-d'))->get();
 
-        foreach ($usuarios as $event){
-            Mail::send('mail.confirmar-presenca', ['confirmar-presenca' => 'confirmar-presenca'], function($m){
-                $m->from('bandejaoaplicativo@gmail.com');
-                $m->to('{{ $event->email }}');
-                $m->subject('Confirme sua presença no almoço de hoje');
-            });
-        }
-        
+        $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d'));
+        $users = User::whereIn('id', $users_ref_hoje)->get();
+
+        foreach($users as $user){
+            
+            Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user));
+        }  
     }
 }

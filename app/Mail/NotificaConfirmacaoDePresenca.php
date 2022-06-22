@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\User;
 
-class NotifyUserAboutSomething extends Mailable
+class NotificaConfirmacaoDePresenca extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -47,3 +47,4 @@ class NotifyUserAboutSomething extends Mailable
                     ]);
     }
 }
+

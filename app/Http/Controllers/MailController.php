@@ -26,7 +26,7 @@ class MailController extends Controller
         
         foreach($users as $user){
             
-            Mail::to($user)->send(new NotifyUserAboutSomething($user));
+            Mail::to($user)->send(new NotificaConfirmacaoDePresenca($user));
         }
         
     }
