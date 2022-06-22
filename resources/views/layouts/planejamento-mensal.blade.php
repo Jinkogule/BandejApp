@@ -178,7 +178,7 @@
                                 dia_da_semana:dia_da_semana,
                                 data:data,
                                 data_visual:data_visual,
-                                id_usuario:id_usuario
+                                id_usuario:id_usuario,
                             },
 
                             success:function(data){
