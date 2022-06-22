@@ -12,11 +12,14 @@ use App\Mail\NotificaConfirmacaoDePresenca;
 class MailController extends Controller
 {
     public function teste_mail(){
-        $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d', strtotime(' +1 day')));
+        $hoje = date('Y-m-d');
+        $amanha = $hoje->modify('+1 day');
+
+        $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', $amanha);
         $users = User::whereIn('id', $users_ref_hoje)->get();
 
         foreach($users as $user){
-            $refeicaos = Refeicao::where('id_usuario', '=', $user->id)->whereDate('data', '=', date('Y-m-d', strtotime(' +1 day')))->get();
+            $refeicaos = Refeicao::where('id_usuario', '=', $user->id)->whereDate('data', '=', $amanha)->get();
             foreach($refeicaos as $refeicao){
                 Mail::to($user->email)->send(new NotificaConfirmacaoDePresenca($user, $refeicao));
             }
