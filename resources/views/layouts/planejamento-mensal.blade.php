@@ -72,7 +72,6 @@
                                             <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                             <input type="hidden" name="data" value="{{ $event->data }}">
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
@@ -90,7 +89,6 @@
                                             <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                             <input type="hidden" name="data" value="{{ $event->data }}">
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
@@ -109,14 +107,13 @@
                                     ?>
                                         <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
                                             <input type="hidden" id="tipo" name="tipo" value="Janta">
                                             <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                             <input type="hidden" id="data" name="data" name="data" value="{{ $event->data }}">
                                             <input type="hidden" id="data_visual" name="data_visual" value="{{ $event->data_visual }}">
                                             <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
-                                            <input type="submit" value="sdfsdfsd">
+
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
@@ -127,7 +124,7 @@
                         
                                         <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="_token" id="_token" value="{{csrf_token() }}">
+                    
                                             <input type="hidden" id="tipo" name="tipo" value="Janta">
                                             <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                             <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
@@ -136,7 +133,6 @@
                                             <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
 
                                             <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
-                                            <input type="submit" value="sdfsdfsd">
                                             <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
