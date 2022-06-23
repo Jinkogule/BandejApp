@@ -64,17 +64,13 @@
                                     <?php
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
-                                        <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamentoAlmoco') }}" method="POST">
+                                        <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="tipo" value="Almoço">
-                                            <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                            <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                            <input type="hidden" name="data" value="{{ $event->data }}">
-                                            <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                            <input type="hidden" name="id_refeicao" value="{{ $event->id }}">
+        
 
                                             <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
-                                            <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
+                                            <label for="id_refeicao" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
                                     }
@@ -102,17 +98,12 @@
                                 <?php
                                 if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->count() == 1){
                                 ?>
-                                    <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamentoJanta') }}" method="POST">
+                                    <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
                                         @csrf
-                                        <input type="hidden" name="tipo" value="Janta">
-                                        <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                        <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                        <input type="hidden" name="data" value="{{ $event->data }}">
-                                        <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
-                                        <input type="hidden" name="id_usuario" value="{{ $user_id }}">
+                                        <input type="hidden" name="id_refeicao" value="{{ $event->id }}">
 
                                         <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
-                                        <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
+                                        <label for="id_refeicao" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                     </form>
                                 <?php
                                 }
