@@ -53,10 +53,10 @@
                         <div class="card-header">
                             
                             <?php
-                            $amanha = date("Y-m-d", time() + 86400);
+                            $amanha = date('Y-m-d', strtotime(' +1 day'));
 
                             /*Alerta caso refeição esteja pendente e passível de confirmação*/
-                            if ($event->status_confirmacao == 'N' && $amanha >= $event->data){
+                            if ($event->status_confirmacao == 'N' && $amanha == $event->data){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <?php
