@@ -75,8 +75,8 @@ class UserController extends Controller{
                 
         return redirect('/dashboard')->with('message', 'Refeição confirmada com sucesso!');
     }
-
-    public function cancelarRefeicaoPlanejamento(Request $request){
+    /*-------------------------------------------------------------------------Funções Planejamento Mensal-------------------------------------------------------------------------*/
+    public function cancelarRefeicaoPlanejamentoAlmoco(Request $request){
 
         $data = $request->all();
        
@@ -88,6 +88,22 @@ class UserController extends Controller{
         );
 
         DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Almoço')->where('data', '=', $data['data'])->delete();
+        
+        return redirect('/planejamentomensal')->with('message', 'Refeição cancelada com sucesso!');
+    }
+
+    public function cancelarRefeicaoPlanejamentoJanta(Request $request){
+
+        $data = $request->all();
+       
+        $request->validate([
+            'id_usuario' => 'required',
+            'tipo' => 'required',
+            'unidade_bandejao' => 'required',
+            'dia_da_semana' => 'required']
+        );
+
+        DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Janta')->where('data', '=', $data['data'])->delete();
         
         return redirect('/planejamentomensal')->with('message', 'Refeição cancelada com sucesso!');
     }

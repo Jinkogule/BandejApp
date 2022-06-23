@@ -64,7 +64,7 @@
                                     <?php
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
-                                        <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
+                                        <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamentoAlmoco') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -102,7 +102,7 @@
                                 <?php
                                 if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->count() == 1){
                                 ?>
-                                    <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
+                                    <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamentoJanta') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="tipo" value="Janta">
                                         <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
