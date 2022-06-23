@@ -62,7 +62,6 @@
                             <div class="card-body">
                                     
                                     <?php
-                                    
                                     if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->count() == 1){
                                     ?>
                                         <form id="cancelarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
@@ -100,44 +99,42 @@
                         
                                 <hr>
                                 <!--Janta-->
+                                <?php
+                                if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->count() == 1){
+                                ?>
+                                    <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="tipo" value="Janta">
+                                        <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                        <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                        <input type="hidden" name="data" value="{{ $event->data }}">
+                                        <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
+                                        <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                    <?php
-                                    
-                                    if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->count() == 1){
-                                    ?>
-                                        <form id="cancelarRefeicaoJanta_{{ $event->id }}" action="{{ route('cancelarRefeicaoPlanejamento') }}" method="POST">
-                                            @csrf
-                                            <input type="hidden" id="tipo" name="tipo" value="Janta">
-                                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                            <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                            <input type="hidden" id="data" name="data" name="data" value="{{ $event->data }}">
-                                            <input type="hidden" id="data_visual" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
-
-                                            <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
-                                            <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
-                                        </form>
-                                    <?php
-                                    }
-                                    else {
-                                    ?>
-                        
-                                        <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
-                                            @csrf
+                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
+                                        <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
+                                    </form>
+                                <?php
+                                }
+                                else {
+                                ?>
                     
-                                            <input type="hidden" id="tipo" name="tipo" value="Janta">
-                                            <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
-                                            <input type="hidden" id="dia_da_semana" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
-                                            <input type="hidden" id="data" name="data" value="{{ $event->data }}">
-                                            <input type="hidden" id="data_visual" name="data_visual" value="{{ $event->data_visual }}">
-                                            <input type="hidden" id="id_usuario" name="id_usuario" value="{{ $user_id }}">
+                                    <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="tipo" value="Janta">
+                                        <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
+                                        <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
+                                        <input type="hidden" name="data" value="{{ $event->data }}">
+                                        <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
+                                        <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
-                                            <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
-                                        </form>
-                                    <?php
-                                    }
-                                    ?>
+                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
+                                        <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
+                                    </form>
+                                <?php
+                                }
+                                ?>
+                                    
                                     
                             </div>                       
                         </div>
