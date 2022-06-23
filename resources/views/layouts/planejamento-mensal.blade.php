@@ -170,7 +170,6 @@
 
                             url:'../ajax_submit',
                             type: 'post',
-
                             data: { 
                                 _token:_token,
                                 tipo:tipo,
