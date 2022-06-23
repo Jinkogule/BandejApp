@@ -59,6 +59,11 @@
                             if ($event->status_confirmacao == 'N' && $amanha == $event->data){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                                <script type="text/javascript">
+                                    $(window).on('load', function() {
+                                        $('#confirmacao-notificacao{{$event->id}}').modal('show');
+                                    });
+                                </script>
                             <?php
                             }
                             /*Sinal de confirmada caso refeição esteja confirmada*/
