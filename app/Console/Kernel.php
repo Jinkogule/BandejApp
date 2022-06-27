@@ -20,7 +20,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        
+        /*Notificação de confirmação de presença*/
         $schedule->call(function () {
             $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d', strtotime(' +1 day')));
             $users = User::whereIn('id', $users_ref_hoje)->get();
@@ -32,6 +32,11 @@ class Kernel extends ConsoleKernel
                 }
             }
         })->everyMinute();
+
+        /*Delete das refeições que já se passaram*/
+        $schedule->call(function () {
+            DB::table('refeicaos')->whereDate('data', '<', date('Y-m-d'))->delete();
+        })->dailyAt('15:45');
     }
 
     /**
