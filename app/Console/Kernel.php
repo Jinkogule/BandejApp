@@ -35,6 +35,7 @@ class Kernel extends ConsoleKernel
 
             /*Delete das refeições que já se passaram*/
             DB::table('refeicaos')->whereDate('data', '<', date('Y-m-d'))->delete();
+            DB::table('calendario')->whereDate('data', '<', date('Y-m-d'))->delete();
         })->everyMinute();
     }
 
