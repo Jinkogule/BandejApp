@@ -42,7 +42,7 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a) {{ session('nome') }}, você tem um almoço planejado no {{$event->unidade_bandejao}} para amanhã, dia {{$event->data_visual}}.
+                Prezado(a) {{ session('nome') }}, você tem um {{ $event->tipo }} planejado no {{ $event->unidade_bandejao }} para amanhã, dia {{ $event->data_visual }}.
                 <br><br>
                 Você confirma sua presença?
             </div>
