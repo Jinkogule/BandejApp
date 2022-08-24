@@ -91,7 +91,7 @@
                             ?>
                             <?php
                             /*Botões de confirmação e cancelamento caso refeição não esteja confirmada*/
-                            if ($event->status_confirmacao == 'P'){
+                            if ($event->status_confirmacao != 'C'){
                             ?>
                                 <div class="container botoes-cc" style="margin: 0 auto;">
                                     <div class="row">
