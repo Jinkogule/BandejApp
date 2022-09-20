@@ -22,7 +22,7 @@ class CreateRefeicaosTable extends Migration
             $table->string('dia_da_semana');
             $table->string('data_visual');
             $table->date('data');
-            $table->char('status_confirmacao', 1)->default('C');
+            $table->char('status_confirmacao', 1)->default('P');
             $table->char('status_validez', 1)->default('V');
             $table->timestamps();
 
