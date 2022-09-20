@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\View;
 
 class AuthController extends Controller{
     public function index(){
-        return View::make('auth.login');
+        return View::make('layouts-auth.login');
     } 
 
     /*Login*/
