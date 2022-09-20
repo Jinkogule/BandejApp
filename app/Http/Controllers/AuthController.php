@@ -45,7 +45,7 @@ class AuthController extends Controller{
 
     /*Cadastro*/
     public function cadastro(){
-        return view('auth.cadastro');
+        return view('layouts-auth.cadastro');
     }
       
     public function realizarCadastro(Request $request){  
@@ -108,7 +108,7 @@ class AuthController extends Controller{
 
         if(Auth::check()){
             if (Auth::user()->user_type == 'Administrator'){
-                return View::make('admin.dashboard');  // admin dashboard path
+                return View::make('layouts-admin.dashboard');  // admin dashboard path
             }
             else{
                 $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(31);
