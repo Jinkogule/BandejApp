@@ -120,6 +120,6 @@
 
 <script>
 function desativaCheckboxConfirmado() {
-  document.getElementById("#cancelarRefeicaoAlmoco_{{ $event->id }} input[id=checkbocAlmoço]").disabled = true;
+  document.getElementById("checkbocAlmoço").disabled = true;
 }
 </script>
