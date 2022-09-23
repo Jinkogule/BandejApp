@@ -55,8 +55,8 @@
                         @foreach($calendario_dias as $event)
                         <?php
                         /*Não mostrar datas de refeições confirmadas pelo usuário*/
-                        $Refeicao_ativa_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->get()
-                        echo $Refeicao_ativa_dessa_data->status_confirmacao;
+                        $Refeicao_ativa_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->get();
+                        if ($Refeicao_ativa_dessa_data->status_confirmacao != "C"){
                         ?>
                         <div class="card">
                             <div class="card-header">
@@ -142,7 +142,9 @@
                                     
                             </div>                       
                         </div>
-                              
+                        <?php
+                        }
+                        ?>       
                         @endforeach 
                     </div>
                 </div>
