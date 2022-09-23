@@ -56,7 +56,7 @@
                         <?php
                         /*Não mostrar datas de refeições confirmadas pelo usuário*/
                         $Refeicao_ativa_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->get()
-                        if ($Refeicao_ativa_dessa_data->status_confirmacao != "C"){
+                        echo $Refeicao_ativa_dessa_data->status_confirmacao;
                         ?>
                         <div class="card">
                             <div class="card-header">
@@ -142,9 +142,7 @@
                                     
                             </div>                       
                         </div>
-                        <?php
-                        }
-                        ?>       
+                              
                         @endforeach 
                     </div>
                 </div>
