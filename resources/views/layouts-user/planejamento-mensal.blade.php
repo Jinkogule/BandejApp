@@ -82,7 +82,7 @@
                                             ?>
                                             {{ $status_refeicao_dessa_data }}
                                             <script>
-                                            document.getElementById("myCheck").disabled = true;
+                                            document.getElementById("checkbocAlmoço").disabled = true;
                                             </script>
                                             <?php
                                             }
