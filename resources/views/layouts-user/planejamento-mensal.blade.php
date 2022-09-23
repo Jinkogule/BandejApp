@@ -73,7 +73,7 @@
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                            <input type="checkbox" name="checkbocAlmoço_{{ $event->id }}" id="checkbocAlmoço_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
 
                                             <?php
@@ -82,7 +82,7 @@
                                             ?>
                                             {{ $status_refeicao_dessa_data }}
                                             <script>
-                                            document.getElementById("checkbocAlmoço").disabled = true;
+                                            document.getElementById("checkbocAlmoço_{{ $event->id }}").disabled = true;
                                             </script>
                                             <?php
                                             }
@@ -93,7 +93,6 @@
                                     }
                                     else {
                                     ?>
-                        
                                         <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
