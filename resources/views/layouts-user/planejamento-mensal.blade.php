@@ -77,7 +77,7 @@
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
 
                                             <?php
-                                            $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value();
+                                            $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value('status_confirmacao');
                                             if ($status_refeicao_dessa_data == "C"){ 
                                             ?>
                                             {{ $status_refeicao_dessa_data }}
