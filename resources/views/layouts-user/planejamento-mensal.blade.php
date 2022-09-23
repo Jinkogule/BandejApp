@@ -87,6 +87,7 @@
                                             <?php
                                             }
                                             ?>
+                                            {{ $status_refeicao_dessa_data }}
                                         </form>
                                     <?php
                                     }
