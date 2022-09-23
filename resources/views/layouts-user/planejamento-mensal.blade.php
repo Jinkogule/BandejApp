@@ -73,7 +73,7 @@
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocAlmoço_{{ $event->id }}" id="checkbocAlmoço_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
+                                            <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
 
                                             <?php
@@ -81,7 +81,7 @@
                                             if ($status_refeicao_dessa_data == "C"){ 
                                             ?>
                                                 <script>
-                                                document.getElementById("checkbocAlmoço_{{ $event->id }}").disabled = true;
+                                                document.getElementById("checkboxAlmoço_{{ $event->id }}").disabled = true;
                                                 </script>
                                             <?php
                                             }
@@ -100,7 +100,7 @@
                                             <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                             <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                            <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
+                                            <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                         </form>
                                     <?php
@@ -121,7 +121,7 @@
                                         <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                         <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
+                                        <input type="checkbox" name="checkboxJanta_{{ $event->id }}" id="checkboxJanta_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
                                         <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
 
                                         <?php
@@ -129,7 +129,7 @@
                                         if ($status_refeicao_dessa_data == "C"){ 
                                         ?>
                                             <script>
-                                            document.getElementById("checkbocAlmoço_{{ $event->id }}").disabled = true;
+                                            document.getElementById("checkboxJanta_{{ $event->id }}").disabled = true;
                                             </script>
                                         <?php
                                         }
@@ -149,7 +149,7 @@
                                         <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                         <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
-                                        <input type="checkbox" name="checkbocJanta" id="checkbocJanta" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
+                                        <input type="checkbox" name="checkboxJanta_{{ $event->id }}" id="checkboxJanta_{{ $event->id }}" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
                                         <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
                                     </form>
                                 <?php
