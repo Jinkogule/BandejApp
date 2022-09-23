@@ -96,7 +96,7 @@
                     @csrf          
                     <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
                     <label for="unidade_bandejao">Selecione o novo local da refeição:</label>
-                    <select class="form-control" id="unidade_bandejao" name="unidade_bandejao">
+                    <select class="form-control" id="unidade_bandejao" name="unidade_bandejao" required>
                         <option></option>
                         <option>Gragoatá</option>
                         <option>Praia Vermelha</option>
