@@ -53,11 +53,7 @@
                     <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
-                        <?php
-                        /*Não mostrar datas de refeições confirmadas pelo usuário*/
-                        $status_refeicao_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value('status_confirmacao');
-                        if ($status_refeicao_dessa_data != "C"){
-                        ?>
+                        
                         <div class="card">
                             <div class="card-header">
                                 <span class="card-title" style="text-align: center; color: #fff;">{{ $event->dia_da_semana }} - {{ $event->data_visual }}</span>
@@ -79,6 +75,18 @@
 
                                             <input type="checkbox" name="checkbocAlmoço" id="checkbocAlmoço" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
                                             <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
+
+                                            <?php
+                                            $status_refeicao_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value('status_confirmacao');
+                                            if ($status_refeicao_dessa_data == "C"){ 
+                                            ?>
+                                            {{ $status_refeicao_dessa_data }}
+                                            <script>
+                                            document.getElementById("myCheck").disabled = true;
+                                            </script>
+                                            <?php
+                                            }
+                                            ?>
                                         </form>
                                     <?php
                                     }
@@ -142,9 +150,7 @@
                                     
                             </div>                       
                         </div>
-                        <?php
-                        }
-                        ?>       
+                                
                         @endforeach 
                     </div>
                 </div>
