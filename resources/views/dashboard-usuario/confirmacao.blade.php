@@ -56,7 +56,7 @@
                             <input type="hidden" id="unidade_bandejao" name="unidade_bandejao" value="{{$event->unidade_bandejao}}">
 
                             <div class="col" style="margin: 0 auto;">
-                                <button type="submit" class="btn btn-primary btn-confirmar">Sim</button>
+                                <button type="submit" class="btn btn-primary btn-confirmar" onclick="desativaCheckboxConfirmado()">Sim</button>
                             </div>
                         </form>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="modal-footer">
                         <div class="row" style= "margin: 0 auto;">
                             <div class="col">
-                                <button type="submit" class="btn btn-primary btn-confirmar">Confirmar</button>
+                                <button type="submit" class="btn btn-primary btn-confirmar" onclick="desativaCheckboxConfirmado()">Confirmar</button>
                             </div>
                         </div>
                     </div>
@@ -117,3 +117,9 @@
         </div>
     </div>
 </div>
+
+<script>
+function desativaCheckboxConfirmado() {
+  document.getElementById("#cancelarRefeicaoAlmoco_{{ $event->id }} input[id=checkbocAlmoço]").disabled = true;
+}
+</script>
