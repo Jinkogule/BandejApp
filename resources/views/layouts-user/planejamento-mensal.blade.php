@@ -53,7 +53,11 @@
                     <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
-                        
+                        <?php
+                        /*Não mostrar datas de refeições confirmadas pelo usuário*/
+                        $Refeicao_ativa_dessa_data = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->get()
+                        if ($Refeicao_ativa_dessa_data->status_confirmacao != "C"){
+                        ?>
                         <div class="card">
                             <div class="card-header">
                                 <span class="card-title" style="text-align: center; color: #fff;">{{ $event->dia_da_semana }} - {{ $event->data_visual }}</span>
@@ -138,7 +142,9 @@
                                     
                             </div>                       
                         </div>
-                                
+                        <?php
+                        }
+                        ?>       
                         @endforeach 
                     </div>
                 </div>
