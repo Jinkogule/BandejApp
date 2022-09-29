@@ -52,7 +52,7 @@
                 </div>
                 <div class="container container2-pm" style="overflow: auto">
                     <br>
-                    <input type='checkbox' style="margin-left: 15px;" action="{{ route('selecionarTodasRefeicoes') }}"> <span class="card-title">Selecionar/desselecionar todos</span>
+                    <input type='checkbox' style="margin-left: 15px;" onchange="{{ route('selecionarTodasRefeicoes') }}"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
                         
