@@ -53,10 +53,9 @@
                 <div class="container container2-pm" style="overflow: auto">
                     <br>
                     
-                        <form action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
+                        <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
                             @csrf
-                            <input type='checkbox' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
-                            <input type="submit" value="Submit">
+                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
                         </form>
                         @foreach($calendario_dias as $event)
                         
