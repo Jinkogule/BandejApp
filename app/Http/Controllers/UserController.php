@@ -90,12 +90,15 @@ class UserController extends Controller{
         return redirect('/planejamentomensal')->with('message', 'Refeição cancelada com sucesso!');
     }
 
-
-
-
-
-
-
+    public function criaRefeicao(array $data){
+        return Refeicao::create([
+            'id_usuario' => Auth::user()->id,
+            'tipo' => $data['tipo'],
+            'unidade_bandejao' => $data['unidade_bandejao'],
+            'dia_da_semana' => $data['dia_da_semana'],
+            'cardapio' => $data['cardapio'],
+        ]);
+    }
 
 
     public function selecionarTodasRefeicoes(){
@@ -128,4 +131,7 @@ class UserController extends Controller{
 
         return redirect('/planejamentomensal')->with('message', 'Refeições registradas com sucesso!');
     }
+
+
+
 }

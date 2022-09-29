@@ -54,6 +54,7 @@ Route::get('planejamentomensal', [PlanejamentoMensalController::class, 'planejam
 Route::post('cancelarRefeicaoPlanejamento', [UserController::class, 'cancelarRefeicaoPlanejamento'])->name('cancelarRefeicaoPlanejamento');
 Route::post('cancelarRefeicaoPlanejamentoAlmoco', [UserController::class, 'cancelarRefeicaoPlanejamentoAlmoco'])->name('cancelarRefeicaoPlanejamentoAlmoco');
 Route::post('cancelarRefeicaoPlanejamentoJanta', [UserController::class, 'cancelarRefeicaoPlanejamentoJanta'])->name('cancelarRefeicaoPlanejamentoJanta');
+Route::post('registraRefeicao', [UserController::class, 'registrarRefeicao'])->name('registraRefeicao');
 Route::post('selecionarTodasRefeicoes', [UserController::class, 'selecionarTodasRefeicoes'])->name('selecionarTodasRefeicoes');
 
 

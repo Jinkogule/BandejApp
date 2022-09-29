@@ -93,7 +93,7 @@
                                     }
                                     else {
                                     ?>
-                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                        <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('registraRefeicao') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="tipo" value="Almoço">
                                             <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
@@ -142,7 +142,7 @@
                                 else {
                                 ?>
                     
-                                    <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('refeicao') }}" method="POST">
+                                    <form id="registrarRefeicaoJanta_{{ $event->id }}" action="{{ route('registraRefeicao') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="tipo" value="Janta">
                                         <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
