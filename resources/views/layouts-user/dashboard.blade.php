@@ -77,18 +77,13 @@
                         </div>
                         
                         <div class="card-body">
-                            <?php
-                            if (2 == 2){
-                            ?>
-                                <div class="container capa-cardapio" style="background-image: url('/images/peixe.jpg');">
-                                    <div class="cardapio">
-                                        Cardápio: {{$event->cardapio}}
-                                    </div>
+                        
+                            <div class="container capa-cardapio" style="background-image: url('/images/restaurant.png');">
+                                <div class="cardapio">
+                                    Cardápio: {{$event->cardapio}}
                                 </div>
-                                <br>
-                            <?php
-                            }
-                            ?>
+                            </div>
+                            <br>
                             <?php
                             /*Botões de confirmação e cancelamento caso refeição não esteja confirmada*/
                             if ($event->status_confirmacao != 'C'){
