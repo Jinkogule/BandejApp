@@ -80,7 +80,7 @@
                         
                             <div class="container capa-cardapio" style="background-image: url('/images/restaurant.png'); background-size: contain !important;
 background-repeat: no-repeat !important;
-background-position: 0 100px !important;">
+background-position: 0 50px !important;">
                                 <div class="cardapio">
                                     Cardápio: {{$event->cardapio}}
                                 </div>
