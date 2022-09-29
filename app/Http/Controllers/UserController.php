@@ -98,21 +98,34 @@ class UserController extends Controller{
 
 
 
+    public function selecionarTodasRefeicoes(){
 
+        $calendario = DB::table('calendario')->select('*')->get();
 
+        foreach ($calendario as $event) {
+            Refeicao::create([
+                'id_usuario' => Auth::user()->id,
+                'tipo' => 'Almoço',
+                'unidade_bandejao' => Auth::user()->unidade_bandejao,
+                'data' => $event->data,
+                'data_visual' => $event->data_visual,
+                'dia_da_semana' => $event->dia_da_semana,
+                
+            ]);
+        }
 
+        foreach ($calendario as $event) {
+            Refeicao::create([
+                'id_usuario' => Auth::user()->id,
+                'tipo' => 'Janta',
+                'unidade_bandejao' => Auth::user()->unidade_bandejao,
+                'data' => $event->data,
+                'data_visual' => $event->data_visual,
+                'dia_da_semana' => $event->dia_da_semana,
+                
+            ]);
+        }
 
-
-
-
-    public function criaRefeicao(array $data){
-
-        return Refeicao::create([
-            'id_usuario' => Auth::user()->id,
-            'tipo' => $data['tipo'],
-            'unidade_bandejao' => $data['unidade_bandejao'],
-            'dia_da_semana' => $data['dia_da_semana'],
-            'cardapio' => $data['cardapio'],
-        ]);
+        return redirect('/planejamentomensal')->with('message', 'Refeições registradas com sucesso!');
     }
 }

@@ -48,11 +48,11 @@
                 <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
                 <hr>
                 <div style="text-align: center;">
-                    <span style="color: #fff;">Selecione aqui os dias em que você pretende comparecer ao bandejão</span>
+                    <span style="color: #fff;">Selecione os dias em que você pretende comparecer ao bandejão</span>
                 </div>
                 <div class="container container2-pm" style="overflow: auto">
                     <br>
-                    <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
+                    <input type='checkbox' style="margin-left: 15px;" action="{{ route('selecionarTodasRefeicoes') }}"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
                         
@@ -215,51 +215,6 @@
                 return false;
                    
             }
-        
-
-
-
-
-
-
-
-
-
-
-            $(function () {
-            $("form").validate();
-            });
-
-            
-
-
-
-            $( "form" ).on( "submit", function(e) {
- 
- var dataString = $(this).serialize();
-  
- // alert(dataString); return false;
-
- $.ajax({
-   type: "POST",
-   url: "bin/process.php",
-   data: dataString,
-   success: function () {
-     $("#contact_form").html("<div id='message'></div>");
-     $("#message")
-       .html("<h2>Contact Form Submitted!</h2>")
-       .append("<p>We will be in touch soon.</p>")
-       .hide()
-       .fadeIn(1500, function () {
-         $("#message").append(
-           "<img id='checkmark' src='images/check.png' />"
-         );
-       });
-   }
- });
-
- e.preventDefault();
-});
             </script>
     </body>
 </html>

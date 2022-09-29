@@ -30,6 +30,7 @@ class AuthController extends Controller{
             $request->session()->put('id', Auth::user()->id);
             $request->session()->put('user_type', Auth::user()->user_type);
             $request->session()->put('user_email', Auth::user()->email);
+            $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
     
             /*preenchendo refeições iniciais
             $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
