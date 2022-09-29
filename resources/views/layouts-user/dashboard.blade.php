@@ -78,7 +78,7 @@
                         
                         <div class="card-body">
                         
-                            <div class="container capa-cardapio" style="background-image: url('/images/restaurant.png'); background-size:">
+                            <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                                 <div class="cardapio">
                                     Cardápio: {{$event->cardapio}}
                                 </div>
