@@ -51,6 +51,7 @@
                     <span style="color: #fff;">Selecione aqui os dias em que você pretende comparecer ao bandejão</span>
                 </div>
                 <div class="container container2-pm" style="overflow: auto">
+                    <br>
                     <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
