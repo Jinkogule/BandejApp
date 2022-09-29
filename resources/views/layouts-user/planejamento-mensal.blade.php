@@ -47,11 +47,9 @@
                 <br>
                 <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
                 <hr>
-                Selecione aqui os dias em que você pretende comparecer ao bandejão
+                <span style="text-align: center; color: #fff;">Selecione aqui os dias em que você pretende comparecer ao bandejão</span>
                 <div class="container container2-pm" style="overflow: auto">
                     <br>
-                    
-                    
                     <input type='checkbox' class='checkall' onClick='toggle(this)' style="margin-left: 15px;"> <span class="card-title">Selecionar/desselecionar todos</span>
                     
                         @foreach($calendario_dias as $event)
