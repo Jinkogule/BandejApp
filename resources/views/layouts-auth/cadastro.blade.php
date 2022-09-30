@@ -77,9 +77,7 @@
                         <span class="text-danger">{{ $errors->first('altura') }}</span>
                         @endif
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col mb-3">
+                    <div class="col mb-4">
                         <label for="status" style="color: #fff;">Você é:</label>
                         <select class="form-control" id="status" name="status" value="{{ old('status') }}">
                             <option></option>
@@ -89,8 +87,8 @@
                             <option>Externo</option>
                         </select>
                     </div>
-                    <div class="col mb-4">
-                        
+                </div>
+                <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
                         <select class="form-control" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}">
                             <option></option>
@@ -101,8 +99,6 @@
                             <option>HUAP</option>
                         </select>
                     </div>
-                </div>
-              
                 <div class="d-grid mx-auto mb-4">
                     <button type="submit" class="btn btn-success btn-block">Enviar</button>
                 </div>
