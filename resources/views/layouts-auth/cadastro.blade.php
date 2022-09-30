@@ -28,14 +28,14 @@
                 <div class="row">
                     <div class="col">
                         <label for="nome" style="color: #fff;">Nome:</label>
-                        <input type="text" placeholder="" id="nome" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
+                        <input type="text" placeholder="" id="nome" class="form-control" name="nome" value="{{ old('nome') }}" maxlength="100" required autofocus>
                         @if ($errors->has('nome'))
                         <span class="text-danger">{{ $errors->first('nome') }}</span>
                         @endif
                     </div>
                     <div class="col">
                         <label for="sobrenome" style="color: #fff;">Sobrenome:</label>
-                        <input type="text" placeholder="" id="sobrenome" class="form-control" name="sobrenome" value="{{ old('sobrenome') }}" required autofocus>
+                        <input type="text" placeholder="" id="sobrenome" class="form-control" name="sobrenome" value="{{ old('sobrenome') }}" maxlength="100" required autofocus>
                         @if ($errors->has('sobrenome'))
                         <span class="text-danger">{{ $errors->first('sobrenome') }}</span>
                         @endif
@@ -50,14 +50,14 @@
                 </div>
                 <div class="form-group">
                     <label for="email" style="color: #fff;">E-mail:</label>
-                    <input type="text" placeholder="" id="email" class="form-control"name="email" value="{{ old('email') }}" required autofocus>
+                    <input type="text" placeholder="" id="email" class="form-control"name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="password" style="color: #fff;">Senha:</label>
-                    <input type="password" placeholder="" id="password" class="form-control" name="password" required>
+                    <input type="password" placeholder="" id="password" class="form-control" name="password" maxlength="20" required>
                     @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
