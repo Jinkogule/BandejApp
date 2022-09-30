@@ -28,14 +28,14 @@
                 <div class="row">
                     <div class="col">
                         <label for="nome" style="color: #fff;">Nome:</label>
-                        <input type="text" placeholder="Insira seu nome" id="nome" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
+                        <input type="text" placeholder="" id="nome" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
                         @if ($errors->has('nome'))
                         <span class="text-danger">{{ $errors->first('nome') }}</span>
                         @endif
                     </div>
                     <div class="col">
                         <label for="sobrenome" style="color: #fff;">Sobrenome:</label>
-                        <input type="text" placeholder="Insira seu sobrenome" id="sobrenome" class="form-control" name="sobrenome" value="{{ old('sobrenome') }}" required autofocus>
+                        <input type="text" placeholder="" id="sobrenome" class="form-control" name="sobrenome" value="{{ old('sobrenome') }}" required autofocus>
                         @if ($errors->has('sobrenome'))
                         <span class="text-danger">{{ $errors->first('sobrenome') }}</span>
                         @endif
@@ -43,21 +43,21 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="data_nascimento" style="color: #fff;">Data de nascimento:</label>
-                    <input type="date" placeholder="Insira sua data de nascimento" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
+                    <input type="date" placeholder="" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
                     @if ($errors->has('data_nascimento'))
                     <span class="text-danger">{{ $errors->first('data_nascimento') }}</span>
                     @endif
                 </div>
                 <div class="form-group">
                     <label for="email" style="color: #fff;">E-mail:</label>
-                    <input type="text" placeholder="Insira seu e-mail" id="email" class="form-control"name="email" value="{{ old('email') }}" required autofocus>
+                    <input type="text" placeholder="" id="email" class="form-control"name="email" value="{{ old('email') }}" required autofocus>
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
                 <div class="form-group mb-4">
                     <label for="password" style="color: #fff;">Senha:</label>
-                    <input type="password" placeholder="Insira sua senha" id="password" class="form-control" name="password" required>
+                    <input type="password" placeholder="" id="password" class="form-control" name="password" required>
                     @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
@@ -65,14 +65,14 @@
                 <div class="row">
                     <div class="col mb-3">
                         <label for="peso" style="color: #fff;">Peso(Kg):</label>
-                        <input type="text" placeholder="Insira seu peso" id="peso" class="form-control" name="peso" pattern="[\d]+" value="{{ old('peso') }}" required>
+                        <input type="text" placeholder="" id="peso" class="form-control" name="peso" pattern="[\d]+" value="{{ old('peso') }}" required>
                         @if ($errors->has('peso'))
                         <span class="text-danger">{{ $errors->first('peso') }}</span>
                         @endif
                     </div>
                     <div class="col mb-3">
                         <label for="altura" style="color: #fff;">Altura(m):</label>
-                        <input type="number" placeholder="Insira sua altura" id="altura" class="form-control" name="altura" step=".01" value="{{ old('altura') }}" required>
+                        <input type="number" placeholder="" id="altura" class="form-control" name="altura" step=".01" value="{{ old('altura') }}" required>
                         @if ($errors->has('altura'))
                         <span class="text-danger">{{ $errors->first('altura') }}</span>
                         @endif

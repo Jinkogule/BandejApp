@@ -74,7 +74,7 @@
                 </div>
                 <hr>
                 <a class="nav-link" href="{{ route('cadastro') }}">Não possui uma conta? Cadastre-se</a>
-                <a class="nav-link" href="">Recuperar e-mail ou senha</a>
+                <a class="nav-link" href="" hidden>Recuperar e-mail ou senha</a>
             </form>     
         </div>
     </body>
