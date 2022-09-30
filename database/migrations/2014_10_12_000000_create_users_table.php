@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('peso');
             $table->decimal('altura', $precision = 3, $scale = 2);
-            $table->string('genero');
             $table->string('status');
             $table->string('unidade_bandejao');
             $table->string('user_type')->nullable();

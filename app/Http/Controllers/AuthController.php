@@ -73,35 +73,10 @@ class AuthController extends Controller{
             'password' => Hash::make($data['password']),
             'peso' => $data['peso'],
             'altura' => $data['altura'],
-            'genero' => $data['genero'],
             'status' => $data['status'],
             'unidade_bandejao' => $data['unidade_bandejao'],
         ]);
     }
-    
-    public function geraRefeicoes(array $data){
-        for ($x = 0; $x <= 30; $x++){
-            Refeicao::create([
-                'id_usuario' => Auth::user()->id,
-                'tipo' => 'almoço',
-                'unidade_bandejao' => 'gragoatá',
-                'data' => date('d/m/Y'),
-                'dia_da_semana' => $x,
-                
-            ]);
-        }
-
-        for ($x = 0; $x <= 30; $x++){
-            Refeicao::create([
-                'id_usuario' => Auth::user()->id,
-                'tipo' => 'janta',
-                'unidade_bandejao' => 'gragoatá',
-                'data' => date('d/m/Y'),
-                'dia_da_semana' => $x,
-                
-            ]);
-        }
-    } 
 
     /*Dashboard*/
     public function dashboard(){
