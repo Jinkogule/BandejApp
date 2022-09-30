@@ -99,10 +99,10 @@
                             <option>HUAP</option>
                         </select>
                     </div>
-                <div class="d-grid mx-auto mb-4">
+                <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-success btn-block">Enviar</button>
                 </div>
-                <a class="nav-link" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
+                <a class="nav-link mb-2" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
             </form>    
         </div>
        
