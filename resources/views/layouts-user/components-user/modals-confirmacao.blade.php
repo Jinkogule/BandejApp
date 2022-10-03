@@ -42,7 +42,14 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Prezado(a) {{ session('nome') }}, você tem um {{ $event->tipo }} planejado(a) no campus {{ $event->unidade_bandejao }} para dia {{ $event->data_visual }}.
+                <?php
+                $data_banco = $event->data;  
+                $data_visual = date("d/m/y", strtotime($data_banco));
+
+                /*Alerta caso refeição esteja pendente e passível de confirmação*/
+                if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
+                ?>
+                Prezado(a) {{ session('nome') }}, você tem um {{ $event->tipo }} planejado(a) no campus {{ $event->unidade_bandejao }} para dia {{ $data_visual }}.
                 <br><br>
                 Você confirma sua presença?
             </div>

@@ -53,7 +53,6 @@ class UserController extends Controller{
             'tipo' => $request->tipo,
             'unidade_bandejao' => $request->unidade_bandejao,
             'data' => $request->data,
-            'data_visual' => $request->data_visual,
             'dia_da_semana' => $request->dia_da_semana,
             
         ]);
@@ -77,9 +76,7 @@ class UserController extends Controller{
             'tipo' => $data['tipo'],
             'unidade_bandejao' => $data['unidade_bandejao'],
             'data' => $data['data'],
-            'data_visual' => $data['data_visual'],
-            'dia_da_semana' => $data['dia_da_semana'],
-            
+            'dia_da_semana' => $data['dia_da_semana'],  
         ]);
 
         return redirect('/planejamentomensal')->with('message', 'Refeição registrada com sucesso!');
@@ -138,8 +135,7 @@ class UserController extends Controller{
                     'id_usuario' => Auth::user()->id,
                     'tipo' => 'Almoço',
                     'unidade_bandejao' => Auth::user()->unidade_bandejao,
-                    'data' => $event->data,
-                    'data_visual' => $event->data_visual,
+                    'data' => $event->data, 
                     'dia_da_semana' => $event->dia_da_semana,     
                 ]);
             }
@@ -151,7 +147,6 @@ class UserController extends Controller{
                     'tipo' => 'Janta',
                     'unidade_bandejao' => Auth::user()->unidade_bandejao,
                     'data' => $event->data,
-                    'data_visual' => $event->data_visual,
                     'dia_da_semana' => $event->dia_da_semana,           
                 ]);
             }

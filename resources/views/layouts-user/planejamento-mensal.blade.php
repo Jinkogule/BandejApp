@@ -67,10 +67,15 @@
                         </div>
                     </div>
 
-                    @foreach($calendario_dias as $event)        
+                    @foreach($calendario_dias as $event)
+                    <?php
+                    $data_banco = $event->data;  
+                    $data_visual = date("d/m/y", strtotime($data_banco));
+                    $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+                    ?>
                     <div class="card">
                         <div class="card-header">
-                            <span class="card-title" style="text-align: center; color: #fff;">{{ $event->dia_da_semana }} - {{ $event->data_visual }}</span>
+                            <span class="card-title" style="text-align: center; color: #fff;">{{ $dia_da_semana_visual }} - {{ $data_visual }}</span>
                         </div>
                         
                         <div class="card-body">
