@@ -120,15 +120,17 @@ class UserController extends Controller{
         }
 
         foreach ($calendario as $event) {
-            Refeicao::create([
-                'id_usuario' => Auth::user()->id,
-                'tipo' => 'Janta',
-                'unidade_bandejao' => Auth::user()->unidade_bandejao,
-                'data' => $event->data,
-                'data_visual' => $event->data_visual,
-                'dia_da_semana' => $event->dia_da_semana,
-                
-            ]);
+            if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->exists() == 0){
+                Refeicao::create([
+                    'id_usuario' => Auth::user()->id,
+                    'tipo' => 'Janta',
+                    'unidade_bandejao' => Auth::user()->unidade_bandejao,
+                    'data' => $event->data,
+                    'data_visual' => $event->data_visual,
+                    'dia_da_semana' => $event->dia_da_semana,
+                    
+                ]);
+            }
         }
 
         return redirect('/planejamentomensal')->with('message', 'Refeições registradas com sucesso!');
