@@ -95,7 +95,7 @@
                                         <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
 
                                         <?php
-                                        $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value('status_confirmacao');
+                                        $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->value('status_confirmacao');
                                         if ($status_refeicao_dessa_data == "C"){ 
                                         ?>
                                             <script>
@@ -141,7 +141,7 @@
                                     <label for="tipo" class="text-shadow">Janta - {{ $unidade_bandejao }}</label>
 
                                     <?php
-                                    $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->value('status_confirmacao');
+                                    $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->value('status_confirmacao');
                                     if ($status_refeicao_dessa_data == "C"){ 
                                     ?>
                                         <script>
