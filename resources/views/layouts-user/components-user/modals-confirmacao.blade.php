@@ -45,6 +45,7 @@
                 <?php
                 $data_banco = $event->data;  
                 $data_visual = date("d/m/y", strtotime($data_banco));
+                $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco);
                 ?>
                 Prezado(a) {{ session('nome') }}, você tem 
                 <?php
@@ -59,7 +60,7 @@
                 <?php
                 }
                 ?>
-                  no campus {{ $event->unidade_bandejao }} para dia {{ $data_visual }}, {{ $dia_da_semana }}.
+                  no campus {{ $event->unidade_bandejao }} para {{ $dia_da_semana }}, dia {{ $data_visual }}.
                 <br><br>
                 Você confirma sua presença?
             </div>
