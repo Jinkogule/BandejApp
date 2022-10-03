@@ -239,10 +239,23 @@ body{
 }
 
 /*-------------------------------TELA DE CONFIRMAÇÃO----------------------*/
-.confirmacao-bloco{
-    background-color: #1F519B;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
+
+@media (min-width: 1000px) {
+    .confirmacao-bloco{
+        background-color: #1F519B;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+}
+@media (max-width: 1000px) {
+    .confirmacao-bloco{
+        background-color: #1F519B;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        width: 90%;
+    }
 }
