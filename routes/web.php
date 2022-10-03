@@ -56,6 +56,7 @@ Route::post('cancelarRefeicaoPlanejamentoAlmoco', [UserController::class, 'cance
 Route::post('cancelarRefeicaoPlanejamentoJanta', [UserController::class, 'cancelarRefeicaoPlanejamentoJanta'])->name('cancelarRefeicaoPlanejamentoJanta');
 Route::post('registraRefeicao', [UserController::class, 'registrarRefeicao'])->name('registraRefeicao');
 Route::post('selecionarTodasRefeicoes', [UserController::class, 'selecionarTodasRefeicoes'])->name('selecionarTodasRefeicoes');
+Route::post('desselecionarTodasRefeicoes', [UserController::class, 'desselecionarTodasRefeicoes'])->name('desselecionarTodasRefeicoes');
 
 
 Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');

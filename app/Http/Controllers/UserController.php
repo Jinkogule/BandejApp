@@ -113,12 +113,10 @@ class UserController extends Controller{
                     'unidade_bandejao' => Auth::user()->unidade_bandejao,
                     'data' => $event->data,
                     'data_visual' => $event->data_visual,
-                    'dia_da_semana' => $event->dia_da_semana,
-                    
+                    'dia_da_semana' => $event->dia_da_semana,     
                 ]);
             }
         }
-
         foreach ($calendario as $event) {
             if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->exists() == 0){
                 Refeicao::create([
@@ -127,13 +125,19 @@ class UserController extends Controller{
                     'unidade_bandejao' => Auth::user()->unidade_bandejao,
                     'data' => $event->data,
                     'data_visual' => $event->data_visual,
-                    'dia_da_semana' => $event->dia_da_semana,
-                    
+                    'dia_da_semana' => $event->dia_da_semana,           
                 ]);
             }
         }
-
+        
         return redirect('/planejamentomensal')->with('message', 'Refeições registradas com sucesso!');
+    }
+
+    public function desselecionarTodasRefeicoes(Request $request){
+
+        DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('status_confirmacao', '!=', 'C')->delete();
+
+        return redirect('/planejamentomensal')->with('message', 'Refeições removidas com sucesso!');
     }
 
 

@@ -54,9 +54,27 @@
                     <br>
                     
                         <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
-                            @csrf
-                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
+                            @csrf   
                         </form>
+
+                        <form id="desselecionarTodasRefeicoes" action="{{ route('desselecionarTodasRefeicoes') }}" method="POST">
+                            @csrf   
+                        </form>
+
+                        <?php
+                        if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->exists() == 1){
+                        ?>
+                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
+                        <?php
+                        }
+                        else{
+                        ?>
+                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()" checked> <span class="card-title">Selecionar/desselecionar todos</span>
+                        <?php
+                        }
+                        ?>
+
+
                         @foreach($calendario_dias as $event)
                         
                         <div class="card">
