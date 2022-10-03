@@ -106,7 +106,7 @@ class UserController extends Controller{
         $calendario = DB::table('calendario')->select('*')->get();
 
         foreach ($calendario as $event) {
-            if (DB::table('refeicaos')->where('id', '=', Auth::user()->id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->exists() == 1){
+            if (DB::table('refeicaos')->where('id', '=', Auth::user()->id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->exists() == 0){
                 Refeicao::create([
                     'id_usuario' => Auth::user()->id,
                     'tipo' => 'Almoço',
