@@ -68,9 +68,19 @@ body{
     margin-top: 5px !important;
 }
 
-.card-header{
-    text-align: center;
-    background-color: #5E5FC0;
+
+@media (min-width: 1000px) {
+    .card-header{
+        text-align: center;
+        background-color: #5E5FC0;
+    }
+}
+@media (max-width: 1000px) {
+    .card-header{
+        text-align: center;
+        background-color: #5E5FC0;
+        margin-left: 50px;
+    }
 }
 
 .botoes-menu:hover{
