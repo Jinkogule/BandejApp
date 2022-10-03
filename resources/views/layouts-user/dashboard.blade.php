@@ -49,12 +49,12 @@
                 
                     <br>
                     <?php
-                    
+                    if ($verif_null == 1){
                     ?>
                     @foreach($events as $event)
                     <div class="card">
                         <div class="card-header">
-                        {{$verif_null}}
+                        {{}}
                             <?php
                             $amanha = date('Y-m-d', strtotime(' +1 day'));
 
@@ -123,12 +123,13 @@
                     @include('dashboard-usuario.confirmacao')
                     @endforeach
                     <?php
-                   
+                    }
+                    else{
                     ?>
 
-
+testeeee
                     <?php
-                    
+                    }
                     ?>
 
                 </div>
