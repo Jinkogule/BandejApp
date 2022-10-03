@@ -61,20 +61,11 @@
                             @csrf   
                         </form>
 
-                        <?php
-                        $q_refeicoes = DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->count();
-                        $q_dias = DB::table('calendario')->count();
-                        if ($q_refeicoes == 2*$q_dias){
-                        ?>
-                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
-                        <?php
-                        }
-                        else{
-                        ?>
-                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()" checked> <span class="card-title">Selecionar/desselecionar todos</span>
-                        <?php
-                        }
-                        ?>
+                  
+                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar todos</span>
+                    
+                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="card-title">Desselecionar todos</span>
+                        
 
 
                         @foreach($calendario_dias as $event)
