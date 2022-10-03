@@ -45,7 +45,7 @@
                 <?php
                 $data_banco = $event->data;  
                 $data_visual = date("d/m/y", strtotime($data_banco));
-                $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco)->get();
+                $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco)->value('dia_da_semana');
                 ?>
                 Prezado(a) {{ session('nome') }}, você tem 
                 <?php
