@@ -16,7 +16,6 @@ class CreateCalendarioTable extends Migration
         Schema::create('calendario', function (Blueprint $table) {
             $table->id();
             $table->string('dia_da_semana');
-            $table->string('data_visual');
             $table->date('data');
             $table->timestamps();
         });
