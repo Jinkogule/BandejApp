@@ -48,16 +48,22 @@
 
                 
                     <br>
+                    <?php
+                    $aux_contador = 1; /*variável auxiliar para dar display do modal somente da primeira refeição da fila*/
+                    ?>
                     @foreach($events as $event)
                     <div class="card">
                         <div class="card-header">
                             
                             <?php
                             $amanha = date('Y-m-d', strtotime(' +1 day'));
-                        
+                            
 
+                            if ($aux_contador == 1){
+                                $primeira_da_fila = $event->id;
+                            }
                             /*Alerta caso refeição esteja pendente e passível de confirmação*/ /*e não tem nenhuma refeição pendente antes*/
-                            if ($event->status_confirmacao == 'P' || $first_event->id == $event->id /*&& $amanha == $event->data*/){
+                            if ($event->status_confirmacao == 'P' || $event->id == $primeira_da_fila/*&& $amanha == $event->data*/){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                                 <script type="text/javascript">
@@ -119,6 +125,9 @@
                     </div>
 
                     @include('dashboard-usuario.confirmacao')
+                    <?php
+                    $aux_contador += 1;
+                    ?>
                     @endforeach 
 
                 </div>
