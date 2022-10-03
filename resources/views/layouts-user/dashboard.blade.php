@@ -54,7 +54,6 @@
                         @foreach($events as $event)
                         <div class="card">
                             <div class="card-header">
-                            {{}}
                                 <?php
                                 $amanha = date('Y-m-d', strtotime(' +1 day'));
 
