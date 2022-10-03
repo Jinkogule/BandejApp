@@ -89,7 +89,6 @@
                                         <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                         <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                         <input type="hidden" name="data" value="{{ $event->data }}">
-                                        <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                         <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                         <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
@@ -116,7 +115,6 @@
                                         <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                         <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                         <input type="hidden" name="data" value="{{ $event->data }}">
-                                        <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                         <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                         <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
@@ -137,7 +135,6 @@
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                     <input type="hidden" name="data" value="{{ $event->data }}">
-                                    <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                     <input type="checkbox" name="checkboxJanta_{{ $event->id }}" id="checkboxJanta_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoJanta_{{ $event->id }}').submit()" checked>
@@ -165,7 +162,6 @@
                                     <input type="hidden" name="unidade_bandejao" value="{{ $unidade_bandejao }}">
                                     <input type="hidden" name="dia_da_semana" value="{{ $event->dia_da_semana }}">
                                     <input type="hidden" name="data" value="{{ $event->data }}">
-                                    <input type="hidden" name="data_visual" value="{{ $event->data_visual }}">
                                     <input type="hidden" name="id_usuario" value="{{ $user_id }}">
 
                                     <input type="checkbox" name="checkboxJanta_{{ $event->id }}" id="checkboxJanta_{{ $event->id }}" onchange="document.getElementById('registrarRefeicaoJanta_{{ $event->id }}').submit()">
@@ -191,7 +187,7 @@
                     var unidade_bandejao = document.getElementById("unidade_bandejao").value;
                     var dia_da_semana = document.getElementById("dia_da_semana").value;
                     var data = document.getElementById("data").value;
-                    var data_visual = document.getElementById("data_visual").value;
+                 
                     var id_usuario = document.getElementById("id_usuario").value;
 
                     
@@ -206,7 +202,7 @@
                             unidade_bandejao:unidade_bandejao,
                             dia_da_semana:dia_da_semana,
                             data:data,
-                            data_visual:data_visual,
+                         
                             id_usuario:id_usuario,
                         },
 
