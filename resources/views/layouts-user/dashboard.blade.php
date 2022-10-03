@@ -127,7 +127,7 @@
                     else{
                     ?>
                     <div class="alert alert-info" style="text-align: center;">
-                    Sua lista está vazia. Vá em <a href="/planejamentomensal">Planejamento Mensal</a> e selecione as datas em que você pretende almoçar ou jantar no bandejão.
+                    Sua lista está vazia. Vá em <a href="/planejamentomensal">Planejamento Mensal</a> e selecione as refeições que você pretende realizar no bandejão ao longo dos próximos dias.
                     </div>
 
                     <?php

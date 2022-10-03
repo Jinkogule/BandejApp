@@ -48,7 +48,7 @@
                 <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
                 <hr>
                 <div style="text-align: center;">
-                    <span style="color: #fff;">Selecione os dias em que você pretende comparecer ao bandejão</span>
+                    <span style="color: #fff;">Selecione as refeições que você pretende realizar no bandejão</span>
                 </div>
                 <div class="container container2-pm" style="overflow: auto">
                     <br>

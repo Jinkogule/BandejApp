@@ -20,7 +20,7 @@ class PlanejamentoMensalController extends Controller
             return View::make('layouts-user.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
         }
   
-        return back()->withErrors([
+        return redirect("/")->withErrors([
             'email' => 'auth nao checked',
             'password' => 'auth nao checked'
         ]);
