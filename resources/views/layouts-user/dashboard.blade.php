@@ -38,20 +38,21 @@
                 <div class="container container2-d" style="overflow: auto">
                 <br>
                 <?php
+                $amanha = date('Y-m-d', strtotime(' +1 day'));
+
+                $data_banco = $event->data;  
+                $data_visual2 = date("d/m/y", strtotime($data_banco));
+
+                $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+
+                $tipo_visual = ucfirst($event->tipo);
                 if ($verif_null == 1){
                 ?>
                 @foreach($events as $event)
                 <div class="card">
                     <div class="card-header">
                         <?php
-                        $amanha = date('Y-m-d', strtotime(' +1 day'));
-
-                        $data_banco = $event->data;  
-                        $data_visual2 = date("d/m/y", strtotime($data_banco));
-
-                        $dia_da_semana_visual = ucfirst($event->dia_da_semana);
-
-                        $tipo_visual = ucfirst($event->tipo);
+                        
 
                         /*Alerta caso refeição esteja pendente e passível de confirmação*/
                         if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
