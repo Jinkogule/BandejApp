@@ -46,6 +46,13 @@
                         <?php
                         $amanha = date('Y-m-d', strtotime(' +1 day'));
 
+                        $data_banco = $event->data;  
+                        $data_visual2 = date("d/m/y", strtotime($data_banco));
+
+                        $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+
+                        $tipo_visual = ucfirst($event->tipo);
+
                         /*Alerta caso refeição esteja pendente e passível de confirmação*/
                         if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
                         ?>
@@ -62,9 +69,10 @@
                         ?>
                             <img src="/images/confirmado.png" class="img-fluid" alt="Responsive image" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                         <?php
+                    
                         }
                         ?>
-                        <span class="card-title" style="text-align: center; color: #fff;">{{$event->dia_da_semana}} - {{$event->data_visual}} - {{$event->tipo}} - {{$event->unidade_bandejao}}</span>
+                        <span class="card-title" style="text-align: center; color: #fff;">{{$dia_da_semana_visual}} - {{$event->$data_visual2}} - {{$tipo_visual}} - {{$event->unidade_bandejao}}</span>
                     </div>
                     
                     <div class="card-body">
