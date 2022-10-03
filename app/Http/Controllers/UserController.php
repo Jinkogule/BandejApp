@@ -46,7 +46,7 @@ class UserController extends Controller{
   
         return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
     }
-/*
+    /*
     public function ajax_submit(Request $request){
         Refeicao::create([
             'id_usuario' => $request->id_usuario,
@@ -166,7 +166,4 @@ class UserController extends Controller{
 
         return redirect('/planejamentomensal')->with('message', 'Refeições removidas com sucesso!');
     }
-
-
-
 }
