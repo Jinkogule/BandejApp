@@ -177,6 +177,7 @@
         </div>
        
         <script>
+            /* tentativa submit por ajax
             $(document).ready(function (){
                 $("form").submit(function (event){
                     event.preventDefault();
@@ -222,7 +223,7 @@
             });
             return false;
                 
-        }
+        }*/
         </script>
     </body>
 </html>

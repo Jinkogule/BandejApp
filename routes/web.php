@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\PlanejamentoMensalController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MailController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -48,7 +47,7 @@ Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->
 
 
 
-Route::get('planejamentomensal', [PlanejamentoMensalController::class, 'planejamentomensal']);
+Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
 
 
 Route::post('cancelarRefeicaoPlanejamento', [UserController::class, 'cancelarRefeicaoPlanejamento'])->name('cancelarRefeicaoPlanejamento');
