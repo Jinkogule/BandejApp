@@ -50,26 +50,19 @@
                 <div style="text-align: center;">
                     <span style="color: #fff;">Selecione as refeições que você pretende realizar no bandejão</span>
                 </div>
-                <div class="container container2-pm" style="overflow: auto">
+                <div class="container container2-pm" style="overflow: auto; text-align: center;">
                     <br>
-                    
                         <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
-                            @csrf   
+                            @csrf
+                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar todos</span> 
                         </form>
 
                         <form id="desselecionarTodasRefeicoes" action="{{ route('desselecionarTodasRefeicoes') }}" method="POST">
-                            @csrf   
+                            @csrf
+                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="card-title">Desselecionar todos</span>
                         </form>
 
-                  
-                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar todos</span>
-                    
-                        <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="card-title">Desselecionar todos</span>
-                        
-
-
-                        @foreach($calendario_dias as $event)
-                        
+                        @foreach($calendario_dias as $event)        
                         <div class="card">
                             <div class="card-header">
                                 <span class="card-title" style="text-align: center; color: #fff;">{{ $event->dia_da_semana }} - {{ $event->data_visual }}</span>
