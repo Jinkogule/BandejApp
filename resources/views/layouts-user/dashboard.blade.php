@@ -20,9 +20,9 @@
     </head>
 
     <body>
-        @include('dashboard-usuario.navbar1')
+        @include('layouts-user.components-user.navbar1')
 
-        @include('dashboard-usuario.navbar2')
+        @include('layouts-user.components-user.navbar2')
 
         @if(session()->has('message'))
             <div class="alert alert-success" style="text-align: center;">
@@ -108,7 +108,7 @@
                     </div>                       
                 </div>
 
-                @include('dashboard-usuario.confirmacao')
+                @include('layouts-user.components-user.modals-confirmacao')
                 @endforeach
                 <?php
                 }
