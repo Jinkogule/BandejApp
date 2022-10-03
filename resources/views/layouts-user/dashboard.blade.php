@@ -54,9 +54,10 @@
                             
                             <?php
                             $amanha = date('Y-m-d', strtotime(' +1 day'));
+                        
 
-                            /*Alerta caso refeição esteja pendente e passível de confirmação*/
-                            if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
+                            /*Alerta caso refeição esteja pendente e passível de confirmação*/ /*e não tem nenhuma refeição pendente antes*/
+                            if ($event->status_confirmacao == 'P' || DB::table('refeicaos')->where('id_usuario', '=', $user_id)->where('status_confirmacao', '=', 'P')->where('data', '<', $event->data)->doesntExist() /*&& $amanha == $event->data*/){
                             ?>
                                 <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                                 <script type="text/javascript">
