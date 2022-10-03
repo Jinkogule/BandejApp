@@ -48,6 +48,9 @@
 
                 
                     <br>
+                    <?php
+                    if ($events != null){
+                    ?>
                     @foreach($events as $event)
                     <div class="card">
                         <div class="card-header">
@@ -118,7 +121,10 @@
                     </div>
 
                     @include('dashboard-usuario.confirmacao')
-                    @endforeach 
+                    @endforeach
+                    <?php
+                    }
+                    ?>
 
                 </div>
             </div>          
