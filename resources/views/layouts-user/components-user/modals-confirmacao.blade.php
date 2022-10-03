@@ -46,7 +46,20 @@
                 $data_banco = $event->data;  
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 ?>
-                Prezado(a) {{ session('nome') }}, você tem um {{ $event->tipo }} planejado(a) no campus {{ $event->unidade_bandejao }} para dia {{ $data_visual }}.
+                Prezado(a) {{ session('nome') }}, você tem 
+                <?php
+                if ($event->tipo == 'Almoço'){
+                ?>
+                    um almoço planejado
+                <?php
+                }
+                if ($event->tipo == 'Janta'){
+                ?>
+                    uma janta planejada
+                <?php
+                }
+                ?>
+                  no campus {{ $event->unidade_bandejao }} para dia {{ $data_visual }}, {{ $dia_da_semana }}.
                 <br><br>
                 Você confirma sua presença?
             </div>
