@@ -89,15 +89,12 @@ class AuthController extends Controller{
             else{
                 $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(31);
                 $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
-                
+
                 return View::make('layouts-user.dashboard')->with('events', $events)->with('verif_null', $verif_null);  // user dashboard path
             }   
         }
   
-        return back()->withErrors([
-            'email' => 'auth nao checked',
-            'password' => 'auth nao checked'
-        ]);
+        return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
     }
 
     /*Sair*/
