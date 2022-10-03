@@ -63,7 +63,7 @@
 
                         <?php
                         $q_refeicoes = DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->count();
-                        $q_dias = DB::table('calendario')count();
+                        $q_dias = DB::table('calendario')->count();
                         if ($q_refeicoes = 2*$q_dias){
                         ?>
                         <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
