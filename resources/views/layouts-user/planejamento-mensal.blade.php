@@ -62,7 +62,7 @@
                         </form>
 
                         <?php
-                        if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->exists() == 1){
+                        if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('status_confirmacao', '!=', 'C')->exists() == 1){
                         ?>
                         <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar/desselecionar todos</span>
                         <?php
