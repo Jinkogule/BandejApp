@@ -77,9 +77,8 @@ body{
 }
 @media (max-width: 1000px) {
     .card-header{
-        text-align: center;
+        text-align: left;
         background-color: #5E5FC0;
-        margin-left: 50px;
     }
 }
 
