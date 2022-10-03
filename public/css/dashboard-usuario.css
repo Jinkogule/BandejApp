@@ -238,8 +238,7 @@ body{
     color: #fff;
 }
 
-/*-------------------------------TELA DE CONFIRMAÇÃO----------------------*/
-
+/*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
 @media (min-width: 1000px) {
     .confirmacao-bloco{
         background-color: #1F519B;
@@ -256,6 +255,6 @@ body{
         padding: 20px;
         text-align: center;
         color: #fff;
-        width: 90%;
+        width: 95%;
     }
 }
