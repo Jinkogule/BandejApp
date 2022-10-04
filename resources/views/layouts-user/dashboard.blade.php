@@ -72,7 +72,7 @@
                         
                         if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
                         ?>
-                            <img src="/images/pendente.png" class="img-fluid border" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <!--desativado temporariamente*/ (ativado no temporário acima)
                             <script type="text/javascript">
                                 $(window).on('load', function() {
@@ -110,13 +110,15 @@
                                 <div class="row">
                                     <?php
                                     /*Botão de confirmação disponível caso o dia atual seja 1 anterior à ocorrência da refeição*/
-                                    if ($amanha >= $event->data){
+                                    /*if ($amanha >= $event->data) (IF desativado temporariamente{*/
                                     ?>
                                         <div class="d-grid mx-auto mb-3">
                                             <button type="submit" class="btn btn-sm btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}">Confirmar</button>
                                         </div>
                                     <?php
+                                    /*
                                     }
+                                    */
                                     ?>
 
                                     <!--Form cancelamento de refeição-->
