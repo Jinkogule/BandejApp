@@ -72,7 +72,7 @@
                         
                         if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
                         ?>
-                            <img src="/images/pendente.png" class="img-fluid border" style="border-color: coral; border-radius: 20px;" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <img src="/images/pendente.png" class="img-fluid border" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                             <!--desativado temporariamente*/ (ativado no temporário acima)
                             <script type="text/javascript">
                                 $(window).on('load', function() {
