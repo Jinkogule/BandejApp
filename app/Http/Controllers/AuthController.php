@@ -88,6 +88,7 @@ class AuthController extends Controller{
             }
             else{
                 $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(31);
+                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(31);
                 $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
 
                 return View::make('layouts-user.dashboard')->with('events', $events)->with('verif_null', $verif_null);  // user dashboard path

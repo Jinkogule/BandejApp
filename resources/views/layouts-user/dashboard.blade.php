@@ -40,6 +40,23 @@
                 <?php
                 if ($verif_null == 1){
                 ?>
+                <!--temporário-->
+                @foreach($events2 as $event)
+                    <?php
+                    if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
+                    ?> 
+                    <script type="text/javascript">
+                        $(window).on('load', function() {
+                            $('#confirmacao-notificacao{{$event->id}}').modal('show');
+                        });
+                    </script>
+                    <?php
+                    }
+                    ?>
+                    @include('layouts-user.components-user.modals-confirmacao')
+                @endforeach
+                <!--temporário-->
+
                 @foreach($events as $event)
                 <div class="card">
                     <div class="card-header">
@@ -52,14 +69,17 @@
                         $tipo_visual = ucfirst($event->tipo);
 
                         /*Alerta caso refeição esteja pendente e passível de confirmação*/
+                        
                         if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
                         ?>
                             <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                            <!--desativado temporariamente*/ (ativado no temporário acima)
                             <script type="text/javascript">
                                 $(window).on('load', function() {
                                     $('#confirmacao-notificacao{{$event->id}}').modal('show');
                                 });
                             </script>
+                            -->
                         <?php
                         }
                         /*Sinal de confirmada caso refeição esteja confirmada*/
