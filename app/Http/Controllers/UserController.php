@@ -127,7 +127,7 @@ class UserController extends Controller{
 
     public function selecionarTodasRefeicoes(Request $request){
 
-        $calendario = DB::table('calendario')->select('*')->get();
+        $calendario = DB::table('calendario')->select('*')->paginate(10);
 
         foreach ($calendario as $event) {
             if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->exists() == 0){
