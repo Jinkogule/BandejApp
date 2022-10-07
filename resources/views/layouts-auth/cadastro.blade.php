@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="data_nascimento" style="color: #fff;">Data de nascimento:</label>
-                    <input type="date" placeholder="" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
+                    <input type="text" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
                     @if ($errors->has('data_nascimento'))
                     <span class="text-danger">{{ $errors->first('data_nascimento') }}</span>
                     @endif
@@ -107,4 +107,10 @@
         </div>
        
     </body>
+
+    <script>
+    $(document).ready(function(){
+        $('#data_nascimento').mask('00/00/0000');
+    });
+    </script>
 </html>
