@@ -94,7 +94,7 @@
                 <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
                         <select class="form-control fake-placeholder" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
-                            <option value="" disabled selected>Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
+                            <option value="" hidden selected>Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
                             <option>Gragoatá</option>
                             <option>Praia Vermelha</option>
                             <option>Reitoria</option>
@@ -115,15 +115,5 @@
     $(document).ready(function(){
         $('#data_nascimento').mask('00/00/0000');
     });
-
-    (function($){
-    $('#unidade_bandejao').change(function(){
-       if( !$(this).data('removedPlaceHolder'))
-       {
-          $(this).find('option:first').remove();
-          $(this).data('removedPlaceHolder', true); 
-       }
-    });
-})(jQuery);
     </script>
 </html>
