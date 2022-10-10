@@ -51,7 +51,7 @@
                     </div>
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
-                        <select class="form-control" id="status" name="status" value="{{ old('status') }}" required>
+                        <select class="form-control empty" id="status" name="status" value="{{ old('status') }}" required>
                             <option value="" disabled selected>Aluno, professor, técnico administrativo ou externo</option>
                             <option>Aluno</option>
                             <option>Professor</option>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
-                        <select class="form-control" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
+                        <select class="form-control empty" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
                             <option value="" disabled selected>Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
                             <option>Gragoatá</option>
                             <option>Praia Vermelha</option>
