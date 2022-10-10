@@ -52,8 +52,7 @@
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
                         <select class="form-control fake-placeholder" id="status" name="status" onclick="fake_placeholder_status()" value="{{ old('status') }}" required>
-                            <option></option>
-                            <option value="" class="campo-placeholder">Aluno, professor, técnico administrativo ou externo</option>
+                            <option value="" class="campo-placeholder">Aluno, professor, técnico administrativo ou externo.</option>
                             <option>Aluno</option>
                             <option>Professor</option>
                             <option>Técnico administrativo</option>
