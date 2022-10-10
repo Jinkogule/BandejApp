@@ -41,13 +41,26 @@
                         @endif
                     </div>
                 </div>
-                <div class="form-group mb-4">
-                    <label for="data_nascimento" style="color: #fff;">Data de nascimento:</label>
-                    <input type="text" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
-                    @if ($errors->has('data_nascimento'))
-                    <span class="text-danger">{{ $errors->first('data_nascimento') }}</span>
-                    @endif
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="data_nascimento" style="color: #fff;">Data de nascimento:</label>
+                        <input type="text" id="data_nascimento" class="form-control" name="data_nascimento" value="{{ old('data_nascimento') }}" required autofocus>
+                        @if ($errors->has('data_nascimento'))
+                        <span class="text-danger">{{ $errors->first('data_nascimento') }}</span>
+                        @endif
+                    </div>
+                    <div class="col">
+                        <label for="status" style="color: #fff;">Você é:</label>
+                        <select class="form-control" id="status" name="status" value="{{ old('status') }}" required>
+                            <option></option>
+                            <option>Aluno</option>
+                            <option>Professor</option>
+                            <option>Servidor Público</option>
+                            <option>Externo</option>
+                        </select>
+                    </div>
                 </div>
+
                 <div class="form-group">
                     <label for="email" style="color: #fff;">E-mail:</label>
                     <input type="text" placeholder="" id="email" class="form-control"name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
@@ -76,16 +89,6 @@
                         @if ($errors->has('altura'))
                         <span class="text-danger">{{ $errors->first('altura') }}</span>
                         @endif
-                    </div>
-                    <div class="col mb-4">
-                        <label for="status" style="color: #fff;">Você é:</label>
-                        <select class="form-control" id="status" name="status" value="{{ old('status') }}" required>
-                            <option></option>
-                            <option>Aluno</option>
-                            <option>Professor</option>
-                            <option>Servidor Público</option>
-                            <option>Externo</option>
-                        </select>
                     </div>
                 </div>
                 <div class="col mb-4">
