@@ -235,9 +235,9 @@ h4{
 }
 
 /*----------------------------------------Placeholders select tag----------------------------------------*/
-.fake-placeholder
-{
-
-
+.fake-placeholder {
+    color: gray;
+}
+.campo-placeholder {
     display:none;
 }
