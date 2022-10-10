@@ -233,3 +233,7 @@ h4{
     text-decoration: none;
     cursor: pointer;
 }
+
+/*----------------------------------------Placeholders select tag----------------------------------------*/
+
+.fake-placeholder select option:first-child { color: grey; }
