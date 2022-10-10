@@ -54,7 +54,7 @@ class AuthController extends Controller{
             'nome' => 'required',
             'sobrenome' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8|max:20',
         ]);
            
         $data = $request->all();
