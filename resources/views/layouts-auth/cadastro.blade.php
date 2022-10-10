@@ -52,7 +52,7 @@
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
                         <select class="form-control empty" id="status" name="status" value="{{ old('status') }}" required>
-                            <option value="" disabled selected>Aluno, professor, técnico administrativo ou externo</option>
+                            <option value="" style="color: grey !important;" disabled selected>Aluno, professor, técnico administrativo ou externo</option>
                             <option>Aluno</option>
                             <option>Professor</option>
                             <option>Técnico administrativo</option>
@@ -94,7 +94,7 @@
                 <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
                         <select class="form-control" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
-                            <option value="" disabled selected>Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
+                            <option value="" style="color: grey !important;" disabled selected>Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
                             <option>Gragoatá</option>
                             <option>Praia Vermelha</option>
                             <option>Reitoria</option>
@@ -118,6 +118,16 @@
 
     (function($){
         $('#unidade_bandejao').change(function(){
+        if( !$(this).data('removedPlaceHolder'))
+        {
+            $(this).find('option:first').remove();
+            $(this).data('removedPlaceHolder', true); 
+        }
+        });
+    })(jQuery);
+
+    (function($){
+        $('#status').change(function(){
         if( !$(this).data('removedPlaceHolder'))
         {
             $(this).find('option:first').remove();
