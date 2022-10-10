@@ -51,7 +51,7 @@
                     </div>
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
-                        <select class="form-control fake-placeholder" id="status" name="status" onclick="fake_placeholder()" value="{{ old('status') }}" required>
+                        <select class="form-control fake-placeholder" id="status" name="status" onclick="fake_placeholder_status()" value="{{ old('status') }}" required>
                             <option></option>
                             <option value="" class="campo-placeholder">Aluno, professor, técnico administrativo ou externo</option>
                             <option>Aluno</option>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
-                        <select class="form-control fake-placeholder" id="unidade_bandejao" onclick="fake_placeholder()" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
+                        <select class="form-control fake-placeholder" id="unidade_bandejao" onclick="fake_placeholder_unidade_bandejao()" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
                             <option value="" class="campo-placeholder">Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP.</option>
                             <option>Gragoatá</option>
                             <option>Praia Vermelha</option>
@@ -117,12 +117,14 @@
         $('#data_nascimento').mask('00/00/0000');
     });
 
-    function fake_placeholder(){
-        var status = document.getElementById("status");
-        status.classList.remove("fake-placeholder");
+    function fake_placeholder_unidade_bandejao(){
+        var element = document.getElementById("unidade_bandejao");
+        element.classList.remove("fake-placeholder");
+    }
 
-        var unidade_bandejao = document.getElementById("unidade_bandejao");
-        unidade_bandejao.classList.remove("fake-placeholder");
+    function fake_placeholder_status(){
+        var element = document.getElementById("status");
+        element.classList.remove("fake-placeholder");
     }
     </script>
 </html>
