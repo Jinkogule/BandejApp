@@ -8,7 +8,7 @@
         <!-- Brand -->
         </a>  
         
-        <h4 class="bem-vindo centraliza">Bem vindo, {{ session('nome')}}!</h4>
+        <h4 class="bem-vindo centraliza">Bem vindo(a), {{ session('nome')}}!</h4>
         
         <a class="nav-link" href="{{ route('sair') }}" style="color: #fff !important;">Sair</a>
         
