@@ -52,7 +52,6 @@
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
                         <select class="form-control" id="status" name="status" value="{{ old('status') }}" required>
-                            <option></option>
                             <option value="" disabled selected>Aluno, professor, técnico administrativo ou externo</option>
                             <option>Aluno</option>
                             <option>Professor</option>
@@ -116,5 +115,9 @@
     $(document).ready(function(){
         $('#data_nascimento').mask('00/00/0000');
     });
+
+    $("select:has(option[value=]:first-child)").on('change', function() {
+        $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
+    }).trigger('change');
     </script>
 </html>
