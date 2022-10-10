@@ -235,4 +235,4 @@ h4{
 }
 
 /*----------------------------------------Placeholders select tag----------------------------------------*/
-select:invalid option:not(:disabled) { color: black }
+select:invalid option:not(:disabled) { color: grey }
