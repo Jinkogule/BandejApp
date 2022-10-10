@@ -116,9 +116,11 @@
         $('#data_nascimento').mask('00/00/0000');
     });
 
-    $("select:has(option[value=]:first-child)").on('change', function() {
-        $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
-        $("#unidade_bandejao").removeClass("empty");
-    }).trigger('change');
+    if ($("#unidade_bandejao").hasClass("empty")){
+        $("select:has(option[value=]:first-child)").on('change', function() {
+            $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
+            $("#unidade_bandejao").removeClass("empty");
+        }).trigger('change');
+    }
     </script>
 </html>
