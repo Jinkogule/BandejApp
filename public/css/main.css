@@ -235,3 +235,8 @@ h4{
 }
 
 /*----------------------------------------Placeholders select tag----------------------------------------*/
+select option { color: black; }
+select option:first-child { color: grey; }
+select.empty { color: grey; }
+/* Hidden placeholder */
+select option[disabled]:first-child { display: none; }
