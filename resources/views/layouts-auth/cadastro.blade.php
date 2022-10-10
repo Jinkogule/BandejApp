@@ -25,7 +25,7 @@
             <br><h4 style="text-align: center;">Cadastro</h4><hr>
             <form action="{{ route('realizarCadastro') }}" method="POST">
                 @csrf
-                <div class="row">
+                <div class="row mb-1">
                     <div class="col">
                         <label for="nome" style="color: #fff;">Nome:</label>
                         <input type="text" placeholder="" id="nome" class="form-control" name="nome" value="{{ old('nome') }}" maxlength="100" required autofocus>
@@ -61,29 +61,29 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-1">
                     <label for="email" style="color: #fff;">E-mail:</label>
                     <input type="text" placeholder="" id="email" class="form-control"name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
-                <div class="form-group mb-4">
+                <div class="form-group mb-3">
                     <label for="password" style="color: #fff;">Senha:</label>
                     <input type="password" placeholder="" id="password" class="form-control" name="password" maxlength="20" required>
                     @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
-                <div class="row">
-                    <div class="col mb-3">
+                <div class="row mb-3">
+                    <div class="col">
                         <label for="peso" style="color: #fff;">Peso(Kg):</label>
                         <input type="text" placeholder="" id="peso" class="form-control" name="peso" pattern="[\d]+" value="{{ old('peso') }}" required>
                         @if ($errors->has('peso'))
                         <span class="text-danger">{{ $errors->first('peso') }}</span>
                         @endif
                     </div>
-                    <div class="col mb-3">
+                    <div class="col">
                         <label for="altura" style="color: #fff;">Altura(m):</label>
                         <input type="number" placeholder="" id="altura" class="form-control" name="altura" step=".01" value="{{ old('altura') }}" required>
                         @if ($errors->has('altura'))
