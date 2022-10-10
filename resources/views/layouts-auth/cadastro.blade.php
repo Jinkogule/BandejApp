@@ -52,6 +52,7 @@
                     <div class="col">
                         <label for="status" style="color: #fff;">Você é:</label>
                         <select class="form-control" id="status" name="status" value="{{ old('status') }}" required>
+                            <option></option>
                             <option value="" disabled selected>Aluno, professor, técnico administrativo ou externo</option>
                             <option>Aluno</option>
                             <option>Professor</option>
@@ -94,7 +95,7 @@
                 <div class="col mb-4">
                         <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
                         <select class="form-control" id="unidade_bandejao" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
-                            <option selected="selected" class="fake-placeholder">Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP</option>
+                            <option></option>
                             <option>Gragoatá</option>
                             <option>Praia Vermelha</option>
                             <option>Reitoria</option>
@@ -105,7 +106,7 @@
                 <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-success btn-block">Enviar</button>
                 </div>
-                <a class="nav-link mb-2 pb-2" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
+                <a class="nav-link mb-2" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
             </form>    
         </div>
        
@@ -115,6 +116,5 @@
     $(document).ready(function(){
         $('#data_nascimento').mask('00/00/0000');
     });
-    
     </script>
 </html>
