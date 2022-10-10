@@ -233,7 +233,3 @@ h4{
     text-decoration: none;
     cursor: pointer;
 }
-
-/*----------------------------------------Placeholders select tag----------------------------------------*/
-#choice option { color: black; }
-.empty { color: gray; }
