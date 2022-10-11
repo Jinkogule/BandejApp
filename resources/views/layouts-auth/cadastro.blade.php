@@ -85,7 +85,7 @@
                     </div>
                     <div class="col">
                         <label for="altura" style="color: #fff;">Altura(m):</label>
-                        <input type="number" placeholder="Altura" id="altura" class="form-control" name="altura" value="{{ old('altura') }}" required>
+                        <input type="text" placeholder="Altura" id="altura" class="form-control" name="altura" value="{{ old('altura') }}" required>
                         @if ($errors->has('altura'))
                         <span class="text-danger">{{ $errors->first('altura') }}</span>
                         @endif
