@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('peso');
-            $table->decimal('altura', $precision = 3, $scale = 2);
+            $table->string('altura');
             $table->string('status');
             $table->string('unidade_bandejao');
             $table->string('user_type')->nullable();
