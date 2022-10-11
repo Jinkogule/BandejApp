@@ -65,7 +65,11 @@
                     <label for="email" style="color: #fff;">E-mail:</label>
                     <input type="text" placeholder="E-mail" id="email" class="form-control"name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
                     @if ($errors->has('email'))
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                        @if ($errors->first('email') == 'validation.unique')
+                            <span class="text-danger">Este e-mail já foi cadastrado</span>
+                        @else
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        @endif
                     @endif
                 </div>
                 <div class="form-group mb-3">
