@@ -68,7 +68,7 @@
                         @if ($errors->first('email') == 'validation.unique')
                             <span class="text-danger">Este e-mail já foi cadastrado</span>
                         @else
-                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                            <span class="text-danger">E-mail inválido</span>
                         @endif
                     @endif
                 </div>
