@@ -117,7 +117,7 @@
     });
 
     $(document).ready(function(){
-        $('#altura').mask('0.00');
+        $('#altura').mask('0,00');
     });
 
     function fake_placeholder_unidade_bandejao(){
