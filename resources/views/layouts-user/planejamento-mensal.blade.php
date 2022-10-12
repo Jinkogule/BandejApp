@@ -173,9 +173,9 @@
                         </div>                       
                     </div>         
                 @endforeach
-                    <div class="alert alert-info" style="text-align: center;">
+                </div>
+                <div class="alert alert-info" style="text-align: center;">
                         Após selecionar as refeições, retorne à <a href="/dashboard">página principal</a> para confirmar as refeições.
-                    </div>
                 </div>
             </div>
         </div>
