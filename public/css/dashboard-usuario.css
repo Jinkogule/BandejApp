@@ -44,7 +44,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 720px;
+        height: 730px;
         width: 100%;
         border-radius: 10px;
         position: relative;
@@ -180,8 +180,7 @@ body{
     .container-pm{
         background-color: #1F519B;
         height: 725px;
-        width: 100%;
-        margin-top: 30px;  
+        width: 100%; 
         border-radius: 10px;
         position: relative;
     }
