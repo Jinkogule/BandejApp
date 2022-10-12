@@ -33,7 +33,7 @@ body{
 @media (min-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 85vh;
+        height: 87vh;
         width: 600px;
         border-radius: 10px;
         position: relative;
@@ -42,7 +42,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 85vh;
+        height: 87vh;
         width: 100%;
         border-radius: 10px;
         position: relative;
@@ -167,9 +167,8 @@ body{
 @media (min-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 85vh;
-        width: 600px;
-        margin-top: 30px;  
+        height: 87vh;
+        width: 600px; 
         border-radius: 10px;
         position: relative;
     }
@@ -177,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 85vh;
+        height: 87vh;
         width: 100%; 
         border-radius: 10px;
         position: relative;
