@@ -43,7 +43,7 @@ body{
     .container-d{
         background-color: #1F519B;
         height: 85vh;
-        width: 100%;
+        width: 95%;
         border-radius: 10px;
         position: relative;
     }
@@ -177,7 +177,7 @@ body{
     .container-pm{
         background-color: #1F519B;
         height: 85vh;
-        width: 100%; 
+        width: 95%; 
         border-radius: 10px;
         position: relative;
     }
