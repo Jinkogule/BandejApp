@@ -190,9 +190,10 @@ body{
 }
 .container2-pm{
     background-color: #B9D5FF;
-    height: 80%;
+    height: 70%;
     width: 98%;
-    margin-top: 15px;
+    margin-top: 15px;  
+    margin-bottom: 20px;
     border-radius: 10px;
 }
 
