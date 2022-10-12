@@ -180,21 +180,34 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 750px;
+        height: 700px;
         width: 100%;
         margin-top: 30px;  
         border-radius: 10px;
         position: relative;
     }
 }
-.container2-pm{
-    background-color: #B9D5FF;
-    height: 77%;
-    width: 98%;
-    margin-top: 15px;  
-    margin-bottom: 15px;
-    border-radius: 10px;
+@media (min-width: 1000px) {
+    .container2-pm{
+        background-color: #B9D5FF;
+        height: 77%;
+        width: 98%;
+        margin-top: 15px;  
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
 }
+@media (max-width: 1000px) {
+    .container2-pm{
+        background-color: #B9D5FF;
+        height: 77%;
+        width: 98%;
+        margin-top: 15px;  
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}
+
 
 /*----BOTÕES----*/
 .btn-confirmar{
