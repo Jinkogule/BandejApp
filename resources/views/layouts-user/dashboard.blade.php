@@ -31,7 +31,7 @@
         @endif
         <br>
         <!--Suas Próximas Refeições-->
-        <div class="container-fluid">
+       
             <div class="container-fluid container-d">
                 <br>
                 <h2 style="text-align: center; color: #fff;">Suas Próximas Refeições</h2>
@@ -150,6 +150,6 @@
                 }
                 ?>
             </div>
-        </div>          
+                 
     </body>
 </html>
