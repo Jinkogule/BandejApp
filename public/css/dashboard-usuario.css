@@ -33,7 +33,8 @@ body{
 @media (min-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        flex: 1 1 auto;
+        display: flex !important;
+        width: 600px;
         border-radius: 10px;
         position: relative;
     }
@@ -41,7 +42,8 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        flex: 1 1 auto;
+        display: flex !important;
+        width: 100%;
         border-radius: 10px;
         position: relative;
     }
