@@ -32,7 +32,7 @@
         <br>
         <!--Suas Próximas Refeições-->
         <div class="container-fluid">
-            <div class="container container-d">
+            <div class="container-fluid container-d">
                 <br>
                 <h2 style="text-align: center; color: #fff;">Suas Próximas Refeições</h2>
                 <div class="container container2-d" style="overflow: auto">

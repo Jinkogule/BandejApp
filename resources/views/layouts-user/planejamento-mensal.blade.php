@@ -43,14 +43,14 @@
         </nav>
 
         <div class="container-fluid">
-            <div class="container container-pm">
+            <div class="container-fluid container-pm">
                 <br>
                 <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
                 <hr>
                 <div style="text-align: center;">
                     <span style="color: #fff;">Selecione as refeições que você pretende realizar no bandejão</span>
                 </div>
-                <div class="container container2-pm" style="overflow: auto">
+                <div class="container-fluid container2-pm" style="overflow: auto">
                     <br>
                     <div class="row" style="text-align: center;">
                         <div class="col">
