@@ -174,6 +174,7 @@
                     </div>         
                 @endforeach 
                 </div>
+                <button href="/dashboard" class="btn btn-success btn-block">Voltar à página principal</button>
             </div>
         </div>
        
