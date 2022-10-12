@@ -33,7 +33,7 @@ body{
 @media (min-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-
+        max-width: 100%;
         border-radius: 10px;
         position: relative;
     }
@@ -41,7 +41,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-      
+        max-width: 100%;
         border-radius: 10px;
         position: relative;
     }
