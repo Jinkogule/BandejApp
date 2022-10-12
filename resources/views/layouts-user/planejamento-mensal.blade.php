@@ -175,7 +175,7 @@
             @endforeach
             </div>
             <div style="text-align: center;">
-                <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #31a3b8;">retorne à página principal</a>.</span>
+                <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #54b4c5;">retorne à página principal</a>.</span>
             </div>
         </div>
     
