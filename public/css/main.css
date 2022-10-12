@@ -4,7 +4,8 @@ body{
     font-family: 'Bahnschrift' !important;
     font-size: 1.0rem;
     text-align: justify;
-    background-color: rgb(220, 247, 255);      
+    background-color: rgb(220, 247, 255);
+    height: 100%;
 }
 
 hr { display: block; height: 1px;
