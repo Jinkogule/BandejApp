@@ -1,14 +1,5 @@
-@media (min-width: 1000px) {
-    body{
-        padding-top: 90px !important;
-        padding-bottom: 56px !important;    
-    }
-}
-@media (max-width: 1000px) {
-    body{
-        padding-top: 90px !important;
-        padding-bottom: 80px !important;    
-    }
+body{
+    padding-top: 90px !important;    
 }
 
 @media (min-width: 1000px) {
@@ -51,7 +42,7 @@
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: auto;
+        height: 77vh;
         width: 95%;
         border-radius: 10px;
         position: relative;
@@ -185,7 +176,7 @@
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: auto;
+        height: 77vh;
         width: 95%; 
         border-radius: 10px;
         position: relative;
@@ -204,7 +195,7 @@
 @media (max-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 70%;
+        height: 60%;
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
@@ -254,19 +245,6 @@
     color: #fff;
 }
 
-
-@media (min-width: 1000px) {
-    .span-info{
-        color: #fff;
-    }
-}
-@media (max-width: 1000px) {
-    .span-info{
-        color: #fff;
-        margin: 0;
-        padding: 0;
-    }
-}
 /*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
 @media (min-width: 1000px) {
     .confirmacao-bloco{

@@ -48,7 +48,7 @@
             <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
             <hr>
             <div style="text-align: center;">
-                <span class="span-info">Selecione as refeições que você pretende realizar no bandejão</span>
+                <span style="color: #fff;">Selecione as refeições que você pretende realizar no bandejão</span>
             </div>
             <div class="container-fluid container2-pm" style="overflow: auto">
                 <br>
@@ -174,15 +174,11 @@
                 </div>         
             @endforeach
             </div>
-            
-        </div>
-    
-        <!--Footer-->
-        <footer class="page-footer font-small fixed-bottom">
-            <div class="text-center py-3">
+            <div style="text-align: center;">
                 <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #8dd4e0;">retorne à página principal</a>.</span>
             </div>
-        </footer>
+        </div>
+    
         <script>
             /* tentativa submit por ajax
             $(document).ready(function (){
