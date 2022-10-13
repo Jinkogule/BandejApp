@@ -52,7 +52,7 @@
             </div>
             <div class="container-fluid container2-pm" style="overflow: auto">
                 <br>
-                <div class="row" style="text-align: center;">
+                <div class="row" style="text-align: center; height: 50px;">
                     <div class="col">
                         <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
                             @csrf

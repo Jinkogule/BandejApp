@@ -251,12 +251,12 @@ body{
 
 @media (min-width: 1000px) {
     .selecionar-desselecionar-todos{
-        font-size: 1.2rem !important;
+        font-size: 1rem !important;
     }
 }
 @media (max-width: 1000px) {
     .selecionar-desselecionar-todos{
-        font-size: 0.8rem !important;
+        font-size: 0.6rem !important;
     }
 }
 /*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
