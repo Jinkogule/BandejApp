@@ -56,13 +56,13 @@
                     <div class="col">
                         <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
                             @csrf
-                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="card-title">Selecionar todos</span> 
+                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Selecionar todos</span> 
                         </form>
                     </div>
                     <div class="col">
                         <form id="desselecionarTodasRefeicoes" action="{{ route('desselecionarTodasRefeicoes') }}" method="POST">
                             @csrf
-                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="card-title">Desselecionar todos</span>
+                            <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Desselecionar todos</span>
                         </form>
                     </div>
                 </div>

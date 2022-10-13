@@ -245,6 +245,20 @@ body{
     color: #fff;
 }
 
+.selecionar-desselecionar-todos{
+
+}
+
+@media (min-width: 1000px) {
+    .selecionar-desselecionar-todos{
+        font-size: 1.2rem !important;
+    }
+}
+@media (max-width: 1000px) {
+    .selecionar-desselecionar-todos{
+        font-size: 0.8rem !important;
+    }
+}
 /*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
 @media (min-width: 1000px) {
     .confirmacao-bloco{
