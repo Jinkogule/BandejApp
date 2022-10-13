@@ -52,20 +52,21 @@
             </div>
             <div class="container-fluid container2-pm" style="overflow: auto">
                 <br>
-                <div class="row" style="text-align: center; height: 50px;">
-                    <div class="col">
+                <div class="grid-container-element">
+                    <div class="grid-child-element">
                         <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
                             @csrf
                             <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Selecionar todos</span> 
                         </form>
                     </div>
-                    <div class="col">
+                    <div class="grid-child-element">
                         <form id="desselecionarTodasRefeicoes" action="{{ route('desselecionarTodasRefeicoes') }}" method="POST">
                             @csrf
                             <input type='checkbox' style="margin-left: 15px;" onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Desselecionar todos</span>
                         </form>
                     </div>
                 </div>
+                
 
                 @foreach($calendario_dias as $event)
                 <?php
