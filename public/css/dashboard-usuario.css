@@ -42,7 +42,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 75vh;
+        height: 77vh;
         width: 95%;
         border-radius: 10px;
         position: relative;
@@ -176,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 75vh;
+        height: 77vh;
         width: 95%; 
         border-radius: 10px;
         position: relative;
@@ -245,6 +245,19 @@ body{
     color: #fff;
 }
 
+
+@media (min-width: 1000px) {
+    .span-info{
+        color: #fff;
+    }
+}
+@media (max-width: 1000px) {
+    .span-info{
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+}
 /*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
 @media (min-width: 1000px) {
     .confirmacao-bloco{
