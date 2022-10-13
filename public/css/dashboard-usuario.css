@@ -249,7 +249,7 @@ body{
 .grid-container-element { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    height: 50px;
+    height: 25px;
     border: 1px solid; 
     width: 100%; 
 } 
@@ -260,11 +260,13 @@ body{
 @media (min-width: 1000px) {
     .selecionar-desselecionar-todos{
         font-size: 1rem !important;
+        letter-spacing: -1px;
     }
 }
 @media (max-width: 1000px) {
     .selecionar-desselecionar-todos{
-        font-size: 0.6rem !important;
+        font-size: 0.8rem !important;
+        letter-spacing: -1px;
     }
 }
 /*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
