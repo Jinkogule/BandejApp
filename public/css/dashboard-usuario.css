@@ -1,5 +1,14 @@
-body{
-    padding-top: 90px !important;    
+@media (min-width: 1000px) {
+    body{
+        padding-top: 90px !important;
+        padding-bottom: 56px !important;    
+    }
+}
+@media (max-width: 1000px) {
+    body{
+        padding-top: 90px !important;
+        padding-bottom: 80px !important;    
+    }
 }
 
 @media (min-width: 1000px) {
