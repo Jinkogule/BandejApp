@@ -174,11 +174,15 @@
                 </div>         
             @endforeach
             </div>
-            <div style="text-align: center;">
-                <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #8dd4e0;">retorne à página principal</a>.</span>
-            </div>
+            
         </div>
     
+        <!--Footer-->
+        <footer class="page-footer font-small fixed-bottom">
+            <div class="text-center py-3">
+                <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #8dd4e0;">retorne à página principal</a>.</span>
+            </div>
+        </footer>
         <script>
             /* tentativa submit por ajax
             $(document).ready(function (){
