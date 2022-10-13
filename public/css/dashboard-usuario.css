@@ -251,11 +251,10 @@ body{
     grid-template-columns: 1fr 1fr; 
     grid-gap: 20px; 
     border: 1px solid; 
-    width: 50%; 
+    width: 100%; 
 } 
 .grid-child-element { 
-    margin: 10px; 
-    border: 1px solid; 
+
 }
 
 @media (min-width: 1000px) {
