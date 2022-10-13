@@ -245,17 +245,26 @@ body{
     color: #fff;
 }
 
+/*-------------------------------Botões Selecionar/Desselecionar todos----------------------*/
 
-.grid-container-element { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    height: 25px;
-    border: 1px solid; 
-    width: 100%; 
-} 
-.grid-child-element { 
-
+@media (min-width: 1000px) {
+    .grid-container-element { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        height: 25px;
+        width: 100%;
+        margin-top: 10px;
+    } 
 }
+@media (max-width: 1000px) {
+    .grid-container-element { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        height: 25px;
+        width: 100%; 
+    } 
+}
+
 
 @media (min-width: 1000px) {
     .selecionar-desselecionar-todos{
