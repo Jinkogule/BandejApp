@@ -169,18 +169,21 @@
             <?php
         if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->exists() == 1){
         ?>
-            <div class="col btn-confirmar border position-relative">
-                <p class="centraliza" style="color: #fff;"> Próxima etapa</p>
-                <a href="/dashboard" class="stretched-link"></a>
+        
+            <div class="d-grid mx-auto mb-2">
+                <form action="/dashboard">
+                    <input type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
+                </form>
             </div>
         <?php
         }
         else{
         ?>
-         <div class="col btn-desativado border position-relative">
-            <p disabled class="centraliza" style="color: #fff;"> Próxima etapa</p>
-            <a disabled href="" class="stretched-link"></a>
-        </div>
+            <div class="d-grid mx-auto mb-2">
+                <form action="/dashboard">
+                    <input disabled type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
+                </form>
+            </div>
         <?php
         }
         ?>
