@@ -27,7 +27,7 @@
         -->
 
         @if(session()->has('message'))
-            <div class="alert alert-success msg-confirmacao">
+            <div class="alert alert-success msg-sucesso">
                 {{ session()->get('message') }}
             </div>
         @endif

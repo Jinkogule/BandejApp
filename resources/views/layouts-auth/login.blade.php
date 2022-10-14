@@ -36,13 +36,13 @@
         @include('comuns.navbar')
 
         @if(session()->has('message'))
-            <div class="alert alert-success" style="text-align: center;">
+            <div class="alert alert-success msg-sucesso">
                 {{ session()->get('message') }}
             </div>
         @endif
 
         @if(session()->has('erro'))
-            <div class="alert alert-danger" style="text-align: center;">
+            <div class="alert alert-danger msg-erro">
                 {{ session()->get('erro') }}
             </div>
         @endif
