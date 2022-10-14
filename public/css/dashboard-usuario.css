@@ -154,11 +154,23 @@ body{
 @media (min-width: 1000px) {
     .msg-confirmacao{
         top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        opacity: 0.9;
+        height: 45px;
     }
 }
 @media (max-width: 1000px) {
     .msg-confirmacao{
         top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        opacity: 0.9;
+        height: 25px;
     }
 }
 
@@ -196,7 +208,7 @@ body{
 @media (min-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 77%;/*valor antigo: height: 77%;*/
+        height: 75%;/*valor antigo: height: 77%;*/
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
