@@ -27,7 +27,7 @@
         -->
 
         @if(session()->has('message'))
-            <div class="alert alert-success" style="text-align: center;">
+            <div class="alert alert-success opacity-50" style="text-align: center; position: asbolute; top: 50px;">
                 {{ session()->get('message') }}
             </div>
         @endif
