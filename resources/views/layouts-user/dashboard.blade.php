@@ -19,13 +19,13 @@
         @include('comuns.scripts')
     </head>
 
-    <body>
+    <body style="padding-top: 70px !important; ">
         @include('layouts-user.components-user.navbar1')
 
         <!--desativado temporariamente pra fase de testes
         @include('layouts-user.components-user.navbar2')
         -->
-        
+
         @if(session()->has('message'))
             <div class="alert alert-success" style="text-align: center;">
                 {{ session()->get('message') }}
