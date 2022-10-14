@@ -176,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 75vh;/*valor antigo: height: 77vh;*/
+        height: 77vh;
         width: 95%; 
         border-radius: 10px;
         position: relative;
@@ -185,7 +185,7 @@ body{
 @media (min-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 77%;
+        height: 75%;/*valor antigo: height: 77%;*/
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
