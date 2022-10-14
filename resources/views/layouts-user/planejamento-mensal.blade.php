@@ -27,7 +27,6 @@
         <!--Navbar-->
         @include('layouts-user.components-user.navbar1')
 
-        @include('layouts-user.components-user.navbar2-testes')
         <br>
         
         <div class="container-fluid container-pm">
@@ -170,20 +169,20 @@
         if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->exists() == 1){
         ?>
         
-            <div class="d-grid mx-auto mb-2">
-                <form action="/dashboard">
+          
+                <form action="/dashboard" class="d-grid mx-auto mb-2">
                     <input type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
                 </form>
-            </div>
+            
         <?php
         }
         else{
         ?>
-            <div class="d-grid mx-auto mb-2">
-                <form action="/dashboard">
+          
+                <form action="/dashboard" class="d-grid mx-auto mb-2">
                     <input disabled type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
                 </form>
-            </div>
+            
         <?php
         }
         ?>

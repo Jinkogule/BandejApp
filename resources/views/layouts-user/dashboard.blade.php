@@ -19,7 +19,7 @@
         @include('comuns.scripts')
     </head>
 
-    <body style="padding-top: 70px !important; ">
+    <body>
         @include('layouts-user.components-user.navbar1')
 
         <!--desativado temporariamente pra fase de testes
