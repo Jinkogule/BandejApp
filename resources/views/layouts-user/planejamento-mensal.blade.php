@@ -161,9 +161,29 @@
                 </div>         
             @endforeach
             </div>
+            <!--
             <div style="text-align: center;">
                 <span style="color: #fff;">Após selecionar as refeições, <a href="/dashboard" style="color: #8dd4e0;">retorne à página principal</a>.</span>
             </div>
+                    -->
+            <?php
+        if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->exists() == 1){
+        ?>
+            <div class="col btn-confirmar border position-relative">
+                <p class="centraliza" style="color: #fff;"> Próxima etapa</p>
+                <a href="/dashboard" class="stretched-link"></a>
+            </div>
+        <?php
+        }
+        else{
+        ?>
+         <div class="col btn-desativado border position-relative">
+            <p disabled class="centraliza" style="color: #fff;"> Próxima etapa</p>
+            <a disabled href="" class="stretched-link"></a>
+        </div>
+        <?php
+        }
+        ?>
         </div>
     
         <script>
