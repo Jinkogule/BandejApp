@@ -39,7 +39,7 @@ class AuthController extends Controller{
             }
             preenchendo refeições iniciais*/
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('planejamentomensal');/*alterado temporariamente para fase de testes*/
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
     }
@@ -91,10 +91,22 @@ class AuthController extends Controller{
                 $events2 = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
                 $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
 
-                return View::make('layouts-user.planejamento-mensal')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path
+                return View::make('layouts-user.dashboard')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path
             }   
         }
   
+        public function planejamentomensal(){
+            if(Auth::check()){
+                $unidade_bandejao = Auth::user()->unidade_bandejao;
+                $user_id = Auth::user()->id;
+                //$refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $id_usuario)->paginate(10);
+                $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
+    
+                return View::make('layouts-user.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
+            }
+      
+            return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
+        }
         return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
     }
 
