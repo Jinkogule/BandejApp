@@ -22,8 +22,10 @@
     <body>
         @include('layouts-user.components-user.navbar1')
 
+        <!--desativado temporariamente pra fase de testes
         @include('layouts-user.components-user.navbar2')
-
+        -->
+        
         @if(session()->has('message'))
             <div class="alert alert-success" style="text-align: center;">
                 {{ session()->get('message') }}

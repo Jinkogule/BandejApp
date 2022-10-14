@@ -27,7 +27,7 @@
         <!--Navbar-->
         @include('layouts-user.components-user.navbar1')
 
-        @include('layouts-user.components-user.navbar2')
+        @include('layouts-user.components-user.navbar2-testes')
 
         <nav class="navbar navbar2 navbar-expand-md fixed-top">
             <div class="row" style="width: 100%; height: 45px; padding: 0; margin: 0; position: relative;">
