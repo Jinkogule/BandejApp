@@ -151,6 +151,17 @@ body{
     }
 }
 
+@media (min-width: 1000px) {
+    .msg-confirmacao{
+        top: 58px;
+    }
+}
+@media (max-width: 1000px) {
+    .msg-confirmacao{
+        top: 58px;
+    }
+}
+
 /*-------------------------------PLANEJAMENTO MENSAL----------------------*/
 @media (min-width: 1000px) {
     .bemvindo{
