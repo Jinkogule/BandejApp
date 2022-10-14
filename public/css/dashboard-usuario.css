@@ -42,7 +42,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 80vh;/*antigo 77*/
+        height: 82vh;/*antigo 77*/
         width: 95%;
         border-radius: 10px;
         position: relative;
@@ -176,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 80vh;/*antigo 87*/
+        height: 82vh;/*antigo 87*/
         width: 98%; 
         border-radius: 10px;
         position: relative;
@@ -185,7 +185,7 @@ body{
 @media (min-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 75%;/*valor antigo: height: 77%;*/
+        height: 77%;/*valor antigo: height: 77%;*/
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
@@ -262,7 +262,7 @@ body{
         display: grid; 
         grid-template-columns: 1fr 1fr; 
         height: 25px;
-        margin-top: 5px;
+        margin-top: 7px;
         width: 100%; 
     } 
 }
@@ -275,7 +275,7 @@ body{
 }
 @media (max-width: 1000px) {
     .selecionar-desselecionar-todos{
-        font-size: 0.8rem !important;
+        font-size: 1rem !important;
         letter-spacing: -1px;
     }
 }
