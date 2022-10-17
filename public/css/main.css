@@ -242,3 +242,54 @@ h4{
 .campo-placeholder {
     display:none;
 }
+
+/*----------------------------------------Mensagens----------------------------------------*/
+@media (min-width: 1000px) {
+    .msg-sucesso{
+        top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 1000px) {
+    .msg-sucesso{
+        top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .msg-erro{
+        top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 1000px) {
+    .msg-erro{
+        top: 58px;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+    }
+}
