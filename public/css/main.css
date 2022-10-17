@@ -254,6 +254,7 @@ h4{
         height: auto;
         margin: 0;
         padding: 0;
+        opacity: 0.95;
     }
 }
 @media (max-width: 1000px) {
@@ -266,6 +267,7 @@ h4{
         height: auto;
         margin: 0;
         padding: 0;
+        opacity: 0.95;
     }
 }
 
@@ -279,6 +281,7 @@ h4{
         height: auto;
         margin: 0;
         padding: 0;
+        opacity: 0.95;
     }
 }
 @media (max-width: 1000px) {
@@ -291,5 +294,6 @@ h4{
         height: auto;
         margin: 0;
         padding: 0;
+        opacity: 0.95;
     }
 }
