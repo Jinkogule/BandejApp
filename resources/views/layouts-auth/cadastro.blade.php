@@ -75,7 +75,7 @@
                 <div class="form-group mb-3">
                     <label for="password" style="color: #fff;">Senha:</label>
                     <input type="password" placeholder="Senha" id="password" class="form-control" name="password" maxlength="20" minlength="3" required>
-                    <small id="emailHelp" class="form-text">Obs: mínimo de 3 e máximo de 20 caracteres.</small>
+                    <small id="emailHelp" style="color: #F0F0F0" class="form-text text-muted">Obs.: mínimo de 3 e máximo de 20 caracteres.</small>
                     @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
