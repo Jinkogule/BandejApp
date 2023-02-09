@@ -21,7 +21,7 @@ class CreateRefeicaosTable extends Migration
             $table->string('cardapio')->nullable();
             $table->string('dia_da_semana');
             $table->date('data');
-            $table->char('status_confirmacao', 1)->default('P');
+            $table->char('status_confirmacao', 1)->default('N');
             $table->char('status_validez', 1)->default('V');
             $table->timestamps();
 
