@@ -22,18 +22,18 @@ class Kernel extends ConsoleKernel
     {
         
         $schedule->call(function () {
-            /*
+            
             $users_ref_hoje = DB::table('users')->join('refeicaos', 'users.id', '=', 'refeicaos.id_usuario')->select('users.id')->whereDate('refeicaos.data', '=', date('Y-m-d', strtotime(' +1 day')));
             $users = User::whereIn('id', $users_ref_hoje)->get();
 
             /*Notificação de confirmação de presença (8:00 horas da manhã)*/
 
-            /*
+            
             DB::table('refeicaos')->whereDate('data', '=', date('Y-m-d', strtotime(' +1 day')))->update(['status_confirmacao' => 'P']);
             
 
             /*Notificação de confirmação de presença (8:00 horas da manhã)*/
-            /*
+            
             foreach($users as $user){
                 $refeicaos = Refeicao::where('id_usuario', '=', $user->id)->whereDate('data', '=', date('Y-m-d', strtotime(' +1 day')))->get();
                 foreach($refeicaos as $refeicao){
@@ -42,8 +42,7 @@ class Kernel extends ConsoleKernel
             }
 
             /*Delete das refeições e datas que já se passaram*/
-            /*
-            */
+        
             DB::table('refeicaos')->whereDate('data', '<', date('Y-m-d'))->delete();
             DB::table('calendario')->whereDate('data', '<', date('Y-m-d'))->delete();
            

@@ -42,22 +42,7 @@
             <?php
             if ($verif_null == 1){
             ?>
-            <!--temporário-->
-            @foreach($events2 as $event)
-                <?php
-                if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
-                ?> 
-                <script type="text/javascript">
-                    $(window).on('load', function() {
-                        $('#confirmacao-notificacao{{$event->id}}').modal('show');
-                    });
-                </script>
-                <?php
-                }
-                ?>
-                @include('layouts-user.components-user.modals-confirmacao')
-            @endforeach
-            <!--temporário-->
+       
 
             @foreach($events as $event)
             <div class="card">
@@ -72,18 +57,19 @@
 
                     /*Alerta caso refeição esteja pendente e passível de confirmação*/
                     
-                    if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
+                    if ($event->status_confirmacao == 'P' && $amanha == $event->data){
                     ?>
                         <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
-                        <!--desativado temporariamente*/ (ativado no temporário acima)
+                       
                         <script type="text/javascript">
                             $(window).on('load', function() {
                                 $('#confirmacao-notificacao{{$event->id}}').modal('show');
                             });
                         </script>
-                        -->
+                        
                     <?php
                     }
+
                     /*Sinal de confirmada caso refeição esteja confirmada*/
                     elseif ($event->status_confirmacao == 'C'){
                     ?>
@@ -105,6 +91,7 @@
                     </div>
                     <br>
                     <?php
+
                     /*Botões de confirmação e cancelamento caso refeição não esteja confirmada*/
                     if ($event->status_confirmacao != 'C'){
                     ?>
@@ -112,15 +99,13 @@
                             <div class="row">
                                 <?php
                                 /*Botão de confirmação disponível caso o dia atual seja 1 anterior à ocorrência da refeição*/
-                                /*if ($amanha >= $event->data) (IF desativado temporariamente{*/
+                                if ($amanha >= $event->data){
                                 ?>
                                     <div class="d-grid mx-auto mb-3">
                                         <button type="submit" class="btn btn-sm btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}">Confirmar</button>
                                     </div>
                                 <?php
-                                /*
                                 }
-                                */
                                 ?>
 
                                 <!--Form cancelamento de refeição-->
