@@ -33,12 +33,12 @@ class AuthController extends Controller{
             $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
     
             $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
-            
+
             if ($q_refeicoes == 0){
                 return redirect()->intended('planejamentomensal');
             }
             else{
-                return redirect()->intended('layouts-admin.dashboard');
+                return redirect()->intended('layouts-users.dashboard');
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
