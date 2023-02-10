@@ -57,7 +57,7 @@
 
                     /*Alerta caso refeição esteja pendente e passível de confirmação*/
                     
-                    if ($event->status_confirmacao == 'P' && $amanha == $event->data){
+                    if ($event->status_confirmacao == 'P'){
                     ?>
                         <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                        
@@ -98,8 +98,8 @@
                         <div class="container botoes-cc" style="margin: 0 auto;">
                             <div class="row">
                                 <?php
-                                /*Botão de confirmação disponível caso o dia atual seja 1 anterior à ocorrência da refeição*/
-                                if ($amanha >= $event->data){
+                                /*Botão de confirmação disponível caso refeição esteja desponível a ser confirmada (pendente)*/
+                                if ($event->status_confirmacao == 'P'){
                                 ?>
                                     <div class="d-grid mx-auto mb-3">
                                         <button type="submit" class="btn btn-sm btn-confirmar" data-toggle="modal" data-target="#confirmacao{{$event->id}}">Confirmar</button>
