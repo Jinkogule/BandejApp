@@ -38,7 +38,7 @@ class AuthController extends Controller{
                 return redirect()->intended('planejamentomensal');
             }
             else{
-                return redirect()->intended('layouts-users.dashboard');
+                return redirect()->intended('layouts-user.dashboard');
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
