@@ -246,7 +246,7 @@ h4{
 /*----------------------------------------Mensagens----------------------------------------*/
 @media (min-width: 1000px) {
     .msg-sucesso{
-        top: 110px;
+        top: 100px;
         text-align: center;
         position: fixed;
         z-index: 1;
@@ -259,7 +259,7 @@ h4{
 }
 @media (max-width: 1000px) {
     .msg-sucesso{
-        top: 58px;
+        top: 88px;
         text-align: center;
         position: fixed;
         z-index: 1;

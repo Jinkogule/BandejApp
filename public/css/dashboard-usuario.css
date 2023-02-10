@@ -167,7 +167,7 @@ body{
 @media (min-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 90vh;/*antigo 87*/
+        height: 87vh;/*antigo 87*/
         width: 600px; 
         border-radius: 10px;
         position: relative;
@@ -176,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 82vh;/*antigo 87*/
+        height: 87vh;/*antigo 87*/
         width: 98%; 
         border-radius: 10px;
         position: relative;
