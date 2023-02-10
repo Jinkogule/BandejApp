@@ -32,14 +32,14 @@ class AuthController extends Controller{
             $request->session()->put('user_email', Auth::user()->email);
             $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
     
-            /*preenchendo refeições iniciais
             $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
+            
             if ($q_refeicoes == 0){
-                $check = $this->geraRefeicoes($data);
+                return redirect()->intended('planejamentomensal');
             }
-            preenchendo refeições iniciais*/
-
-            return redirect()->intended('planejamentomensal');/*alterado temporariamente para fase de testes*/
+            else{
+                return redirect()->intended('layouts-admin.dashboard');
+            }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
     }
