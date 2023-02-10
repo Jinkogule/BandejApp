@@ -259,7 +259,7 @@ h4{
 }
 @media (max-width: 1000px) {
     .msg-sucesso{
-        top: 95px;
+        top: 100px;
         text-align: center;
         position: fixed;
         z-index: 1;
