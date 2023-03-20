@@ -34,21 +34,18 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     })->name('dashboard');
 
 });
+*/
 
-Rotas do usuário
-Route::middleware(['auth', 'isAdmin'])->group(function () {
-    Route::get('/admin', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+Route::middleware(['auth', 'isUser'])->group(function () {
+    Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
 
 });
-*/
+
 Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
 Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
 
 
 
-Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
 
 
 Route::post('cancelarRefeicaoPlanejamento', [UserController::class, 'cancelarRefeicaoPlanejamento'])->name('cancelarRefeicaoPlanejamento');
