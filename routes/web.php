@@ -27,7 +27,7 @@ Route::post('realizarCadastro', [AuthController::class, 'realizarCadastro'])->na
 Route::get('dashboard', [AuthController::class, 'dashboard']);
 Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 
-/*Rotas do admin*/
+/*Rotas do admin
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/admin', function () {
         return view('admin.dashboard');
@@ -35,13 +35,14 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 });
 
-/*Rotas do usuário*/
+Rotas do usuário
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/admin', function () {
         return view('admin.dashboard');
     })->name('dashboard');
 
 });
+*/
 Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
 Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
 

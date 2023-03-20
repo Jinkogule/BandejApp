@@ -25,20 +25,26 @@ class AuthController extends Controller{
     
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            $request->session()->put('nome', Auth::user()->nome);
-            $request->session()->put('id', Auth::user()->id);
-            $request->session()->put('user_type', Auth::user()->user_type);
-            $request->session()->put('user_email', Auth::user()->email);
-            $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
-    
-            $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
-
-            if ($q_refeicoes == 0){
-                return redirect()->intended('planejamentomensal');
+            //
+            if (Auth::user()->user_type == 'Administrator'){
+                return redirect()->intended('dashboard');
             }
             else{
-                return redirect()->intended('dashboard');
+                $request->session()->regenerate();
+                $request->session()->put('nome', Auth::user()->nome);
+                $request->session()->put('id', Auth::user()->id);
+                $request->session()->put('user_type', Auth::user()->user_type);
+                $request->session()->put('user_email', Auth::user()->email);
+                $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
+        
+                $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
+
+                if ($q_refeicoes == 0){
+                    return redirect()->intended('planejamentomensal');
+                }
+                else{
+                    return redirect()->intended('dashboard');
+                }
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
