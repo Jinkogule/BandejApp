@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class UserMiddleware
+class AdminMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,11 +17,11 @@ class UserMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check()){
-            if (Auth::user()->user_type == null){
+            if (Auth::user()->user_type == 'Administrator'){
                 return $next($request);
             }
             else{
-                return redirect('/')->with('message', 'Acesso negado, você não é um usuário');
+                return redirect('/')->with('message', 'Acesso negado, você não é um administrador');
             }
         }
         else{
