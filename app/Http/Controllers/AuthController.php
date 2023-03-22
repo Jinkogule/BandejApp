@@ -29,7 +29,9 @@ class AuthController extends Controller{
         if (Auth::attempt($credentials)) {
             //
             if (Auth::user()->user_type == 'Administrator'){
-                return AdminController::dashboard();
+                $AdminController = new AdminController();
+                return $AdminController->dashboard();
+                
             }
             else{
                 $request->session()->regenerate();
@@ -41,7 +43,8 @@ class AuthController extends Controller{
         
                 $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
 
-                return UserController::dashboard();
+                $UserController = new UserController();
+                return $UserController->dashboard();
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
