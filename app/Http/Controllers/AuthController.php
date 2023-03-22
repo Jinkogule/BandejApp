@@ -10,6 +10,8 @@ use App\Models\Refeicao;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 class AuthController extends Controller{
     public function index(){
@@ -27,7 +29,7 @@ class AuthController extends Controller{
         if (Auth::attempt($credentials)) {
             //
             if (Auth::user()->user_type == 'Administrator'){
-                return redirect()->intended('dashboard');
+                return AdminController::dashboard();
             }
             else{
                 $request->session()->regenerate();
@@ -39,12 +41,7 @@ class AuthController extends Controller{
         
                 $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
 
-                if ($q_refeicoes == 0){
-                    return redirect()->intended('planejamentomensal');
-                }
-                else{
-                    return redirect()->intended('dashboard');
-                }
+                return UserController::dashboard();
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
@@ -84,25 +81,7 @@ class AuthController extends Controller{
         ]);
     }
 
-    /*Dashboard*/
-    public function dashboard(){
-        $hoje = date('Y-m-d');
-
-        if(Auth::check()){
-            if (Auth::user()->user_type == 'Administrator'){
-                return View::make('layouts-admin.dashboard');  // admin dashboard path
-            }
-            else{
-                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
-                $events2 = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
-                $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
-
-                return View::make('layouts-user.dashboard')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path
-            }   
-        }
-  
-        return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
-    }
+    
 
     public function planejamentomensal(){
         if(Auth::check()){
