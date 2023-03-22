@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MailController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -29,12 +30,13 @@ Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 
 /*Rotas do admin*/
 Route::middleware(['auth', 'isAdmin'])->group(function () {
-
+    Route::get('dashboard', [AdminController::class, 'dashboard']);
 
 });
 
 
 Route::middleware(['auth', 'isUser'])->group(function () {
+    Route::get('dashboard', [UserController::class, 'dashboard']);
     Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
 
     Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
