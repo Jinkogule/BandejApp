@@ -48,17 +48,8 @@ class AuthController extends Controller{
                 $request->session()->put('user_email', Auth::user()->email);
                 $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
         
-                $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
-
-                //Vai para o Planejamentomensal caso não possua refeições registradas
-                if ($q_refeicoes == 0){
-                    return redirect()->intended('planejamentomensal');
-                }
-                //Vai para o Dashboard caso possua refeições registradas
-                else{
-                    $UserController = new UserController();
-                    return $UserController->dashboard();
-                } 
+                $UserController = new UserController();
+                return $UserController->dashboard();
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
@@ -98,18 +89,7 @@ class AuthController extends Controller{
         ]);
     }
 
-    public function planejamentomensal(){
-        if(Auth::check()){
-            $unidade_bandejao = Auth::user()->unidade_bandejao;
-            $user_id = Auth::user()->id;
-            //$refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $id_usuario)->paginate(10);
-            $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
-
-            return View::make('layouts-user.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
-        }
-  
-        return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
-    }
+    
 
     /*Sair*/
     public function sair(){
