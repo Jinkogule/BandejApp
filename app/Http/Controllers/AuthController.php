@@ -26,19 +26,20 @@ class AuthController extends Controller{
         ]);
     
         $credentials = $request->only('email', 'password');
+
         if (Auth::attempt($credentials)) {
-            //
+            //Administrador
             if (Auth::user()->user_type == 'Administrator'){
                 $request->session()->regenerate();
                 $request->session()->put('nome', Auth::user()->nome);
                 $request->session()->put('id', Auth::user()->id);
                 $request->session()->put('user_type', Auth::user()->user_type);
                 $request->session()->put('user_email', Auth::user()->email);
-                
+
                 $AdminController = new AdminController();
-                return $AdminController->dashboard();
-                
+                return $AdminController->dashboard();  
             }
+            //Usuário
             else{
                 $request->session()->regenerate();
                 $request->session()->put('nome', Auth::user()->nome);
@@ -49,14 +50,15 @@ class AuthController extends Controller{
         
                 $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
 
+                //Vai para o Planejamentomensal caso não possua refeições registradas
                 if ($q_refeicoes == 0){
                     return redirect()->intended('planejamentomensal');
                 }
+                //Vai para o Dashboard caso possua refeições registradas
                 else{
                     $UserController = new UserController();
                     return $UserController->dashboard();
-                }
-                
+                } 
             }
         }
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
@@ -95,8 +97,6 @@ class AuthController extends Controller{
             'unidade_bandejao' => $data['unidade_bandejao'],
         ]);
     }
-
-    
 
     public function planejamentomensal(){
         if(Auth::check()){
