@@ -15,18 +15,12 @@ class AdminController extends Controller
         $hoje = date('Y-m-d');
 
         if(Auth::check()){
-            if (Auth::user()->user_type == 'Administrator'){
-                return View::make('layouts-admin.dashboard');  // admin dashboard path
-            }
-            else{
-                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
-                $events2 = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
-                $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
+            $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
 
-                return View::make('layouts-user.dashboard')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path
-            }   
+            return View::make('layouts-admin.dashboard')->with('calendario_dias', $calendario_dias);  // user dashboard path      
         }
-  
+
         return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
+        
     }
 }

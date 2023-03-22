@@ -38,6 +38,22 @@
 
         </nav>
         <!--Menu-->
-        página do administrador 
+        
+        
+
+        <div class="container-fluid container2-pm" style="overflow: auto">
+                <div class="grid-container-element">
+
+        @foreach($calendario_dias as $event)
+                <?php
+                $data_banco = $event->data;  
+                $data_visual = date("d/m/y", strtotime($data_banco));
+                $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+                ?>
+                {{ $dia_da_semana_visual }} - {{ $data_visual }}
+                <br><br><br> 
+            @endforeach
+                    </div>
+                    </div>
     </body>
 </html>
