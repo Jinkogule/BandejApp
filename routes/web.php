@@ -28,13 +28,13 @@ Route::post('realizarCadastro', [AuthController::class, 'realizarCadastro'])->na
 Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 
 /*Rotas do admin*/
-Route::middleware(['auth', 'isAdmin'])->group(function () {
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('dashboard', [AdminController::class, 'dashboard']);
 
 });
 
 
-Route::middleware(['auth', 'isUser'])->group(function () {
+Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
     Route::get('dashboard', [UserController::class, 'dashboard']);
     Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
 
