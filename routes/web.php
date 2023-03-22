@@ -25,7 +25,6 @@ Route::get('/', [AuthController::class, 'index'])->name('login');
 Route::post('realizarLogin', [AuthController::class, 'realizarLogin'])->name('realizarLogin');
 Route::get('cadastro', [AuthController::class, 'cadastro'])->name('cadastro');
 Route::post('realizarCadastro', [AuthController::class, 'realizarCadastro'])->name('realizarCadastro');
-Route::get('dashboard', [AuthController::class, 'dashboard']);
 Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 
 /*Rotas do admin*/
