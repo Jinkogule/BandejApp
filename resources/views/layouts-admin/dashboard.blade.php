@@ -68,9 +68,9 @@
                 @foreach($calendario_dias as $event)
                 
                 <?php
-                $q_almoco = DB::table('refeicaos')->select('*')->where('data', '=', '{{ $event->data }}')->where('tipo', '=', 'Almoço')->count();
-                $q_janta = DB::table('refeicaos')->select('*')->where('data', '=', '{{ $event->data }}')->where('tipo', '=', 'Janta')->count();
-                
+                $q_almoco = DB::table('refeicaos')->select('*')->where('data', '=', '$event->data ')->where('tipo', '=', 'Almoço')->count();
+                $q_janta = DB::table('refeicaos')->select('*')->where('data', '=', '$event->data')->where('tipo', '=', 'Janta')->count();
+
                 $data_banco = $event->data;  
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 $dia_da_semana_visual = ucfirst($event->dia_da_semana);
