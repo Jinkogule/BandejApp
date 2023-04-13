@@ -71,6 +71,9 @@
                 $q_almoco = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->count();
                 $q_janta = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->count();
 
+                $q_almoco_confirmados = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->where('status_confirmacao', '=', 'C')->count();
+                $q_janta_conrirmados = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->where('status_confirmacao', '=', 'C')->count();
+
                 $data_banco = $event->data;  
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 $dia_da_semana_visual = ucfirst($event->dia_da_semana);
@@ -80,11 +83,15 @@
                         <span class="card-title" style="text-align: center; color: #fff;">{{ $dia_da_semana_visual }} - {{ $data_visual }}</span>
                     </div>
                     
-                    <div class="card-body">
-                        Quantidade confirmados para almoço: {{ $q_almoco }}
+                    <div class="card-body" style="color: #fff;">
+                        Registrados para almoço: {{ $q_almoco }}
                         <br>
-                        Quantidade confirmados para janta: {{ $q_janta }}
+                        Registrados para janta: {{ $q_janta }}
                         <br>
+                        <br>
+                        Confirmados para almoço: {{ $q_almoco_confirmados }}
+                        <br>
+                        Confirmados para janta: {{ $q_janta_conrirmados }}
                     </div>                       
                 </div>         
             @endforeach
