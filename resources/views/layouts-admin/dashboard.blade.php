@@ -31,12 +31,14 @@
                         <li class="desplegable">
                             <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">PORTAL</a>
                             <ul class="grupo-desplegable">
-                                @include('comuns.menus.itens-menu-home-compacto')                                   
+                            <li><a class="dropdown-item" href="">Teste</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="">Teste</a></li>                                  
                             </ul>
                         </li> 
                     </ul>
                 </div>
-                
+
                 <!-- Brand -->
                 <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
                     <img src="/images/favicons/talheres-icon.png">
