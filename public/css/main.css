@@ -297,3 +297,178 @@ h4{
         opacity: 0.95;
     }
 }
+
+/*----------------------------------------MENU----------------------------------------*/
+/*--------------DROPDOWN--------------*/
+/*links de dropright*/
+
+/*hover nos links de dropright*/
+.dropdown-toggle:hover {
+    background-color: #a54200;
+    color: #fff;
+}
+
+.dropdown-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dropdown-item:hover{
+    background-color: #a54200;
+}
+
+.dropdown-divider{
+    color: black;
+    margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+ul li a {
+  display: inline-block;
+}
+/*botão do dropdown*/
+ul.main {
+    max-height: 500px;
+    overflow-y: auto !important;
+    height: auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+
+/*conteúdo do botão do dropdown*/
+ul.main > li.desplegable > a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 5px;
+}
+
+/*hover no botão*/
+ul.main > li.desplegable:hover {
+    background-color: #a54200;
+}
+ul.main > li.desplegable > ul.grupo-desplegable > li a:hover{
+    background-color: #a54200;
+    color: white;
+}
+/* Grupo Desplegable */
+ul.main > li.desplegable > ul.grupo-desplegable,
+ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
+  display: none;
+  position: absolute;
+  background-color: #FCEED3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*cor do item "portal"*/
+.dropend .item-portal{
+    background-color: #e28e56;
+}
+
+/*visibilidade das scroll bars*/
+::-webkit-scrollbar {
+    display: auto;
+}
+ul.main > li.desplegable:hover > ul.grupo-desplegable { 
+  display: block;
+}
+
+ul.main > li.desplegable > ul.grupo-desplegable > li,
+ul.grupo-desplegable > li > ul.sub-grupo-desplegable > li {
+  display: block;
+  position: relative;
+  
+}
+/*links do dropright*/
+ul.main > li.desplegable > ul.grupo-desplegable > li:hover,
+ul.grupo-desplegable > li > ul.sub-grupo-desplegable > li a:hover {
+    background-color: #a54200;
+}
+
+ul.main > li.desplegable > ul.grupo-desplegable > li > a,
+ul.grupo-desplegable > li > ul.sub-grupo-desplegable > li > a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Sub Grupo Desplegable */
+ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
+    top: 0;
+    left: 100%;
+    z-index: -1;
+    max-height: 500px;
+    overflow-y: auto !important;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Sub Grupo Desplegable */
+ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
+  display: block;
+}
+
+/*texto no menu*/
+.dropdown-item{
+    font-size: 0.8rem !important;
+}
+
+/*classificações dos itens*/
+h2{
+    color: #000;
+    text-align: left !important;
+    margin-left:15px;
+    margin-top: 10px !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    font-size: 0.8rem !important;
+}
+
+/*BARRA DE BUSCA*/
+.d-flex>button{
+    color: #fff;
+    background-color: #ED7B2F;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.d-flex>button:focus{
+    color: #FFF;
+    background-color: #a54200;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.d-flex>button:hover{
+    background-color: #a54200;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
