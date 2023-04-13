@@ -43,28 +43,9 @@
 
         <div class="container-fluid container-pm">
             <br>
-            <h2 style="text-align: center; color: #fff;">Planejamento Mensal</h2>
-            <hr>
-            <div style="text-align: center;">
-                <span style="color: #fff;">Selecione as refeições que você pretende realizar no bandejão</span>
-            </div>
+            <h2 style="text-align: center; color: #fff;">Calendário de Refeições</h2>
             <div class="container-fluid container2-pm" style="overflow: auto">
-                <div class="grid-container-element">
-                    <div>
-                        <form id="selecionarTodasRefeicoes" action="{{ route('selecionarTodasRefeicoes') }}" method="POST">
-                            @csrf
-                            <input type='checkbox' onchange="document.getElementById('selecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Selecionar todos</span> 
-                        </form>
-                    </div>
-                    <div>
-                        <form id="desselecionarTodasRefeicoes" action="{{ route('desselecionarTodasRefeicoes') }}" method="POST">
-                            @csrf
-                            <input type='checkbox' onchange="document.getElementById('desselecionarTodasRefeicoes').submit()"> <span class="selecionar-desselecionar-todos">Desselecionar todos</span>
-                        </form>
-                    </div>
-                </div>
                 
-
                 @foreach($calendario_dias as $event)
                 
                 <?php
