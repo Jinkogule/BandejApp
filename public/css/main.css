@@ -78,10 +78,20 @@ hr { display: block; height: 1px;
 } 
 
 /*--------navbar--------*/
-.navbar1{
-    background-color: #1F519B;
-
+@media (min-width: 1000px) {
+    .navbar1{
+        background-color: #1F519B;
+        width: 1000px;
+    
+    }
 }
+
+@media (max-width: 1000px) {
+    .navbar1{
+        background-color: #1F519B;
+    }
+}
+
 
 .navbar2 {
     height: 45px;
@@ -304,7 +314,7 @@ h4{
 
 /*hover nos links de dropright*/
 .dropdown-toggle:hover {
-    background-color: #a54200;
+    background-color: #1a3f77;
     color: #fff;
 }
 
@@ -314,7 +324,7 @@ h4{
 }
 
 .dropdown-item:hover{
-    background-color: #a54200;
+    background-color: #1a3f77;
 }
 
 .dropdown-divider{
@@ -364,10 +374,10 @@ ul.main > li.desplegable > a {
 
 /*hover no botão*/
 ul.main > li.desplegable:hover {
-    background-color: #a54200;
+    background-color: #1a3f77;
 }
 ul.main > li.desplegable > ul.grupo-desplegable > li a:hover{
-    background-color: #a54200;
+    background-color: #1a3f77;
     color: white;
 }
 /* Grupo Desplegable */
@@ -382,7 +392,7 @@ ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
 
 /*cor do item "portal"*/
 .dropend .item-portal{
-    background-color: #e28e56;
+    background-color: #1F519B;
 }
 
 /*visibilidade das scroll bars*/
@@ -435,20 +445,11 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 }
 
 /*classificações dos itens*/
-h2{
-    color: #000;
-    text-align: left !important;
-    margin-left:15px;
-    margin-top: 10px !important;
-    font-weight: bold;
-    text-transform: uppercase !important;
-    font-size: 0.8rem !important;
-}
 
 /*BARRA DE BUSCA*/
 .d-flex>button{
     color: #fff;
-    background-color: #ED7B2F;
+    background-color: #1F519B;
     border-color: #fff;
     border-style: solid;
     border-top: none;
@@ -457,7 +458,7 @@ h2{
 }
 .d-flex>button:focus{
     color: #FFF;
-    background-color: #a54200;
+    background-color: #1a3f77;
     border-color: #fff;
     border-style: solid;
     border-top: none;
@@ -465,7 +466,7 @@ h2{
     border-left: none;
 }
 .d-flex>button:hover{
-    background-color: #a54200;
+    background-color: #1a3f77;
     border-color: #fff;
     border-style: solid;
     border-top: none;

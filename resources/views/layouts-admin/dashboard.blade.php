@@ -29,7 +29,7 @@
                     <!-- dropdown menu-->
                     <ul class="main">
                         <li class="desplegable">
-                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">PORTAL</a>
+                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
                             <ul class="grupo-desplegable">
                             <li><a class="dropdown-item" href="">Teste</a></li>
                             <li><hr class="dropdown-divider"></li>
