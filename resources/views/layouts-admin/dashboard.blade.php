@@ -23,6 +23,20 @@
         <!--Menu-->
         <nav class="navbar navbar1 navbar-expand-md fixed-top">
             <div class="container-fluid container-menu" style="position: relative;">
+
+                <!-- Dropdown -->
+                <div class="dropdown">
+                    <!-- dropdown menu-->
+                    <ul class="main">
+                        <li class="desplegable">
+                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">PORTAL</a>
+                            <ul class="grupo-desplegable">
+                                @include('comuns.menus.itens-menu-home-compacto')                                   
+                            </ul>
+                        </li> 
+                    </ul>
+                </div>
+                
                 <!-- Brand -->
                 <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
                     <img src="/images/favicons/talheres-icon.png">
