@@ -74,24 +74,26 @@ hr { display: block; height: 1px;
 }
 
 .container-menu {
-    width: 100% !important;          
+              
 } 
 
 /*--------navbar--------*/
 @media (min-width: 1000px) {
-    .navbar1{
+    .container-menu{
         background-color: #1F519B;
-        width: 1000px;
-    
+        width: 900px; 
     }
 }
-
 @media (max-width: 1000px) {
-    .navbar1{
+    .container-menu{
         background-color: #1F519B;
+        width: 100% !important;
     }
 }
 
+.navbar1{
+    background-color: #1F519B;
+}
 
 .navbar2 {
     height: 45px;
