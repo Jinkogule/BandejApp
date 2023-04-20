@@ -351,7 +351,7 @@ ul li a {
 }
 /*botão do dropdown*/
 ul.main {
-    z-index: 9999;
+    z-index: 1;
     max-height: 500px;
     overflow-y: visible !important;
     height: auto;
@@ -361,6 +361,7 @@ ul.main {
 
 /*conteúdo do botão do dropdown*/
 ul.main > li.desplegable > a {
+    z-index: 1;
     display: inline-block;
     color: white;
     text-align: center;
@@ -377,15 +378,18 @@ ul.main > li.desplegable > a {
 
 /*hover no botão*/
 ul.main > li.desplegable:hover {
+    z-index: 1;
     background-color: #1a3f77;
 }
 ul.main > li.desplegable > ul.grupo-desplegable > li a:hover{
+    z-index: 1;
     background-color: #1a3f77;
     color: white;
 }
 /* Grupo Desplegable */
 ul.main > li.desplegable > ul.grupo-desplegable,
 ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
+    z-index: 1;
   display: none;
   position: absolute;
   background-color: #fff;
@@ -402,12 +406,14 @@ ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
 ::-webkit-scrollbar {
     display: auto;
 }
-ul.main > li.desplegable:hover > ul.grupo-desplegable { 
+ul.main > li.desplegable:hover > ul.grupo-desplegable {
+    z-index: 1;
   display: block;
 }
 
 ul.main > li.desplegable > ul.grupo-desplegable > li,
 ul.grupo-desplegable > li > ul.sub-grupo-desplegable > li {
+    z-index: 1;
   display: block;
   position: relative;
   
