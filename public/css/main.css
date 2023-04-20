@@ -357,7 +357,7 @@ ul.main {
     height: auto;
     overflow-x: hidden;
     border-radius: 5px;
-    position: relative;
+    position: fixed;
 }
 
 /*conteúdo do botão do dropdown*/
