@@ -17,13 +17,8 @@
         <!-- Brand -->
         <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
             <img src="/images/favicons/talheres-icon.png">
-        </a> 
-
-        <a class="navbar-brand menu-brand" href="/">
-            <img src="/images/favicons/talheres-icon.png">
             Bem vindo, {{ session('nome')}}!
-        <!-- Brand -->
-        </a>
+        </a> 
             
         <a class="nav-link" href="{{ route('sair') }}" style="color: #fff !important;">Sair</a>
         
