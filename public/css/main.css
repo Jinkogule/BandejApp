@@ -352,7 +352,7 @@ ul li a {
 /*botão do dropdown*/
 ul.main {
     max-height: 500px;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
     height: auto;
     overflow-x: hidden;
     border-radius: 5px;
