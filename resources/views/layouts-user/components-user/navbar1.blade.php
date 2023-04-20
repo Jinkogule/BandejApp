@@ -8,7 +8,10 @@
                 <li class="desplegable">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
                     <ul class="grupo-desplegable">
-                                                         
+                    <h4>Sugestões ></h4>
+                        <li><a class="dropdown-item" href="/">Cardápio</a></li>   
+                        <li><a class="dropdown-item" href="/sugestaodemelhorias">Melhorias</a></li>
+                    
                     </ul>
                 </li> 
             </ul>

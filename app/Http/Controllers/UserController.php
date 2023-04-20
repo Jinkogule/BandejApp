@@ -184,4 +184,17 @@ class UserController extends Controller{
 
         return redirect('/planejamentomensal')->with('message', 'Refeições removidas com sucesso!');
     }
+
+    /*-------------------------- Páginas e funções das sugestões de melhorias e cardápio --------------------------*/
+    public function sugestaodemelhorias(){
+  
+        return View::make('layouts-user.sugestao-de-melhorias');
+        
+    }
+
+    public function enviaSugestaoDeMelhorias(){
+  
+        return 0;
+        
+    }
 }

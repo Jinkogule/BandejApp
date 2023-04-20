@@ -54,6 +54,10 @@ Route::middleware(['auth', 'isUser'])->group(function () {
     Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
     Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
     
+    Route::get('sugestaodemelhorias', [UserController::class, 'sugestaodemelhorias']);
+    Route::post('enviaSugestaoDeMelhorias', [UserController::class, 'enviaSugestaoDeMelhorias'])->name('enviaSugestaoDeMelhorias');
+
+
     Route::get('/teste-mail', [MailController::class, 'teste_mail']);
     
     Route::post('/ajax_submit', [PlanejamentoMensalController::class, 'ajax_submit'])->name('ajax_submit');
