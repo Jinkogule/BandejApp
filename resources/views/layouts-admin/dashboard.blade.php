@@ -20,20 +20,17 @@
     </head>
 
     <body>
-        <!--Menu-->
+        <!--Navbar-->
         <nav class="navbar navbar1 navbar-expand-md fixed-top">
             <div class="container-fluid container-menu" style="position: relative;">
-
-                <!-- Dropdown -->
+                <!-- Menu -->
                 <div class="dropdown">
                     <!-- dropdown menu-->
                     <ul class="main">
                         <li class="desplegable">
                             <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
                             <ul class="grupo-desplegable">
-                            <li><a class="dropdown-item" href="">Teste</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="">Teste</a></li>                                  
+                                @include('layouts-admin.components-admin.itens-menu')                                  
                             </ul>
                         </li> 
                     </ul>
@@ -42,18 +39,16 @@
                 <!-- Brand -->
                 <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
                     <img src="/images/favicons/talheres-icon.png">
-                    
-                <!-- Brand -->
-                </a>  
-                
-                <h4 class="bem-vindo centraliza">Bem vindo, {{ session('nome')}}!</h4>
-                
+                </a> 
+
+                <h4 class="bem-vindo">Bem vindo, {{ session('nome')}}!</h4>
+                 
                 <a class="nav-link" href="{{ route('sair') }}" style="color: #fff !important;">Sair</a>
                 
             </div>
 
         </nav>
-        <!--Menu-->
+        <!--Navbar-->
         
         
 
