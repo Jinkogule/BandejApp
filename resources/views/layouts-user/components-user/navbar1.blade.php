@@ -6,7 +6,7 @@
             <!-- dropdown menu-->
             <ul class="main">
                 <li class="desplegable">
-                    <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" class="curso">Menu</a>
                     <ul class="grupo-desplegable">
                     <h4>Sugestões ></h4>
                         <li><a class="dropdown-item" href="/">Cardápio</a></li>   
