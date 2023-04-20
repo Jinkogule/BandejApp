@@ -351,7 +351,7 @@ ul li a {
 }
 /*botão do dropdown*/
 ul.main {
-    z-index: 1;
+    z-index: 999;
     max-height: 500px;
     overflow-y: visible !important;
     height: auto;
