@@ -34,10 +34,10 @@
         <div class="">
             <form id="enviar_sugestao_de_melhorias" action="{{ route('enviaSugestaoDeMelhorias') }}" method="POST">
                 @csrf
-                <input type="hidden" name="nome" id="nome" value="{{ $nome }}">
-                <input type="hidden" name="sobrenome" id="sobrenome" value="{{ $sobrenome }}">
-                <input type="hidden" name="id_usuario" id="id_usuario" value="{{ $id }}">
-                <input type="hidden" name="email" id="email" value="{{ $user_email }}">
+                <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">
+                <input type="hidden" name="sobrenome" id="sobrenome" value="{{ session('sobrenome') }}">
+                <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
+                <input type="hidden" name="email" id="email" value="{{ session('user_email')">
                 
                 <input type="text" name="assunto" id="assunto">
 
