@@ -43,6 +43,7 @@ class AuthController extends Controller{
             else{
                 $request->session()->regenerate();
                 $request->session()->put('nome', Auth::user()->nome);
+                $request->session()->put('sobrenome', Auth::user()->sobrenome);
                 $request->session()->put('id', Auth::user()->id);
                 $request->session()->put('user_type', Auth::user()->user_type);
                 $request->session()->put('user_email', Auth::user()->email);

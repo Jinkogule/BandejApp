@@ -192,9 +192,30 @@ class UserController extends Controller{
         
     }
 
-    public function enviaSugestaoDeMelhorias(){
-  
-        return 0;
+    public function enviaSugestaoDeMelhorias(Request $request){
+        $request->validate([
+            'nome' => 'required',
+            'sobrenome' => 'required',
+            'id_usuario' => 'required',
+            'email' => 'required|email|unique:users',
+            'assunto' => 'required',
+            'sugestao' => 'required',
+        ]);
+           
+        $data = $request->all();
+        $check = $this->criaSugestao($data);
         
+        return redirect("")->with('message', 'Sugestão enviada com sucesso!');
+    }
+
+    public function criaSugestao(array $data){
+        return Sugestao_de_melhoria::create([
+            'nome' => $data['nome'],
+            'sobrenome' => $data['sobrenome'],
+            'id_usuario' => $data['id_usuario'],
+            'email' => $data['email'],
+            'assunto' => $data['assunto'],
+            'sugestao' => $data['sugestao'],
+        ]);
     }
 }
