@@ -22,4 +22,6 @@ class Sugestao_de_melhoria extends Model
         'assunto',
         'sugestao',
     ];
+
+    protected $table = 'sugestao_de_melhorias';
 }
