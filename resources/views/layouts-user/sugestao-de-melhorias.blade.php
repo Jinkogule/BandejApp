@@ -30,14 +30,21 @@
         @include('layouts-user.components-user.navbar2')
 
         <br>
-        
+        {{ session('nome') }}
+        <br>
+        {{ session('sobrenome') }}
+        <br>
+        {{ session('id') }}
+        <br>
+        {{ session('user_email') }}
+        <br>
         <div class="">
             <form id="enviar_sugestao_de_melhorias" action="{{ route('enviaSugestaoDeMelhorias') }}" method="POST">
                 @csrf
                 <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">
                 <input type="hidden" name="sobrenome" id="sobrenome" value="{{ session('sobrenome') }}">
                 <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
-                <input type="hidden" name="email" id="email" value="{{ session('user_email')">
+                <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
                 
                 <input type="text" name="assunto" id="assunto">
 
