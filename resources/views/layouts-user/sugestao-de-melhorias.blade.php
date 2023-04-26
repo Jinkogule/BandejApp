@@ -57,9 +57,7 @@
                 <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
                 <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
                 
-                <input type="text" name="assunto" id="assunto">
-
-                <input type="text" name="sugestao" id="sugestao">
+               
                                                    
                 <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-sm btn-confirmar">Enviar</button>
