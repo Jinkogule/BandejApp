@@ -198,7 +198,8 @@ class UserController extends Controller{
             'sobrenome' => 'required',
             'id_usuario' => 'required',
             'email' => 'required',
-           
+            'assunto' => 'required',
+            'sugestao' => 'required',
         ]);
            
         $data = $request->all();
@@ -214,6 +215,8 @@ class UserController extends Controller{
             'sobrenome' => $data['sobrenome'],
             'id_usuario' => $data['id_usuario'],
             'email' => $data['email'],
+            'assunto' => $data['assunto'],
+            'sugestao' => $data['sugestao'],
             
         ]);
     }
