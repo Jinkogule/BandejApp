@@ -50,7 +50,7 @@
             </div>
         @endif
         <div class="">
-            <form id="enviar_sugestao_de_melhorias" action="{{ route('enviaSugestaoDeMelhorias') }}" method="POST">
+            <form action="{{ route('enviarSugestaoDeMelhorias') }}" method="POST">
                 @csrf
                 <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">
                 <input type="hidden" name="sobrenome" id="sobrenome" value="{{ session('sobrenome') }}">
