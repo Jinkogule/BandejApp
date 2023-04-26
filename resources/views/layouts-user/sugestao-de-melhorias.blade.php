@@ -38,6 +38,17 @@
         <br>
         {{ session('user_email') }}
         <br>
+        @if(session()->has('message'))
+            <div class="alert alert-success msg-sucesso">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+
+        @if(session()->has('erro'))
+            <div class="alert alert-danger msg-erro">
+                {{ session()->get('erro') }}
+            </div>
+        @endif
         <div class="">
             <form id="enviar_sugestao_de_melhorias" action="{{ route('enviaSugestaoDeMelhorias') }}" method="POST">
                 @csrf
