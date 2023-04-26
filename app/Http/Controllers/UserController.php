@@ -203,11 +203,12 @@ class UserController extends Controller{
            
         $data = $request->all();
         $check = $this->criaSugestao($data);
-        
+        alert("antes do return da mensagem");
         return redirect("")->with('message', 'Sugestão enviada com sucesso!');
     }
 
     public function criaSugestao(array $data){
+        alert("cria sugestao funcao");
         return Sugestao_de_melhoria::create([
             'nome' => $data['nome'],
             'sobrenome' => $data['sobrenome'],
