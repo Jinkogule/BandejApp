@@ -147,7 +147,6 @@ class UserController extends Controller{
         ]);
     }
 
-
     public function selecionarTodasRefeicoes(Request $request){
 
         $calendario = DB::table('calendario')->select('*')->paginate(10);

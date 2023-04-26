@@ -20,7 +20,7 @@ class CreateSugestaoDeMelhoriasTable extends Migration
             $table->string('id_usuario');
             $table->string('email');
             $table->string('assunto');
-            $table->integer('sugestao');
+            $table->string('sugestao');
             $table->timestamps();
         });
     }
