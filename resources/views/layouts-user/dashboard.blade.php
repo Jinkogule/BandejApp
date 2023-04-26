@@ -22,7 +22,7 @@
     <body>
         @include('layouts-user.components-user.navbar1')
 
-        @include('layouts-user.components-user.navbar2')
+        <!--@include('layouts-user.components-user.navbar2')-->
 
         @if(session()->has('message'))
             <div class="alert alert-success msg-sucesso">
