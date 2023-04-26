@@ -56,7 +56,7 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
     Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
     
     Route::get('sugestaodemelhorias', [UserController::class, 'sugestaodemelhorias']);
-    Route::post('enviaSugestaoDeMelhorias', [UserController::class, 'enviaSugestaoDeMelhorias'])->name('enviaSugestaoDeMelhorias');
+    Route::post('enviarSugestaoDeMelhorias', [UserController::class, 'enviarSugestaoDeMelhorias'])->name('enviarSugestaoDeMelhorias');
 
 
     Route::get('/teste-mail', [MailController::class, 'teste_mail']);

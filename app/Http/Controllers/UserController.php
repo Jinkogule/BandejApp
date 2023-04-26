@@ -191,19 +191,19 @@ class UserController extends Controller{
         
     }
 
-    public function enviaSugestaoDeMelhorias(Request $request){
+    public function enviarSugestaoDeMelhorias(Request $request){
         $request->validate([
             'nome' => 'required',
             'sobrenome' => 'required',
             'id_usuario' => 'required',
-            'email' => 'required|email|unique:users',
+            'email' => 'required',
            
         ]);
            
         $data = $request->all();
         $check = $this->criaSugestao($data);
         alert("antes do return da mensagem");
-        return redirect("")->with('message', 'Sugestão enviada com sucesso!');
+        return redirect("/user/dashboard")->with('message', 'Sugestão enviada com sucesso!');
     }
 
     public function criaSugestao(array $data){
