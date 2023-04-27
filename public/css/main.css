@@ -147,6 +147,8 @@ h4{
         background-color: #1F519B;
         margin: 50px auto;
         border-radius: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -158,6 +160,8 @@ h4{
         background-color: #1F519B;
         margin: 50px auto;
         border-radius: 10px;
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
 }
 
@@ -171,6 +175,8 @@ h4{
         border-radius: 10px;
         width: 500px;
         margin: 50px auto;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -181,6 +187,8 @@ h4{
         border-radius: 10px;
         width: 95%;
         margin: 50px auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
 }
 

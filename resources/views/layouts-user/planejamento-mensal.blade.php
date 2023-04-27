@@ -27,7 +27,7 @@
         <!--Navbar-->
         @include('layouts-user.components-user.navbar1')
 
-        @include('layouts-user.components-user.navbar2')
+        <!--@include('layouts-user.components-user.navbar2')-->
 
         <br>
         

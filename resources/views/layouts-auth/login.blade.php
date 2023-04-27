@@ -48,8 +48,8 @@
         @endif
         
         <div class="container container-login">
-            <br>
-            <h4 style="text-align: center;">Acesse o BandejApp</h4><hr>
+            <h4 style="text-align: center;">Acesse o BandejApp</h4>
+            <hr>
             <form method="POST" action="{{ route('realizarLogin') }}">
             @csrf
                 <div class="form-group mb-3">

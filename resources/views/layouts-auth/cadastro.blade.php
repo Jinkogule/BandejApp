@@ -22,7 +22,8 @@
         @include('comuns.navbar')
 
         <div class="container container-cadastro mb-4">
-            <br><h4 style="text-align: center;">Cadastro</h4><hr>
+            <h4 style="text-align: center;">Cadastro</h4>
+            <hr>
             <form action="{{ route('realizarCadastro') }}" method="POST">
                 @csrf
                 <div class="row mb-1">
@@ -110,7 +111,7 @@
                 <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-success btn-block">Enviar</button>
                 </div>
-                <a class="nav-link mb-2" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
+                <a class="nav-link" href="{{ route('login') }}" style="text-align: center;">Já possuo uma conta cadastrada</a>
             </form>    
         </div>
        

@@ -8,17 +8,19 @@
                 <li class="desplegable">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" class="curso">Menu</a>
                     <ul class="grupo-desplegable">
-                    <h4>Sugestões ></h4>
-                        <li><a class="dropdown-item" href="/">Cardápio</a></li>   
-                        <li><a class="dropdown-item" href="/sugestaodemelhorias">Melhorias</a></li>
-                    
+                        <li><a class="dropdown-item" href="/user/dashboard">Próximas Refeições</a></li>   
+                        <li><a class="dropdown-item" href="/user/planejamentomensal">Planejamento Mensal</a></li>
+                        <!--<h4>Sugestões ></h4>-->
+                        <li><hr class="dropdown-divider"></li>  
+                        <li><a class="dropdown-item" href="/user/sugestaodecardapio">Sugerir Cardápio</a></li>   
+                        <li><a class="dropdown-item" href="/user/sugestaodemelhorias">Sugerir Melhorias</a></li>
                     </ul>
                 </li> 
             </ul>
         </div>
 
         <!-- Brand -->
-        <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
+        <a class="navbar-brand navbar-brand-dashboard logo" href="/user/dashboard">
             <img src="/images/favicons/talheres-icon.png">
             Bem vindo, {{ session('nome')}}!
         </a> 
