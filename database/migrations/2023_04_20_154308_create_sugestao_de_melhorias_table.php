@@ -17,10 +17,10 @@ class CreateSugestaoDeMelhoriasTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('sobrenome');
-            $table->string('id_usuario');
+            $table->unsignedBigInteger('id_usuario');
             $table->string('email');
-            $table->string('assunto');
-            $table->string('sugestao');
+            $table->string('assunto', 500);
+            $table->string('sugestao', 2000);
             $table->timestamps();
         });
     }

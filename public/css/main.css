@@ -394,7 +394,7 @@ ul.main > li.desplegable > ul.grupo-desplegable,
 ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
   display: none;
   position: absolute;
-  background-color: rgb(175, 229, 245);
+  background-color: rgb(220, 247, 255);
   min-width: 160px;
   border-radius: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

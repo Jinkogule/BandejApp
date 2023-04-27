@@ -52,13 +52,14 @@
 
                 <div class="form-group mb-2">
                     <label for="assunto" style="color: #fff;">Assunto:</label>
-                    <input type="text" placeholder="Assunto" name="assunto" id="assunto" class="form-control" required>
+                    <input type="text" placeholder="Assunto" name="assunto" id="assunto" class="form-control" maxlength='500' value="{{ old('assunto') }}" required>
+                    <small id="emailHelp" style="color: #E0E0E0 !important;" class="form-text text-muted">Obs.: máximo de 500 caracteres.</small>
                 </div>
 
-                
                 <div class="form-group mb-4">
                     <label for="sugestao" style="color: #fff;">Sugestão:</label>
-                    <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" class="form-control" rows="5" maxlength='1000' required></textarea>
+                    <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" class="form-control" rows="5" maxlength='2000' value="{{ old('sugestao') }}" required></textarea>
+                    <small id="emailHelp" style="color: #E0E0E0 !important;" class="form-text text-muted">Obs.: máximo de 2000 caracteres.</small>
                 </div>
                                       
                 <div class="d-grid mx-auto">
