@@ -31,6 +31,7 @@ Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 /*Rotas do admin*/
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('dashboard', [AdminController::class, 'dashboard']);
+    Route::get('sugestoesdemelhorias', [AdminController::class, 'sugestoesdemelhorias']);
 
 });
 

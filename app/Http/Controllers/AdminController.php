@@ -23,4 +23,10 @@ class AdminController extends Controller
         return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
         
     }
+
+    public function sugestoesdemelhorias(){
+        $sugestoes = DB::table('sugestao_de_melhorias')->select('*')->get();
+
+        return View::make('layouts-admin.sugestoes-de-melhorias')->with('sugestoes', $sugestoes);
+    }
 }
