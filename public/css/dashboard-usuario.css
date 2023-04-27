@@ -308,6 +308,7 @@ body{
         border-radius: 10px;
         width: 500px;
         margin: 50px auto;
+        padding: 20px;
     }
 }
 
@@ -318,5 +319,6 @@ body{
         border-radius: 10px;
         width: 95%;
         margin: 50px auto;
+        padding: 20px;
     }
 }

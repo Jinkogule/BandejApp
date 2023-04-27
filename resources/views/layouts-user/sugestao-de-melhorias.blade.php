@@ -70,7 +70,7 @@
                 </div>
                 
                                                    
-                <div class="d-grid mx-auto mb-2 pb-2">
+                <div class="d-grid mx-auto">
                     <button type="submit" class="btn btn-sm btn-confirmar">Enviar</button>
                 </div>
             </form> 
