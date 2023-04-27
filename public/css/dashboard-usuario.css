@@ -299,3 +299,24 @@ body{
         width: 95%;
     }
 }
+
+/*-----------------------------------------------------------------PÁGINA DE SUGESTÃO DE MELHORIAS-----------------------------------------------------------------*/
+@media (min-width: 1000px) {
+    .container-sugestao{
+        float: center;
+        background-color: #1F519B;
+        border-radius: 10px;
+        width: 500px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-sugestao{
+        float: center;
+        background-color: #1F519B;
+        border-radius: 10px;
+        width: 95%;
+        margin: 50px auto;
+    }
+}

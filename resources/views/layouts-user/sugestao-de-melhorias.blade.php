@@ -49,7 +49,7 @@
                 {{ session()->get('erro') }}
             </div>
         @endif
-        <div class="" style="width: 500px;">
+        <div class="container-sugestao">
             <form action="{{ route('enviarSugestaoDeMelhorias') }}" method="POST">
                 @csrf
                 <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">
@@ -57,19 +57,11 @@
                 <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
                 <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
                 
-                
-
                 <label for="assunto" style="color: #fff;">Assunto:</label>
-                <select class="form-control fake-placeholder" name="assunto" id="assunto" onclick="fake_placeholder_status()" value="{{ old('status') }}" required>
-                    <option value="" class="campo-placeholder">Assunto da sugestão</option>
-                    <option>Gragoatá</option>
-                    <option>Praia Vermelha</option>
-                    <option>Reitoria</option>
-                    <option>HUAP</option>
-                    <option>Outro</option>
-                </select>
+                <input type="text" name="assunto" id="assunto" required>
 
-                <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" rows="5" cols="33" maxlength='1000' minlength='100'></textarea>
+
+                <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" rows="5" maxlength='1000' required></textarea>
                                                    
                 <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-sm btn-confirmar">Enviar</button>
