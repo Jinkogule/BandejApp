@@ -63,7 +63,7 @@
 
                 <div class="form-group mb-1">
                     <label for="email" style="color: #fff;">E-mail:</label>
-                    <input type="text" placeholder="E-mail" id="email" class="form-control"name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
+                    <input type="text" placeholder="E-mail" id="email" class="form-control" name="email" value="{{ old('email') }}" maxlength="100" required autofocus>
                     @if ($errors->has('email'))
                         @if ($errors->first('email') == 'validation.unique')
                             <span class="text-danger">Este e-mail já foi cadastrado</span>
@@ -97,16 +97,16 @@
                     </div>
                 </div>
                 <div class="col mb-4">
-                        <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
-                        <select class="form-control fake-placeholder" id="unidade_bandejao" onclick="fake_placeholder_unidade_bandejao()" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
-                            <option value="" class="campo-placeholder">Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP.</option>
-                            <option>Gragoatá</option>
-                            <option>Praia Vermelha</option>
-                            <option>Reitoria</option>
-                            <option>Veterinária</option>
-                            <option>HUAP</option>
-                        </select>
-                    </div>
+                    <label for="unidade_bandejao" style="color: #fff; text-align: center;">Em qual campus você utiliza o restaurante universitário com maior frequência?</label>
+                    <select class="form-control fake-placeholder" id="unidade_bandejao" onclick="fake_placeholder_unidade_bandejao()" name="unidade_bandejao" value="{{ old('unidade_bandejao') }}" required>
+                        <option value="" class="campo-placeholder">Gragoatá, Praia Vermelha, Reitoria, Veterinária ou HUAP.</option>
+                        <option>Gragoatá</option>
+                        <option>Praia Vermelha</option>
+                        <option>Reitoria</option>
+                        <option>Veterinária</option>
+                        <option>HUAP</option>
+                    </select>
+                </div>
                 <div class="d-grid mx-auto mb-2">
                     <button type="submit" class="btn btn-success btn-block">Enviar</button>
                 </div>

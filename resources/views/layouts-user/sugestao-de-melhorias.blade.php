@@ -60,17 +60,17 @@
 
                 <div class="form-group mb-2">
                     <label for="assunto" style="color: #fff;">Assunto:</label>
-                    <input type="text" name="assunto" id="assunto" class="form-control" required>
+                    <input type="text" placeholder="Assunto" name="assunto" id="assunto" class="form-control" required>
                 </div>
 
                 
-                <div class="form-group mb-1">
-                    <label for="sugestao" style="color: #fff;">Assunto:</label>
+                <div class="form-group mb-4">
+                    <label for="sugestao" style="color: #fff;">Sugestão:</label>
                     <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" class="form-control" rows="5" maxlength='1000' required></textarea>
                 </div>
                 
                                                    
-                <div class="d-grid mx-auto mb-2">
+                <div class="d-grid mx-auto mb-2 pb-2">
                     <button type="submit" class="btn btn-sm btn-confirmar">Enviar</button>
                 </div>
             </form> 
