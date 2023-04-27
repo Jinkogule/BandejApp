@@ -29,15 +29,6 @@
 
         @include('layouts-user.components-user.navbar2')
 
-        <br>
-        {{ session('nome') }}
-        <br>
-        {{ session('sobrenome') }}
-        <br>
-        {{ session('id') }}
-        <br>
-        {{ session('user_email') }}
-        <br>
         @if(session()->has('message'))
             <div class="alert alert-success msg-sucesso">
                 {{ session()->get('message') }}
@@ -50,7 +41,8 @@
             </div>
         @endif
         <div class="container container-sugestao mb-4">
-        <br><h4 style="text-align: center;">Sugestão de Melhoria</h4><hr>
+            <h4 style="text-align: center;">Sugestão de Melhoria</h4>
+            <hr>
             <form action="{{ route('enviarSugestaoDeMelhorias') }}" method="POST">
                 @csrf
                 <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">

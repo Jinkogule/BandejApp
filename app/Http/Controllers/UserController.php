@@ -205,7 +205,7 @@ class UserController extends Controller{
         $data = $request->all();
         $check = $this->criaSugestao($data);
         
-        return redirect("/user/dashboard")->with('message', 'Sugestão enviada com sucesso!');
+        return redirect("/")->with('message', 'Sugestão enviada com sucesso!');
     }
 
     public function criaSugestao(array $data){
