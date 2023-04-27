@@ -58,13 +58,15 @@
                 <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
                 <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
 
-                <div class="form-group mb-1">
+                <div class="form-group mb-2">
                     <label for="assunto" style="color: #fff;">Assunto:</label>
-                    <input type="text" name="assunto" id="assunto" required>
+                    <input type="text" name="assunto" id="assunto" class="form-control" required>
                 </div>
 
+                
                 <div class="form-group mb-1">
-                    <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" rows="5" maxlength='1000' required></textarea>
+                    <label for="sugestao" style="color: #fff;">Assunto:</label>
+                    <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" class="form-control" rows="5" maxlength='1000' required></textarea>
                 </div>
                 
                                                    
