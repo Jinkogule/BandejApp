@@ -60,8 +60,7 @@
                     <label for="sugestao" style="color: #fff;">Sugestão:</label>
                     <textarea placeholder="Deixe aqui sua sugestão." name="sugestao" id="sugestao" class="form-control" rows="5" maxlength='1000' required></textarea>
                 </div>
-                
-                                                   
+                                      
                 <div class="d-grid mx-auto">
                     <button type="submit" class="btn btn-sm btn-confirmar">Enviar</button>
                 </div>

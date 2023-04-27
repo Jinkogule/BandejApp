@@ -308,7 +308,8 @@ body{
         border-radius: 10px;
         width: 500px;
         margin: 50px auto;
-        padding: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 
@@ -319,6 +320,7 @@ body{
         border-radius: 10px;
         width: 95%;
         margin: 50px auto;
-        padding: 15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
 }
