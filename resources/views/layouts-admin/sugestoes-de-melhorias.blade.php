@@ -43,7 +43,7 @@
                 
                 {{ $event->sugestao }}
                 <br><br>
-                <small style="color: #D9D9D9 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} (<a href="mailto:{{ $event->email }}" title="glorythemes">{{ $event->email }}</a>) em {{ $data_visual_timestamp }}, às {{ $horario_timestamp }}h.</small>
+                <small style="color: #D9D9D9 !important; text-align: left;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} (<a href="mailto:{{ $event->email }}">{{ $event->email }}</a>) em {{ $data_visual_timestamp }}, às {{ $horario_timestamp }}h.</small>
             </div>  
             <br>
             @endforeach

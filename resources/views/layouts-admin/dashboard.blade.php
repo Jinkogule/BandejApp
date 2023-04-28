@@ -15,19 +15,19 @@
 
         <!-- Estilos (path do arquivo css) -->
         @include('comuns.styles')
-        <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
         @include('comuns.scripts')
     </head>
 
     <body>
         @include('layouts-admin.components-admin.navbar1')
         
-        
+        <br>
 
-        <div class="container-fluid container-pm">
+        <div class="container-fluid container-cdr">
             <br>
             <h2 style="text-align: center; color: #fff;">Calendário de Refeições</h2>
-            <div class="container-fluid container2-pm" style="overflow: auto">
+            <div class="container-fluid container2-cdr" style="overflow: auto">
                 
                 @foreach($calendario_dias as $event)
                 
