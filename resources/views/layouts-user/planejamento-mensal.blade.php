@@ -172,7 +172,7 @@
         ?>
         
           
-                <form action="/dashboard" class="d-grid mx-auto mb-2 pb-2">
+                <form action="/user/dashboard" class="d-grid mx-auto mb-2 pb-2">
                     <input type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
                 </form>
             
@@ -181,7 +181,7 @@
         else{
         ?>
           
-                <form action="/dashboard" class="d-grid mx-auto mb-2 pb-2">
+                <form action="/user/dashboard" class="d-grid mx-auto mb-2 pb-2">
                     <input disabled type="submit"type="submit" class="btn btn-confirmar btn-block" value="Próxima etapa" />
                 </form>
             
