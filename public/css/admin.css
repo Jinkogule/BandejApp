@@ -29,15 +29,16 @@
     .conteudo-sugestoes{
         background-color: #747BCF;
         border-radius: 10px;
-        padding: 10px;
+        padding-bottom: 8px;
+        padding-top: 8px;
     }
 }
 
 @media (max-width: 1000px) {
     .conteudo-sugestoes{
         background-color: #747BCF;
-        border-radius: 10px;
-        padding: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 }
 
