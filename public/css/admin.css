@@ -11,7 +11,7 @@
 @media (max-width: 1000px) {
     .container-cdr{
         background-color: #1F519B;
-        height: 87vh;/*antigo 87*/
+        height: 80vh;/*antigo 87*/
         width: 98%; 
         border-radius: 10px;
         position: relative;
@@ -20,7 +20,7 @@
 @media (min-width: 1000px) {
     .container2-cdr{
         background-color: #B9D5FF;
-        height: 98%;/*valor antigo: height: 77%;*/
+        height: 85%;/*valor antigo: height: 77%;*/
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
@@ -30,7 +30,7 @@
 @media (max-width: 1000px) {
     .container2-cdr{
         background-color: #B9D5FF;
-        height: 98%;
+        height: 75%;
         width: 98%;
         margin-top: 15px;  
         margin-bottom: 15px;
@@ -45,7 +45,7 @@
         background-color: #1F519B;
         border-radius: 10px;
         width: 1100px;
-        margin: 50px auto;
+        margin: 0 auto;
         padding-bottom: 20px;
         padding-top: 20px;
         color: #fff;
@@ -58,7 +58,7 @@
         background-color: #1F519B;
         border-radius: 10px;
         width: 95%;
-        margin: 50px auto;
+        margin: 0 auto;
         padding-bottom: 15px;
         padding-top: 15px;
         color: #fff;
