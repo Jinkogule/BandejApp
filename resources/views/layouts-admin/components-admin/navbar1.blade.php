@@ -18,7 +18,7 @@
         </div>
 
         <!-- Brand -->
-        <a class="navbar-brand navbar-brand-dashboard logo" href="/dashboard">
+        <a class="navbar-brand navbar-brand-dashboard logo" href="/admin/dashboard">
             <img src="/images/favicons/talheres-icon.png">
             Bem vindo, {{ session('nome')}}!
         </a> 

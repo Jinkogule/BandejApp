@@ -30,8 +30,8 @@
             <hr>
                
             @foreach($sugestoes as $event)
-            <div class="conteudo-sugestoes">
-                <strong>{{ $event->assunto }}</strong>
+            <div class="container conteudo-sugestoes">
+                <h5>{{ $event->assunto }}</h5>
                 <br>
                 {{ $event->sugestao }}
                 <br><br>
