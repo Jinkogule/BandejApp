@@ -30,13 +30,12 @@
             <hr>
             <div class="conteudo-sugestoes">   
             @foreach($sugestoes as $event)
-                <strong  style="color: black !important;">Sugestão enviada por</strong> {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}):
-                <br>
-                <strong style="color: black !important;">Assunto:</strong> {{ $event->assunto }}
-                <br>
-                <strong style="color: black !important;">Sugestão:</strong> {{ $event->sugestao }}       
+                {{ $event->assunto }}
+                <hr>
+                {{ $event->sugestao }}
+                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>   
             @endforeach
-            <hr>
+            <br>
             </div>
         </div>
     </body>
