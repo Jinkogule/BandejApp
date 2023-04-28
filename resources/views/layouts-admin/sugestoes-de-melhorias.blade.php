@@ -30,12 +30,19 @@
             <hr>
                
             @foreach($sugestoes as $event)
+            <?php
+                $horario_timestamp =  substr($event->created_at, -8);  
+
+                $newstring = substr($dynamicstring, -7);
+                $data_visual = date("d/m/y", strtotime($data_banco));
+                $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+            ?>
             <div class="container conteudo-sugestoes">
                 <h5>{{ $event->assunto }}</h5>
                 
                 {{ $event->sugestao }}
                 <br><br>
-                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>
+                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}, horário {{ $horario_timestamp }}; </small>
             </div>  
             <br>
             @endforeach

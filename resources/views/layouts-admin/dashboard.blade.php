@@ -24,10 +24,10 @@
         
         
 
-        <div class="container-fluid container-pm">
+        <div class="container-fluid container-cdr">
             <br>
             <h2 style="text-align: center; color: #fff;">Calendário de Refeições</h2>
-            <div class="container-fluid container2-pm" style="overflow: auto">
+            <div class="container-fluid container2-cdr" style="overflow: auto">
                 
                 @foreach($calendario_dias as $event)
                 

@@ -1,3 +1,43 @@
+/*-------------------------------Dashboard-------------------------------*/
+@media (min-width: 1000px) {
+    .container-cdr{
+        background-color: #1F519B;
+        height: 87vh;/*antigo 87*/
+        width: 600px; 
+        border-radius: 10px;
+        position: relative;
+    }
+}
+@media (max-width: 1000px) {
+    .container-cdr{
+        background-color: #1F519B;
+        height: 87vh;/*antigo 87*/
+        width: 98%; 
+        border-radius: 10px;
+        position: relative;
+    }
+}
+@media (min-width: 1000px) {
+    .container2-cdr{
+        background-color: #B9D5FF;
+        height: 98%;/*valor antigo: height: 77%;*/
+        width: 98%;
+        margin-top: 15px;  
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .container2-cdr{
+        background-color: #B9D5FF;
+        height: 98%;
+        width: 98%;
+        margin-top: 15px;  
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}
+
 /*-------------------------------Página de sugestões-------------------------------*/
 @media (min-width: 1000px) {
     .container-visualizar-sugestoes{
