@@ -260,7 +260,7 @@ h4{
 /*----------------------------------------Mensagens----------------------------------------*/
 @media (min-width: 1000px) {
     .msg-sucesso{
-        top: 100px;
+        top: 57px;
         text-align: center;
         position: fixed;
         z-index: 1;
@@ -273,7 +273,7 @@ h4{
 }
 @media (max-width: 1000px) {
     .msg-sucesso{
-        top: 100px;
+        top: 57px;
         text-align: center;
         position: fixed;
         z-index: 1;
@@ -287,7 +287,7 @@ h4{
 
 @media (min-width: 1000px) {
     .msg-erro{
-        top: 58px;
+        top: 57px;
         text-align: center;
         position: fixed;
         z-index: 1;
@@ -300,7 +300,7 @@ h4{
 }
 @media (max-width: 1000px) {
     .msg-erro{
-        top: 58px;
+        top: 57px;
         text-align: center;
         position: fixed;
         z-index: 1;
