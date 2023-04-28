@@ -28,16 +28,19 @@
         <div class="container container-visualizar-sugestoes mb-4" style="color: #fff;">
             <h4 style="text-align: center;">Sugestões de Melhorias</h4>
             <hr>
-            <div class="conteudo-sugestoes">   
+               
             @foreach($sugestoes as $event)
+            <div class="conteudo-sugestoes">
                 <strong>{{ $event->assunto }}</strong>
                 <br>
                 {{ $event->sugestao }}
                 <br><br>
-                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>   
-            @endforeach
+                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>
+            </div>  
             <br>
-            </div>
+            @endforeach
+            
+            
         </div>
     </body>
 </html>
