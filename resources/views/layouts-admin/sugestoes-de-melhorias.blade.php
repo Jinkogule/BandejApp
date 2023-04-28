@@ -32,7 +32,7 @@
             @foreach($sugestoes as $event)
             <div class="container conteudo-sugestoes">
                 <h5>{{ $event->assunto }}</h5>
-                <br>
+                
                 {{ $event->sugestao }}
                 <br><br>
                 <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>
