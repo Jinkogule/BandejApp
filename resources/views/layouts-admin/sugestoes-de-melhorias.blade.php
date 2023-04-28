@@ -31,23 +31,22 @@
                
             @foreach($sugestoes as $event)
             <?php
-                $horario_timestamp =  substr($event->created_at, -8);  
+            $horario_timestamp =  substr($event->created_at, -8);  
 
-                $data_timestamp =  substr($event->created_at, 10);
-                $data_banco_timestamp = $data_timestamp;  
-                $data_visual_timestamp = date("d/m/y", strtotime($data_banco_timestamp));
+            $data_timestamp =  substr($event->created_at, 10);
+            $data_banco_timestamp = $data_timestamp;  
+            $data_visual_timestamp = date("d/m/y", strtotime($data_banco_timestamp));
             ?>
+
             <div class="container conteudo-sugestoes">
                 <h5>{{ $event->assunto }}</h5>
                 
                 {{ $event->sugestao }}
                 <br><br>
-                <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $data_visual_timestamp }}, às {{ $horario_timestamp }}.; </small>
+                <small style="color: #D9D9D9 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} (<a href="mailto:{{ $event->email }}" title="glorythemes">{{ $event->email }}</a>) em {{ $data_visual_timestamp }}, às {{ $horario_timestamp }}h.</small>
             </div>  
             <br>
             @endforeach
-            
-            
         </div>
     </body>
 </html>

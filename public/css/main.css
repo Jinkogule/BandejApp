@@ -73,15 +73,11 @@ hr { display: block; height: 1px;
     color: #fff;
 }
 
-.container-menu {
-              
-} 
-
 /*--------navbar--------*/
 @media (min-width: 1000px) {
     .container-menu{
         background-color: #1F519B;
-        width: 900px; 
+        width: 1100px; 
     }
 }
 @media (max-width: 1000px) {

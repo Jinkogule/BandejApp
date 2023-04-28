@@ -15,7 +15,7 @@
 
         <!-- Estilos (path do arquivo css) -->
         @include('comuns.styles')
-        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
         @include('comuns.scripts')
     </head>
 
@@ -24,10 +24,10 @@
         
         
 
-        <div class="container-fluid container-cdr">
+        <div class="container-fluid container-pm">
             <br>
             <h2 style="text-align: center; color: #fff;">Calendário de Refeições</h2>
-            <div class="container-fluid container2-cdr" style="overflow: auto">
+            <div class="container-fluid container2-pm" style="overflow: auto">
                 
                 @foreach($calendario_dias as $event)
                 
