@@ -15,7 +15,7 @@
 
         <!-- Estilos (path do arquivo css) -->
         @include('comuns.styles')
-        <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/dashboard-admin.css') }}">
         @include('comuns.scripts')
     </head>
 

@@ -33,7 +33,6 @@
             <?php
                 $horario_timestamp =  substr($event->created_at, -8);  
 
-                $newstring = substr($dynamicstring, -7);
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 $dia_da_semana_visual = ucfirst($event->dia_da_semana);
             ?>
