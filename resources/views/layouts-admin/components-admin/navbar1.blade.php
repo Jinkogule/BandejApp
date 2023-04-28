@@ -8,9 +8,10 @@
                 <li class="desplegable">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
                     <ul class="grupo-desplegable">
-                        <li><a class="dropdown-item" href="">Sugestões de cardápio</a></li>
+                        <li><a class="dropdown-item" href="/admin/dashboard">Calendário de Refeições</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="">Sugestões de melhorias</a></li>                              
+                        <li><a class="dropdown-item" href="/admin/sugestoesdecardapio">Sugestões de cardápio</a></li>
+                        <li><a class="dropdown-item" href="/admin/sugestoesdemelhorias">Sugestões de melhorias</a></li>                              
                     </ul>
                 </li> 
             </ul>

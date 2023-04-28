@@ -25,17 +25,17 @@
         
         
 
-        <div class="container container-visualizar-sugestoes mb-4">
+        <div class="container container-visualizar-sugestoes mb-4" style="color: #fff;">
             <h4 style="text-align: center;">Sugestões de Melhorias</h4>
             <hr>
                 
             @foreach($sugestoes as $event)
                 
-                {{ $event->nome }} {{ $event->sobrenome }}
-                <br><br><br>
-                {{ $event->assunto }}
-                <br><br>
-                {{ $event->sugestao }}       
+                Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}):
+                <br>
+                <strong>Assunto:</strong>{{ $event->assunto }}
+                <br>
+                <strong>Sugestão:</strong>{{ $event->sugestao }}       
             @endforeach
             </div>
         </div>
