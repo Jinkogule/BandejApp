@@ -30,9 +30,10 @@
             <hr>
             <div class="conteudo-sugestoes">   
             @foreach($sugestoes as $event)
-                {{ $event->assunto }}
-                <hr>
+                <strong>{{ $event->assunto }}</strong>
+                <br>
                 {{ $event->sugestao }}
+                <br><br>
                 <small style="color: #E0E0E0 !important;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} ({{ $event->email }}) em {{ $event->created_at }}</small>   
             @endforeach
             <br>
