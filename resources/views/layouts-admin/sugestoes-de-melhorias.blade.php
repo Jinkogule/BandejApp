@@ -33,8 +33,7 @@
             <?php
                 $horario_timestamp =  substr($event->created_at, -8);  
 
-                $data_visual = date("d/m/y", strtotime($data_banco));
-                $dia_da_semana_visual = ucfirst($event->dia_da_semana);
+                
             ?>
             <div class="container conteudo-sugestoes">
                 <h5>{{ $event->assunto }}</h5>
