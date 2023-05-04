@@ -19,7 +19,9 @@ class AuthController extends Controller{
     } 
 
     /*Login*/
-    public function realizarLogin(Request $request){
+    
+    
+    public function realizarLogin(Request $request, AdminController $adminController, UserController $userController){
         $request->validate([
             'email' => 'required',
             'password' => 'required',
@@ -36,10 +38,10 @@ class AuthController extends Controller{
             $request->session()->put('user_email', $user->email);
     
             if ($user->user_type == 'Administrator') {
-                return redirect()->route('admin.dashboard');
+                return $adminController->dashboard();
             } else {
                 $request->session()->put('unidade_bandejao', $user->unidade_bandejao);
-                return redirect()->route('user.dashboard');
+                return $userController->dashboard();
             }
         }
     
