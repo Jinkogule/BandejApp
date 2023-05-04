@@ -26,33 +26,23 @@ class AuthController extends Controller{
         ]);
     
         $credentials = $request->only('email', 'password');
-
+    
         if (Auth::attempt($credentials)) {
-            //Administrador
-            if (Auth::user()->user_type == 'Administrator'){
-                $request->session()->regenerate();
-                $request->session()->put('nome', Auth::user()->nome);
-                $request->session()->put('id', Auth::user()->id);
-                $request->session()->put('user_type', Auth::user()->user_type);
-                $request->session()->put('user_email', Auth::user()->email);
-
-                $AdminController = new AdminController();
-                return $AdminController->dashboard();  
-            }
-            //Usuário
-            else{
-                $request->session()->regenerate();
-                $request->session()->put('nome', Auth::user()->nome);
-                $request->session()->put('sobrenome', Auth::user()->sobrenome);
-                $request->session()->put('id', Auth::user()->id);
-                $request->session()->put('user_type', Auth::user()->user_type);
-                $request->session()->put('user_email', Auth::user()->email);
-                $request->session()->put('unidade_bandejao', Auth::user()->unidade_bandejao);
-        
-                $UserController = new UserController();
-                return $UserController->dashboard();
+            $user = Auth::user();
+            $request->session()->regenerate();
+            $request->session()->put('nome', $user->nome);
+            $request->session()->put('id', $user->id);
+            $request->session()->put('user_type', $user->user_type);
+            $request->session()->put('user_email', $user->email);
+    
+            if ($user->user_type == 'Administrator') {
+                return redirect()->route('admin.dashboard');
+            } else {
+                $request->session()->put('unidade_bandejao', $user->unidade_bandejao);
+                return redirect()->route('user.dashboard');
             }
         }
+    
         return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
     }
 
