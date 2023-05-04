@@ -82,21 +82,13 @@
                                     <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('cancelarRefeicaoAlmoco_{{ $event->id }}').submit()" checked>
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
 
-                                    <?php
-                                    $status_refeicao_dessa_data = DB::table('refeicaos')->select('status_confirmacao')->where('id_usuario', '=', $user_id)->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->value('status_confirmacao');
-                                    if ($status_refeicao_dessa_data == "C"){ 
-                                    ?>
+                                    @if ($status_refeicao_data_especifica == "C")
                                         <script>
                                         document.getElementById("checkboxAlmoço_{{ $event->id }}").disabled = true;
                                         </script>
-                                    <?php
-                                    }
-                                    ?>
-                                </form>
-                            <?php
-                            }
-                            else {
-                            ?>
+                                    
+                                    </form>
+                                    @else
                                 <form id="registrarRefeicaoAlmoco_{{ $event->id }}" action="{{ route('registraRefeicao') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="tipo" value="Almoço">
@@ -108,6 +100,7 @@
                                     <input type="checkbox" name="checkboxAlmoço_{{ $event->id }}" id="checkboxAlmoço_{{ $event->id }}" onchange="document.getElementById('registrarRefeicaoAlmoco_{{ $event->id }}').submit()">
                                     <label for="tipo" class="text-shadow">Almoço - {{ $unidade_bandejao }}</label>
                                 </form>
+                                @endif
                             <?php
                             }
                             ?>
