@@ -83,8 +83,7 @@ class AuthController extends Controller{
     public function sair(){
         Session::flush();
         Auth::logout();
-  
-        return Redirect('/');
+
         return redirect()->route('login')->with('success', 'Você saiu com sucesso!');
     }
 }
