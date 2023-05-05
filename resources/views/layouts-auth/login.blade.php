@@ -35,23 +35,8 @@
         <!--Navbar-->
         @include('comuns.navbar')
 
-        @if(session()->has('message'))
-            <div class="alert alert-success msg-sucesso">
-                {{ session()->get('message') }}
-            </div>
-        @endif
-
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
-        @if(session()->has('erro'))
-            <div class="alert alert-danger msg-erro">
-                {{ session()->get('erro') }}
-            </div>
-        @endif
+        <!--Mensagens-->
+        @include('comuns.mensagens')
         
         <div class="container container-login">
             <h4 style="text-align: center;">Acesse o BandejApp</h4>

@@ -43,11 +43,11 @@ class AuthController extends Controller{
             }
         }
     
-        return redirect("/")->with('erro', 'Dados inseridos são inválidos.');
+        return redirect()->route('login')->with('erro', 'Dados inseridos são inválidos.');
     }
 
     /*Cadastro*/
-    public function cadastro(){
+    public function viewCadastro(){
         return view('layouts-auth.cadastro');
     }
       
@@ -60,12 +60,12 @@ class AuthController extends Controller{
         ]);
            
         $data = $request->all();
-        $check = $this->criaUsuario($data);
+        $check = $this->criarUsuario($data);
         
-        return redirect("/")->with('message', 'Cadastro realizado com sucesso!');
+        return redirect()->route('login')->with('sucesso', 'Cadastro realizado com sucesso!');
     }
 
-    public function criaUsuario(array $data){
+    public function criarUsuario(array $data){
         return User::create([
             'nome' => $data['nome'],
             'sobrenome' => $data['sobrenome'],
@@ -84,7 +84,7 @@ class AuthController extends Controller{
         Session::flush();
         Auth::logout();
 
-        return redirect()->route('login')->with('success', 'Você saiu com sucesso!');
+        return redirect()->route('login')->with('sucesso', 'Você saiu com sucesso!');
     }
 }
 

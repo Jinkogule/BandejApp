@@ -20,11 +20,11 @@ class AdminController extends Controller
             return View::make('layouts-admin.dashboard')->with('calendario_dias', $calendario_dias);  // user dashboard path      
         }
 
-        return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
+        return redirect()->route('login')->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
         
     }
 
-    public function sugestoesdemelhorias(){
+    public function listarSugestoesDeMelhorias(){
         $sugestoes = DB::table('sugestao_de_melhorias')->select('*')->get();
 
         return View::make('layouts-admin.sugestoes-de-melhorias')->with('sugestoes', $sugestoes);

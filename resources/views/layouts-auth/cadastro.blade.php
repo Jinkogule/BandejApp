@@ -21,6 +21,9 @@
         <!--Navbar-->
         @include('comuns.navbar')
 
+        <!--Mensagens-->
+        @include('comuns.mensagens')
+        
         <div class="container container-cadastro mb-4">
             <h4 style="text-align: center;">Cadastro</h4>
             <hr>

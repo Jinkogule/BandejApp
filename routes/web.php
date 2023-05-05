@@ -24,21 +24,21 @@ use Illuminate\Support\Facades\Auth;
 /*Auth*/
 Route::get('/', [AuthController::class, 'index'])->name('login');
 Route::post('realizarLogin', [AuthController::class, 'realizarLogin'])->name('realizarLogin');
-Route::get('cadastro', [AuthController::class, 'cadastro'])->name('cadastro');
+Route::get('cadastro', [AuthController::class, 'viewCadastro'])->name('cadastro');
 Route::post('realizarCadastro', [AuthController::class, 'realizarCadastro'])->name('realizarCadastro');
 Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 
 /*Rotas do admin*/
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
-    Route::get('dashboard', [AdminController::class, 'dashboard']);
-    Route::get('sugestoesdemelhorias', [AdminController::class, 'sugestoesdemelhorias']);
+    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('sugestoes_de_melhorias', [AdminController::class, 'sugestoesDeMelhorias'])->name('admin.sugestoes_de_melhorias');
 
 });
 
 
 Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
-    Route::get('dashboard', [UserController::class, 'dashboard']);
-    Route::get('planejamentomensal', [UserController::class, 'planejamentomensal']);
+    Route::get('dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('planejamento_mensal', [UserController::class, 'planejamentoMensal'])->name('user.planejamento_mensal');
 
     Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
     Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');

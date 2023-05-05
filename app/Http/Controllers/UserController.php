@@ -16,7 +16,7 @@ class UserController extends Controller{
 
         //Vai para o Planejamentomensal caso não possua refeições registradas
         if ($q_refeicoes == 0){
-            return redirect()->intended('/user/planejamentomensal');
+            return redirect()->intended(route('user.planejamento_mensal'));
         }
         //Vai para o Dashboard caso possua refeições registradas
         else{
@@ -30,7 +30,7 @@ class UserController extends Controller{
                 return View::make('layouts-user.dashboard')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path      
             }
     
-            return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
+            return redirect()->route('login')->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
         }
     }
     
@@ -41,7 +41,7 @@ class UserController extends Controller{
         
         DB::table('refeicaos')->delete($id_refeicao);
 
-        return redirect('/user/dashboard')->with('message', 'Refeição cancelada com sucesso!');
+        return redirect()->route('user.dashboard')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
 
     public function confirmarRefeicao(Request $request){
@@ -55,10 +55,10 @@ class UserController extends Controller{
         DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => "C"]);
         DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['unidade_bandejao' => $data['unidade_bandejao']]);
                 
-        return redirect('/user/dashboard')->with('message', 'Refeição confirmada com sucesso!');
+        return redirect()->route('user.dashboard')->with('sucesso', 'Refeição confirmada com sucesso!');
     }
     /*-------------------------------------------------------------------------Funções Planejamento Mensal-------------------------------------------------------------------------*/
-    public function planejamentomensal(){
+    public function planejamentoMensal(){
         if(Auth::check()){
             $unidade_bandejao = Auth::user()->unidade_bandejao;
             $user_id = Auth::user()->id;
@@ -68,7 +68,7 @@ class UserController extends Controller{
             return View::make('layouts-user.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
         }
   
-        return redirect("/")->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
+        return redirect()->route('login')->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
     }
     /*
     public function ajax_submit(Request $request){
@@ -103,7 +103,7 @@ class UserController extends Controller{
             'dia_da_semana' => $data['dia_da_semana'],  
         ]);
 
-        return redirect('/user/planejamentomensal')->with('message', 'Refeição registrada com sucesso!');
+        return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeição registrada com sucesso!');
     }
 
     public function cancelarRefeicaoPlanejamentoAlmoco(Request $request){
@@ -119,7 +119,7 @@ class UserController extends Controller{
 
         DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Almoço')->where('data', '=', $data['data'])->delete();
         
-        return redirect('/user/planejamentomensal')->with('message', 'Refeição cancelada com sucesso!');
+        return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
 
     public function cancelarRefeicaoPlanejamentoJanta(Request $request){
@@ -135,7 +135,7 @@ class UserController extends Controller{
 
         DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Janta')->where('data', '=', $data['data'])->delete();
         
-        return redirect('/user/planejamentomensal')->with('message', 'Refeição cancelada com sucesso!');
+        return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
 
     public function criaRefeicao(array $data){
@@ -175,21 +175,19 @@ class UserController extends Controller{
             }
         }
         
-        return redirect('/user/planejamentomensal')->with('message', 'Refeições registradas com sucesso!');
+        return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeições registradas com sucesso!');
     }
 
     public function desselecionarTodasRefeicoes(Request $request){
 
         DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('status_confirmacao', '!=', 'C')->delete();
 
-        return redirect('/user/planejamentomensal')->with('message', 'Refeições removidas com sucesso!');
+        return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeições removidas com sucesso!');
     }
 
     /*-------------------------- Páginas e funções das sugestões de melhorias e cardápio --------------------------*/
-    public function sugestaodemelhorias(){
-  
+    public function viewSugestaoDeMelhorias(){
         return View::make('layouts-user.sugestao-de-melhorias');
-        
     }
 
     public function enviarSugestaoDeMelhorias(Request $request){
@@ -205,7 +203,7 @@ class UserController extends Controller{
         $data = $request->all();
         $check = $this->criaSugestao($data);
         
-        return redirect("/user/sugestaodemelhorias")->with('message', 'Sugestão enviada com sucesso!');
+        return redirect()->route('user.sugestao_de_melhorias')->with('sucesso', 'Sugestão enviada com sucesso!');
     }
 
     public function criaSugestao(array $data){
