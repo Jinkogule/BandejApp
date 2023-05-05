@@ -29,17 +29,9 @@
 
         <!--@include('layouts-user.components-user.navbar2')-->
 
-        @if(session()->has('message'))
-            <div class="alert alert-success msg-sucesso">
-                {{ session()->get('message') }}
-            </div>
-        @endif
-
-        @if(session()->has('erro'))
-            <div class="alert alert-danger msg-erro">
-                {{ session()->get('erro') }}
-            </div>
-        @endif
+        <!--Mensagens-->
+        @include('comuns.mensagens')
+        
         <div class="container container-sugestao mb-4">
             <h4 style="text-align: center;">Sugestão de Melhoria</h4>
             <hr>

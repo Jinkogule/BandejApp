@@ -24,11 +24,9 @@
 
         <!--@include('layouts-user.components-user.navbar2')-->
 
-        @if(session()->has('message'))
-            <div class="alert alert-success msg-sucesso">
-                {{ session()->get('message') }}
-            </div>
-        @endif
+        <!--Mensagens-->
+        @include('comuns.mensagens')
+        
         <br>
         <!--Suas Próximas Refeições-->
        

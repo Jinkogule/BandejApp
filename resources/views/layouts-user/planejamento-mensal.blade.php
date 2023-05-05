@@ -29,6 +29,9 @@
 
         <!--@include('layouts-user.components-user.navbar2')-->
 
+        <!--Mensagens-->
+        @include('comuns.mensagens')
+        
         <br>
         
         <div class="container-fluid container-pm">
