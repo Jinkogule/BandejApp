@@ -19,8 +19,6 @@ class AuthController extends Controller{
     } 
 
     /*Login*/
-    
-    
     public function realizarLogin(Request $request, AdminController $adminController, UserController $userController){
         $request->validate([
             'email' => 'required',
@@ -64,7 +62,6 @@ class AuthController extends Controller{
         $data = $request->all();
         $check = $this->criaUsuario($data);
         
-        
         return redirect("/")->with('message', 'Cadastro realizado com sucesso!');
     }
 
@@ -82,14 +79,13 @@ class AuthController extends Controller{
         ]);
     }
 
-    
-
     /*Sair*/
     public function sair(){
         Session::flush();
         Auth::logout();
   
         return Redirect('/');
+        return redirect()->route('login')->with('success', 'Você saiu com sucesso!');
     }
 }
 

@@ -41,6 +41,12 @@
             </div>
         @endif
 
+        @if (session('success'))
+            <div class="alert alert-success msg-sucesso">
+                {{ session('success') }}
+            </div>
+        @endif
+
         @if(session()->has('erro'))
             <div class="alert alert-danger msg-erro">
                 {{ session()->get('erro') }}
