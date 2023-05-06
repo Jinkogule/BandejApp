@@ -56,7 +56,7 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
     Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
     Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
     
-    Route::get('sugestaodemelhorias', [UserController::class, 'sugestaodemelhorias']);
+    Route::get('sugestao_de_melhorias', [UserController::class, 'sugestaodemelhorias'])->name('user.sugestao_de_melhorias');
     Route::post('enviarSugestaoDeMelhorias', [UserController::class, 'enviarSugestaoDeMelhorias'])->name('enviarSugestaoDeMelhorias');
 
 
