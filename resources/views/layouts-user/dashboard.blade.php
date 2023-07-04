@@ -26,10 +26,10 @@
 
         <!--Mensagens-->
         @include('comuns.mensagens')
-        
+
         <br>
         <!--Suas Próximas Refeições-->
-       
+
         <div class="container container-d">
             <br>
             <h2 style="text-align: center; color: #fff;">Suas Próximas Refeições</h2>
@@ -38,12 +38,12 @@
             <?php
             if ($verif_null == 1){
             ?>
-       
+
             <!--temporário-->
             @foreach($events2 as $event)
                 <?php
                 if ($event->status_confirmacao == 'P' /*&& $amanha == $event->data*/){
-                ?> 
+                ?>
                 <script type="text/javascript">
                     $(window).on('load', function() {
                         $('#confirmacao-notificacao{{$event->id}}').modal('show');
@@ -55,24 +55,41 @@
                 @include('layouts-user.components-user.modals-confirmacao')
             @endforeach
             <!--temporário-->
-            
+
+            <!--teste modal avaliação-->
+            @foreach($events2 as $event)
+                <?php
+                if ($event->status_confirmacao == 'C' /*&& $amanha == $event->data*/){
+                ?>
+                <script type="text/javascript">
+                    $(window).on('load', function() {
+                        $('#confirmacao-avaliacao{{$event->id}}').modal('show');
+                    });
+                </script>
+                <?php
+                }
+                ?>
+                @include('layouts-user.components-user.modals-avaliacao')
+            @endforeach
+            <!--teste modal avaliação-->
+
             @foreach($events as $event)
             <div class="card">
                 <div class="card-header">
                     <?php
                     $amanha = date('Y-m-d', strtotime(' +1 day'));
 
-                    $data_banco = $event->data;  
+                    $data_banco = $event->data;
                     $data_visual = date("d/m/y", strtotime($data_banco));
                     $dia_da_semana_visual = ucfirst($event->dia_da_semana);
                     $tipo_visual = ucfirst($event->tipo);
 
                     /*Alerta caso refeição esteja pendente e passível de confirmação*/
-                    
+
                     if ($event->status_confirmacao == 'P'){
                     ?>
                         <img src="/images/pendente.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#confirmacao-notificacao{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
-                       
+
                         <!--desativado temporariamente*/ (ativado no temporário acima)
                         <script type="text/javascript">
                             $(window).on('load', function() {
@@ -80,7 +97,7 @@
                             });
                         </script>
                         -->
-                        
+
                     <?php
                     }
 
@@ -89,15 +106,15 @@
                     ?>
                         <img src="/images/confirmado.png" class="img-fluid" alt="Responsive image" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
                     <?php
-                
+
                     }
-    
+
                     ?>
                     <span class="card-title" style="text-align: center; color: #fff;">{{$dia_da_semana_visual}} - {{$data_visual}} - {{$tipo_visual}} - {{$event->unidade_bandejao}}</span>
                 </div>
-                
+
                 <div class="card-body">
-                
+
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
                             Cardápio: {{$event->cardapio}}
@@ -124,18 +141,18 @@
 
                                 <!--Form cancelamento de refeição-->
                                 <form id="cancelar_refeicao" action="{{ route('cancelarRefeicao') }}" method="POST">
-                                    @csrf          
-                                    <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">                
+                                    @csrf
+                                    <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
                                     <div class="d-grid mx-auto mb-2">
                                         <button type="submit" class="btn btn-sm btn-cancelar">Cancelar</button>
                                     </div>
-                                </form> 
+                                </form>
                             </div>
                         </div>
                     <?php
                     }
                     ?>
-                </div>                       
+                </div>
             </div>
 
             @include('layouts-user.components-user.modals-confirmacao')
@@ -151,6 +168,6 @@
             }
             ?>
         </div>
-                
+
     </body>
 </html>

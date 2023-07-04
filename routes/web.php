@@ -35,13 +35,14 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
 });
 
-
 Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
     Route::get('dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
     Route::get('planejamento_mensal', [UserController::class, 'planejamentoMensal'])->name('user.planejamento_mensal');
 
     Route::post('cancelarRefeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
     Route::post('confirmarRefeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
+
+    Route::post('avaliarRefeicao', [UserController::class, 'avaliarRefeicao'])->name('avaliarRefeicao');
 
     Route::post('cancelarRefeicaoPlanejamento', [UserController::class, 'cancelarRefeicaoPlanejamento'])->name('cancelarRefeicaoPlanejamento');
     Route::post('cancelarRefeicaoPlanejamentoAlmoco', [UserController::class, 'cancelarRefeicaoPlanejamentoAlmoco'])->name('cancelarRefeicaoPlanejamentoAlmoco');
@@ -51,17 +52,15 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
 
     Route::post('selecionarTodasRefeicoes', [UserController::class, 'selecionarTodasRefeicoes'])->name('selecionarTodasRefeicoes');
     Route::post('desselecionarTodasRefeicoes', [UserController::class, 'desselecionarTodasRefeicoes'])->name('desselecionarTodasRefeicoes');
-    
-    
+
     Route::post('cancela-refeicao', [UserController::class, 'cancelarRefeicao'])->name('cancelarRefeicao');
     Route::post('confirma-refeicao', [UserController::class, 'confirmarRefeicao'])->name('confirmarRefeicao');
-    
+
     Route::get('sugestao_de_melhorias', [UserController::class, 'viewSugestaoDeMelhorias'])->name('user.sugestao_de_melhorias');
     Route::post('enviarSugestaoDeMelhorias', [UserController::class, 'enviarSugestaoDeMelhorias'])->name('enviarSugestaoDeMelhorias');
 
-
     Route::get('/teste-mail', [MailController::class, 'teste_mail']);
-    
+
     Route::post('/ajax_submit', [PlanejamentoMensalController::class, 'ajax_submit'])->name('ajax_submit');
 });
 

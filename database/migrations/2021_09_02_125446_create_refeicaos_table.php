@@ -23,12 +23,14 @@ class CreateRefeicaosTable extends Migration
             $table->date('data');
             $table->char('status_confirmacao', 1)->default('N');
             $table->char('status_validez', 1)->default('V');
+            $table->integer('avaliacao')->nullable();
+            $table->string('avaliacao_detalhada')->nullable();
             $table->timestamps();
 
             $table->unique(['id_usuario', 'tipo', 'data']);
 
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');;
-            
+
         });
     }
 

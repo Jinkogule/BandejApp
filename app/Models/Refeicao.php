@@ -22,6 +22,8 @@ class Refeicao extends Model
         'data',
         'dia_da_semana',
         'status_confirmacao',
-        'status_validez'
+        'status_validez',
+        'avaliacao',
+        'avaliacao_detalhada'
     ];
 }
