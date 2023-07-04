@@ -52,8 +52,7 @@ class UserController extends Controller{
             'unidade_bandejao' => 'required']
         );
 
-        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => 'C','unidade_bandejao' => $data['unidade_bandejao']
-    ]);
+        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => 'C','unidade_bandejao' => $data['unidade_bandejao']]);
 
         return redirect()->route('user.dashboard')->with('sucesso', 'Refeição confirmada com sucesso!');
     }
@@ -64,10 +63,10 @@ class UserController extends Controller{
         $request->validate([
             'id_refeicao' => 'required',
             'avaliacao' => 'required',
-            'avaliacao_detalhes' => 'nullable']
+            'avaliacao_detalhada' => 'nullable']
         );
 
-        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['avaliacao' => $data['avaliacao'],'avaliacao_detalhes' => $data['avaliacao_detalhes']]);
+        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['avaliacao' => $data['avaliacao'],'avaliacao_detalhada' => $data['avaliacao_detalhada']]);
 
         return redirect()->route('user.dashboard')->with('sucesso', 'Refeição avaliada com sucesso!');
     }
