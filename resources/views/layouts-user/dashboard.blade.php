@@ -63,7 +63,7 @@
                 ?>
                 <script type="text/javascript">
                     $(window).on('load', function() {
-                        $('#confirmacao-avaliacao{{$event->id}}').modal('show');
+                        $('avaliar-refeicao{{$event->id}}').modal('show');
                     });
                 </script>
                 <?php
