@@ -1,6 +1,6 @@
 
 <!--Notificação de confirmação-->
-<div class="modal fade" id="confirmacao-avaliacao{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="avaliar-refeicao{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
@@ -17,24 +17,23 @@
                 <?php
                 if ($event->tipo == 'Almoço'){
                 ?>
-                    um almoço planejado
+                    o almoço
                 <?php
                 }
                 if ($event->tipo == 'Janta'){
                 ?>
-                    uma janta planejada
+                    a janta
                 <?php
                 }
                 ?>
-                  no campus {{ $event->unidade_bandejao }} para {{ $dia_da_semana }}, dia {{ $data_visual }}.
+                  que realizou nesta {{ $dia_da_semana }}, dia {{ $data_visual }}, no campus {{ $event->unidade_bandejao }}.
                 <br><br>
-                Você confirma sua presença?
             </div>
             <div class="modal-footer">
 
 
-                <!--Confirmar refeição mantendo o RU-->
-                <form id="confirmar_avaliacao" action="{{ route('confirmarAvaliacao') }}" method="POST">
+                <!--Avaliar refeição Form-->
+                <form id="avaliar-refeicao" action="{{ route('avaliarRefeicao') }}" method="POST">
                     @csrf
                     <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
 
