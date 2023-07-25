@@ -59,7 +59,7 @@
             <!--teste modal avaliação-->
             @foreach($events2 as $event)
                 <?php
-                if ($event->status_confirmacao == 'C' /*&& $amanha == $event->data*/){
+                if ($event->status_confirmacao == 'C' && $event->avaliacao == null/*&& $amanha == $event->data*/){
                 ?>
                 <script type="text/javascript">
                     $(window).on('load', function() {
