@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content confirmacao-bloco">
             <div class="modal-header" style="position: relative">
-                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Avaliação de Refeição - ({{$event->id}}) - {{$event->tipo}}</h5>
+                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Avaliação de Refeição</h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -38,7 +38,24 @@
                     <input type="hidden" id="id_refeicao" name="id_refeicao" value="{{$event->id}}">
 
                     <label for="avaliacao">Avaliação:</label>
-                    <input type="text" id="avaliacao" name="avaliacao" pattern="[0-9]+" required>
+
+                    <div class="rate">
+                        <input type="radio" id="star5" name="avaliacao" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+
+                        <input type="radio" id="star4" name="avaliacao" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+
+                        <input type="radio" id="star3" name="avaliacao" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+
+                        <input type="radio" id="star2" name="avaliacao" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+
+                        <input type="radio" id="star1" name="avaliacao" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+
 
                     <label for="avaliacao_detalhada">Detalhes de sua avaliação:</label>
                     <input type="text" id="avaliacao_detalhada" name="avaliacao_detalhada" pattern="^[a-zA-Z\s]+$">

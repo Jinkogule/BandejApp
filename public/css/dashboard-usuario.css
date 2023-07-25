@@ -1,5 +1,5 @@
 body{
-    padding-top: 80px !important;    
+    padding-top: 80px !important;
 }
 
 @media (min-width: 1000px) {
@@ -52,10 +52,10 @@ body{
     background-color: #B9D5FF;
     height: 85%;
     width: 98%;
-    margin-top: 30px;  
+    margin-top: 30px;
     margin-bottom: 100px;
     border-radius: 10px;
-} 
+}
 
 .card{
     background-color: #747BCF;
@@ -92,7 +92,7 @@ body{
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center; 
+        background-position: center center;
     }
 }
 @media (max-width: 1000px) {
@@ -103,7 +103,7 @@ body{
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center; 
+        background-position: center center;
     }
 }
 
@@ -168,7 +168,7 @@ body{
     .container-pm{
         background-color: #1F519B;
         height: 87vh;/*antigo 87*/
-        width: 600px; 
+        width: 600px;
         border-radius: 10px;
         position: relative;
     }
@@ -177,7 +177,7 @@ body{
     .container-pm{
         background-color: #1F519B;
         height: 80vh;/*antigo 87*/
-        width: 98%; 
+        width: 98%;
         border-radius: 10px;
         position: relative;
     }
@@ -187,7 +187,7 @@ body{
         background-color: #B9D5FF;
         height: 75%;/*valor antigo: height: 77%;*/
         width: 98%;
-        margin-top: 15px;  
+        margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
     }
@@ -197,7 +197,7 @@ body{
         background-color: #B9D5FF;
         height: 68%;
         width: 98%;
-        margin-top: 15px;  
+        margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
     }
@@ -248,23 +248,23 @@ body{
 /*-------------------------------Botões Selecionar/Desselecionar todos----------------------*/
 
 @media (min-width: 1000px) {
-    .grid-container-element { 
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
+    .grid-container-element {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         height: 25px;
         width: 100%;
         margin-top: 10px;
         text-align: center;
-    } 
+    }
 }
 @media (max-width: 1000px) {
-    .grid-container-element { 
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
+    .grid-container-element {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         height: 25px;
         margin-top: 7px;
-        width: 100%; 
-    } 
+        width: 100%;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -323,4 +323,41 @@ body{
         padding-bottom: 15px;
         padding-top: 15px;
     }
+}
+
+/*avaliacao 5 estrelas*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
