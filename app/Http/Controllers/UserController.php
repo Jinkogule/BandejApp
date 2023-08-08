@@ -30,7 +30,7 @@ class UserController extends Controller{
 
                 $cardapios = [];
                 foreach ($events as $event) {
-                    $cardapio = $event->cardapios->first();
+                    $cardapio = $event->cardapio;
                     $cardapios[$event->id] = $cardapio;
                 }
 

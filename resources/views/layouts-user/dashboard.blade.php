@@ -118,24 +118,20 @@
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
                             Cardápio:
-
-                            Teste display de cardápio:
-                            @if (isset($cardapios[$event->id]))
-                                @php
-                                    $cardapio = $cardapios[$event->id];
-                                @endphp
-
-                                <h3>Cardápio</h3>
-                                <ul>
-                                    <li>Prato principal: {{ $cardapio->prato_principal }}</li>
-                                    <li>Guarnição: {{ $cardapio->guarnicao }}</li>
-                                    <li>Acompanhamentos: {{ $cardapio->acompanhamentos }}</li>
-                                    <li>Sobremesa: {{ $cardapio->sobremesa }}</li>
-                                    <li>Salada 1: {{ $cardapio->salada_1 }}</li>
-                                    <li>Salada 2: {{ $cardapio->salada_2 }}</li>
-                                    <li>Refresco: {{ $cardapio->refresco }}</li>
-                                </ul>
-                            @endif
+                            @if ($event->cardapio)
+        <h4>Cardápio:</h4>
+        <ul>
+            <li>Prato principal: {{ $event->cardapio->prato_principal }}</li>
+            <li>Guarnição: {{ $event->cardapio->guarnicao }}</li>
+            <li>Acompanhamentos: {{ $event->cardapio->acompanhamentos }}</li>
+            <li>Sobremesa: {{ $event->cardapio->sobremesa }}</li>
+            <li>Salada 1: {{ $event->cardapio->salada_1 }}</li>
+            <li>Salada 2: {{ $event->cardapio->salada_2 }}</li>
+            <li>Refresco: {{ $event->cardapio->refresco }}</li>
+        </ul>
+    @else
+        <p>Nenhum cardápio associado a esta refeição.</p>
+    @endif
                         </div>
                     </div>
                     <br>
