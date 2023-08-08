@@ -24,11 +24,13 @@ class CreateRefeicoesTable extends Migration
             $table->char('status_validez', 1)->default('V');
             $table->integer('avaliacao')->nullable();
             $table->string('avaliacao_detalhada')->nullable();
+            $table->unsignedBigInteger('cardapio_id')->nullable();
             $table->timestamps();
 
             $table->unique(['id_usuario', 'tipo', 'data']);
 
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');;
+            $table->foreign('cardapio_id')->references('id')->on('cardapios');
         });
     }
 
