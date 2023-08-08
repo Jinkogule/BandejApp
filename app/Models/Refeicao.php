@@ -30,11 +30,25 @@ class Refeicao extends Model
         'status_confirmacao',
         'status_validez',
         'avaliacao',
-        'avaliacao_detalhada'
+        'avaliacao_detalhada',
+        'cardapio_id'
     ];
 
-    public function cardapios()
+    public function cardapio()
     {
-        return $this->belongsToMany(Cardapio::class);
+        return $this->belongsTo(Cardapio::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($refeicao) {
+            $cardapio = Cardapio::where('data', $refeicao->data)->first();
+            if ($cardapio) {
+                $refeicao->cardapio()->associate($cardapio);
+                $refeicao->save();
+            }
+        });
     }
 }

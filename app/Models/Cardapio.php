@@ -32,12 +32,9 @@ class Cardapio extends Model
         'refresco'
     ];
 
-    /**
-     * The refeicoes that belong to the cardapio.
-     */
     public function refeicoes()
     {
-        return $this->belongsToMany(Refeicao::class);
+        return $this->hasMany(Refeicao::class);
     }
 
     protected static function boot()
@@ -47,9 +44,9 @@ class Cardapio extends Model
         static::created(function ($cardapio) {
             $refeicoes = Refeicao::where('data', $cardapio->data)->get();
             foreach ($refeicoes as $refeicao) {
-                $cardapio->refeicoes()->attach($refeicao);
+                $refeicao->cardapio()->associate($cardapio);
+                $refeicao->save();
             }
         });
     }
 }
-
