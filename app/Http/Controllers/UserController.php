@@ -23,7 +23,8 @@ class UserController extends Controller{
             $hoje = date('Y-m-d');
 
             if(Auth::check()){
-                $events = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
+                $events = Refeicao::where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
+
                 $events2 = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
                 $verif_null = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
 

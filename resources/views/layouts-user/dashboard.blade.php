@@ -117,7 +117,7 @@
 
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
-                            Cardápio: {{$event->cardapio}}
+                            Cardápio:
 
                             Teste display de cardápio:
                             @if (isset($cardapios[$event->id]))
