@@ -167,8 +167,7 @@ class UserController extends Controller{
             'id_usuario' => Auth::user()->id,
             'tipo' => $data['tipo'],
             'unidade_bandejao' => $data['unidade_bandejao'],
-            'dia_da_semana' => $data['dia_da_semana'],
-            'cardapio' => $data['cardapio'],
+            'dia_da_semana' => $data['dia_da_semana']
         ]);
     }
 
