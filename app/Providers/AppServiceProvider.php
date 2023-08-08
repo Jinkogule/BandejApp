@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Cardapio;
-use App\Observers\CardapioObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Cardapio::observe(CardapioObserver::class);
+        //
     }
 }

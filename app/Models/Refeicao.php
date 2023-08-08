@@ -35,6 +35,6 @@ class Refeicao extends Model
 
     public function cardapios()
     {
-        return $this->belongsToMany(Cardapio::class, 'refeicao_cardapio');
+        return $this->belongsToMany(Cardapio::class);
     }
 }

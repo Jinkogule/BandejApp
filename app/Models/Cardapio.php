@@ -22,6 +22,7 @@ class Cardapio extends Model
      * @var array
      */
     protected $fillable = [
+        'data',
         'prato_principal',
         'guarnicao',
         'acompanhamentos',
@@ -36,6 +37,18 @@ class Cardapio extends Model
      */
     public function refeicoes()
     {
-        return $this->belongsToMany(Refeicao::class, 'refeicao_cardapio');
+        return $this->belongsToMany(Refeicao::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($cardapio) {
+            $refeicoes = Refeicao::where('data', $cardapio->data)->get();
+            foreach ($refeicoes as $refeicao) {
+                $cardapio->refeicoes()->attach($refeicao);
+            }
+        });
     }
 }
