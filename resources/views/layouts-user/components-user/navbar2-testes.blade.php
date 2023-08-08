@@ -1,7 +1,7 @@
 <nav class="navbar navbar2 navbar-expand-md fixed-top">
     <div class="row" style="width: 100%; height: 45px; padding: 0; margin: 0; position: relative;">
         <?php
-        if (DB::table('refeicaos')->select('*')->where('id_usuario', '=', $user_id)->exists() == 1){
+        if (DB::table('refeicoes')->select('*')->where('id_usuario', '=', $user_id)->exists() == 1){
         ?>
             <div class="col btn-sucesso border position-relative">
                 <p class="centraliza" style="color: #fff;"> Próxima etapa</p>

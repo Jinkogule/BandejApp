@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller{
     public function dashboard(){
-        $q_refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
+        $q_refeicoes = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->count();
 
         //Vai para o Planejamentomensal caso não possua refeições registradas
         if ($q_refeicoes == 0){
@@ -23,12 +23,23 @@ class UserController extends Controller{
             $hoje = date('Y-m-d');
 
             if(Auth::check()){
-                $events = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
-                $events2 = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
-                $verif_null = DB::table('refeicaos')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
+                $events = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderBy('data')->orderBy('tipo')->paginate(20);
+                $events2 = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->orderByDesc('data')->orderByDesc('tipo')->paginate(20);
+                $verif_null = DB::table('refeicoes')->select('*')->where('id_usuario', '=', Auth::user()->id)->exists();
 
-                return View::make('layouts-user.dashboard')->with('events', $events)->with('events2', $events2)->with('verif_null', $verif_null);  // user dashboard path
+                $cardapios = [];
+                foreach ($events as $event) {
+                    $cardapio = $event->cardapios->first();
+                    $cardapios[$event->id] = $cardapio;
+                }
+
+                return View::make('layouts-user.dashboard')
+                    ->with('events', $events)
+                    ->with('events2', $events2)
+                    ->with('verif_null', $verif_null)
+                    ->with('cardapios', $cardapios);
             }
+
 
             return redirect()->route('login')->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');
         }
@@ -39,7 +50,7 @@ class UserController extends Controller{
 
         $id_refeicao =  $request->input('id_refeicao');
 
-        DB::table('refeicaos')->delete($id_refeicao);
+        DB::table('refeicoes')->delete($id_refeicao);
 
         return redirect()->route('user.dashboard')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
@@ -52,7 +63,7 @@ class UserController extends Controller{
             'unidade_bandejao' => 'required']
         );
 
-        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => 'C','unidade_bandejao' => $data['unidade_bandejao']]);
+        DB::table('refeicoes')->where('id', $data['id_refeicao'])->update(['status_confirmacao' => 'C','unidade_bandejao' => $data['unidade_bandejao']]);
 
         return redirect()->route('user.dashboard')->with('sucesso', 'Refeição confirmada com sucesso!');
     }
@@ -66,7 +77,7 @@ class UserController extends Controller{
             'avaliacao_detalhada' => 'nullable']
         );
 
-        DB::table('refeicaos')->where('id', $data['id_refeicao'])->update(['avaliacao' => $data['avaliacao'],'avaliacao_detalhada' => $data['avaliacao_detalhada']]);
+        DB::table('refeicoes')->where('id', $data['id_refeicao'])->update(['avaliacao' => $data['avaliacao'],'avaliacao_detalhada' => $data['avaliacao_detalhada']]);
 
         return redirect()->route('user.dashboard')->with('sucesso', 'Refeição avaliada com sucesso!');
     }
@@ -75,7 +86,7 @@ class UserController extends Controller{
         if(Auth::check()){
             $unidade_bandejao = Auth::user()->unidade_bandejao;
             $user_id = Auth::user()->id;
-            //$refeicoes = DB::table('refeicaos')->select('*')->where('id_usuario', '=', $id_usuario)->paginate(10);
+            //$refeicoes = DB::table('refeicoes')->select('*')->where('id_usuario', '=', $id_usuario)->paginate(10);
             $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
 
             return View::make('layouts-user.planejamento-mensal')->with('unidade_bandejao', $unidade_bandejao)->with('user_id', $user_id)->with('calendario_dias', $calendario_dias);
@@ -130,7 +141,7 @@ class UserController extends Controller{
             'dia_da_semana' => 'required']
         );
 
-        DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Almoço')->where('data', '=', $data['data'])->delete();
+        DB::table('refeicoes')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Almoço')->where('data', '=', $data['data'])->delete();
 
         return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
@@ -146,7 +157,7 @@ class UserController extends Controller{
             'dia_da_semana' => 'required']
         );
 
-        DB::table('refeicaos')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Janta')->where('data', '=', $data['data'])->delete();
+        DB::table('refeicoes')->where('id_usuario', '=', $data['id_usuario'])->where('tipo', '=', 'Janta')->where('data', '=', $data['data'])->delete();
 
         return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeição cancelada com sucesso!');
     }
@@ -166,7 +177,7 @@ class UserController extends Controller{
         $calendario = DB::table('calendario')->select('*')->paginate(10);
 
         foreach ($calendario as $event) {
-            if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->exists() == 0){
+            if (DB::table('refeicoes')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Almoço')->where('data', '=', $event->data)->exists() == 0){
                 Refeicao::create([
                     'id_usuario' => Auth::user()->id,
                     'tipo' => 'Almoço',
@@ -177,7 +188,7 @@ class UserController extends Controller{
             }
         }
         foreach ($calendario as $event) {
-            if (DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->exists() == 0){
+            if (DB::table('refeicoes')->where('id_usuario', '=', Auth::user()->id)->where('tipo', '=', 'Janta')->where('data', '=', $event->data)->exists() == 0){
                 Refeicao::create([
                     'id_usuario' => Auth::user()->id,
                     'tipo' => 'Janta',
@@ -193,7 +204,7 @@ class UserController extends Controller{
 
     public function desselecionarTodasRefeicoes(Request $request){
 
-        DB::table('refeicaos')->where('id_usuario', '=', Auth::user()->id)->where('status_confirmacao', '!=', 'C')->delete();
+        DB::table('refeicoes')->where('id_usuario', '=', Auth::user()->id)->where('status_confirmacao', '!=', 'C')->delete();
 
         return redirect()->route('user.planejamento_mensal')->with('sucesso', 'Refeições removidas com sucesso!');
     }

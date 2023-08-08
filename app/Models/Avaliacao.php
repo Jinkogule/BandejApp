@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sugestao_de_melhoria extends Model
+class Avaliacao extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Sugestao_de_melhoria extends Model
      *
      * @var string
      */
-    protected $table = 'sugestao_de_melhorias';
+    protected $table = 'avaliacoes';
 
     /**
      * The attributes that are mass assignable.
@@ -22,11 +22,15 @@ class Sugestao_de_melhoria extends Model
      * @var array
      */
     protected $fillable = [
-        'nome',
-        'sobrenome',
-        'id_usuario',
-        'email',
-        'assunto',
-        'sugestao',
+        'atendimento_nota',
+        'atendimento_comentario',
+        'ambiente_nota',
+        'ambiente_comentario',
+        'prato_principal',
+        'fila',
+        'comida',
+        'data_refeicao_avaliada',
+        'outro_topico',
+        'outro_topico_comentario'
     ];
 }

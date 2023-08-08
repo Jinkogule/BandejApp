@@ -118,6 +118,24 @@
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
                             Cardápio: {{$event->cardapio}}
+
+                            Teste display de cardápio:
+                            @if (isset($cardapios[$event->id]))
+                                @php
+                                    $cardapio = $cardapios[$event->id];
+                                @endphp
+
+                                <h3>Cardápio</h3>
+                                <ul>
+                                    <li>Prato principal: {{ $cardapio->prato_principal }}</li>
+                                    <li>Guarnição: {{ $cardapio->guarnicao }}</li>
+                                    <li>Acompanhamentos: {{ $cardapio->acompanhamentos }}</li>
+                                    <li>Sobremesa: {{ $cardapio->sobremesa }}</li>
+                                    <li>Salada 1: {{ $cardapio->salada_1 }}</li>
+                                    <li>Salada 2: {{ $cardapio->salada_2 }}</li>
+                                    <li>Refresco: {{ $cardapio->refresco }}</li>
+                                </ul>
+                            @endif
                         </div>
                     </div>
                     <br>

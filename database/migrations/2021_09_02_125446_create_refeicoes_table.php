@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRefeicaosTable extends Migration
+class CreateRefeicoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateRefeicaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('refeicaos', function (Blueprint $table) {
+        Schema::create('refeicoes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_usuario');
             $table->string('tipo');
             $table->string('unidade_bandejao');
-            $table->string('cardapio')->nullable();
             $table->string('dia_da_semana');
             $table->date('data');
             $table->char('status_confirmacao', 1)->default('N');
@@ -30,7 +29,6 @@ class CreateRefeicaosTable extends Migration
             $table->unique(['id_usuario', 'tipo', 'data']);
 
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');;
-
         });
     }
 
@@ -41,6 +39,6 @@ class CreateRefeicaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('refeicaos');
+        Schema::dropIfExists('refeicoes');
     }
 }

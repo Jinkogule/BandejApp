@@ -21,24 +21,24 @@
 
     <body>
         @include('layouts-admin.components-admin.navbar1')
-        
+
         <br>
 
         <div class="container-fluid container-cdr">
             <br>
             <h2 style="text-align: center; color: #fff;">Calendário de Refeições</h2>
             <div class="container-fluid container2-cdr" style="overflow: auto">
-                
+
                 @foreach($calendario_dias as $event)
-                
+
                 <?php
-                $q_almoco = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->count();
-                $q_janta = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->count();
+                $q_almoco = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->count();
+                $q_janta = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->count();
 
-                $q_almoco_confirmados = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->where('status_confirmacao', '=', 'C')->count();
-                $q_janta_conrirmados = DB::table('refeicaos')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->where('status_confirmacao', '=', 'C')->count();
+                $q_almoco_confirmados = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->where('status_confirmacao', '=', 'C')->count();
+                $q_janta_conrirmados = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->where('status_confirmacao', '=', 'C')->count();
 
-                $data_banco = $event->data;  
+                $data_banco = $event->data;
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 $dia_da_semana_visual = ucfirst($event->dia_da_semana);
                 ?>
@@ -46,7 +46,7 @@
                     <div class="card-header">
                         <span class="card-title" style="text-align: center; color: #fff;">{{ $dia_da_semana_visual }} - {{ $data_visual }}</span>
                     </div>
-                    
+
                     <div class="card-body" style="color: #fff;">
                         Registrados para almoço: {{ $q_almoco }}
                         <br>
@@ -56,8 +56,8 @@
                         Confirmados para almoço: {{ $q_almoco_confirmados }}
                         <br>
                         Confirmados para janta: {{ $q_janta_conrirmados }}
-                    </div>                       
-                </div>         
+                    </div>
+                </div>
             @endforeach
             </div>
         </div>

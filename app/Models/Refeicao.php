@@ -10,6 +10,13 @@ class Refeicao extends Model
     use HasFactory;
 
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'refeicoes';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -17,7 +24,6 @@ class Refeicao extends Model
     protected $fillable = [
         'id_usuario',
         'tipo',
-        'cardapio',
         'unidade_bandejao',
         'data',
         'dia_da_semana',
@@ -26,4 +32,9 @@ class Refeicao extends Model
         'avaliacao',
         'avaliacao_detalhada'
     ];
+
+    public function cardapios()
+    {
+        return $this->belongsToMany(Cardapio::class, 'refeicao_cardapio');
+    }
 }
