@@ -548,8 +548,7 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     background-color: #373f97d8;
     margin-top: 0;
     color: #fff;
-    height: 30px;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 .img-editar-cardapio {
