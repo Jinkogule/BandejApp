@@ -43,7 +43,7 @@
                     $dia_da_semana_visual = ucfirst($event->dia_da_semana);
                     ?>
 
-                    @include('layouts-admin.components-admin.modal-definir-cardapio')
+                    @include('layouts-admin.components-admin.modal-salvar-cardapio')
 
                     <div class="card">
                         <div class="card-header">
@@ -53,7 +53,7 @@
                         <div class="card-body" style="color: #fff;">
                             <div class="cardapio" style="background-color: blue;">
                                 @if (is_null($event->cardapio_id))
-                                    <button type="button" data-toggle="modal" data-target="#definir-cardapio{{$event->id}}">
+                                    <button type="button" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                         Definir Cardápio
                                     </button>
 
@@ -61,7 +61,7 @@
 
                                         {{ $event->cardapio->prato_principal }}, etc.
 
-                                    <img src="/images/icons/editar.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#definir-cardapio{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 10px;">
+                                    <img src="/images/icons/editar.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 30px;">
                                 @endif
                             </div>
                             Registrados para almoço: {{ $q_almoco }}

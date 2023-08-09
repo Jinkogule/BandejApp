@@ -38,8 +38,8 @@ class AdminController extends Controller
         return View::make('layouts-admin.sugestoes-de-melhorias')->with('sugestoes', $sugestoes);
     }
 
-    public function definirCardapio(Request $request){
-
+    public function salvarCardapio(Request $request)
+    {
         $request->validate([
             'data' => 'required|date',
             'prato_principal' => 'required|string',
@@ -51,9 +51,15 @@ class AdminController extends Controller
             'refresco' => 'nullable|string'
         ]);
 
-        $cardapio = new Cardapio($request->all());
+        if ($request->has('id')) {
+            $cardapio = Cardapio::find($request->input('id'));
+            $cardapio->fill($request->all());
+        } else {
+            $cardapio = new Cardapio($request->all());
+        }
+
         $cardapio->save();
 
-        return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio definido com sucesso!');
+        return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio salvo com sucesso!');
     }
 }

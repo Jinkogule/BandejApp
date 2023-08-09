@@ -33,7 +33,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('sugestoes_de_melhorias', [AdminController::class, 'sugestoesDeMelhorias'])->name('admin.sugestoes_de_melhorias');
 
-    Route::post('definirCardapio', [AdminController::class, 'definirCardapio'])->name('definirCardapio');
+    Route::post('salvarCardapio', [AdminController::class, 'salvarCardapio'])->name('salvarCardapio');
 
 });
 
