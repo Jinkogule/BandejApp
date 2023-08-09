@@ -11,6 +11,7 @@
             </div>
             <div class="modal-body">
             <ul>
+            @if ($event->cardapio)
                 <li>Prato principal: {{ $event->cardapio->prato_principal }}</li>
                 <li>Guarnição: {{ $event->cardapio->guarnicao }}</li>
                 <li>Acompanhamentos: {{ $event->cardapio->acompanhamentos }}</li>
@@ -18,6 +19,7 @@
                 <li>Salada 1: {{ $event->cardapio->salada_1 }}</li>
                 <li>Salada 2: {{ $event->cardapio->salada_2 }}</li>
                 <li>Refresco: {{ $event->cardapio->refresco }}</li>
+            @endif
             </ul>
             </div>
         </div>
