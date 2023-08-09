@@ -16,9 +16,15 @@ class AdminController extends Controller
         $hoje = date('Y-m-d');
 
         if(Auth::check()){
-            $calendario_dias = DB::table('calendario')->select('*')->where('data', '!=', NULL)->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
+            $calendario_dias = Calendario::whereNotNull('data')->where('dia_da_semana', '!=', 'Sábado')->where('dia_da_semana', '!=', 'Domingo')->orderBy('data')->paginate(10);
 
-            return View::make('layouts-admin.dashboard')->with('calendario_dias', $calendario_dias);  // user dashboard path
+            $cardapios = [];
+            foreach ($calendario_dias as $event) {
+                $cardapio = $event->cardapio;
+                $cardapios[$event->id] = $cardapio;
+            }
+
+            return View::make('layouts-admin.dashboard')->with('calendario_dias', $calendario_dias)->with('cardapios', $cardapios);
         }
 
         return redirect()->route('login')->with('erro', 'Usuário não logado. Realize o login para acessar sua área privada do aplicativo.');

@@ -29,11 +29,6 @@
                     </div>
 
                     <div class="form-group mb-1">
-                        <label for="sobremesa">Sobremesa:</label>
-                        <input type="text" class="form-control" name="sobremesa" id="sobremesa">
-                    </div>
-
-                    <div class="form-group mb-1">
                         <label for="salada_1">Salada 1:</label>
                         <input type="text" class="form-control" name="salada_1" id="salada_1">
                     </div>
@@ -43,7 +38,12 @@
                         <input type="text" class="form-control" name="salada_2" id="salada_2">
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
+                        <label for="sobremesa">Sobremesa:</label>
+                        <input type="text" class="form-control" name="sobremesa" id="sobremesa">
+                    </div>
+
+                    <div class="form-group mb-4">
                         <label for="refresco">Refresco:</label>
                         <input type="text" class="form-control" name="refresco" id="refresco">
                     </div>
