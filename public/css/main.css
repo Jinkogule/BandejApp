@@ -486,7 +486,6 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
         background-color: #1F519B;
         border-radius: 10px;
         padding: 20px;
-        text-align: center;
         color: #fff;
     }
 }
@@ -495,7 +494,6 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
         background-color: #1F519B;
         border-radius: 10px;
         padding: 20px;
-        text-align: center;
         color: #fff;
         width: 95%;
     }

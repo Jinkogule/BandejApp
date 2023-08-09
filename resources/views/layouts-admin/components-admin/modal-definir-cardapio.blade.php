@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-bloco">
             <div class="modal-header" style="position: relative">
-                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Definir cardápio - {{$event->data}}</h5>
+                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Definir Cardápio - {{ $data_visual }}</h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -43,7 +43,7 @@
                         <input type="text" class="form-control" name="salada_2" id="salada_2">
                     </div>
 
-                    <div class="form-group mb-2">
+                    <div class="form-group mb-3">
                         <label for="refresco">Refresco:</label>
                         <input type="text" class="form-control" name="refresco" id="refresco">
                     </div>
