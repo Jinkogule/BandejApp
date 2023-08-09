@@ -558,7 +558,8 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     height: auto;
 }
 
-.img-visualizar-detalhes {
+.img-visualizar-cardapio {
     width: 30px;
     height: auto;
+    display: inline-block;
 }
