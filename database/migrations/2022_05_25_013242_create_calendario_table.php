@@ -17,7 +17,10 @@ class CreateCalendarioTable extends Migration
             $table->id();
             $table->string('dia_da_semana');
             $table->date('data');
+            $table->unsignedBigInteger('cardapio_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('cardapio_id')->references('id')->on('cardapios');
         });
     }
 

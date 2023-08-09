@@ -42,10 +42,18 @@ class Cardapio extends Model
         parent::boot();
 
         static::created(function ($cardapio) {
+            // Atualizar refeições com a mesma data
             $refeicoes = Refeicao::where('data', $cardapio->data)->get();
             foreach ($refeicoes as $refeicao) {
                 $refeicao->cardapio()->associate($cardapio);
                 $refeicao->save();
+            }
+
+            // Atualizar calendario com a mesma data
+            $calendario = Calendario::where('data', $cardapio->data)->first();
+            if ($calendario) {
+                $calendario->cardapio()->associate($cardapio);
+                $calendario->save();
             }
         });
     }
