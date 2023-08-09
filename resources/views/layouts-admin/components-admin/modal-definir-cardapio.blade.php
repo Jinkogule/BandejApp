@@ -15,41 +15,41 @@
 
                     <div class="form-group mb-1">
                         <label for="prato_principal">Prato Principal:</label>
-                        <input type="text" name="prato_principal" id="prato_principal" required>
+                        <input type="text" class="form-control" name="prato_principal" id="prato_principal" required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="guarnicao">Guarnição:</label>
-                        <input type="text" name="guarnicao" id="guarnicao" required>
+                        <input type="text" class="form-control" name="guarnicao" id="guarnicao" required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="acompanhamentos">Acompanhamentos:</label>
-                        <input type="text" name="acompanhamentos" id="acompanhamentos">
+                        <input type="text" class="form-control" name="acompanhamentos" id="acompanhamentos">
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="sobremesa">Sobremesa:</label>
-                        <input type="text" name="sobremesa" id="sobremesa">
+                        <input type="text" class="form-control" name="sobremesa" id="sobremesa">
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="salada_1">Salada 1:</label>
-                        <input type="text" name="salada_1" id="salada_1">
+                        <input type="text" class="form-control" name="salada_1" id="salada_1">
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="salada_2">Salada 2:</label>
-                        <input type="text" name="salada_2" id="salada_2">
+                        <input type="text" class="form-control" name="salada_2" id="salada_2">
                     </div>
 
                     <div class="form-group mb-2">
                         <label for="refresco">Refresco:</label>
-                        <input type="text" name="refresco" id="refresco">
+                        <input type="text" class="form-control" name="refresco" id="refresco">
                     </div>
 
-                    <div class="col" style="margin: 0 auto;">
-                        <button type="submit" class="btn btn-primary btn-confirmar">Enviar</button>
+                    <div class="d-grid mx-auto">
+                        <button type="submit" class="btn btn-success btn-block">Enviar</button>
                     </div>
                 </form>
             </div>
