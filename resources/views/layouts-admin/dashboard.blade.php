@@ -53,9 +53,11 @@
                         </div>
                         <div class="cardapio">
                                 @if (is_null($event->cardapio_id))
-                                    <button type="button" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
-                                        Definir Cardápio
-                                    </button>
+                                    <div class="d-grid mx-auto">
+                                        <button type="button" data-toggle="modal" class="btn btn-danger btn-block" data-target="#salvar-cardapio{{$event->id}}">
+                                            Definir Cardápio
+                                        </button>
+                                    </div>
                                 @else
 
                                     {{ $event->cardapio->prato_principal }}, etc.
