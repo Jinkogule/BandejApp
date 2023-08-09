@@ -61,8 +61,8 @@
                                 @else
 
                                     {{ $event->cardapio->prato_principal }}, etc.
-                                    <img src="/images/icons/visualizar-detalhes.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="display: inline-block;">
-                                    <img src="/images/icons/editar.png" class="img-fluid img-visualizar-detalhes" alt="Responsive image" data-toggle="modal" data-target="#visualizar-detalhes-cardapio{{$event->id}}">
+                                    <img src="/images/icons/visualizar-detalhes.png" class="img-fluid visualizar-detalhes" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="display: inline-block;">
+                                    <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                 @endif
                             </div>
                         <div class="card-body" style="color: #fff;">
