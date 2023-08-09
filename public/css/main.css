@@ -21,19 +21,19 @@ hr { display: block; height: 1px;
 ::-webkit-scrollbar {
     width: 12px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 20px;
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #747BCF;
     border-radius: 20px;
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #5E5FC0;
@@ -77,7 +77,7 @@ hr { display: block; height: 1px;
 @media (min-width: 1000px) {
     .container-menu{
         background-color: #1F519B;
-        width: 900px; 
+        width: 900px;
     }
 }
 @media (max-width: 1000px) {
@@ -116,7 +116,7 @@ hr { display: block; height: 1px;
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
-} 
+}
 
 .navbar-brand:hover{
     color: rgb(179, 179, 179);
@@ -197,7 +197,7 @@ h4{
 }
 
 .espaço {
-    line-height: 15px;  
+    line-height: 15px;
     margin: 15px 0;
 }
 
@@ -225,7 +225,7 @@ h4{
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
-  
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
@@ -234,7 +234,7 @@ h4{
     border: 1px solid #888;
     width: 80%;
 }
-  
+
 /* The Close Button */
 .close {
     color: #aaa;
@@ -242,7 +242,7 @@ h4{
     font-size: 28px;
     font-weight: bold;
 }
-  
+
 .close:hover, .close:focus {
     color: black;
     text-decoration: none;
@@ -405,7 +405,7 @@ ul.grupo-desplegable > li > ul.sub-grupo-desplegable {
 ::-webkit-scrollbar {
     display: auto;
 }
-ul.main > li.desplegable:hover > ul.grupo-desplegable { 
+ul.main > li.desplegable:hover > ul.grupo-desplegable {
   display: block;
 }
 
@@ -413,7 +413,7 @@ ul.main > li.desplegable > ul.grupo-desplegable > li,
 ul.grupo-desplegable > li > ul.sub-grupo-desplegable > li {
   display: block;
   position: relative;
-  
+
 }
 /*links do dropright*/
 ul.main > li.desplegable > ul.grupo-desplegable > li:hover,
@@ -478,4 +478,67 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     border-top: none;
     border-right: none;
     border-left: none;
+}
+
+/*-------------------------------TELA DE CONFIRMAÇÃO (Modal)----------------------*/
+@media (min-width: 1000px) {
+    .modal-bloco{
+        background-color: #1F519B;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+    }
+}
+@media (max-width: 1000px) {
+    .modal-bloco{
+        background-color: #1F519B;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        width: 95%;
+    }
+}
+
+
+/*----BOTÕES----*/
+.btn-confirmar{
+    background-color: #44832d;
+    border-radius: 10px;
+    color: #fff;
+}
+.btn-confirmar:hover{
+    background-color: #3d642f;
+    color: #fff;
+}
+
+.btn-cancelar{
+    background-color: #961c1c;
+    border-radius: 10px;
+    color: #fff;
+}
+.btn-cancelar:hover{
+    background-color: #7a2525;
+    color: #fff;
+}
+
+.btn-desativado{
+    background-color: #6e6e6e;
+    color: #fff;
+    border-radius: 10px;
+}
+.btn-desativado:hover{
+    background-color: #414141;
+    color: #fff;
+}
+
+.btn-neutro{
+    background-color: #747BCF;
+    color: #fff;
+    border-radius: 10px;
+}
+.btn-neutro:hover{
+    background-color: #575eb1;
+    color: #fff;
 }
