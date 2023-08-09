@@ -48,22 +48,23 @@
                     <div class="card">
                         <div class="card-header">
                             <span class="card-title" style="text-align: center; color: #fff;">{{ $dia_da_semana_visual }} - {{ $data_visual }}</span>
-                        </div>
 
-                        <div class="card-body" style="color: #fff;">
                             <div class="cardapio">
                                 @if (is_null($event->cardapio_id))
                                     <button type="button" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                         Definir Cardápio
                                     </button>
-
                                 @else
 
-                                        {{ $event->cardapio->prato_principal }}, etc.
+                                    {{ $event->cardapio->prato_principal }}, etc.
 
-                                    <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 30px;">
+                                    <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                 @endif
                             </div>
+                        </div>
+
+                        <div class="card-body" style="color: #fff;">
+
                             Registrados para almoço: {{ $q_almoco }}
                             <br>
                             Registrados para janta: {{ $q_janta }}
