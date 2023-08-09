@@ -48,6 +48,11 @@
                     </div>
 
                     <div class="card-body" style="color: #fff;">
+                    @if (is_null($event->cardapio_id))
+                        <button type="button" data-toggle="modal" data-target="#definir-cardapio{{$event->id}}">
+                            Definir Cardápio
+                        </button>
+                    @endif
                         Registrados para almoço: {{ $q_almoco }}
                         <br>
                         Registrados para janta: {{ $q_janta }}
