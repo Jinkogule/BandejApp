@@ -7,7 +7,7 @@
                 <h5 class="modal-title centraliza" id="exampleModalLongTitle">
                     @if ($event->cardapio)
                         Alterar Cardápio - {{ $data_visual }}
-                    @elseif
+                    @else
                         Definir Cardápio - {{ $data_visual }}
                     @endif
                 </h5>
