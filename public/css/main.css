@@ -540,3 +540,17 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     background-color: #575eb1;
     color: #fff;
 }
+
+/*------bloco cardapio admin------*/
+
+.cardapio {
+    position: relative;
+    background-color: #373f97d8;
+    margin-top: 0;
+}
+
+.img-editar-cardapio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

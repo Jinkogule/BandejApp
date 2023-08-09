@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="card-body" style="color: #fff;">
-                            <div class="cardapio" style="background-color: blue;">
+                            <div class="cardapio">
                                 @if (is_null($event->cardapio_id))
                                     <button type="button" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                         Definir Cardápio
@@ -61,7 +61,7 @@
 
                                         {{ $event->cardapio->prato_principal }}, etc.
 
-                                    <img src="/images/icons/editar.png" class="img-fluid" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 30px;">
+                                    <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}" style="position: absolute; width: 20px; height: auto; right: 10px; top: 30px;">
                                 @endif
                             </div>
                             Registrados para almoço: {{ $q_almoco }}
