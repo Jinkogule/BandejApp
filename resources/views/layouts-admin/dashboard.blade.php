@@ -30,7 +30,7 @@
             <div class="container-fluid container2-cdr" style="overflow: auto">
 
                 @foreach($calendario_dias as $event)
-
+                @include('layouts-admin.components-admin.modal-definir-cardapio')
                 <?php
                 $q_almoco = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->count();
                 $q_janta = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->count();
