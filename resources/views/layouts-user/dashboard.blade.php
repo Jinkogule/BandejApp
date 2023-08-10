@@ -117,21 +117,27 @@
 
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
-                            Cardápio:
+                        <h4>Cardápio:</h4>
                             @if ($event->cardapio)
-        <h4>Cardápio:</h4>
-        <ul>
-            <li>Prato principal: {{ $event->cardapio->prato_principal }}</li>
-            <li>Guarnição: {{ $event->cardapio->guarnicao }}</li>
-            <li>Acompanhamentos: {{ $event->cardapio->acompanhamentos }}</li>
-            <li>Sobremesa: {{ $event->cardapio->sobremesa }}</li>
-            <li>Salada 1: {{ $event->cardapio->salada_1 }}</li>
-            <li>Salada 2: {{ $event->cardapio->salada_2 }}</li>
-            <li>Refresco: {{ $event->cardapio->refresco }}</li>
-        </ul>
-    @else
-        <p>Nenhum cardápio associado a esta refeição.</p>
-    @endif
+
+                            <ul>
+                                <li>Prato principal: {{ $event->cardapio->prato_principal }}</li>
+                                <br>
+                                <li>Guarnição: {{ $event->cardapio->guarnicao }}</li>
+                                <br>
+                                <li>Acompanhamentos: {{ $event->cardapio->acompanhamentos }}</li>
+                                <br>
+                                <li>Salada 1: {{ $event->cardapio->salada_1 }}</li>
+                                <br>
+                                <li>Salada 2: {{ $event->cardapio->salada_2 }}</li>
+                                <br>
+                                <li>Sobremesa: {{ $event->cardapio->sobremesa }}</li>
+                                <br>
+                                <li>Refresco: {{ $event->cardapio->refresco }}</li>
+                            </ul>
+                            @else
+                                <p>Nenhum cardápio definido ainda.</p>
+                            @endif
                         </div>
                     </div>
                     <br>

@@ -543,7 +543,7 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 
 /*------bloco cardapio admin------*/
 
-.cardapio {
+.cardapio-admin {
     position: relative;
     background-color: #373f97d8;
     margin-top: 0;

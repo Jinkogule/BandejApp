@@ -52,9 +52,8 @@
 
 
                         </div>
-                        <div class="cardapio">
+                        <div class="cardapio-admin">
                                 @if (is_null($event->cardapio_id))
-
                                     <div class="d-grid mx-auto">
                                         <button type="button" data-toggle="modal" class="btn btn-danger btn-block" data-target="#salvar-cardapio{{$event->id}}">
                                             Definir Cardápio
@@ -64,7 +63,7 @@
                                     <!--Modal visualizar cardápio-->
                                     @include('layouts-admin.components-admin.modal-visualizar-cardapio')
 
-                                    {{ $event->cardapio->prato_principal }}, etc.
+                                    Cardápio: {{ $event->cardapio->prato_principal }}...
                                     <img src="/images/icons/visualizar-detalhes.png" class="img-fluid img-visualizar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#visualizar-cardapio{{$event->id}}">
                                     <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                 @endif
