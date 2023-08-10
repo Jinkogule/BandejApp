@@ -69,7 +69,7 @@
                             </div>
                         <div class="card-body" style="color: #fff;">
 
-                            Registrados para almoço:
+                            Registrados para almoço: testeee
                             <br>
                             Confirmados para janta na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_janta_pv'] }}
                             <br>
