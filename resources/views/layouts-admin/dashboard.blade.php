@@ -32,12 +32,11 @@
                 @foreach($calendario_dias as $event)
 
                     <?php
-                    $q_almoco = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->count();
-                    $q_janta = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->count();
 
-                    $q_almoco_confirmados = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Almoço')->where('status_confirmacao', '=', 'C')->count();
-                    $q_janta_conrirmados = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('tipo', '=', 'Janta')->where('status_confirmacao', '=', 'C')->count();
 
+
+
+                    /*aux*/
                     $data_banco = $event->data;
                     $data_visual = date("d/m/y", strtotime($data_banco));
                     $dia_da_semana_visual = ucfirst($event->dia_da_semana);
@@ -72,7 +71,7 @@
 
                             Registrados para almoço: {{ $q_almoco }}
                             <br>
-                            Registrados para janta: {{ $q_janta }}
+                            Registrados para janta na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_janta_pv'] }}
                             <br>
                             <br>
                             Confirmados para almoço: {{ $q_almoco_confirmados }}
