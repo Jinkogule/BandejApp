@@ -69,14 +69,14 @@
                             </div>
                         <div class="card-body" style="color: #fff;">
 
-                            Registrados para almoço: {{ $q_almoco }}
+                            Registrados para almoço:
                             <br>
-                            Registrados para janta na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_janta_pv'] }}
+                            Confirmados para janta na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_janta_pv'] }}
                             <br>
                             <br>
-                            Confirmados para almoço: {{ $q_almoco_confirmados }}
+                            Confirmados para almoço:
                             <br>
-                            Confirmados para janta: {{ $q_janta_conrirmados }}
+                            Confirmados para janta:
                         </div>
                     </div>
                 @endforeach
