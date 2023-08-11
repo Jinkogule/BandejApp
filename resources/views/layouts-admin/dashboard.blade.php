@@ -68,6 +68,7 @@
                                 @endif
                             </div>
                         <div class="card-body" style="color: #fff;">
+                            @include('layouts-admin.components-admin.modal-visualizar-dados')
 
                             Confirmados no Gragoatá: {{ $confirmados[$event->id]['confirmados_total_gragoata'] }}
                             <br>
@@ -79,9 +80,9 @@
                             <br>
                             Confirmados no HUAP: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
                             <hr>
-                            Total de confirmados: {{ $confirmados[$event->id]['confirmados_totat'] }}
+                            Total de confirmados: {{ $confirmados[$event->id]['confirmados_total'] }}
                             <hr>
-                            <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#salvar-cardapio{{$event->id}}">
+                            <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#visualizar-dados{{$event->id}}">
                                 Ver detalhes
                             </button>
                         </div>
