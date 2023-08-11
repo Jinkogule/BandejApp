@@ -541,6 +541,9 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     color: #fff;
 }
 
+.btn-info{
+    color: #fff !important;
+}
 /*------bloco cardapio admin------*/
 
 .cardapio-admin {

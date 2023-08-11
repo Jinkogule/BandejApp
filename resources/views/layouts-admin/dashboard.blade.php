@@ -82,9 +82,11 @@
                             <hr>
                             Total de confirmados: {{ $confirmados[$event->id]['confirmados_total'] }}
                             <hr>
-                            <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#visualizar-dados{{$event->id}}">
-                                Ver detalhes
-                            </button>
+                            <div class="d-grid mx-auto">
+                                <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#visualizar-dados{{$event->id}}">
+                                    Ver detalhes
+                                </button>
+                            </div>
                         </div>
                     </div>
                 @endforeach
