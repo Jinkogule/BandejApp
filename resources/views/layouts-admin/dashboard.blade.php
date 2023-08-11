@@ -69,14 +69,21 @@
                             </div>
                         <div class="card-body" style="color: #fff;">
 
-                            Registrados para almoço: testeee
+                            Confirmados no Gragoatá: {{ $confirmados[$event->id]['confirmados_total_gragoata'] }}
                             <br>
-                            Confirmados para janta na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_janta_pv'] }}
+                            Confirmados na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_total_pv'] }}
                             <br>
+                            Confirmados na Reitoria: {{ $confirmados[$event->id]['confirmados_total_reitoria'] }}
                             <br>
-                            Confirmados para almoço:
+                            Confirmados na Veterinária: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
                             <br>
-                            Confirmados para janta:
+                            Confirmados no HUAP: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
+                            <hr>
+                            Total de confirmados: {{ $confirmados[$event->id]['confirmados_totat'] }}
+                            <hr>
+                            <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#salvar-cardapio{{$event->id}}">
+                                Ver detalhes
+                            </button>
                         </div>
                     </div>
                 @endforeach
