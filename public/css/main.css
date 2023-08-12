@@ -52,8 +52,8 @@ hr { display: block; height: 1px;
     background-color: #747BCF;
     border: none;
     text-align: left !important;
-    margin-bottom: 5px;
-    margin-top: 5px !important;
+    margin-bottom: 7px;
+    margin-top: 7px !important;
 }
 .engrenagem{
     color:#555555;
@@ -567,7 +567,7 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 }
 
 .img-visualizar-cardapio {
-    width: 25px;
+    width: 30px;
     padding: 5px;
     height: auto;
     display: inline-block;

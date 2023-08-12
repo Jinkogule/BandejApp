@@ -31,7 +31,7 @@ Route::get('sair', [AuthController::class, 'sair'])->name('sair');
 /*Rotas do admin*/
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('sugestoes_de_melhorias', [AdminController::class, 'sugestoesDeMelhorias'])->name('admin.sugestoes_de_melhorias');
+    Route::get('sugestoes_de_melhorias', [AdminController::class, 'listarSugestoesDeMelhorias'])->name('admin.sugestoes_de_melhorias');
 
     Route::post('salvarCardapio', [AdminController::class, 'salvarCardapio'])->name('salvarCardapio');
 
