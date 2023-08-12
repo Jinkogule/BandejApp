@@ -1,5 +1,5 @@
 
-<!--Definição e alteração de cardápio-->
+<!--Visualização de cardápio-->
 <div class="modal fade" id="visualizar-cardapio{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-bloco">

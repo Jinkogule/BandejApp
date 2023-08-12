@@ -1,7 +1,7 @@
 
-<!--Definição e alteração de cardápio-->
+<!--Visualização de tabela de registrados e confirmados sobre determinada data-->
 <div class="modal fade" id="visualizar-dados{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: none;">
         <div class="modal-content modal-bloco">
             <div class="modal-header" style="position: relative">
                 <h5 class="modal-title centraliza" id="exampleModalLongTitle">
