@@ -16,7 +16,7 @@ use App\Http\Controllers\UserController;
 class AuthController extends Controller{
     public function index(){
         return View::make('layouts-auth.login');
-    } 
+    }
 
     /*Login*/
     public function realizarLogin(Request $request, AdminController $adminController, UserController $userController){
@@ -24,9 +24,9 @@ class AuthController extends Controller{
             'email' => 'required',
             'password' => 'required',
         ]);
-    
+
         $credentials = $request->only('email', 'password');
-    
+
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             $request->session()->regenerate();
@@ -34,15 +34,15 @@ class AuthController extends Controller{
             $request->session()->put('id', $user->id);
             $request->session()->put('user_type', $user->user_type);
             $request->session()->put('user_email', $user->email);
-    
+
             if ($user->user_type == 'Administrator') {
-                return $adminController->dashboard();
+                return redirect()->route('admin.dashboard');
             } else {
                 $request->session()->put('unidade_bandejao', $user->unidade_bandejao);
-                return $userController->dashboard();
+                return redirect()->route('user.dashboard');
             }
         }
-    
+
         return redirect()->route('login')->with('erro', 'Dados inseridos são inválidos.');
     }
 
@@ -50,18 +50,18 @@ class AuthController extends Controller{
     public function viewCadastro(){
         return view('layouts-auth.cadastro');
     }
-      
-    public function realizarCadastro(Request $request){  
+
+    public function realizarCadastro(Request $request){
         $request->validate([
             'nome' => 'required',
             'sobrenome' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:3|max:20',
         ]);
-           
+
         $data = $request->all();
         $check = $this->criarUsuario($data);
-        
+
         return redirect()->route('login')->with('sucesso', 'Cadastro realizado com sucesso!');
     }
 
