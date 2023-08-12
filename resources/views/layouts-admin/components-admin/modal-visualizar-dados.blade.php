@@ -1,8 +1,8 @@
 
 <!--Definição e alteração de cardápio-->
 <div class="modal fade" id="visualizar-dados{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal-dialog-centered" role="document">
+        <div class="modal-content modal-bloco">
             <div class="modal-header" style="position: relative">
                 <h5 class="modal-title centraliza" id="exampleModalLongTitle">
                     Registrados e Confirmados - {{ $data_visual }}
@@ -11,8 +11,8 @@
             </div>
             <div class="modal-body">
             <ul>
-            <div class="table-responsive" style="color: #fff;">
-                <table class="table">
+            <div class="table-responsive">
+                <table class="table" style="color: #fff;">
                     <thead>
                         <tr>
                         <th scope="col">#</th>
