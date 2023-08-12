@@ -70,17 +70,17 @@
                         <div class="card-body" style="color: #fff;">
                             @include('layouts-admin.components-admin.modal-visualizar-dados')
 
-                            Confirmados no Gragoatá: {{ $confirmados[$event->id]['confirmados_total_gragoata'] }}
+                            <i>Confirmados no Gragoatá:</i> {{ $confirmados[$event->id]['confirmados_total_gragoata'] }}
                             <br>
-                            Confirmados na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_total_pv'] }}
+                            <i>Confirmados na Praia Vermelha:</i> {{ $confirmados[$event->id]['confirmados_total_pv'] }}
                             <br>
-                            Confirmados na Reitoria: {{ $confirmados[$event->id]['confirmados_total_reitoria'] }}
+                            <i>Confirmados na Reitoria:</i> {{ $confirmados[$event->id]['confirmados_total_reitoria'] }}
                             <br>
-                            Confirmados na Veterinária: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
+                            <i>Confirmados na Veterinária:</i> {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
                             <br>
-                            Confirmados no HUAP: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
+                            <i>Confirmados no HUAP:</i> {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
                             <hr>
-                            Total de confirmados: {{ $confirmados[$event->id]['confirmados_total'] }}
+                            <i>Total de confirmados:</i> {{ $confirmados[$event->id]['confirmados_total'] }}
                             <hr>
                             <div class="d-grid mx-auto">
                                 <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#visualizar-dados{{$event->id}}">

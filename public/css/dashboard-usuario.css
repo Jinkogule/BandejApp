@@ -140,6 +140,9 @@ body{
     }
 }
 
+.cardapio-titulo{
+    font-size: 1.2rem;
+}
 @media (min-width: 1000px) {
     .botoes-cc{
         width: 400px;;

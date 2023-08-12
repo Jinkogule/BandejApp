@@ -570,8 +570,3 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     height: auto;
     display: inline-block;
 }
-
-
-.sub-titulo{
-    color:#6d75a0;
-}
