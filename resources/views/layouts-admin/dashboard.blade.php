@@ -70,18 +70,73 @@
                         <div class="card-body" style="color: #fff;">
                             @include('layouts-admin.components-admin.modal-visualizar-dados')
 
-                            Confirmados no Gragoatá: {{ $confirmados[$event->id]['confirmados_total_gragoata'] }}
-                            <br>
-                            Confirmados na Praia Vermelha: {{ $confirmados[$event->id]['confirmados_total_pv'] }}
-                            <br>
-                            Confirmados na Reitoria: {{ $confirmados[$event->id]['confirmados_total_reitoria'] }}
-                            <br>
-                            Confirmados na Veterinária: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
-                            <br>
-                            Confirmados no HUAP: {{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}
-                            <hr>
-                            Total de confirmados: {{ $confirmados[$event->id]['confirmados_total'] }}
-                            <hr>
+                            <div class="table-responsive" style="color: #fff;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Gragoatá</th>
+                        <th scope="col">Praia Vermelha</th>
+                        <th scope="col">Reitoria</th>
+                        <th scope="col">Veterinária</th>
+                        <th scope="col">HUAP</th>
+                        <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Registrados almoço</th>
+                            <td>{{ $registrados[$event->id]['registrados_almoco_gragoata'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_almoco_pv'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_almoco_reitoria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_almoco_veterinaria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_almoco_huap'] }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Registrados janta</th>
+                            <td>{{ $registrados[$event->id]['registrados_janta_gragoata'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_janta_pv'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_janta_reitoria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_janta_veterinaria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_janta_huap'] }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total registrados</th>
+                            <td>{{ $registrados[$event->id]['registrados_total_gragoata'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_total_pv'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_total_reitoria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_total_veterinaria'] }}</td>
+                            <td>{{ $registrados[$event->id]['registrados_total_huap'] }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Confirmados almoço</th>
+                            <td>{{ $confirmados[$event->id]['confirmados_almoco_gragoata'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_almoco_pv'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_almoco_reitoria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_almoco_veterinaria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_almoco_huap'] }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Confirmados janta</th>
+                            <td>{{ $confirmados[$event->id]['confirmados_janta_gragoata'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_janta_pv'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_janta_reitoria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_janta_veterinaria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_janta_huap'] }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total confirmados</th>
+                            <td>{{ $confirmados[$event->id]['confirmados_total_gragoata'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_total_pv'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_total_reitoria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_total_veterinaria'] }}</td>
+                            <td>{{ $confirmados[$event->id]['confirmados_total_huap'] }}</td>
+
+                            <td>{{ $confirmados[$event->id]['confirmados_total'] }}</td>
+                        </tr>
+                    </tbody>
+                    </table>
+</div>
                             <div class="d-grid mx-auto">
                                 <button type="button" data-toggle="modal" class="btn btn-info btn-block" data-target="#visualizar-dados{{$event->id}}">
                                     Ver detalhes
