@@ -167,7 +167,7 @@ body{
 @media (min-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 87vh;/*antigo 87*/
+        height: 90vh;
         width: 600px;
         border-radius: 10px;
         position: relative;
@@ -176,7 +176,7 @@ body{
 @media (max-width: 1000px) {
     .container-pm{
         background-color: #1F519B;
-        height: 80vh;/*antigo 87*/
+        height: 91vh;
         width: 98%;
         border-radius: 10px;
         position: relative;
@@ -185,7 +185,7 @@ body{
 @media (min-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 75%;/*valor antigo: height: 77%;*/
+        height: 75%;
         width: 98%;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -195,7 +195,7 @@ body{
 @media (max-width: 1000px) {
     .container2-pm{
         background-color: #B9D5FF;
-        height: 68%;
+        height: 72%;
         width: 98%;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -203,9 +203,7 @@ body{
     }
 }
 
-.sub-titulo{
-    color:#c5c5c5;
-}
+
 /*-------------------------------Botões Selecionar/Desselecionar todos----------------------*/
 
 @media (min-width: 1000px) {

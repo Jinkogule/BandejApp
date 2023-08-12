@@ -137,7 +137,6 @@ h4{
 /*----------------------------------------LOGIN / CADASTRO----------------------------------------*/
 @media (min-width: 1000px) {
     .container-login{
-        float: center;
         width: 400px;
         background-color: #1F519B;
         margin: 50px auto;
@@ -149,7 +148,6 @@ h4{
 
 @media (max-width: 1000px) {
     .container-login{
-        float: center;
         width: 95%;
         background-color: #1F519B;
         margin: 50px auto;
@@ -571,4 +569,9 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     padding: 5px;
     height: auto;
     display: inline-block;
+}
+
+
+.sub-titulo{
+    color:#6d75a0;
 }
