@@ -1,5 +1,5 @@
 body{
-    padding-top: 80px !important;
+    padding-top: 50px !important;
 }
 
 @media (min-width: 1000px) {
@@ -33,7 +33,7 @@ body{
 @media (min-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 87vh;/*antigo 87*/
+        height: 90vh;
         width: 600px;
         border-radius: 10px;
         position: relative;
@@ -42,7 +42,7 @@ body{
 @media (max-width: 1000px) {
     .container-d{
         background-color: #1F519B;
-        height: 80vh;/*antigo 77*/
+        height: 91vh;
         width: 98%;
         border-radius: 10px;
         position: relative;
@@ -118,8 +118,8 @@ body{
         color: #fff;
         text-align: left;
         line-height: 1;
-        font-size: 1.2rem !important;
-        padding: 2px;
+        font-size: 0.9rem !important;
+        padding: 5px;
         border-radius: 10px;
     }
 }
@@ -134,8 +134,8 @@ body{
         color: #fff;
         text-align: left;
         line-height: 1;
-        font-size: 1rem !important;
-        padding: 2px;
+        font-size: 0.8rem !important;
+        padding: 5px;
         border-radius: 10px;
     }
 }
@@ -203,6 +203,9 @@ body{
     }
 }
 
+.sub-titulo{
+    color:#c5c5c5;
+}
 /*-------------------------------Botões Selecionar/Desselecionar todos----------------------*/
 
 @media (min-width: 1000px) {
@@ -319,3 +322,5 @@ body{
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+

@@ -2,8 +2,8 @@
 @media (min-width: 1000px) {
     .container-cdr{
         background-color: #1F519B;
-        height: 87vh;/*antigo 87*/
-        width: 600px; 
+        height: 90vh;
+        width: 600px;
         border-radius: 10px;
         position: relative;
     }
@@ -11,8 +11,8 @@
 @media (max-width: 1000px) {
     .container-cdr{
         background-color: #1F519B;
-        height: 87vh;/*antigo 87*/
-        width: 98%; 
+        height: 91vh;
+        width: 98%;
         border-radius: 10px;
         position: relative;
     }
@@ -22,7 +22,7 @@
         background-color: #B9D5FF;
         height: 87%;/*valor antigo: height: 77%;*/
         width: 98%;
-        margin-top: 15px;  
+        margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
     }
@@ -32,7 +32,7 @@
         background-color: #B9D5FF;
         height: 87%;
         width: 98%;
-        margin-top: 15px;  
+        margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
     }
@@ -83,4 +83,3 @@
 }
 
 
-    

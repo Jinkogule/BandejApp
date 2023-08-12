@@ -119,22 +119,22 @@
                         <div class="cardapio">
                         <h4>Cardápio:</h4>
                             @if ($event->cardapio)
+                                <ul>
+                                    <li><span class="sub-titulo">Prato principal:</span> {{ $event->cardapio->prato_principal }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Guarnição:</span> {{ $event->cardapio->guarnicao }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Acompanhamentos:</span> {{ $event->cardapio->acompanhamentos }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Salada 1:</span> {{ $event->cardapio->salada_1 }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Salada 2:</span> {{ $event->cardapio->salada_2 }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Sobremesa:</span> {{ $event->cardapio->sobremesa }}</li>
+                                    <br><br>
+                                    <li><span class="sub-titulo">Refresco:</span> {{ $event->cardapio->refresco }}</li>
+                                </ul>
 
-                            <ul>
-                                <li>Prato principal: {{ $event->cardapio->prato_principal }}</li>
-                                <br>
-                                <li>Guarnição: {{ $event->cardapio->guarnicao }}</li>
-                                <br>
-                                <li>Acompanhamentos: {{ $event->cardapio->acompanhamentos }}</li>
-                                <br>
-                                <li>Salada 1: {{ $event->cardapio->salada_1 }}</li>
-                                <br>
-                                <li>Salada 2: {{ $event->cardapio->salada_2 }}</li>
-                                <br>
-                                <li>Sobremesa: {{ $event->cardapio->sobremesa }}</li>
-                                <br>
-                                <li>Refresco: {{ $event->cardapio->refresco }}</li>
-                            </ul>
                             @else
                                 <p>Nenhum cardápio definido ainda.</p>
                             @endif
