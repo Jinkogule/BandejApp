@@ -1,7 +1,7 @@
 
 <!--Visualização de tabela de registrados e confirmados sobre determinada data-->
 <div class="modal fade" id="visualizar-dados{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 500px;">
         <div class="modal-content modal-bloco">
             <div class="modal-header" style="position: relative">
                 <h5 class="modal-title centraliza" id="exampleModalLongTitle">
@@ -9,10 +9,10 @@
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+
             <ul>
             <div class="table-responsive">
-                <table class="table" style="color: #fff; font-size: 14px;">
+                <table class="table" style="color: #fff; font-size: 14px; text-align: center;">
                     <thead>
                         <tr>
                         <th scope="col">#</th>
@@ -80,7 +80,7 @@
                 </div>
 
             </ul>
-            </div>
+
         </div>
     </div>
 </div>

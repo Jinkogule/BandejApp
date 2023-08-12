@@ -495,10 +495,15 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
         border-radius: 10px;
         padding: 20px;
         color: #fff;
-        width: 95%;
+        width: 98%;
     }
 }
-
+/*botão close do modal*/
+.btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 /*----BOTÕES----*/
 .btn-confirmar{
