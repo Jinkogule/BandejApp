@@ -501,8 +501,8 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 /*botão close do modal*/
 .btn-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
 }
 
 /*----BOTÕES----*/

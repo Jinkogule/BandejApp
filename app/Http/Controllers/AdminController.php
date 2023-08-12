@@ -48,6 +48,9 @@ class AdminController extends Controller
                 $registrados_janta_huap = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('unidade_bandejao', '=', 'HUAP')->where('tipo', '=', 'Janta')->count();
                 $registrados_total_huap = $registrados_almoco_huap + $registrados_janta_huap;
 
+                $registrados_almoco_total = $registrados_almoco_gragoata + $registrados_almoco_pv + $registrados_almoco_reitoria + $registrados_almoco_veterinaria + $registrados_almoco_huap;
+                $registrados_janta_total = $registrados_janta_gragoata + $registrados_janta_pv + $registrados_janta_reitoria + $registrados_janta_veterinaria + $registrados_janta_huap;
+
                 $registrados_total = $registrados_total_gragoata + $registrados_total_pv + $registrados_total_reitoria + $registrados_total_veterinaria + $registrados_total_huap;
 
                 $registrados[$event->id] = [
@@ -70,6 +73,9 @@ class AdminController extends Controller
                     'registrados_almoco_huap' => $registrados_almoco_huap,
                     'registrados_janta_huap' => $registrados_janta_huap,
                     'registrados_total_huap' => $registrados_total_huap,
+
+                    'registrados_almoco_total' => $registrados_almoco_total,
+                    'registrados_janta_total' => $registrados_janta_total,
 
                     'registrados_total' => $registrados_total
                 ];
@@ -95,6 +101,9 @@ class AdminController extends Controller
                 $confirmados_janta_huap = DB::table('refeicoes')->select('*')->where('data', '=', $event->data)->where('unidade_bandejao', '=', 'HUAP')->where('tipo', '=', 'Janta')->where('status_confirmacao', '=', 'C')->count();
                 $confirmados_total_huap = $confirmados_almoco_huap + $confirmados_janta_huap;
 
+                $confirmados_almoco_total = $confirmados_almoco_gragoata + $confirmados_almoco_pv + $confirmados_almoco_reitoria + $confirmados_almoco_veterinaria + $confirmados_almoco_huap;
+                $confirmados_janta_total = $confirmados_janta_gragoata + $confirmados_janta_pv + $confirmados_janta_reitoria + $confirmados_janta_veterinaria + $confirmados_janta_huap;
+
                 $confirmados_total = $confirmados_total_gragoata + $confirmados_total_pv + $confirmados_total_reitoria + $confirmados_total_veterinaria + $confirmados_total_huap;
 
                 $confirmados[$event->id] = [
@@ -117,6 +126,9 @@ class AdminController extends Controller
                     'confirmados_almoco_huap' => $confirmados_almoco_huap,
                     'confirmados_janta_huap' => $confirmados_janta_huap,
                     'confirmados_total_huap' => $confirmados_total_huap,
+
+                    'confirmados_almoco_total' => $confirmados_almoco_total,
+                    'confirmados_janta_total' => $confirmados_janta_total,
 
                     'confirmados_total' => $confirmados_total
                 ];
