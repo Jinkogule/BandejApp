@@ -117,7 +117,6 @@
 
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
-                            <span style="font-size: 1.2rem">Cardápio:</span>
                             @if ($event->cardapio)
                                 <ul>
                                     <li><i>Prato principal:</i> {{ $event->cardapio->prato_principal }}</li>
