@@ -109,12 +109,9 @@ body{
 
 @media (min-width: 1000px) {
     .cardapio{
-        width: 70%;
+        width: 10%;
         background-color: #213d66c4;
         position: absolute;
-        top: 3px;
-        right: 1.5px;
-        left: 1.5px;
         color: #fff;
         text-align: left;
         line-height: 1;
@@ -125,12 +122,9 @@ body{
 }
 @media (max-width: 1000px) {
     .cardapio{
-        width: 70%;
+        width: 100%;
         background-color: #213d66c4;
         position: absolute;
-        top: 1px;
-        right: 1.5px;
-        left: 1.5px;
         color: #fff;
         text-align: left;
         line-height: 1;

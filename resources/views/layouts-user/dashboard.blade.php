@@ -117,22 +117,22 @@
 
                     <div class="container capa-cardapio border" style="background-image: url('/images/restaurant.png'); background-size:">
                         <div class="cardapio">
-                        <h4>Cardápio:</h4>
+                            <span style="font-size: 1.2rem">Cardápio:</span>
                             @if ($event->cardapio)
                                 <ul>
-                                    <li><span class="sub-titulo">Prato principal:</span> {{ $event->cardapio->prato_principal }}</li>
+                                    <li><i>Prato principal:</i> {{ $event->cardapio->prato_principal }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Guarnição:</span> {{ $event->cardapio->guarnicao }}</li>
+                                    <li><i>Guarnição:</i> {{ $event->cardapio->guarnicao }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Acompanhamentos:</span> {{ $event->cardapio->acompanhamentos }}</li>
+                                    <li><i>Acompanhamentos:</i> {{ $event->cardapio->acompanhamentos }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Salada 1:</span> {{ $event->cardapio->salada_1 }}</li>
+                                    <li><i>Salada 1:</i> {{ $event->cardapio->salada_1 }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Salada 2:</span> {{ $event->cardapio->salada_2 }}</li>
+                                    <li><i>Salada 2:</i> {{ $event->cardapio->salada_2 }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Sobremesa:</span> {{ $event->cardapio->sobremesa }}</li>
+                                    <li><i>Sobremesa:</i> {{ $event->cardapio->sobremesa }}</li>
                                     <br><br>
-                                    <li><span class="sub-titulo">Refresco:</span> {{ $event->cardapio->refresco }}</li>
+                                    <li><i>Refresco:</i> {{ $event->cardapio->refresco }}</li>
                                 </ul>
 
                             @else

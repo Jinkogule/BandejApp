@@ -62,7 +62,7 @@
                                     <!--Modal visualizar cardápio-->
                                     @include('layouts-admin.components-admin.modal-visualizar-cardapio')
 
-                                    Cardápio: {{ $event->cardapio->prato_principal }}...
+                                    <i>Cardápio:</i> {{ $event->cardapio->prato_principal }}...
                                     <img src="/images/icons/visualizar-detalhes.png" class="img-fluid img-visualizar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#visualizar-cardapio{{$event->id}}">
                                     <img src="/images/icons/editar.png" class="img-fluid img-editar-cardapio" alt="Responsive image" data-toggle="modal" data-target="#salvar-cardapio{{$event->id}}">
                                 @endif
