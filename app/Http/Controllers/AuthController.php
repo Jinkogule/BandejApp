@@ -31,9 +31,10 @@ class AuthController extends Controller{
             $user = Auth::user();
             $request->session()->regenerate();
             $request->session()->put('nome', $user->nome);
+            $request->session()->put('sobrenome', $user->sobrenome);
             $request->session()->put('id', $user->id);
-            $request->session()->put('user_type', $user->user_type);
             $request->session()->put('user_email', $user->email);
+            $request->session()->put('user_type', $user->user_type);
 
             if ($user->user_type == 'Administrator') {
                 return redirect()->route('admin.dashboard');
