@@ -251,6 +251,10 @@ class UserController extends Controller{
 
     public function avaliarBandejao(Request $request){
         $request->validate([
+            'nome' => 'required',
+            'sobrenome' => 'required',
+            'id_usuario' => 'required',
+            'email' => 'required',
             'atendimento_nota' => 'required|integer|min:1|max:5',
             'atendimento_comentario' => 'nullable|string|max:1000',
             'ambiente_nota' => 'required|integer|min:1|max:5',
@@ -274,6 +278,10 @@ class UserController extends Controller{
     public function criaAvaliacaoDeBandejao(array $data){
 
         return Avaliacao::create([
+            'nome' => $data['nome'],
+            'sobrenome' => $data['sobrenome'],
+            'id_usuario' => $data['id_usuario'],
+            'email' => $data['email'],
             'atendimento_nota' => $data['atendimento_nota'],
             'atendimento_comentario' => $data['atendimento_comentario'],
             'ambiente_nota' => $data['ambiente_nota'],

@@ -22,6 +22,10 @@ class Avaliacao extends Model
      * @var array
      */
     protected $fillable = [
+        'nome',
+        'sobrenome',
+        'id_usuario',
+        'email',
         'atendimento_nota',
         'atendimento_comentario',
         'ambiente_nota',

@@ -35,6 +35,11 @@
             <hr>
             <form action="{{ route('avaliarBandejao') }}" method="POST">
                 @csrf
+                <input type="hidden" name="nome" id="nome" value="{{ session('nome') }}">
+                <input type="hidden" name="sobrenome" id="sobrenome" value="{{ session('sobrenome') }}">
+                <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
+                <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
+
                 <div class="row mb-2">
                     <div class="col">
                         <label for="atendimento_nota" style="color: #fff;">Atendimento:</label>
