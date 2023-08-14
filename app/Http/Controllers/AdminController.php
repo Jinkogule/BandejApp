@@ -167,7 +167,8 @@ class AdminController extends Controller
             $data_possui_cardapio->update($request->all());
         }
         else{
-            $cardapio = Cardapio::create($request->all());
+            $cardapio = new Cardapio($request->all());
+            $cardapio->save();
         }
 
         return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio salvo com sucesso!');
