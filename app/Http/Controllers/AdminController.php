@@ -155,16 +155,16 @@ class AdminController extends Controller
             'data' => 'required|date',
             'prato_principal' => 'required|string',
             'guarnicao' => 'required|string',
-            'acompanhamentos' => 'nullable|string',
-            'sobremesa' => 'nullable|string',
-            'salada_1' => 'nullable|string',
-            'salada_2' => 'nullable|string',
-            'refresco' => 'nullable|string'
+            'acompanhamentos' => 'required|string',
+            'sobremesa' => 'required|string',
+            'salada_1' => 'required|string',
+            'salada_2' => 'required|string',
+            'refresco' => 'required|string'
         ]);
 
         if ($request->has('id')) {
             $cardapio = Cardapio::find($request->input('id'));
-            $cardapio->fill($request->all());
+            $cardapio->update($request->all());
         } else {
             $cardapio = new Cardapio($request->all());
         }
@@ -173,4 +173,5 @@ class AdminController extends Controller
 
         return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio salvo com sucesso!');
     }
+
 }
