@@ -149,8 +149,7 @@ class AdminController extends Controller
         return View::make('layouts-admin.sugestoes-de-melhorias')->with('sugestoes', $sugestoes);
     }
 
-    public function salvarCardapio(Request $request)
-    {
+    public function salvarCardapio(Request $request){
         $request->validate([
             'data' => 'required|date',
             'prato_principal' => 'required|string',
@@ -162,14 +161,14 @@ class AdminController extends Controller
             'refresco' => 'required|string'
         ]);
 
-        if ($request->has('id')) {
-            $cardapio = Cardapio::find($request->input('id'));
-            $cardapio->update($request->all());
-        } else {
-            $cardapio = new Cardapio($request->all());
-        }
+        $data_possui_cardapio = Calendario::where('data', $request->input('data'))->first();
 
-        $cardapio->save();
+        if ($data_possui_cardapio) {
+            $data_possui_cardapio->update($request->all());
+        }
+        else{
+            $cardapio = Cardapio::create($request->all());
+        }
 
         return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio salvo com sucesso!');
     }
