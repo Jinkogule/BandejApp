@@ -21,37 +21,37 @@
 
                     <div class="form-group mb-1">
                         <label for="prato_principal">Prato Principal:</label>
-                        <input type="text" class="form-control" name="prato_principal" id="prato_principal" required>
+                        <input type="text" class="form-control" name="prato_principal" id="prato_principal" @if ($event->cardapio) value="{{ $event->cardapio->prato_principal }}" @endif required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="guarnicao">Guarnição:</label>
-                        <input type="text" class="form-control" name="guarnicao" id="guarnicao" required>
+                        <input type="text" class="form-control" name="guarnicao" id="guarnicao" @if ($event->cardapio) value="{{ $event->cardapio->guarnicao }}" @endif required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="acompanhamentos">Acompanhamentos:</label>
-                        <input type="text" class="form-control" name="acompanhamentos" id="acompanhamentos">
+                        <input type="text" class="form-control" name="acompanhamentos" id="acompanhamentos" @if ($event->cardapio) value="{{ $event->cardapio->acompanhamentos }}" @endif required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="salada_1">Salada 1:</label>
-                        <input type="text" class="form-control" name="salada_1" id="salada_1">
+                        <input type="text" class="form-control" name="salada_1" id="salada_1" @if ($event->cardapio) value="{{ $event->cardapio->salada_1 }}" @endif required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="salada_2">Salada 2:</label>
-                        <input type="text" class="form-control" name="salada_2" id="salada_2">
+                        <input type="text" class="form-control" name="salada_2" id="salada_2" @if ($event->cardapio) value="{{ $event->cardapio->salada_2 }}" @endif required>
                     </div>
 
                     <div class="form-group mb-1">
                         <label for="sobremesa">Sobremesa:</label>
-                        <input type="text" class="form-control" name="sobremesa" id="sobremesa">
+                        <input type="text" class="form-control" name="sobremesa" id="sobremesa" @if ($event->cardapio) value="{{ $event->cardapio->sobremesa }}" @endif required>
                     </div>
 
                     <div class="form-group mb-4">
                         <label for="refresco">Refresco:</label>
-                        <input type="text" class="form-control" name="refresco" id="refresco">
+                        <input type="text" class="form-control" name="refresco" id="refresco" @if ($event->cardapio) value="{{ $event->cardapio->refresco }}" @endif required>
                     </div>
 
                     <div class="d-grid mx-auto">
