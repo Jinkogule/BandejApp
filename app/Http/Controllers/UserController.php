@@ -268,7 +268,7 @@ class UserController extends Controller{
         $data = $request->all();
         $check = $this->criaAvaliacaoDeBandejao($data);
 
-        return redirect()->route('user.avaliacao-de-bandejao')->with('sucesso', 'Avaliação enviada com sucesso!');
+        return redirect()->route('user.avaliacao_de_bandejao')->with('sucesso', 'Avaliação enviada com sucesso!');
     }
 
     public function criaAvaliacaoDeBandejao(array $data){
