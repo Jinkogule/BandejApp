@@ -26,11 +26,13 @@ class Avaliacao extends Model
         'atendimento_comentario',
         'ambiente_nota',
         'ambiente_comentario',
-        'prato_principal',
-        'fila',
-        'comida',
-        'data_refeicao_avaliada',
-        'outro_topico',
+        'cardapios_nota',
+        'cardapios_comentario',
+        'fila_nota',
+        'fila_comentario',
+        'comida_nota',
+        'comida_comentario',
+        'outro_topico_nota',
         'outro_topico_comentario'
     ];
 }

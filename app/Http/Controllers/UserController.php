@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Refeicao;
 use App\Models\Sugestao_de_melhoria;
+use App\Models\Avaliacao;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
@@ -240,6 +241,51 @@ class UserController extends Controller{
             'assunto' => $data['assunto'],
             'sugestao' => $data['sugestao'],
 
+        ]);
+    }
+
+    /*-------------------------- Páginas e funções das avaliações de Bandejão --------------------------*/
+    public function viewAvaliacaoDeBandejao(){
+        return View::make('layouts-user.avaliacao-de-bandejao');
+    }
+
+    public function avaliarBandejao(Request $request){
+        $request->validate([
+            'atendimento_nota' => 'required|integer|min:1|max:5',
+            'atendimento_comentario' => 'nullable|string|max:1000',
+            'ambiente_nota' => 'required|integer|min:1|max:5',
+            'ambiente_comentario' => 'nullable|string|max:1000',
+            'cardapios_nota' => 'required|integer|min:1|max:5',
+            'cardapios_comentario' => 'nullable|string|max:1000',
+            'fila_nota' => 'required|integer|min:1|max:5',
+            'fila_comentario' => 'nullable|string|max:1000',
+            'comida_nota' => 'required|integer|min:1|max:5',
+            'comida_comentario' => 'nullable|string|max:1000',
+            'outro_topico_nota' => 'required|integer|min:1|max:5',
+            'outro_topico_comentario' => 'nullable|string|max:1000'
+        ]);
+
+        $data = $request->all();
+        $check = $this->criaAvaliacaoDeBandejao($data);
+
+        return redirect()->route('user.avaliacao-de-bandejao')->with('sucesso', 'Avaliação enviada com sucesso!');
+    }
+
+    public function criaAvaliacaoDeBandejao(array $data){
+
+        return Avaliacao::create([
+            'atendimento_nota' => $data['atendimento_nota'],
+            'atendimento_comentario' => $data['atendimento_comentario'],
+            'ambiente_nota' => $data['ambiente_nota'],
+            'ambiente_comentario' => $data['ambiente_comentario'],
+            'cardapios_nota' => $data['cardapios_nota'],
+            'cardapios_comentario' => $data['cardapios_comentario'],
+            'fila_nota' => $data['fila_nota'],
+            'fila_comentario' => $data['fila_comentario'],
+            'comida_nota' => $data['comida_nota'],
+            'comida_comentario' => $data['comida_comentario'],
+            'outro_topico_nota' => $data['outro_topico_nota'],
+            'outro_topico_comentario' => $data['outro_topico_comentario']
         ]);
     }
 }
