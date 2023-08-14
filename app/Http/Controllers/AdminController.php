@@ -161,10 +161,10 @@ class AdminController extends Controller
             'refresco' => 'required|string'
         ]);
 
-        $data_possui_cardapio = Calendario::where('data', $request->input('data'))->first();
+        $cardapio_na_data = Cardapio::where('data', $request->input('data'))->first();
 
-        if ($data_possui_cardapio) {
-            $data_possui_cardapio->update($request->all());
+        if ($cardapio_na_data) {
+            $cardapio_na_data->update($request->all());
         }
         else{
             $cardapio = new Cardapio($request->all());
