@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------PRINCIPAIS----------------------------------------------------------------*/
+/*----------------------------------------------------------------PRINCIPAIS/GERAIS----------------------------------------------------------------*/
 body{
     padding-top: 50px;
     font-family: 'Bahnschrift' !important;
@@ -15,6 +15,10 @@ hr { display: block; height: 1px;
 
 .container {
     margin: 0 auto;
+}
+
+.label{
+    color: #fff;
 }
 /*----------------------------------------SCROLLBAR----------------------------------------*/
 /* width */
@@ -572,10 +576,6 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 }
 
 /*avaliação 5 estrelas*/
-*{
-    margin: 0;
-    padding: 0;
-}
 .rate {
     height: 46px;
     padding: 0 10px;
@@ -611,3 +611,5 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+
