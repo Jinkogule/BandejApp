@@ -42,7 +42,7 @@
 
                 <div class="row mb-2">
                     <div class="col">
-                        Atendimento:
+                        <label for="atendimento_nota" style="color: #fff; display: inline-block;">Atendimento:</label>
                         <div class="rate">
                             <input type="radio" id="star5" name="atendimento_nota" value="5" />
                             <label for="star5" title="text">5 stars</label>

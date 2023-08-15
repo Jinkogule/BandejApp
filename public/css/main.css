@@ -577,9 +577,9 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     padding: 0;
 }
 .rate {
-    float: left;
     height: 46px;
     padding: 0 10px;
+    display: inline-block;
 }
 .rate:not(:checked) > input {
     position:absolute;
