@@ -43,10 +43,18 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="atendimento_nota" style="color: #fff;">Atendimento:</label>
-                        <input type="text" placeholder="" id="atendimento_nota" name="atendimento_nota" class="form-control"  value="{{ old('atendimento_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('atendimento_nota'))
-                        <span class="text-danger">{{ $errors->first('atendimento_nota') }}</span>
-                        @endif
+                        <div class="rate">
+                            <input type="radio" id="star5" name="atendimento_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="atendimento_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="atendimento_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="atendimento_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="atendimento_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                     </div>
                     <div class="col">
                         <label for="atendimento_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
