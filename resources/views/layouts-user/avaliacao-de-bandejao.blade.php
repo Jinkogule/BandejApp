@@ -40,8 +40,8 @@
                 <input type="hidden" name="id_usuario" id="id_usuario" value="{{ session('id') }}">
                 <input type="hidden" name="email" id="email" value="{{ session('user_email') }}">
 
-                <div class="row mb-2">
-                    <div class="col">
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
                         <label for="atendimento_nota" style="color: #fff; display: inline-block;">Atendimento:</label>
                         <div class="rate">
                             <input type="radio" id="star5" name="atendimento_nota" value="5" />
@@ -56,9 +56,7 @@
                             <label for="star1" title="text">1 star</label>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="row mb-2">
                     <div class="col">
                         <label for="atendimento_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
@@ -67,16 +65,55 @@
                         <span class="text-danger">{{ $errors->first('atendimento_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
                 </div>
 
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
+                        <label for="ambiente_nota" style="color: #fff; display: inline-block;">Ambiente:</label>
+                        <div class="rate">
+                            <input type="radio" id="star5" name="ambiente_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="ambiente_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="ambiente_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="ambiente_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="ambiente_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                    </div>
+                </div>
                 <div class="row mb-2">
                     <div class="col">
-                        <label for="cardapios_nota" style="color: #fff;">Cardápios:</label>
-                        <input type="text" placeholder="" id="cardapios_nota" name="cardapios_nota" class="form-control"  value="{{ old('cardapios_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('cardapios_nota'))
-                        <span class="text-danger">{{ $errors->first('cardapios_nota') }}</span>
+                        <label for="ambiente_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
+                        <input type="text" placeholder="" id="ambiente_comentario" name="ambiente_comentario" class="form-control"  value="{{ old('ambiente_comentario') }}" maxlength="100" required autofocus>
+                        @if ($errors->has('ambiente_comentario'))
+                        <span class="text-danger">{{ $errors->first('ambiente_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
+                </div>
+
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
+                        <label for="cardapios_nota" style="color: #fff; display: inline-block;">Cardápios:</label>
+                        <div class="rate">
+                            <input type="radio" id="star5" name="cardapios_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="cardapios_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="cardapios_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="cardapios_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="cardapios_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
                     <div class="col">
                         <label for="cardapios_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
                         <input type="text" placeholder="" id="cardapios_comentario" name="cardapios_comentario" class="form-control"  value="{{ old('cardapios_comentario') }}" maxlength="100" required autofocus>
@@ -84,16 +121,27 @@
                         <span class="text-danger">{{ $errors->first('cardapios_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
                 </div>
 
-                <div class="row mb-2">
-                    <div class="col">
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
                         <label for="fila_nota" style="color: #fff;">Fila:</label>
-                        <input type="text" placeholder="" id="fila_nota" name="fila_nota" class="form-control"  value="{{ old('fila_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('fila_nota'))
-                        <span class="text-danger">{{ $errors->first('fila_nota') }}</span>
-                        @endif
+                        <div class="rate">
+                            <input type="radio" id="star5" name="fila_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="fila_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="fila_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="fila_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="fila_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                     </div>
+                </div>
+                <div class="row mb-2">
                     <div class="col">
                         <label for="fila_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
                         <input type="text" placeholder="" id="fila_comentario" name="fila_comentario" class="form-control"  value="{{ old('fila_comentario') }}" maxlength="100" required autofocus>
@@ -101,17 +149,27 @@
                         <span class="text-danger">{{ $errors->first('fila_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
                 </div>
 
-
-                <div class="row mb-2">
-                    <div class="col">
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
                         <label for="comida_nota" style="color: #fff;">Comida:</label>
-                        <input type="text" placeholder="" id="comida_nota" name="comida_nota" class="form-control"  value="{{ old('comida_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('comida_nota'))
-                        <span class="text-danger">{{ $errors->first('comida_nota') }}</span>
-                        @endif
+                        <div class="rate">
+                            <input type="radio" id="star5" name="comida_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="comida_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="comida_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="comida_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="comida_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                     </div>
+                </div>
+                <div class="row mb-2">
                     <div class="col">
                         <label for="comida_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
                         <input type="text" placeholder="" id="comida_comentario" name="comida_comentario" class="form-control"  value="{{ old('comida_comentario') }}" maxlength="100" required autofocus>
@@ -119,16 +177,28 @@
                         <span class="text-danger">{{ $errors->first('comida_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
                 </div>
 
-                <div class="row mb-2">
-                    <div class="col">
-                        <label for="outro_topico_nota" style="color: #fff;">Outro:</label>
-                        <input type="text" placeholder="" id="outro_topico_nota" name="outro_topico_nota" class="form-control"  value="{{ old('outro_topico_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('outro_topico_nota'))
-                        <span class="text-danger">{{ $errors->first('outro_topico_nota') }}</span>
-                        @endif
+
+                <div class="row mb">
+                    <div class="col" style="display: flex; align-items: center;">
+                        <label for="outro_topico_nota" style="color: #fff;">Outro tópico:</label>
+                        <div class="rate">
+                            <input type="radio" id="star5" name="outro_topico_nota" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="outro_topico_nota" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="outro_topico_nota" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="outro_topico_nota" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="outro_topico_nota" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                     </div>
+                </div>
+                <div class="row mb-2">
                     <div class="col">
                         <label for="outro_topico_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
                         <input type="text" placeholder="" id="outro_topico_comentario" name="outro_topico_comentario" class="form-control"  value="{{ old('outro_topico_comentario') }}" maxlength="100" required autofocus>
@@ -136,6 +206,7 @@
                         <span class="text-danger">{{ $errors->first('outro_topico_comentario') }}</span>
                         @endif
                     </div>
+                    <hr>
                 </div>
 
                 <div class="d-grid mx-auto mb-2">
