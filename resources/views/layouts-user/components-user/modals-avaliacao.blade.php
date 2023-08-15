@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-bloco">
             <div class="modal-header" style="position: relative">
-                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Avaliação de Refeição</h5>
+                <h5 class="modal-title centraliza" id="exampleModalLongTitle">Avaliação de Refeição - {{ $data_visual }}</h5>
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -13,25 +13,9 @@
                 $data_visual = date("d/m/y", strtotime($data_banco));
                 $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco)->value('dia_da_semana');
                 ?>
-                Prezado(a) {{ session('nome') }} avalie
-                <?php
-                if ($event->tipo == 'Almoço'){
-                ?>
-                    o almoço
-                <?php
-                }
-                if ($event->tipo == 'Janta'){
-                ?>
-                    a janta
-                <?php
-                }
-                ?>
-                  que realizou nesta {{ $dia_da_semana }}, dia {{ $data_visual }}, no campus {{ $event->unidade_bandejao }}.
-                <br><br>
+                Prezado(a) avalie as refeições que realizou nesta {{ $dia_da_semana }}.
             </div>
             <div class="modal-footer">
-
-
                 <!--Avaliar refeição Form-->
                 <form id="avaliar-refeicao" action="{{ route('avaliarRefeicao') }}" method="POST">
                     @csrf
@@ -52,14 +36,16 @@
                             <label for="star1" title="text">1 star</label>
                         </div>
                     </div>
-
-                    <label for="avaliacao_detalhada">Explique o motivo da nota (opcional):</label>
-                    <input type="text" id="avaliacao_detalhada" name="avaliacao_detalhada" pattern="^[a-zA-Z\s]+$">
-
-                    <div class="d-grid mx-auto">
+                    <div class="row mb-3">
+                        <label for="avaliacao_detalhada">Explique o motivo da nota (opcional):</label>
+                        <input type="text" class="form-control" id="avaliacao_detalhada" name="avaliacao_detalhada" pattern="^[a-zA-Z\s]+$">
+                    </div>
+                    <div class="d-grid mx-auto mb-2">
                         <button type="submit" class="btn btn-success btn-block">Enviar</button>
                     </div>
                 </form>
+                <hr>
+                <a class="nav-link mt-2" href="{{ route('user.avaliacao_de_bandejao') }}" style="text-align: center;">Avalie com mais detalhes o Bandejão</a>
             </div>
         </div>
     </div>
