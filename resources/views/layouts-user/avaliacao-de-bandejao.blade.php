@@ -42,7 +42,7 @@
 
                 <div class="row mb-2">
                     <div class="col">
-                        <label for="atendimento_nota" style="color: #fff;">Atendimento:</label>
+                        Atendimento:
                         <div class="rate">
                             <input type="radio" id="star5" name="atendimento_nota" value="5" />
                             <label for="star5" title="text">5 stars</label>
@@ -56,28 +56,15 @@
                             <label for="star1" title="text">1 star</label>
                         </div>
                     </div>
+
+                </div>
+
+                <div class="row mb-2">
                     <div class="col">
                         <label for="atendimento_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
                         <input type="text" placeholder="" id="atendimento_comentario" name="atendimento_comentario" class="form-control"  value="{{ old('atendimento_comentario') }}" maxlength="100" required autofocus>
                         @if ($errors->has('atendimento_comentario'))
                         <span class="text-danger">{{ $errors->first('atendimento_comentario') }}</span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col">
-                        <label for="ambiente_nota" style="color: #fff;">Ambiente:</label>
-                        <input type="text" placeholder="" id="ambiente_nota" name="ambiente_nota" class="form-control"  value="{{ old('ambiente_nota') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('ambiente_nota'))
-                        <span class="text-danger">{{ $errors->first('ambiente_nota') }}</span>
-                        @endif
-                    </div>
-                    <div class="col">
-                        <label for="ambiente_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="ambiente_comentario" name="ambiente_comentario" class="form-control"  value="{{ old('ambiente_comentario') }}" maxlength="100" required autofocus>
-                        @if ($errors->has('ambiente_comentario'))
-                        <span class="text-danger">{{ $errors->first('ambiente_comentario') }}</span>
                         @endif
                     </div>
                 </div>
