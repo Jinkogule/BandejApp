@@ -1,4 +1,10 @@
 
+<?php
+$data_banco = $event->data;
+$data_visual = date("d/m/y", strtotime($data_banco));
+$dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco)->value('dia_da_semana');
+?>
+
 <!--Notificação de confirmação-->
 <div class="modal fade" id="avaliar-refeicao{{$event->id}}" data-keyboard="false" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -8,11 +14,7 @@
                 <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <?php
-                $data_banco = $event->data;
-                $data_visual = date("d/m/y", strtotime($data_banco));
-                $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data', '=', $data_banco)->value('dia_da_semana');
-                ?>
+
                 Prezado(a) avalie as refeições que realizou nesta {{ $dia_da_semana }}.
             </div>
             <div class="modal-footer">
