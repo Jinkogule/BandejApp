@@ -52,3 +52,11 @@ $dia_da_semana = DB::table('calendario')->select('dia_da_semana')->where('data',
         </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function() {
+    $('.rate input').click(function(event) {
+        event.stopPropagation();
+    });
+});
+</script>
