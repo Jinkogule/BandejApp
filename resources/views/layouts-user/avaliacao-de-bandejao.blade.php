@@ -60,7 +60,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="atendimento_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="atendimento_comentario" name="atendimento_comentario" class="form-control"  value="{{ old('atendimento_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="atendimento_comentario" name="atendimento_comentario" class="form-control"  value="{{ old('atendimento_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('atendimento_comentario'))
                         <span class="text-danger">{{ $errors->first('atendimento_comentario') }}</span>
                         @endif
@@ -88,7 +88,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="ambiente_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="ambiente_comentario" name="ambiente_comentario" class="form-control"  value="{{ old('ambiente_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="ambiente_comentario" name="ambiente_comentario" class="form-control"  value="{{ old('ambiente_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('ambiente_comentario'))
                         <span class="text-danger">{{ $errors->first('ambiente_comentario') }}</span>
                         @endif
@@ -116,7 +116,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="cardapios_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="cardapios_comentario" name="cardapios_comentario" class="form-control"  value="{{ old('cardapios_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="cardapios_comentario" name="cardapios_comentario" class="form-control"  value="{{ old('cardapios_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('cardapios_comentario'))
                         <span class="text-danger">{{ $errors->first('cardapios_comentario') }}</span>
                         @endif
@@ -144,7 +144,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="fila_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="fila_comentario" name="fila_comentario" class="form-control"  value="{{ old('fila_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="fila_comentario" name="fila_comentario" class="form-control"  value="{{ old('fila_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('fila_comentario'))
                         <span class="text-danger">{{ $errors->first('fila_comentario') }}</span>
                         @endif
@@ -172,7 +172,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="comida_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="comida_comentario" name="comida_comentario" class="form-control"  value="{{ old('comida_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="comida_comentario" name="comida_comentario" class="form-control"  value="{{ old('comida_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('comida_comentario'))
                         <span class="text-danger">{{ $errors->first('comida_comentario') }}</span>
                         @endif
@@ -201,7 +201,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <label for="outro_topico_comentario" style="color: #fff;">Explique o motivo da nota (opcional):</label>
-                        <input type="text" placeholder="" id="outro_topico_comentario" name="outro_topico_comentario" class="form-control"  value="{{ old('outro_topico_comentario') }}" maxlength="100" required autofocus>
+                        <input type="text" placeholder="" id="outro_topico_comentario" name="outro_topico_comentario" class="form-control"  value="{{ old('outro_topico_comentario') }}" maxlength="100" autofocus>
                         @if ($errors->has('outro_topico_comentario'))
                         <span class="text-danger">{{ $errors->first('outro_topico_comentario') }}</span>
                         @endif
