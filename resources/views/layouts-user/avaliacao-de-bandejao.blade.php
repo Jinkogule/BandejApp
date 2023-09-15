@@ -44,16 +44,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="atendimento_nota" style="color: #fff; display: inline-block;">Atendimento:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="atendimento_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="atendimento_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="atendimento_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="atendimento_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="atendimento_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="atendimento_star5" name="atendimento_nota" value="5" />
+                            <label for="atendimento_star5" title="text">5 stars</label>
+                            <input type="radio" id="atendimento_star4" name="atendimento_nota" value="4" />
+                            <label for="atendimento_star4" title="text">4 stars</label>
+                            <input type="radio" id="atendimento_star3" name="atendimento_nota" value="3" />
+                            <label for="atendimento_star3" title="text">3 stars</label>
+                            <input type="radio" id="atendimento_star2" name="atendimento_nota" value="2" />
+                            <label for="atendimento_star2" title="text">2 stars</label>
+                            <input type="radio" id="atendimento_star1" name="atendimento_nota" value="1" />
+                            <label for="atendimento_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
@@ -72,16 +72,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="ambiente_nota" style="color: #fff; display: inline-block;">Ambiente:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="ambiente_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="ambiente_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="ambiente_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="ambiente_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="ambiente_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="ambiente_star5" name="ambiente_nota" value="5" />
+                            <label for="ambiente_star5" title="text">5 stars</label>
+                            <input type="radio" id="ambiente_star4" name="ambiente_nota" value="4" />
+                            <label for="ambiente_star4" title="text">4 stars</label>
+                            <input type="radio" id="ambiente_star3" name="ambiente_nota" value="3" />
+                            <label for="ambiente_star3" title="text">3 stars</label>
+                            <input type="radio" id="ambiente_star2" name="ambiente_nota" value="2" />
+                            <label for="ambiente_star2" title="text">2 stars</label>
+                            <input type="radio" id="ambiente_star1" name="ambiente_nota" value="1" />
+                            <label for="ambiente_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
@@ -100,16 +100,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="cardapios_nota" style="color: #fff; display: inline-block;">Cardápios:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="cardapios_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="cardapios_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="cardapios_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="cardapios_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="cardapios_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="cardapios_star5" name="cardapios_nota" value="5" />
+                            <label for="cardapios_star5" title="text">5 stars</label>
+                            <input type="radio" id="cardapios_star4" name="cardapios_nota" value="4" />
+                            <label for="cardapios_star4" title="text">4 stars</label>
+                            <input type="radio" id="cardapios_star3" name="cardapios_nota" value="3" />
+                            <label for="cardapios_star3" title="text">3 stars</label>
+                            <input type="radio" id="cardapios_star2" name="cardapios_nota" value="2" />
+                            <label for="cardapios_star2" title="text">2 stars</label>
+                            <input type="radio" id="cardapios_star1" name="cardapios_nota" value="1" />
+                            <label for="cardapios_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
@@ -128,16 +128,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="fila_nota" style="color: #fff;">Fila:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="fila_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="fila_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="fila_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="fila_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="fila_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="fila_star5" name="fila_nota" value="5" />
+                            <label for="fila_star5" title="text">5 stars</label>
+                            <input type="radio" id="fila_star4" name="fila_nota" value="4" />
+                            <label for="fila_star4" title="text">4 stars</label>
+                            <input type="radio" id="fila_star3" name="fila_nota" value="3" />
+                            <label for="fila_star3" title="text">3 stars</label>
+                            <input type="radio" id="fila_star2" name="fila_nota" value="2" />
+                            <label for="fila_star2" title="text">2 stars</label>
+                            <input type="radio" id="fila_star1" name="fila_nota" value="1" />
+                            <label for="fila_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
@@ -156,16 +156,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="comida_nota" style="color: #fff;">Comida:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="comida_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="comida_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="comida_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="comida_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="comida_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="comida_star5" name="comida_nota" value="5" />
+                            <label for="comida_star5" title="text">5 stars</label>
+                            <input type="radio" id="comida_star4" name="comida_nota" value="4" />
+                            <label for="comida_star4" title="text">4 stars</label>
+                            <input type="radio" id="comida_star3" name="comida_nota" value="3" />
+                            <label for="comida_star3" title="text">3 stars</label>
+                            <input type="radio" id="comida_star2" name="comida_nota" value="2" />
+                            <label for="comida_star2" title="text">2 stars</label>
+                            <input type="radio" id="comida_star1" name="comida_nota" value="1" />
+                            <label for="comida_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
@@ -185,16 +185,16 @@
                     <div class="col" style="display: flex; align-items: center;">
                         <label for="outro_topico_nota" style="color: #fff;">Outro tópico:</label>
                         <div class="rate">
-                            <input type="radio" id="star5" name="outro_topico_nota" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="outro_topico_nota" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="outro_topico_nota" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="outro_topico_nota" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="outro_topico_nota" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                            <input type="radio" id="outro_star5" name="outro_topico_nota" value="5" />
+                            <label for="outro_star5" title="text">5 stars</label>
+                            <input type="radio" id="outro_star4" name="outro_topico_nota" value="4" />
+                            <label for="outro_star4" title="text">4 stars</label>
+                            <input type="radio" id="outro_star3" name="outro_topico_nota" value="3" />
+                            <label for="outro_star3" title="text">3 stars</label>
+                            <input type="radio" id="outro_star2" name="outro_topico_nota" value="2" />
+                            <label for="outro_star2" title="text">2 stars</label>
+                            <input type="radio" id="outro_star1" name="outro_topico_nota" value="1" />
+                            <label for="outro_star1" title="text">1 star</label>
                         </div>
                     </div>
                 </div>
