@@ -22,29 +22,29 @@
 
     <body>
         @include('layouts-admin.components-admin.navbar1')
-        
-        
+
+        <br>
 
         <div class="container container-visualizar-sugestoes mb-4" style="color: #fff;">
             <h4 style="text-align: center;">Sugestões de Melhorias</h4>
             <hr>
-               
+
             @foreach($sugestoes as $event)
             <?php
-            $horario_timestamp =  substr($event->created_at, -8);  
+            $horario_timestamp =  substr($event->created_at, -8);
 
             $data_timestamp =  substr($event->created_at, 10);
-            $data_banco_timestamp = $data_timestamp;  
+            $data_banco_timestamp = $data_timestamp;
             $data_visual_timestamp = date("d/m/y", strtotime($data_banco_timestamp));
             ?>
 
             <div class="container conteudo-sugestoes">
                 <h5>{{ $event->assunto }}</h5>
-                
+
                 {{ $event->sugestao }}
                 <br><br>
                 <small style="color: #D9D9D9 !important; text-align: left;" class="text-muted">Sugestão enviada por {{ $event->nome }} {{ $event->sobrenome }} (<a href="mailto:{{ $event->email }}" style="color: #D9D9D9 !important;">{{ $event->email }}</a>) em {{ $data_visual_timestamp }}, às {{ $horario_timestamp }}h.</small>
-            </div>  
+            </div>
             <br>
             @endforeach
         </div>

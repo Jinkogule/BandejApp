@@ -580,6 +580,7 @@ ul.grupo-desplegable > li:hover > ul.sub-grupo-desplegable {
     height: 46px;
     padding: 0 10px;
     display: inline-block;
+    z-index: 1050;
 }
 .rate:not(:checked) > input {
     position:absolute;
