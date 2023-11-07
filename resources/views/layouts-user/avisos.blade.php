@@ -17,6 +17,7 @@
         @include('comuns.styles')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
         <link rel="stylesheet" href="{{ asset('css/dashboard-usuario.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
         <!-- JQuery com o AJAX-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

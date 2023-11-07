@@ -10,10 +10,11 @@
                     <ul class="grupo-desplegable">
                         <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Calendário de Refeições</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        
-                        <li><a class="dropdown-item" href="{{ route('admin.sugestoes_de_melhorias') }}">Sugestões de melhorias</a></li>                              
+                        <li><a class="dropdown-item" href="{{ route('admin.sugestoes_de_melhorias') }}">Sugestões de melhorias</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.publicacao_de_avisos') }}">Publicar aviso</a></li>
                     </ul>
-                </li> 
+                </li>
             </ul>
         </div>
 
@@ -21,10 +22,10 @@
         <a class="navbar-brand navbar-brand-dashboard logo" href="/admin/dashboard">
             <img src="/images/favicons/talheres-icon.png">
             Bem vindo, {{ session('nome')}}!
-        </a> 
-            
+        </a>
+
         <a class="nav-link" href="{{ route('sair') }}" style="color: #fff !important;">Sair</a>
-        
+
     </div>
 
 </nav>

@@ -187,7 +187,7 @@ class AdminController extends Controller
         $data = $request->all();
         $check = $this->criaAviso($data);
 
-        return redirect()->route('admin.publicacao_de_aviso')->with('sucesso', 'Aviso publicado com sucesso!');
+        return redirect()->route('admin.publicacao_de_avisos')->with('sucesso', 'Aviso publicado com sucesso!');
     }
 
     public function criaAviso(array $data){
