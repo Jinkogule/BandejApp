@@ -8,7 +8,7 @@
                 <li class="desplegable">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="" class="curso">Menu</a>
                     <ul class="grupo-desplegable">
-                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Calendário de Refeições</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Calendário de refeições</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('admin.sugestoes_de_melhorias') }}">Sugestões de melhorias</a></li>
                         <li><hr class="dropdown-divider"></li>

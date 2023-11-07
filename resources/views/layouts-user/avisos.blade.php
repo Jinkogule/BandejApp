@@ -28,10 +28,7 @@
         <!--Navbar-->
         @include('layouts-user.components-user.navbar1')
 
-        <!--@include('layouts-user.components-user.navbar2')-->
-
-        <!--Mensagens-->
-        @include('comuns.mensagens')
+        <br>
 
         <div class="container container-visualizar-sugestoes mb-4" style="color: #fff;">
             <h4 style="text-align: center;">Avisos informativos</h4>
