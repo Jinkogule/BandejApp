@@ -64,8 +64,9 @@
                         @if ($errors->has('atendimento_comentario'))
                         <span class="text-danger">{{ $errors->first('atendimento_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
 
                 <div class="row mb">
@@ -92,8 +93,8 @@
                         @if ($errors->has('ambiente_comentario'))
                         <span class="text-danger">{{ $errors->first('ambiente_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
                 </div>
 
                 <div class="row mb">
@@ -120,8 +121,9 @@
                         @if ($errors->has('cardapios_comentario'))
                         <span class="text-danger">{{ $errors->first('cardapios_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
 
                 <div class="row mb">
@@ -148,8 +150,9 @@
                         @if ($errors->has('fila_comentario'))
                         <span class="text-danger">{{ $errors->first('fila_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
 
                 <div class="row mb">
@@ -176,8 +179,9 @@
                         @if ($errors->has('comida_comentario'))
                         <span class="text-danger">{{ $errors->first('comida_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
 
 
@@ -205,8 +209,9 @@
                         @if ($errors->has('outro_topico_comentario'))
                         <span class="text-danger">{{ $errors->first('outro_topico_comentario') }}</span>
                         @endif
+                        <hr>
                     </div>
-                    <hr>
+
                 </div>
 
                 <div class="d-grid mx-auto mb-2">
