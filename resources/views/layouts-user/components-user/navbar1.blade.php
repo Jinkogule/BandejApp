@@ -14,6 +14,8 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('user.sugestao_de_melhorias') }}">Sugerir Melhorias</a></li>
                         <li><a class="dropdown-item" href="{{ route('user.avaliacao_de_bandejao') }}">Avaliar Bandejão</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ route('user.avisos') }}">Avisos informativos</a></li>
                     </ul>
                 </li>
             </ul>

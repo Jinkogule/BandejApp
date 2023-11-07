@@ -35,6 +35,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::post('salvarCardapio', [AdminController::class, 'salvarCardapio'])->name('salvarCardapio');
 
+    Route::get('publicacao_de_avisos', [AdminController::class, 'viewPublicacaoDeAvisos'])->name('admin.publicacao_de_avisos');
+    Route::post('publicarAviso', [AdminController::class, 'publicarAviso'])->name('publicarAviso');
 });
 
 Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
@@ -63,6 +65,8 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
 
     Route::get('avaliacao_de_bandejao', [UserController::class, 'viewAvaliacaoDeBandejao'])->name('user.avaliacao_de_bandejao');
     Route::post('avaliarBandejao', [UserController::class, 'avaliarBandejao'])->name('avaliarBandejao');
+
+    Route::get('avisos', [UserController::class, 'listarAvisos'])->name('user.avisos');
 
     Route::get('/teste-mail', [MailController::class, 'teste_mail']);
 

@@ -244,6 +244,11 @@ class UserController extends Controller{
         ]);
     }
 
+    public function listarAvisos(){
+        $avisos = DB::table('avisos')->select('*')->get();
+
+        return View::make('layouts-user.avisos')->with('avisos', $avisos);
+    }
     /*-------------------------- Páginas e funções das avaliações de Bandejão --------------------------*/
     public function viewAvaliacaoDeBandejao(){
         return View::make('layouts-user.avaliacao-de-bandejao');

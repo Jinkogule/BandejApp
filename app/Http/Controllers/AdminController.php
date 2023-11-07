@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Refeicao;
 use App\Models\Cardapio;
 use App\Models\Calendario;
+use App\Models\Aviso;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
@@ -171,6 +172,30 @@ class AdminController extends Controller
         }
 
         return redirect()->route('admin.dashboard')->with('sucesso', 'Cardápio salvo com sucesso!');
+    }
+
+    public function viewPublicacaoDeAvisos(){
+        return View::make('layouts-admin.publicacao-de-avisos');
+    }
+
+    public function publicarAviso(Request $request){
+        $request->validate([
+            'titulo' => 'required|string',
+            'conteudo' => 'required|string',
+        ]);
+
+        $data = $request->all();
+        $check = $this->criaAviso($data);
+
+        return redirect()->route('admin.publicacao_de_aviso')->with('sucesso', 'Aviso publicado com sucesso!');
+    }
+
+    public function criaAviso(array $data){
+
+        return Aviso::create([
+            'titulo' => $data['titulo'],
+            'conteudo' => $data['conteudo'],
+        ]);
     }
 
 }
