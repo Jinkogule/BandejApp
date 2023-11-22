@@ -7,12 +7,10 @@ function toggle(oInput) {
     }
 }
 
-
-
-
 function setGlobal(){
     global = true;
 };
 
-
-
+Echo.private('notifications').listen('NewNotification', (e) => {
+    console.log(e.notification);//teste se notificação ta funcionando
+});

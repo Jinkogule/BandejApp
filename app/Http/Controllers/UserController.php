@@ -35,11 +35,17 @@ class UserController extends Controller{
                     $cardapios[$event->id] = $cardapio;
                 }
 
+                $unreadNotifications = DB::table('user_notifications')
+                    ->where('user_id', Auth::id())
+                    ->where('read', false)
+                    ->get();
+
                 return View::make('layouts-user.dashboard')
                     ->with('events', $events)
                     ->with('events2', $events2)
                     ->with('verif_null', $verif_null)
-                    ->with('cardapios', $cardapios);
+                    ->with('cardapios', $cardapios)
+                    ->with('unreadNotifications', $unreadNotifications);
             }
 
 
@@ -246,6 +252,10 @@ class UserController extends Controller{
 
     public function listarAvisos(){
         $avisos = DB::table('avisos')->select('*')->get();
+
+        $user = Auth::user();
+
+        DB::table('user_notifications')->where('user_id', $user->id)->update(['read' => true]);
 
         return View::make('layouts-user.avisos')->with('avisos', $avisos);
     }

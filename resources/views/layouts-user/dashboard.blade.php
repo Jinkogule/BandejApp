@@ -187,6 +187,11 @@
             }
             ?>
         </div>
+        @foreach ($unreadNotifications as $notification)
+            <div class="notification">
+                testeee notificação existe e não foi lida
+            </div>
+        @endforeach
 
     </body>
 </html>
