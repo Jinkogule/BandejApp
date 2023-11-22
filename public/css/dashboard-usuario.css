@@ -323,4 +323,18 @@ body{
     color: #c59b08;
 }
 
+/*notificação*/
+.notification {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 50px;
+    height: auto;
+    background-image: url('/images/icons/notificacao.png');
+    background-size: cover;
+    animation: blinker 1s linear infinite;
+  }
 
+  @keyframes blinker {
+    50% { opacity: 0; }
+  }

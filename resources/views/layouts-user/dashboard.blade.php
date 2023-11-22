@@ -188,9 +188,7 @@
             ?>
         </div>
         @foreach ($unreadNotifications as $notification)
-            <div class="notification">
-                testeee notificação existe e não foi lida
-            </div>
+            <a href="https://bandejapp.herokuapp.com/user/avisos" class="notification" title="Você possui notificações não lidas!"></a>
         @endforeach
 
     </body>
