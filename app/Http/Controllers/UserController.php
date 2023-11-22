@@ -251,7 +251,7 @@ class UserController extends Controller{
     }
 
     public function listarAvisos(){
-        $avisos = DB::table('avisos')->select('*')->get();
+        $avisos = DB::table('avisos')->orderBy('created_at', 'desc')->get();
 
         $user = Auth::user();
 
