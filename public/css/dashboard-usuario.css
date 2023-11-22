@@ -324,7 +324,7 @@ body{
 }
 
 /*notificação*/
-.notification {
+.notificacao {
     position: fixed;
     top: 60px;
     right: 20px;
@@ -333,8 +333,7 @@ body{
     background-image: url('/images/icons/notificacao.png');
     background-size: cover;
     animation: blinker 1s linear infinite;
-  }
-
-  @keyframes blinker {
+}
+@keyframes blinker {
     50% { opacity: 0; }
-  }
+}
