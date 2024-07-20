@@ -1,7 +1,6 @@
-<img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="100px;" alt=""/>
+<img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
 
 [![Release](https://img.shields.io/github/v/release/Jinkogule/BandejApp)](https://github.com/Jinkogule/BandejApp/releases)
-[![Code Climate coverage](https://img.shields.io/codeclimate/coverage/gems-uff/sapos)](https://codeclimate.com/github/gems-uff/sapos)
 [![License](https://img.shields.io/github/license/Jinkogule/BandejApp)](LICENSE)
   
  
@@ -11,15 +10,12 @@
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
+  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-contribuidores">Contribuidores</a> • 
  <a href="#-autor">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
 </p>
-
 
 ## 💻 Sobre o projeto
 
@@ -43,7 +39,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Laravel 8.8](https://laravel.com/)**
 -   **[Composer 2.7](https://getcomposer.org/)**
 
-
 > Veja o arquivo  [composer.json]()
 
 #### **Banco de Dados**
@@ -63,9 +58,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 #### **Utilitários**
 -   **[CSS](https://react-leaflet.js.org/en/)**
 -   **[HTML](https://react-leaflet.js.org/)**
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Ecoleta)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
--   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
--   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
+-   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
 -   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
 -   Fontes:  **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
 
@@ -75,10 +68,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 O layout da aplicação está disponível no Figma:
 
-<a href="https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A546">
-  <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+<a href="https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=DjFmhk3wbzDHxSC4-0">
+  <img alt="" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
-
 
 ### Telas de autenticação (Mobile)
 <table align="center">
@@ -195,125 +187,7 @@ O layout da aplicação está disponível no Figma:
   </tr>
 </table>
 
-## Licença
-
-Este projeto está licenciado sob uma Licença Proprietária. Todos os direitos estão reservados ao proprietário dos direitos autorais. Para obter permissão para usar, copiar, distribuir ou modificar este software, entre em contato com [Lucas Pimenta](mailto:lucaspimenta21@gmail.com).
-
-Para mais detalhes, veja o arquivo [LICENSE](LICENSE).
-
-
-
-
-
-
-## ⚙️ Funcionalidades
-
-- [x] Empresas ou entidades podem se cadastrar na plataforma web enviando:
-  - [x] uma imagem do ponto de coleta
-  - [x] nome da entidade, email e whatsapp
-  - [x] e o endereço para que ele possa aparecer no mapa
-  - [x] além de selecionar um ou mais ítens de coleta: 
-    - lâmpadas
-    - pilhas e baterias
-    - papéis e papelão
-    - resíduos eletrônicos
-    - resíduos orgânicos
-    - óleo de cozinha
-
-- [x] Os usuários tem acesso ao aplicativo móvel, onde podem:
-  - [x] navegar pelo mapa para ver as instituições cadastradas
-  - [x] entrar em contato com a entidade através do E-mail ou do WhatsApp
-
----
-
-
-
-
-
-
----
-
-## 🚀 Como executar o projeto
-
-Este projeto é divido em três partes:
-1. Backend (pasta server) 
-2. Frontend (pasta web)
-3. Mobile (pasta mobile)
-
-💡Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-#### 🎲 Rodando o Backend (servidor)
-
-```bash
-
-# Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
-
-# Acesse a pasta do projeto no terminal/cmd
-$ cd README-ecoleta
-
-# Vá para a pasta server
-$ cd server
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3333 - acesse http://localhost:3333 
-
-```
-<p align="center">
-  <a href="https://github.com/tgmarinho/README-ecoleta/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
-</p>
-
-
-#### 🧭 Rodando a aplicação web (Frontend)
-
-```bash
-
-# Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
-
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd README-ecoleta
-
-# Vá para a pasta da aplicação Front End
-$ cd web
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start
-
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
-
-```
-
----
-
-
-
-
-## 💪 Como contribuir para o projeto
-
-1. Faça um **fork** do projeto.
-2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
-4. Envie as suas alterações: `git push origin my-feature`
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
-
----
-
-## 🦸 Autor
+## Autor
 
 <a href="">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
@@ -329,5 +203,3 @@ $ npm run start
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
-
-Feito por Lucas Pimenta 👋🏽 [Entre em contato!](https://www.linkedin.com/in/lucas-pimenta-0663671b1/)
