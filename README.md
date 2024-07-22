@@ -1,37 +1,51 @@
-<img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
+<div align="center">
+    <img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
+</div>
 
+<div align="center">
+    
 [![Release](https://img.shields.io/github/v/release/Jinkogule/BandejApp)](https://github.com/Jinkogule/BandejApp/releases)
 [![License](https://img.shields.io/github/license/Jinkogule/BandejApp)](LICENSE)
-  
- 
-<h4 align="center"> 
-	🚧  BandejApp ♻️ Concluído 🚀 🚧
-</h4>
+<br>
+![Status](http://img.shields.io/static/v1?label=STATUS&message=Concluído&color=GREEN&style=for-the-badge)
+
+</div>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
-  <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-documentação">Documentação</a> • 
+ <a href="#-desenvolvimento">Desenvolvimento</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-layout">Layout</a> • 
- <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-autor">Autor</a> • 
- <a href="#user-content--licença">Licença</a>
+ <a href="#-licença">Licença</a>
 </p>
 
 ## 💻 Sobre o projeto
 
 O **BandejApp** é um sistema de gestão para restaurantes universitários, cujo propósito é reduzir o desperdício de alimentos ao proporcionar uma gestão mais eficiente. A aplicação permite que os usuários registrem suas refeições previamente, confirmem presença, avaliem a qualidade do serviço e enviem sugestões de melhorias. Os administradores têm acesso a dados detalhados sobre o número de pessoas que registraram e confirmaram presença, permitindo que haja um melhor planejamento sobre a quantidade de comida a ser preparada e redistribuída entre as unidades que o restaurante universitário possui. Além disso, os administradores também podem publicar avisos e visualizar sugestões e avaliações dos usuários.
 
-Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521) e, com a orientação de de [Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534), foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (System Usability Scale), obtendo resultados satisfatórios (mais detalhes [aqui](https://app.uff.br/riuff/handle/1/30498)).
+Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521) e, com a orientação de de [Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534), foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (System Usability Scale), obtendo resultados satisfatórios ([mais detalhes](https://app.uff.br/riuff/handle/1/30498)).
 
 A proposta deste projeto foi apresentada à Superintendência de Tecnologia da Informação da Universidade Federal Fluminense para sua incorporação ao aplicativo do Restaurante Universitário da universidade. Atualmente, essa integração está em fase de implementação.
 
+Projeto disponível em: https://bandejapp.herokuapp.com/.
+
 ---
 
-Projeto hospedado em: https://bandejapp.herokuapp.com/
+## 📋 Documentação
+-   **[Trabalho de conclusão de curso sobre a primeira versão](https://app.uff.br/riuff/handle/1/30498)**
+-   **[Wiki](https://github.com/Jinkogule/BandejApp/wiki)**
+
+---
+
+## 🧑🏻‍💻 Desenvolvimento
+-   **[Código fonte](https://github.com/Jinkogule/BandejApp)**
+-   **[Issue Tracking](https://github.com/Jinkogule/BandejApp/issues)**
+
+---
 
 ## 🛠 Tecnologias
-
-As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
 
@@ -47,15 +61,16 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Hospedagem**
 
--   **[Heroku](https://www.heroku.com/home)**: Projeto hospedado em: https://bandejapp.herokuapp.com/.
+-   **[Heroku](https://www.heroku.com/home)**
 
 #### **Serviços e Add-ons**
 
--   **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)**: Serviço gerenciado para conexão com o banco de dados PostgreSQL.
--   **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)**: Agendamento de tarefas para ativar as schedules do Laravel em momentos específicos do dia.
--   **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**: Serviço de envio, recebimento, rastreamento e armazenamento de e-mails.
+-   **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)**
+-   **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)**
+-   **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**
 
 #### **Utilitários**
+
 -   **[CSS](https://react-leaflet.js.org/en/)**
 -   **[HTML](https://react-leaflet.js.org/)**
 -   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
@@ -187,7 +202,9 @@ O layout da aplicação está disponível no Figma:
   </tr>
 </table>
 
-## Autor
+---
+
+## 🧑🏻‍💻 Autor
 
 <a href="">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
@@ -202,4 +219,4 @@ O layout da aplicação está disponível no Figma:
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+Este projeto está sob a licença [MIT](./LICENSE).
