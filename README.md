@@ -21,7 +21,7 @@
  <a href="#-licença">Licença</a>
 </p>
 
-## 💻 Sobre o projeto
+# 💻 Sobre o projeto
 
 O **BandejApp** é um sistema de gestão para restaurantes universitários, cujo propósito é reduzir o desperdício de alimentos ao proporcionar uma gestão mais eficiente. A aplicação permite que os usuários registrem suas refeições previamente, confirmem presença, avaliem a qualidade do serviço e enviem sugestões de melhorias. Os administradores têm acesso a dados detalhados sobre o número de pessoas que registraram e confirmaram presença, permitindo que haja um melhor planejamento sobre a quantidade de comida a ser preparada e redistribuída entre as unidades que o restaurante universitário possui. Além disso, os administradores também podem publicar avisos e visualizar sugestões e avaliações dos usuários.
 
@@ -33,19 +33,19 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 
 ---
 
-## 📋 Documentação
+# 📋 Documentação
 -   **[Trabalho de conclusão de curso sobre a primeira versão](https://app.uff.br/riuff/handle/1/30498)**
 -   **[Wiki](https://github.com/Jinkogule/BandejApp/wiki)**
 
 ---
 
-## 🧑🏻‍💻 Desenvolvimento
+# 🧑🏻‍💻 Desenvolvimento
 -   **[Código fonte](https://github.com/Jinkogule/BandejApp)**
 -   **[Issue Tracking](https://github.com/Jinkogule/BandejApp/issues)**
 
 ---
 
-## 🛠 Tecnologias
+# 🛠 Tecnologias
 
 #### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
 
@@ -53,7 +53,7 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 -   **[Laravel 8.8](https://laravel.com/)**
 -   **[Composer 2.7](https://getcomposer.org/)**
 
-> Veja o arquivo  [composer.json]()
+> Veja o arquivo  [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
 
 #### **Banco de Dados**
 
@@ -71,15 +71,13 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 
 #### **Utilitários**
 
--   **[CSS](https://react-leaflet.js.org/en/)**
--   **[HTML](https://react-leaflet.js.org/)**
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
--   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
+-   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**
+-   Ícones:  **[Flaticon](https://www.flaticon.com/)**
 -   Fontes:  **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
 
 ---
 
-## 🎨 Layout
+# 🎨 Layout
 
 O layout da aplicação está disponível no Figma:
 
@@ -204,7 +202,7 @@ O layout da aplicação está disponível no Figma:
 
 ---
 
-## 🧑🏻‍💻 Autor
+# 🧑🏻‍💻 Autor
 
 <a href="">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
@@ -217,6 +215,6 @@ O layout da aplicação está disponível no Figma:
 
 ---
 
-## 📝 Licença
+# 📝 Licença
 
 Este projeto está sob a licença [MIT](./LICENSE).
