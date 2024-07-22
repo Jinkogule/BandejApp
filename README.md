@@ -1,15 +1,15 @@
 <div align="center">
-    <img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
-</div>
+<img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
 
-<div align="center">
-    
+<br>
+
 [![Release](https://img.shields.io/github/v/release/Jinkogule/BandejApp)](https://github.com/Jinkogule/BandejApp/releases)
 [![License](https://img.shields.io/github/license/Jinkogule/BandejApp)](LICENSE)
-<br>
-![Status](http://img.shields.io/static/v1?label=STATUS&message=Concluído&color=GREEN&style=for-the-badge)
 
+![Status](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO%20|%20EM%20ATUALIZAÇÃO-brightgreen)
 </div>
+
+---
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -17,11 +17,11 @@
  <a href="#-desenvolvimento">Desenvolvimento</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-layout">Layout</a> • 
- <a href="#-autor">Autor</a> • 
+ <a href="#-autores">Autores</a> • 
  <a href="#-licença">Licença</a>
 </p>
 
-# 💻 Sobre o projeto
+## 💻 Sobre o projeto
 
 O **BandejApp** é um sistema de gestão para restaurantes universitários, cujo propósito é reduzir o desperdício de alimentos ao proporcionar uma gestão mais eficiente. A aplicação permite que os usuários registrem suas refeições previamente, confirmem presença, avaliem a qualidade do serviço e enviem sugestões de melhorias. Os administradores têm acesso a dados detalhados sobre o número de pessoas que registraram e confirmaram presença, permitindo que haja um melhor planejamento sobre a quantidade de comida a ser preparada e redistribuída entre as unidades que o restaurante universitário possui. Além disso, os administradores também podem publicar avisos e visualizar sugestões e avaliações dos usuários.
 
@@ -31,21 +31,17 @@ A proposta deste projeto foi apresentada à Superintendência de Tecnologia da I
 
 Projeto disponível em: https://bandejapp.herokuapp.com/.
 
----
-
-# 📋 Documentação
+## 📋 Documentação
 -   **[Trabalho de conclusão de curso sobre a primeira versão](https://app.uff.br/riuff/handle/1/30498)**
 -   **[Wiki](https://github.com/Jinkogule/BandejApp/wiki)**
 
----
-
-# 🧑🏻‍💻 Desenvolvimento
+## 🧑🏻‍💻 Desenvolvimento
 -   **[Código fonte](https://github.com/Jinkogule/BandejApp)**
 -   **[Issue Tracking](https://github.com/Jinkogule/BandejApp/issues)**
 
 ---
 
-# 🛠 Tecnologias
+## 🛠 Tecnologias
 
 #### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
 
@@ -75,9 +71,7 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 -   Ícones:  **[Flaticon](https://www.flaticon.com/)**
 -   Fontes:  **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
 
----
-
-# 🎨 Layout
+## 🎨 Layout
 
 O layout da aplicação está disponível no Figma:
 
@@ -200,12 +194,10 @@ O layout da aplicação está disponível no Figma:
   </tr>
 </table>
 
----
-
-# 🧑🏻‍💻 Autor
+## 📝 Autores
 
 <a href="">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
+ <img border-radius="50%" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Lucas Pimenta</b></sub></a> <a href="https://lucas-pimenta-3c80fa16439e.herokuapp.com/" title="Lucas Pimenta"></a>
  <br />
@@ -213,8 +205,6 @@ O layout da aplicação está disponível no Figma:
 [![Linkedin Badge](https://img.shields.io/badge/-Lucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-pimenta-0663671b1/)](https://www.linkedin.com/in/lucas-pimenta-0663671b1/) 
 [![Gmail Badge](https://img.shields.io/badge/-lucaspimenta21@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucaspimenta21@gmail.com)](mailto:lucaspimenta21@gmail.com)
 
----
-
-# 📝 Licença
+## 📝 Licença
 
 Este projeto está sob a licença [MIT](./LICENSE).
