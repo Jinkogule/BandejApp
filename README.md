@@ -16,7 +16,8 @@
  <a href="#-desenvolvimento">Desenvolvimento</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-layout">Layout</a> • 
- <a href="#-autores">Autores</a> • 
+ <a href="#-autores">Autores</a> •
+ <a href="#-certificações">Certificações</a> •
  <a href="#-licença">Licença</a>
 </p>
 
@@ -33,10 +34,12 @@ A proposta deste projeto foi apresentada à Superintendência de Tecnologia da I
 Projeto disponível em: https://bandejapp.herokuapp.com/.
 
 ## 📋 Documentação
--   **[Trabalho de conclusão de curso sobre a primeira versão](https://github.com/Jinkogule/BandejApp/tree/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf)**
+
+-   **[Trabalho de conclusão de curso sobre a primeira versão](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf)**
 -   **[Wiki](https://github.com/Jinkogule/BandejApp/wiki)**
 
 ## 🧑🏻‍💻 Desenvolvimento
+
 -   **[Código-fonte](https://github.com/Jinkogule/BandejApp)**
 -   **[Issue Tracking](https://github.com/Jinkogule/BandejApp/issues)**
 
@@ -200,13 +203,13 @@ O layout da aplicação está disponível no Figma:
 [![Linkedin Badge](https://img.shields.io/badge/-Lucas%20Pimenta-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-pimenta-0663671b1/)](https://www.linkedin.com/in/lucas-pimenta-0663671b1/) 
 [![Gmail Badge](https://img.shields.io/badge/-lucaspimenta21@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucaspimenta21@gmail.com)](mailto:lucaspimenta21@gmail.com)
 
-## 📝 Licença
-
-Este projeto é licenciado sob a [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE).
-
-## ✒️ Certificações e Direitos Autorais
+## ✒️ Certificações
 
 Este software é protegido por direitos autorais, de acordo com as seguintes certificações emitidas pelo INPI:
 
-- **[Certificado de Registro de Programa de Computador](https://github.com/Jinkogule/BandejApp/tree/main/public/documents/certifications/BandejApp-Certificado_de_Registro_de_Programa_de_Computador_-_INPI_-_1.0.0.pdf)** - Referente à versão [1.0.0](https://github.com/Jinkogule/BandejApp/tree/v1.0.0).
-- **[Certificado de Registro de Programa de Computador](https://github.com/Jinkogule/BandejApp/tree/main/public/documents/certifications/BandejApp-Certificado_de_Registro_de_Programa_de_Computador_-_INPI_-_1.2.0.pdf)** - Referente à versão [1.2.0](https://github.com/Jinkogule/BandejApp/tree/v1.2.0).
+- **[Certificado de Registro de Programa de Computador](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/certifications/BandejApp-Certificado_de_Registro_de_Programa_de_Computador_-_INPI_-_1.0.0.pdf)** - Referente à versão [1.0.0](https://github.com/Jinkogule/BandejApp/tree/v1.0.0).
+- **[Certificado de Registro de Programa de Computador](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/certifications/BandejApp-Certificado_de_Registro_de_Programa_de_Computador_-_INPI_-_1.2.0.pdf)** - Referente à versão [1.2.0](https://github.com/Jinkogule/BandejApp/tree/v1.2.0).
+
+## 📝 Licença
+
+Este projeto é licenciado sob a [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE).
