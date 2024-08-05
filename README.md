@@ -1,14 +1,11 @@
 <div align="center">
 <img style="" src="https://github.com/Jinkogule/BandejApp/blob/main/public/images/bandejapp-logo.png" width="250px;" alt=""/>
-
 <br>
 
 [![Release](https://img.shields.io/github/v/release/Jinkogule/BandejApp?style=for-the-badge)](https://github.com/Jinkogule/BandejApp/releases)
 [![License](https://img.shields.io/github/license/Jinkogule/BandejApp?style=for-the-badge)](LICENSE)<br>
 ![Status](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO%20|%20EM%20ATUALIZAÇÃO-brightgreen?style=for-the-badge)
 </div>
-
-
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -27,7 +24,7 @@
 
 O **BandejApp** é um sistema de gestão para restaurantes universitários, cujo propósito é reduzir o desperdício de alimentos ao proporcionar uma gestão mais eficiente. A aplicação permite que os usuários registrem suas refeições previamente, confirmem presença, avaliem a qualidade do serviço e enviem sugestões de melhorias. Os administradores têm acesso a dados detalhados sobre o número de pessoas que registraram e confirmaram presença, permitindo que haja um melhor planejamento sobre a quantidade de comida a ser preparada e redistribuída entre as unidades que o restaurante universitário possui. Além disso, os administradores também podem publicar avisos e visualizar sugestões e avaliações dos usuários.
 
-Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521) e, com a orientação de de [Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534), foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (*System Usability Scale*), obtendo resultados satisfatórios ([mais detalhes](https://github.com/Jinkogule/BandejApp/tree/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf)).
+Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521) e, com a orientação de de [Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534), foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (*System Usability Scale*), obtendo resultados satisfatórios ([mais detalhes](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf)).
 
 A proposta deste projeto foi apresentada à Superintendência de Tecnologia da Informação da Universidade Federal Fluminense para sua incorporação ao aplicativo do Restaurante Universitário da universidade. Atualmente, essa integração está em fase de implementação.
 
@@ -51,7 +48,7 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 -   **[Laravel 8.8](https://laravel.com/)**
 -   **[Composer 2.7](https://getcomposer.org/)**
 
-> Veja o arquivo  [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
+> Para mais detalhes sobre as configurações do projeto, veja o arquivo [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
 
 #### **Banco de Dados**
 
@@ -200,10 +197,10 @@ O layout da aplicação está disponível no Figma:
 
 <img border-radius="50%" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Lucas%20Pimenta-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-pimenta-0663671b1/)](https://www.linkedin.com/in/lucas-pimenta-0663671b1/) 
-[![Gmail Badge](https://img.shields.io/badge/-lucaspimenta21@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucaspimenta21@gmail.com)](mailto:lucaspimenta21@gmail.com)
+[![Linkedin](https://img.shields.io/badge/-Lucas%20Pimenta-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-pimenta-0663671b1/)](https://www.linkedin.com/in/lucas-pimenta-0663671b1/) 
+[![Gmail](https://img.shields.io/badge/-lucaspimenta21@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucaspimenta21@gmail.com)](mailto:lucaspimenta21@gmail.com)
 
-## ✒️ Certificações
+## 📜 Certificações
 
 Este software é protegido por direitos autorais, de acordo com as seguintes certificações emitidas pelo INPI:
 
