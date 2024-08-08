@@ -193,7 +193,7 @@ O layout da aplicação está disponível no Figma:
   </tr>
 </table>
 
-## 📝 Autores
+## ✒ Autores
 
 <img border-radius="50%" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
 
