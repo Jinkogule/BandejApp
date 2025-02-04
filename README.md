@@ -56,7 +56,7 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 
 #### **Hospedagem**
 
--   **[Heroku](https://www.heroku.com/home)**
+-   **[Heroku](https://www.heroku.com/home)**  →  **[BandejApp](https://bandejapp.herokuapp.com/)**
 
 #### **Serviços e Add-ons**
 
