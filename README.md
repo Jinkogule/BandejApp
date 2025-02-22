@@ -28,7 +28,7 @@ Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.b
 
 A proposta deste projeto foi apresentada à Superintendência de Tecnologia da Informação da Universidade Federal Fluminense para sua incorporação ao aplicativo do Restaurante Universitário da universidade. Atualmente, essa integração está em fase de implementação.
 
-Projeto disponível em: https://bandejapp.herokuapp.com/.
+Projeto disponível em: https://bandejapp.free.nf.
 
 ## 📋 Documentação
 
@@ -51,12 +51,12 @@ Projeto disponível em: https://bandejapp.herokuapp.com/.
 > Para mais detalhes sobre as configurações do projeto, veja o arquivo [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
 
 #### **Banco de Dados**
-
--   **[PostgreSQL 16.3](https://www.postgresql.org/)**
+- **Atualmente:** ✅ **[MariaDB 10.6.19](https://mariadb.org/)**
+- **Anteriormente:** ❌ **[PostgreSQL 16.3](https://www.postgresql.org/)** (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
 #### **Hospedagem**
-
--   **[Heroku](https://www.heroku.com/home)**  →  **[BandejApp](https://bandejapp.herokuapp.com/)**
+- **Atualmente:** ✅ **[InfinityFree](https://www.infinityfree.com/)**  →  **[BandejApp](https://bandejapp.free.nf)**    
+- **Anteriormente:** ❌ **[Heroku](https://www.heroku.com/)** (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
 #### **Serviços e Add-ons**
 
