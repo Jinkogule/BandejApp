@@ -73,6 +73,29 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
     Route::post('/ajax_submit', [PlanejamentoMensalController::class, 'ajax_submit'])->name('ajax_submit');
 });
 
+/*Commands*/
+/*executado diariamente (7h) no cron-job.org*/
+Route::get('/processar-refeicoes', function (Request $request) {
+    if ($request->query('key') !== env('PROCESSAR_REFEICOES_KEY')) {
+        abort(403, 'Acesso negado');
+    }
+
+    \Artisan::call('refeicoes:processar-diarias');
+    return 'Refeições processadas!';
+});
+
+/*executado semanalmente (aos domingos) no cron-job.org*/
+Route::get('/processar-calendario', function (Request $request) {
+    if ($request->query('key') !== env('PROCESSAR_CALENDARIO_KEY')) {
+        abort(403, 'Acesso negado');
+    }
+
+    \Artisan::call('inserir:calendario-semanal');
+    return 'Calendário inserido!';
+});
+
+
+
 
 
 
