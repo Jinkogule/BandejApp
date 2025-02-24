@@ -60,8 +60,8 @@ Projeto disponível em: https://bandejapp.free.nf.
 
 #### **Serviços e Add-ons**
 
--   **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)**
--   **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)**
+-   **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)** ❌ (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+-   **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)** ❌ (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 -   **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**
 
 #### **Utilitários**
