@@ -42,7 +42,7 @@ Projeto disponível em: https://bandejapp.free.nf.
 
 ## 🛠 Tecnologias
 
-#### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
+### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
 
 -   **[PHP 8.3](https://www.php.net/)**
 -   **[Laravel 8.8](https://laravel.com/)**
@@ -50,21 +50,32 @@ Projeto disponível em: https://bandejapp.free.nf.
 
 > Para mais detalhes sobre as configurações do projeto, veja o arquivo [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
 
-#### **Banco de Dados**
-- **Atualmente:** ✅ **[MariaDB 10.6.19](https://mariadb.org/)**
-- **Anteriormente:** ❌ **[PostgreSQL 16.3](https://www.postgresql.org/)** (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+### **Banco de Dados**
 
-#### **Hospedagem**
-- **Atualmente:** ✅ **[InfinityFree](https://www.infinityfree.com/)**  →  **[BandejApp](https://bandejapp.free.nf)**    
-- **Anteriormente:** ❌ **[Heroku](https://www.heroku.com/)** (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+- **Atualmente**
+  - ✅ [MariaDB 10.6.19](https://mariadb.org/)
 
-#### **Serviços e Add-ons**
+- **Anteriormente**
+  - ❌ [PostgreSQL 16.3](https://www.postgresql.org/) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
--   **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)** ❌ (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
--   **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)** ❌ (até [`v1.2.0`](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
--   **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**
+### **Hospedagem**
 
-#### **Utilitários**
+- **Atualmente**
+  - ✅ [InfinityFree](https://www.infinityfree.com/) → [BandejApp](https://bandejapp.free.nf)
+
+- **Anteriormente**
+  - ❌ [Heroku](https://www.heroku.com/) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+
+### **Serviços e Add-ons**
+
+- **Atualmente**:
+  - ✅ [Mailgun](https://devcenter.heroku.com/articles/mailgun)
+
+- **Anteriormente**:
+  - ❌ [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+  - ❌ [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+
+### **Utilitários**
 
 -   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**
 -   Ícones:  **[Flaticon](https://www.flaticon.com/)**
