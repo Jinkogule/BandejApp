@@ -38,7 +38,5 @@ class ProcessarRefeicoesDiarias extends Command
 
         DB::table('refeicoes')->whereDate('data', '<', $hoje)->delete();
         DB::table('calendario')->whereDate('data', '<', $hoje)->delete();
-
-        $this->info('Processamento de refeições concluído.');
     }
 }

@@ -42,8 +42,6 @@ class InserirCalendarioSemanalmente extends Command
                 ]);
             }
         }
-
-        $this->info('Os próximos dias úteis foram adicionados ao calendário.');
     }
 }
 

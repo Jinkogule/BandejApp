@@ -9,6 +9,7 @@ use App\Http\Controllers\MailController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,24 +75,30 @@ Route::prefix('user')->middleware(['auth', 'isUser'])->group(function () {
 });
 
 /*Commands*/
-/*executado diariamente (7h) no cron-job.org*/
 Route::get('/processar-refeicoes', function (Request $request) {
     if ($request->query('key') !== env('PROCESSAR_REFEICOES_KEY')) {
-        abort(403, 'Acesso negado');
+        return Response::json(['error' => 'Acesso negado'], 403);
     }
 
-    \Artisan::call('refeicoes:processar-diarias');
-    return 'Refeições processadas!';
+    Artisan::call('refeicoes:processar-diarias');
+
+    return Response::json([
+        'message' => 'Refeicoes processadas com sucesso!',
+        'status' => 200
+    ]);
 });
 
-/*executado semanalmente (aos domingos) no cron-job.org*/
 Route::get('/processar-calendario', function (Request $request) {
     if ($request->query('key') !== env('PROCESSAR_CALENDARIO_KEY')) {
-        abort(403, 'Acesso negado');
+        return Response::json(['error' => 'Acesso negado'], 403);
     }
 
-    \Artisan::call('inserir:calendario-semanal');
-    return 'Calendário inserido!';
+    Artisan::call('inserir:calendario-semanal');
+
+    return Response::json([
+        'message' => 'Calendario semanal inserido com sucesso!',
+        'status' => 200
+    ]);
 });
 
 
