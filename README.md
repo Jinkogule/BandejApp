@@ -42,7 +42,7 @@ Projeto disponível em: https://bandejapp.free.nf.
 
 ## 🛠 Tecnologias
 
-### **Website**  ([PHP](https://www.php.net/)  +  [Laravel](https://laravel.com/))
+### **Website**  **([PHP](https://www.php.net/)**  +  **[Laravel](https://laravel.com/))**
 
 -   **[PHP 8.3](https://www.php.net/)**
 -   **[Laravel 8.8](https://laravel.com/)**
@@ -53,33 +53,36 @@ Projeto disponível em: https://bandejapp.free.nf.
 ### **Banco de Dados**
 
 - **Atualmente**
-  - ✅ [MariaDB 10.6.19](https://mariadb.org/)
+  - ✅ **[MariaDB 10.6.19](https://mariadb.org/)**
 
 - **Anteriormente**
-  - ❌ [PostgreSQL 16.3](https://www.postgresql.org/) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+  - ❌ **[PostgreSQL 16.3](https://www.postgresql.org/)** (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
 ### **Hospedagem**
 
 - **Atualmente**
-  - ✅ [InfinityFree](https://www.infinityfree.com/) → [BandejApp](https://bandejapp.free.nf)
+  - ✅ **[InfinityFree](https://www.infinityfree.com/)** → **[BandejApp](https://bandejapp.free.nf)**
 
 - **Anteriormente**
-  - ❌ [Heroku](https://www.heroku.com/) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+  - ❌ **[Heroku](https://www.heroku.com/)** (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
 ### **Serviços e Add-ons**
 
-- **Atualmente**:
-  - ✅ [Mailgun](https://devcenter.heroku.com/articles/mailgun)
+- **Atualmente**
+  - ✅ **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**
 
-- **Anteriormente**:
-  - ❌ [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
-  - ❌ [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler) (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+- **Anteriormente**
+  - ❌ **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)** (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
+  - ❌ **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)** (até a versão [v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0))
 
 ### **Utilitários**
 
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**
--   Ícones:  **[Flaticon](https://www.flaticon.com/)**
--   Fontes:  **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
+- **Protótipo**  
+    - **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**
+- **Ícones**
+    - **[Flaticon](https://www.flaticon.com/)**
+- **Fontes**  
+    - **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
 
 ## 🎨 Layout
 
@@ -220,4 +223,4 @@ Este software é protegido por direitos autorais, de acordo com as seguintes cer
 
 ## 📝 Licença
 
-Este projeto é licenciado sob a [GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE).
+Este projeto é licenciado sob a **[GNU Affero General Public License v3.0 (AGPLv3)](./LICENSE)**.
