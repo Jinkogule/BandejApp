@@ -48,7 +48,7 @@ Projeto disponível em: https://bandejapp.free.nf.
 -   **[Laravel 8.8](https://laravel.com/)**
 -   **[Composer 2.7](https://getcomposer.org/)**
 
-> Para mais detalhes sobre as configurações do projeto, veja o arquivo [composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)
+> Para mais detalhes sobre as configurações do projeto, veja o arquivo **[composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)**
 
 ### **Banco de Dados**
 
@@ -79,8 +79,10 @@ Projeto disponível em: https://bandejapp.free.nf.
 
 - **Protótipo**  
     - **[Figma](https://www.figma.com/)**  →  **[Protótipo (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**
+
 - **Ícones**
     - **[Flaticon](https://www.flaticon.com/)**
+
 - **Fontes**  
     - **[Bahnschrift](https://learn.microsoft.com/en-us/typography/font-list/bahnschrift)**
 
@@ -209,10 +211,43 @@ O layout da aplicação está disponível no Figma:
 
 ## ✒ Autores
 
-<img border-radius="50%" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt=""/>
-
-[![Linkedin](https://img.shields.io/badge/-Lucas%20Pimenta-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-pimenta-0663671b1/)](https://www.linkedin.com/in/lucas-pimenta-0663671b1/) 
-[![Gmail](https://img.shields.io/badge/-lucaspimenta21@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucaspimenta21@gmail.com)](mailto:lucaspimenta21@gmail.com)
+<table>
+  <tr>
+    <td align="center">
+      Lucas Pimenta
+      <br>
+      <a href="https://github.com/Jinkogule">
+        <img src="https://avatars.githubusercontent.com/u/52849575?v=4" width="100px;" alt="Lucas Pimenta"/>
+      </a>
+      <br>
+      <a href="https://github.com/Jinkogule">
+        <img src="https://img.shields.io/badge/-Github-black?style=flat-square&logo=Github&logoColor=white">
+      </a>
+    </td>
+    <td align="center">
+      Letícia Gago
+      <br>
+      <a href="http://lattes.cnpq.br/3212258897513521">
+        <img src="https://www.w3schools.com/w3images/avatar6.png" width="100px;" alt="Letícia Gago"/>
+      </a>
+      <br>
+      <a href="http://lattes.cnpq.br/3212258897513521">
+        <img src="https://img.shields.io/badge/-Lattes-black?style=flat-square&logo=GoogleScholar&logoColor=white">
+      </a>
+    </td>
+    <td align="center">
+      Flávio Seixas
+      <br>
+      <a href="http://lattes.cnpq.br/4319951805195534">
+        <img src="https://www.w3schools.com/w3images/avatar2.png" width="100px;" alt="Flávio Seixas"/>
+      </a>
+      <br>
+      <a href="http://lattes.cnpq.br/4319951805195534">
+        <img src="https://img.shields.io/badge/-Lattes-black?style=flat-square&logo=GoogleScholar&logoColor=white">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## 📜 Certificações
 
