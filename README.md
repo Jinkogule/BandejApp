@@ -24,11 +24,11 @@
 
 O **BandejApp** é um sistema de gestão para restaurantes universitários, cujo propósito é reduzir o desperdício de alimentos ao proporcionar uma gestão mais eficiente. A aplicação permite que os usuários registrem suas refeições previamente, confirmem presença, avaliem a qualidade do serviço e enviem sugestões de melhorias. Os administradores têm acesso a dados detalhados sobre o número de pessoas que registraram e confirmaram presença, permitindo que haja um melhor planejamento sobre a quantidade de comida a ser preparada e redistribuída entre as unidades que o restaurante universitário possui. Além disso, os administradores também podem publicar avisos e visualizar sugestões e avaliações dos usuários.
 
-Este projeto foi idealizado por [Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521) e, com a orientação de de [Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534), foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (*System Usability Scale*), obtendo resultados satisfatórios ([mais detalhes](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf)).
+Este projeto foi idealizado por **[Letícia de Oliveira Gago](http://lattes.cnpq.br/3212258897513521)** e, com a orientação de de **[Flávio Luiz Seixas](http://lattes.cnpq.br/4319951805195534)**, foram realizadas reuniões a fim de desenvolver uma solução tecnológica para reduzir o desperdício de alimentos em restaurantes universitários, culminando no BandejApp. Após a aplicação ter ficado funcional, foi realizado um teste de usabilidade utilizando o SUS (*System Usability Scale*), obtendo resultados satisfatórios **([mais detalhes](https://github.com/Jinkogule/BandejApp/raw/main/public/documents/documentations/Desenvolvimento_de_sistema_para_confirmacao_do_uso_do_restaurante_universitario_pela_comunidade_academica.pdf))**.
 
 A proposta deste projeto foi apresentada à Superintendência de Tecnologia da Informação da Universidade Federal Fluminense para sua incorporação ao aplicativo do Restaurante Universitário da universidade. Atualmente, essa integração está em fase de implementação.
 
-Projeto disponível em: https://bandejapp.free.nf.
+Projeto disponível em: **https://bandejapp.free.nf**.
 
 ## 📋 Documentação
 
