@@ -26,6 +26,7 @@ class ProcessarRefeicoesDiarias extends Command
 
         DB::table('refeicoes')->whereDate('data', '=', $amanha)->update(['status_confirmacao' => 'P']);
 
+        /* Desativado temporariamente
         foreach ($users as $user) {
             $refeicoes = Refeicao::where('id_usuario', $user->id)->whereDate('data', $amanha)->get();
 
@@ -33,7 +34,7 @@ class ProcessarRefeicoesDiarias extends Command
                 Mail::to($user->email)->send(new NotificaConfirmacaoDePresenca($user, $refeicao));
             }
         }
-
+        */
 
         DB::table('refeicoes')->whereDate('data', '<', $hoje)->delete();
         DB::table('calendario')->whereDate('data', '<', $hoje)->delete();

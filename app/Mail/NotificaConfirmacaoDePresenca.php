@@ -21,7 +21,6 @@ class NotificaConfirmacaoDePresenca extends Mailable
      */
     public $user;
     public $refeicao;
- 
     /**
      * Create a new message instance.
      *
