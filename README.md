@@ -69,7 +69,7 @@ Project available at: **https://bandejapp.free.nf**.
 - **Previously**
   - ❌ **[Heroku](https://www.heroku.com/)** (until version **[v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0)**)
 
-### **Serviços e Add-ons**
+### **Services and Add-ons**
 
 - **Currently**
   - ✅ **[Mailgun](https://devcenter.heroku.com/articles/mailgun)**
@@ -78,7 +78,7 @@ Project available at: **https://bandejapp.free.nf**.
   - ❌ **[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)** (until version **[v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0)**)
   - ❌ **[Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)** (until version **[v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0)**)
 
-### **Utilitários**
+### **Utilities**
 
 - **Prototype**  
     - **[Figma](https://www.figma.com/)**  →  **[Prototype (BandejApp)](https://www.figma.com/design/HAcWO9GlJnCcDmHjk9JoVk/BandejApp?node-id=419-31&t=l5nULhkPCV4Q3s4N-1)**

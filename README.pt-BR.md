@@ -51,7 +51,7 @@ Projeto disponível em: **https://bandejapp.free.nf**.
 -   **[Laravel 8.8](https://laravel.com/)**
 -   **[Composer 2.7](https://getcomposer.org/)**
 
-> Para mais detalhes sobre as configurações do projeto, veja o arquivo **[composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)**
+> Para mais detalhes sobre as configurações do projeto, veja o arquivo **[composer.json](https://github.com/Jinkogule/BandejApp/blob/main/composer.json)**.
 
 ### **Banco de Dados**
 
