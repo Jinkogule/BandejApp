@@ -31,7 +31,7 @@ This project was conceived by **[Letícia de Oliveira Gago](http://lattes.cnpq.b
 
 The project was presented to the Superintendency of Information Technology at the Fluminense Federal University for incorporation into the university restaurant’s official application. Currently, this integration is in the implementation phase.
 
-Project available at: **https://bandejapp.free.nf**.
+Project available at: **https://bandejapp.infinityfreeapp.com**.
 
 ## 📋 Documentation
 
@@ -64,7 +64,7 @@ Project available at: **https://bandejapp.free.nf**.
 ### **Hosting**
 
 - **Currently**
-  - ✅ **[InfinityFree](https://www.infinityfree.com/)** → **[BandejApp](https://bandejapp.free.nf)**
+  - ✅ **[InfinityFree](https://www.infinityfree.com/)** → **[BandejApp](https://bandejapp.infinityfreeapp.com/)**
 
 - **Previously**
   - ❌ **[Heroku](https://www.heroku.com/)** (until version **[v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0)**)

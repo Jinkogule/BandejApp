@@ -31,7 +31,7 @@ Este projeto foi idealizado por **[Letícia de Oliveira Gago](http://lattes.cnpq
 
 A proposta deste projeto foi apresentada à Superintendência de Tecnologia da Informação da Universidade Federal Fluminense para sua incorporação ao aplicativo do Restaurante Universitário da universidade. Atualmente, essa integração está em fase de implementação.
 
-Projeto disponível em: **https://bandejapp.free.nf**.
+Projeto disponível em: **https://bandejapp.infinityfreeapp.com/**.
 
 ## 📋 Documentação
 
@@ -64,7 +64,7 @@ Projeto disponível em: **https://bandejapp.free.nf**.
 ### **Hospedagem**
 
 - **Atualmente**
-  - ✅ **[InfinityFree](https://www.infinityfree.com/)** → **[BandejApp](https://bandejapp.free.nf)**
+  - ✅ **[InfinityFree](https://www.infinityfree.com/)** → **[BandejApp](https://bandejapp.infinityfreeapp.com/)**
 
 - **Anteriormente**
   - ❌ **[Heroku](https://www.heroku.com/)** (até a versão **[v1.2.0](https://github.com/Jinkogule/BandejApp/releases/tag/v1.2.0)**)
